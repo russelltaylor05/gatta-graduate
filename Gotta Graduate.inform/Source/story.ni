@@ -1,4 +1,4 @@
-"Gotta Graduate" by Robin Verweij, David O’Connor, Ryan Chan, Luke Plewa, Lauren Thurston Russell Taylor
+"Gotta Graduate" by Robin Verweij, David O’Connor, Ryan Chan, Luke Plewa, Lauren Thurston, and Russell Taylor
 
 use no scoring. use full-length room descriptions.
 The player is in Software Design Lab.
@@ -18,7 +18,7 @@ When play begins:
 	say "[Opening text]".
 
 [ ---------------------------------]
-[        Start           ]
+[        Start                                        ]
 [ ---------------------------------]
 
 luke_hallway is a room. Storage Room, Janitor's Closet, Software Design Lab, Game Design Lab, HCI Lab, and Women's Restroom are a classroom in luke_hallway.
@@ -142,29 +142,9 @@ Instead of going up in south-east-hall-1:
 Instead of going down in south-east-hall-1:
 	say "There is no time for that.".
 
-
 [ ---------------------------------]
-[                    END           ]
+[             CSL                                    ]
 [ ---------------------------------]
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-[ ---------------------------------]
-[           CSL                    ]
-[ ---------------------------------]
-
 
 csl-239 is a room.
 
@@ -232,9 +212,6 @@ north corridor-3 is east of north corridor-4.
 
 csl-232-1 is south of csl-232-2.
 
-
-
-
 csl-235-1 is east of csl-235-2 and south of csl-235-4.
 
 csl-235-2 is east of csl-235-3 and south of csl-235-5.
@@ -243,10 +220,7 @@ csl-235-4 is east of csl-235-5.
 
 csl-235-5 is east of csl-235-6.
 
-
-
 csl-239-D is a door and scenery. it is north of the northeast corridor and south of csl-239. 
-
 
 csl-hall-L-D-U is a door and a scenery. it is south of csl-hall-L and north of north corridor-1.
 
@@ -256,7 +230,6 @@ csl-hall-L-D-D is a door and a scenery. it is north of csl-hall-L and south of c
 
 csl-hall-L-D-R is a door and a scenery. it is west of csl-hall-L and east of csl-238G.
 
-
 csl-hall-R-D-U is a door and a scenery. it is south of csl-hall-R and north of north corridor-2.
 
 csl-hall-R-D-L is a door and a scenery. it is west of csl-236 and east of csl-hall-R.
@@ -265,38 +238,27 @@ csl-hall-R-D-D is a door and a scenery. it is north of csl-hall-R and south of c
 
 csl-hall-R-D-R is a door and a scenery. it is west of csl-hall-R and east of csl-234.
 
-
 csl-233-D is a door and a scenery. it is north of north corridor-3.
-
 
 csl-238C-D-U is a door and a scenery. it is south of the northeast corridor.
 
 csl-238C-D-R is a door and a scenery. it is west of csl-238C and east of csl-238.
 
-
 csl-238-D is a door and a scenery. it is west of csl-238 and east of csl-235-1.
-
 
 csl-238B-D is a door and a scenery. it is west of csl-238B and east of csl-235-4.
 
-
 csl-240-D is a door and a scenery. it is southwest of csl-240 and northeast of csl-235-4.
-
 
 csl-hall-B-U is a door and a scenery. it is north of csl-235-4 and  south of csl-hall-B.
 
-
 csl-235D-D is a door and a scenery. it is north of csl-235-5 and south of csl-235D.
-
 
 csl-235C-D is a door and a scenery. it is north of csl-235-6 and south of csl-235C.
 
-
 csl-232-2-D-L is a door and a scenery. it is west of csl-235-6 and east of csl-232-2.
 
-
 csl-232-1-D is a door and a scenery. it is west of csl-235-3 and east of csl-232-1.
-
 
 csl-232-1-D-U is a door and a scenery. it is north of north corridor-4
 
