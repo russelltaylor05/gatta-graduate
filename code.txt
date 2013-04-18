@@ -6,9 +6,19 @@ The player is in Software Design Lab.
 [items]
 A key is a thing. Key is in Janitor's Closet. The description of key is "Borrowed from the Janitor's Closet. Perhaps it has access to a particular room in building 14.". The key unlocks Game_Door.
 
-The phone charger is a thing in the Software Design Lab.
+The charger is a thing in the Software Design Lab.
+
+The phone is a thing. The player carries the phone.
+
+app is a kind of thing. DDOS, packet spoofer, keylogger, TBD is an app. DDOS is in the Game Design Lab. keylogger is in the Software Design Lab.
 
 [actions]
+Launching it is an action applying to one thing.
+Check launching it:
+	if the noun is not an app, say "You can't do that.";
+	if the noun is keylogger, say "You're logging its keys!";
+	if the player is not carrying the phone, say "You need your phone to do that.".
+Understand "launch [something]" as launching it.
 
 [Text instantials]
 To say Opening text: say "Your homework is due. Finish your assignment or else you will drop of out Cal Poly!".
