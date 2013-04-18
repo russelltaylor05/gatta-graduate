@@ -1,14 +1,12 @@
-
 "Gotta Graduate" by Robin Verweij, David O’Connor, Ryan Chan, Luke Plewa, Lauren Thurston, Russell Taylor
 
 use no scoring. use full-length room descriptions.
 The player is in Software Design Lab.
 
-[classroom]
-classroom is a kind of container. classroom is scenery, lockable, closed, enterable, fixed in place, openable.
-
 [items]
-A key is a thing. Key is in Janitor's Closet. The description of key is "Borrowed from the Janitor's Closet. Perhaps it has access to a particular room in building 14.". The key unlocks Game Design Lab.
+A key is a thing. Key is in Janitor's Closet. The description of key is "Borrowed from the Janitor's Closet. Perhaps it has access to a particular room in building 14.". The key unlocks Game_Door.
+
+The phone charger is a thing in the Software Design Lab.
 
 [actions]
 
@@ -22,12 +20,13 @@ When play begins:
 [                 Start                     ]
 [ -----------------------]
 
-luke_hallway is a room. Storage Room, Janitor's Closet, Software Design Lab, Game Design Lab, HCI Lab, and Women's Restroom are a classroom in luke_hallway.
-the printed name of luke_hallway is "East-West Hallway".
+luke_hallway1, luke_hallway2, luke_hallway3, luke_hallway4 is a room. luke_hallway1 is west of luke_hallway2. luke_hallway2 is west of luke_hallway3. luke_hallway3 is west of luke_hallway4.
+Storage Room, Janitor's Closet, Software Design Lab, Game Design Lab, HCI Lab, and Women's Restroom is a room. HCI Lab is north of luke_hallway1. Software Design Lab is south of luke_hallway1. Women's Restroom is south of luke_hallway3.
+Game_Door is a door and scenery. It is south of luke_hallway2 and north of Game Design Lab. Game_Door is locked. 
+the printed name of luke_hallway1 is "East-West Hallway". the printed name of luke_hallway2 is "East-West Hallway". the printed name of luke_hallway3 is "East-West Hallway". the printed name of luke_hallway4 is "East-West Hallway".
 The description of Janitor's Closet is "A collection of janitorial items. Perhaps something useful is in there."
-The description of Software Design Lab is "A lab room lined with computers with a projector and table at the center.".
-The description of luke_hallway is “To the west there is a staircase, but you have no need to go downstairs. To the south is a door leading outside. In the hallway you see a Storage Room, a Janitor's Closet, the Software Design Lab, the Game Design Lab, the HCI Lab, and a Women's Restroom. The hallway continues to the east.”.
-Game Design Lab is locked.
+The description of Software Design Lab is "A lab room lined with computers with a projector and table at the center. There is a door to the north.".
+The description of luke_hallway1 is "To the south is the Software Design Lab. To the north is the HCI Lab. There are stairs to the west, but you have no reason to go down there. The hallway continues to the east.".
 
 [ ---------------------------------]
 [               South Faculty Offices                 ]
@@ -269,6 +268,3 @@ It is  south of South Hall 5 and north of 14-254.
 
 254A-D is a door and a scenery.
 It is south of South Hall 2 and north of 14-254A.
-
-
-
