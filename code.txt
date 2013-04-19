@@ -3,7 +3,9 @@
 use no scoring. use full-length room descriptions.
 The player is in Software Design Lab.
 
-[items]
+[ -----------------------]
+[                 Items                     ]
+[ -----------------------]
 A key is a thing. Key is in Janitor's Closet. The description of key is "Borrowed from the Janitor's Closet. Perhaps it has access to a particular room in building 14.". The key unlocks Game_Door.
 
 The charger is a thing in the Software Design Lab.
@@ -12,7 +14,9 @@ The phone is a thing. The player carries the phone.
 
 app is a kind of thing. DDOS, packet spoofer, keylogger, TBD is an app. DDOS is in the Game Design Lab. keylogger is in the Software Design Lab.
 
-[actions]
+[ -----------------------]
+[                 Actions                     ]
+[ -----------------------]
 Launching it is an action applying to one thing.
 Check launching it:
 	if the noun is not an app, say "You can't do that.";
@@ -20,7 +24,9 @@ Check launching it:
 	if the player is not carrying the phone, say "You need your phone to do that.".
 Understand "launch [something]" as launching it.
 
-[Text instantials]
+[ -----------------------]
+[                 Text Instantials                     ]
+[ -----------------------]
 To say Opening text: say "Your homework is due. Finish your assignment or else you will drop of out Cal Poly!".
 
 When play begins:
@@ -132,29 +138,9 @@ Instead of going up in south-east-hall-1:
 Instead of going down in south-east-hall-1:
 	say "There is no time for that.".
 
-
-[ ---------------------------------]
-[                    END           ]
-[ ---------------------------------]
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 [ ---------------------------------]
 [           CSL                    ]
 [ ---------------------------------]
-
 
 csl-239 is a room.
 csl-238D is a room.
@@ -196,8 +182,6 @@ csl-235-2 is east of csl-235-3 and south of csl-235-5.
 csl-235-4 is east of csl-235-5.
 csl-235-5 is east of csl-235-6.
 
-
-
 csl-239-D is a door and scenery. it is north of the northeast corridor and south of csl-239. 
 csl-hall-L-D-U is a door and a scenery. it is south of csl-hall-L and north of north corridor-1.
 csl-hall-L-D-L is a door and a scenery. it is west of csl-238D and east of csl-hall-L.
@@ -207,7 +191,6 @@ csl-hall-R-D-U is a door and a scenery. it is south of csl-hall-R and north of n
 csl-hall-R-D-L is a door and a scenery. it is west of csl-236 and east of csl-hall-R.
 csl-hall-R-D-D is a door and a scenery. it is north of csl-hall-R and south of csl-235-3.
 csl-hall-R-D-R is a door and a scenery. it is west of csl-hall-R and east of csl-234.
-
 
 csl-233-D is a door and a scenery. it is north of north corridor-3.
 csl-238C-D-U is a door and a scenery. it is south of the northeast corridor.
@@ -221,7 +204,6 @@ csl-235C-D is a door and a scenery. it is north of csl-235-6 and south of csl-23
 csl-232-2-D-L is a door and a scenery. it is west of csl-235-6 and east of csl-232-2.
 csl-232-1-D is a door and a scenery. it is west of csl-235-3 and east of csl-232-1.
 csl-232-1-D-U is a door and a scenery. it is north of north corridor-4
-
 
 [ ---------------------------------]
 [           South Corridor                   ]
