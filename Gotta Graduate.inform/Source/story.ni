@@ -17,9 +17,9 @@ To say Opening text: say "Your homework is due. Finish your assignment or else y
 When play begins:
 	say "[Opening text]".
 
-[ ---------------------------------]
-[        Start                                        ]
-[ ---------------------------------]
+[ -----------------------]
+[        Start                              ]
+[ -----------------------]
 
 luke_hallway is a room. Storage Room, Janitor's Closet, Software Design Lab, Game Design Lab, HCI Lab, and Women's Restroom are a classroom in luke_hallway.
 the printed name of luke_hallway is "East-West Hallway".

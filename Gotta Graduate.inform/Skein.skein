@@ -1,11 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<Skein rootNode="node-0x025E4308" xmlns="http://www.logicalshift.org.uk/IF/Skein">
-  <generator>Inform 7 for Windows</generator>
-  <activeNode nodeId="node-0x025E4308"/>
-  <item nodeId="node-0x025E4308">
+<?xml version="1.0"?>
+<Skein rootNode="node-0xabec100" xmlns="http://www.logicalshift.org.uk/IF/Skein">
+  <generator>Zoom</generator>
+  <activeNode nodeId="node-0xabec100" />
+  <item nodeId="node-0xabec100">
     <command xml:space="preserve">- start -</command>
-    <result xml:space="preserve"></result>
-    <commentary xml:space="preserve"></commentary>
     <played>NO</played>
     <changed>NO</changed>
     <temporary score="0">NO</temporary>
