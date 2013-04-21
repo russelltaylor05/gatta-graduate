@@ -7,10 +7,10 @@
 
 use no scoring. use full-length room descriptions.
 The player is in Software Design Lab.
-
+[The player is in Faculty Entrances1.]
 [Pseudo Rooms]
 Classroom is a kind of container. classroom is scenery, lockable, closed, enterable, fixed in place, openable.
-Faculty Room is a kind of container. Faculty Room is scenery, open, enterable, fixed in place, openable.
+Faculty Room is a kind of container. Faculty Room is scenery, closed, enterable, fixed in place, openable, lockable. A Faculty Room is usually locked.
 
 [items]
 A key is a thing. Key is in Janitor's Closet. The description of key is "Borrowed from the Janitor's Closet. Perhaps it has access to a particular room in building 14.". 
@@ -95,28 +95,91 @@ The SouthEast Corridor is a room. It has the description "You're in the Southern
 The SouthWest Corridor is a room. It has the description "You're in the Northern end of the West Outdoor Corridor. The west is fenced off, but the corridor continues to the North. To the south is a locked door and to the west are the South Faculty Offices.".
 
 The South Faculty Atrium is a room. It is west of the SouthEast Corridor and east of the SouthWest Corridor. It has the description "You're in the center of the southern faculty offices. To the north and south are enterances to the faculty offices."
-The Faculty Entrances1 is a room. It is north of the South Faculty Atrium. It has the description "You see seven faculty offices:  14-205, 14-206, 14-207, 14-208, 14-209, 14-210, 14-211. You can enter each office and look around."
-The Faculty Entrances2 is a room. It is south of the South Faculty Atrium. It has the description "You see seven faculty offices:  14-203, 14-204, 14-212, 14-213, 14-214, 14-215, 14-216. You can enter each office and look around."
+The Faculty Entrances1 is a room. It is north of the South Faculty Atrium. It has the description "You see seven faculty offices:  14-205, 14-206, 14-207, 14-208, 14-209, 14-210, 14-211. You can enter each office and look around.[paragraph break]::Refer to the room by the last 3 digits. ie. 14-205 as 205::"
+
+The Faculty Entrances2 is a room. It is south of the South Faculty Atrium. It has the description "You see seven faculty offices:  14-203, 14-204, 14-212, 14-213, 14-214, 14-215, 14-216. You can enter each office and look around.[paragraph break]::Refer to the room by the last 3 digits. ie. 14-205 as 205::"
 
 The 14-205 is a Faculty Room inside the Faculty Entrances1.
 The 14-206 is a Faculty Room inside the Faculty Entrances1.
 The 14-207 is a Faculty Room inside the Faculty Entrances1.
 The 14-208 is a Faculty Room inside the Faculty Entrances1.
 The 14-209 is a Faculty Room inside the Faculty Entrances1.
-The 14-210 is a Faculty Room inside the Faculty Entrances1.
+The 14-210 is a Faculty Room inside the Faculty Entrances1. The description of 14-210 is "gene fisher".
 The 14-211 is a Faculty Room inside the Faculty Entrances1.
 
 The 14-203 is a Faculty Room inside the Faculty Entrances2.
-The 14-204 is a Faculty Room inside the Faculty Entrances2.
+The 14-204 is a Faculty Room inside the Faculty Entrances2. 
 The 14-212 is a Faculty Room inside the Faculty Entrances2.
 The 14-213 is a Faculty Room inside the Faculty Entrances2.
 The 14-214 is a Faculty Room inside the Faculty Entrances2.
-The 14-215 is a Faculty Room inside the Faculty Entrances2.
-The 14-216 is a Faculty Room inside the Faculty Entrances2.
+The 14-215 is a Faculty Room inside the Faculty Entrances2. The rusted key unlocks it. 
+The 14-216 is a Faculty Room inside the Faculty Entrances2. 
+
+A battery is a kind of thing.
+
+A battery compartment is a kind of container. A battery compartment is usually closed and openable. One battery compartment is part of every device. Instead of inserting something which is not a battery into a battery compartment, say "Nothing will happen by inserting that into the slot since its not a battery".
+
+Understand "turn on [device]" as switching on.
+Understand "turn off [device]" as switching off.
+Understand "put [something] in [container]" as inserting it into.
+Understand "open [openable closed thing]" as opening.
+Understand "close [openable open thing]" as closing. 
+
+Instead of opening a device, try opening a random battery compartment which is part of the noun. Instead of closing a device, try closing a random battery compartment which is part of the noun. Instead of inserting a battery into a device, try inserting the noun into a random battery compartment which is part of the second noun.
+
+Instead of switching on an empty device: 
+	say "You need a power source!"
+	
+Definition: a device is empty: 
+	if a battery compartment which is part of it contains a battery (called the power source): 
+		no; 
+	yes.
+
+Does the player mean doing something other than searching to a battery compartment: it is unlikely.
+
+Does the player mean inserting into a battery compartment: 
+	if the noun is nothing: 
+		it is very likely; 
+	otherwise: 
+		make no decision.
+Does the player mean inserting a battery compartment into: it is very unlikely.
+Does the player mean inserting something into a device: it is unlikely.
+Does the player mean searching a battery compartment: it is very likely.
+
+
+The nokia phone is a device. "NOKIA PORTABLE CELLULAR DEVCE".
+The solder pen is a device. "Portable Soldering Pen".
+The backpack is in the South Faculty Atrium. It is wearable and openable. In the backpack is a solder pen and the nokia phone.  The backpack is closed.
+An AA cell is a  battery.  it is in the backpack.
+The description of the backpack is "Recon. A familiar Northface backpack. You know the ins and out of this packpack easily can find the contents within".
+
+
+
+The rusted key is in Faculty Entrances1. The description is "Engraved into the scratched and heavily used key is '14-21...'".
+The South Faculty key is in 14-205. "Engraved into the key is 'gate key'".
+
+Understand "205" as 14-205.
+Understand "206" as 14-206.
+Understand "207" as 14-207.
+Understand "208" as 14-208.
+Understand "209" as 14-209.
+Understand "210" as 14-210.
+Understand "211" as 14-211.
+
+Understand "203" as 14-203.
+Understand "204" as 14-204.
+Understand "212" as 14-212.
+Understand "213" as 14-213.
+Understand "214" as 14-214.
+Understand "215" as 14-215.
+Understand "216" as 14-216. 
+
+
+
 
 
 [ --------------------------]
-[        North Faculty Offices           ]
+[    North Faculty Offices   ]
 [ --------------------------]
 
 The NorthWest Corridor is a room. It has the description "You're in the West Corridor. The west is still fenced off. To the north is another fallen vending machine. Weird... Seems your only option is to head east toward the North Faculty Offices". It is north of the SouthWest Corridor.
