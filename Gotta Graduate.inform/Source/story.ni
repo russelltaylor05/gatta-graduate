@@ -6,8 +6,8 @@
 [ -----------------------]
 
 use no scoring. use full-length room descriptions.
-The player is in Software Design Lab.
-[The player is in Faculty Entrances1.]
+[The player is in Software Design Lab.]
+The player is in Faculty Entrances1.
 [Pseudo Rooms]
 Classroom is a kind of container. classroom is scenery, lockable, closed, enterable, fixed in place, openable.
 Faculty Room is a kind of container. Faculty Room is scenery, closed, enterable, fixed in place, openable, lockable. A Faculty Room is usually locked.
@@ -110,9 +110,9 @@ The 14-211 is a Faculty Room inside the Faculty Entrances1.
 The 14-203 is a Faculty Room inside the Faculty Entrances2.
 The 14-204 is a Faculty Room inside the Faculty Entrances2. 
 The 14-212 is a Faculty Room inside the Faculty Entrances2.
-The 14-213 is a Faculty Room inside the Faculty Entrances2.
+The 14-213 is a Faculty Room inside the Faculty Entrances2. The rusted key unlocks it. 
 The 14-214 is a Faculty Room inside the Faculty Entrances2.
-The 14-215 is a Faculty Room inside the Faculty Entrances2. The rusted key unlocks it. 
+The 14-215 is a Faculty Room inside the Faculty Entrances2. 
 The 14-216 is a Faculty Room inside the Faculty Entrances2. 
 
 A battery is a kind of thing.
@@ -151,13 +151,41 @@ The nokia phone is a device. "NOKIA PORTABLE CELLULAR DEVCE".
 The solder pen is a device. "Portable Soldering Pen".
 The backpack is in the South Faculty Atrium. It is wearable and openable. In the backpack is a solder pen and the nokia phone.  The backpack is closed.
 An AA cell is a  battery.  it is in the backpack.
-The description of the backpack is "Recon. A familiar Northface backpack. You know the ins and out of this packpack easily can find the contents within".
-
-
-
+The description of the backpack is "Recon. A familiar Northface backpack. You know the ins and out of this packpack. You easily can find the contents within".
 The rusted key is in Faculty Entrances1. The description is "Engraved into the scratched and heavily used key is '14-21...'".
-The South Faculty key is in 14-205. "Engraved into the key is 'gate key'".
+[The South Faculty key is in 14-205. "Engraved into the key is 'gate key'".]
 
+
+
+
+The block giving rule is not listed in the check giving it to rules.
+Foaad is a man in 14-213. He carries the North Atrium Key.
+
+Instead of examining Foaad:
+	say "[The noun] looks like he could use a solder pen. Better go find that"
+	
+Instead of talking to Foaad:
+	say "I could really use a solder pen for my side project, I'm sure I can give you something for it".
+	
+before giving something to foaad:
+	if noun is a solder pen:
+		if noun is empty:
+			say "This is useless with out a battery";
+			stop the action;
+		if noun is not empty:
+			say "Ah this will help me alot. What did you say you were doing? anyways I have this 'A' I can give you, but how about this key? [paragraph break] ::you now carry the key foaad gave you::";
+			now the player has the North Atrium Key;
+	otherwise:
+		say "I only want the solder pen";
+		stop the action.
+		
+
+	
+Need relates one person to various things. The verb to need (he needs, they need, he needed, it is needed, he is needing) implies the need relation.
+Foaad needs the solder pen.	
+	
+
+Understand "talk to [someone]" as talking to. Understand "talk to [something]" as talking to. Talking to is an action applying to one visible thing.
 Understand "205" as 14-205.
 Understand "206" as 14-206.
 Understand "207" as 14-207.
