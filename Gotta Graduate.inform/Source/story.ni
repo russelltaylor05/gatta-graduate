@@ -178,13 +178,26 @@ before giving something to foaad:
 	otherwise:
 		say "I only want the solder pen";
 		stop the action.
-		
-
-	
+			
 Need relates one person to various things. The verb to need (he needs, they need, he needed, it is needed, he is needing) implies the need relation.
 Foaad needs the solder pen.	
-	
 
+Carry out smashing a container with something: 
+	if noun is a faculty room:
+		now the noun is open;
+		say "You smash [noun] open!";
+
+
+Check smashing it with: 
+	if the noun is a person, say "why would you want to smash [noun]?!" instead; 
+	if the second noun is not a nokia phone, say "[The second noun] does not have the properties of a nokia phone" instead;
+	if the noun is not a faculty room, say "that is a waste of time to smash the [noun]".
+		
+smashing it with is an action applying to two things.
+
+
+	
+Understand "smash [something] with [something]" as smashing it with.
 Understand "talk to [someone]" as talking to. Understand "talk to [something]" as talking to. Talking to is an action applying to one visible thing.
 Understand "205" as 14-205.
 Understand "206" as 14-206.
@@ -202,10 +215,24 @@ Understand "214" as 14-214.
 Understand "215" as 14-215.
 Understand "216" as 14-216. 
 
-A desk is in 14-205.
 
 [furnature]
+The description of the desk is "Typical desk you would see in a teachers office. Messy with papers.".
+A desk is a backdrop in 14-205. 
+A desk is a backdrop in 14-206.
+A desk is a backdrop in 14-207. 
+A desk is a backdrop in 14-208. 
+A desk is a backdrop in 14-209. 
+A desk is a backdrop in 14-210. 
+A desk is a backdrop in 14-211. 
 
+A desk is a backdrop in 14-203. 
+A desk is a backdrop in 14-204. 
+A desk is a backdrop in 14-212. 
+A desk is a backdrop in 14-213.
+A desk is a backdrop in 14-214.
+A desk is a backdrop in 14-215.
+A desk is a backdrop in 14-216. 
 
 [ --------------------------]
 [    North Faculty Offices   ]

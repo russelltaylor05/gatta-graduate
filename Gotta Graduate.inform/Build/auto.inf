@@ -563,7 +563,7 @@ Property short_name_indef 0; ! not used by I7, but an interesting hook in the li
 
 Constant life = NULL;
 
-Constant ActionCount = 81;
+Constant ActionCount = 82;
 
 Fake_Action ListMiscellany;
 Fake_Action Miscellany;
@@ -4296,7 +4296,7 @@ Global lightflag = false;
 ];
 
 
-Constant REQUISITION_STACK_SIZE = 3*136;
+Constant REQUISITION_STACK_SIZE = 3*137;
 Array requisition_stack --> REQUISITION_STACK_SIZE;
 Global requisition_stack_pointer = 0;
 
@@ -8965,7 +8965,7 @@ Array valued_property_offsets --> valued_property_offsets_SIZE;
 ];
 
 
-Constant NUMBER_RULEBOOKS_CREATED = 368;
+Constant NUMBER_RULEBOOKS_CREATED = 371;
 Constant V0_printing_the_name_of_some = 0;
 Constant V1_printing_the_plural_name_ = 1;
 Constant V2_printing_a_number_of_some = 2;
@@ -9338,7 +9338,7 @@ Constant IK3_First = I46_north;
 Constant IK4_First = I99_door1;
 Constant IK5_First = I122_14_205;
 Constant IK6_First = nothing;
-Constant IK7_First = nothing;
+Constant IK7_First = I147_desk;
 Constant IK8_First = selfobj;
 Constant IK9_First = nothing;
 Constant IK10_First = I145_foaad;
@@ -9385,44 +9385,44 @@ Array Map_Storage -->
  I117_door_246 0 0 I118_door_252 0 0 I111_hallway_8 I109_hallway_6 0 0 0 0 ! Exits from: I110_hallway_7
  I115_door_248 0 0 I116_door_251 0 0 I112_hallway_9 I110_hallway_7 0 0 0 0 ! Exits from: I111_hallway_8
  I113_door_249 0 0 I114_door_250 0 0 0 I111_hallway_8 0 0 0 0 ! Exits from: I112_hallway_9
- I147_northwest_corridor 0 0 0 0 0 I120_south_faculty_atrium 0 0 0 0 0 ! Exits from: I119_southwest_corridor
+ I148_northwest_corridor 0 0 0 0 0 I120_south_faculty_atrium 0 0 0 0 0 ! Exits from: I119_southwest_corridor
  I88_faculty_entrances1 0 0 I121_faculty_entrances2 0 0 I101_southeast_corridor I119_southwest_corridor 0 0 0 0 ! Exits from: I120_south_faculty_atrium
  I120_south_faculty_atrium 0 0 0 0 0 0 0 0 0 0 0 ! Exits from: I121_faculty_entrances2
- 0 0 0 I119_southwest_corridor 0 0 I149_north_faculty_atrium 0 0 0 0 0 ! Exits from: I147_northwest_corridor
- I194_csl_239_d 0 0 I204_csl_238c_d_u 0 0 0 I149_north_faculty_atrium 0 0 0 0 ! Exits from: I148_northeast_corridor
- I150_faculty_entrances3 0 0 I151_faculty_entrances4 0 0 I148_northeast_corridor I147_northwest_corridor 0 0 0 0 ! Exits from: I149_north_faculty_atrium
- 0 0 0 I149_north_faculty_atrium 0 0 0 0 0 0 0 0 ! Exits from: I150_faculty_entrances3
- I149_north_faculty_atrium 0 0 0 0 0 0 0 0 0 0 0 ! Exits from: I151_faculty_entrances4
- 0 0 0 I194_csl_239_d 0 0 0 0 0 0 0 0 ! Exits from: I164_csl_239
- 0 0 0 0 0 0 0 I196_csl_hall_l_d_l 0 0 0 0 ! Exits from: I165_csl_238d
- I197_csl_hall_l_d_d 0 0 I195_csl_hall_l_d_u 0 0 I196_csl_hall_l_d_l I198_csl_hall_l_d_r 0 0 0 0 ! Exits from: I166_csl_hall_l
- 0 0 0 0 0 0 I198_csl_hall_l_d_r 0 0 0 0 0 ! Exits from: I167_csl_238g
- 0 0 0 0 0 0 0 I200_csl_hall_r_d_l 0 0 0 0 ! Exits from: I168_csl_236
- I201_csl_hall_r_d_d 0 0 I199_csl_hall_r_d_u 0 0 I200_csl_hall_r_d_l I202_csl_hall_r_d_r 0 0 0 0 ! Exits from: I169_csl_hall_r
- 0 0 0 0 0 0 I202_csl_hall_r_d_r 0 0 0 0 0 ! Exits from: I170_csl_234
- 0 0 0 0 0 0 0 0 0 0 0 0 ! Exits from: I171_csl_233
- 0 0 0 0 0 0 0 I205_csl_238c_d_r 0 0 0 0 ! Exits from: I172_csl_238c
- 0 0 0 0 0 0 I205_csl_238c_d_r I206_csl_238_d 0 0 0 0 ! Exits from: I173_csl_238
- 0 0 0 0 0 0 0 I207_csl_238b_d 0 0 0 0 ! Exits from: I174_csl_238b
- 0 0 0 0 0 I208_csl_240_d 0 0 0 0 0 0 ! Exits from: I175_csl_240
- 0 0 0 I209_csl_hall_b_u 0 0 0 0 0 0 0 0 ! Exits from: I176_csl_hall_b
- 0 0 0 I210_csl_235d_d 0 0 0 0 0 0 0 0 ! Exits from: I177_csl_235d
- 0 0 0 I211_csl_235c_d 0 0 0 0 0 0 0 0 ! Exits from: I178_csl_235c
- I180_csl_232_2 0 0 0 0 0 I213_csl_232_1_d 0 0 0 0 0 ! Exits from: I179_csl_232_1
- 0 0 0 I179_csl_232_1 0 0 I212_csl_232_2_d_l 0 0 0 0 0 ! Exits from: I180_csl_232_2
- I184_csl_235_4 0 0 I197_csl_hall_l_d_d 0 0 I206_csl_238_d I182_csl_235_2 0 0 0 0 ! Exits from: I181_csl_235_1
- I185_csl_235_5 0 0 0 0 0 I181_csl_235_1 I183_csl_235_3 0 0 0 0 ! Exits from: I182_csl_235_2
- 0 0 0 I201_csl_hall_r_d_d 0 0 I182_csl_235_2 I213_csl_232_1_d 0 0 0 0 ! Exits from: I183_csl_235_3
- I209_csl_hall_b_u I208_csl_240_d 0 I181_csl_235_1 0 0 I207_csl_238b_d I185_csl_235_5 0 0 0 0 ! Exits from: I184_csl_235_4
- I210_csl_235d_d 0 0 I182_csl_235_2 0 0 I184_csl_235_4 I186_csl_235_6 0 0 0 0 ! Exits from: I185_csl_235_5
- I211_csl_235c_d 0 0 0 0 0 I185_csl_235_5 I212_csl_232_2_d_l 0 0 0 0 ! Exits from: I186_csl_235_6
- 0 0 0 0 0 0 0 0 0 0 0 0 ! Exits from: I187_csl_east_stairs
- 0 0 0 0 0 0 0 0 0 0 0 0 ! Exits from: I188_csl_west_stairs
- I195_csl_hall_l_d_u 0 0 0 0 0 0 I193_north_corridor__2 0 0 0 0 ! Exits from: I189_north_corridor_1
- I199_csl_hall_r_d_u 0 0 0 0 0 0 I191_north_corridor_3 0 0 0 0 ! Exits from: I190_north_corridor_2
- I203_csl_233_d 0 0 0 0 0 I190_north_corridor_2 I192_north_corridor_4 0 0 0 0 ! Exits from: I191_north_corridor_3
- I214_csl_232_1_d_u 0 0 0 0 0 I191_north_corridor_3 0 0 0 0 0 ! Exits from: I192_north_corridor_4
- 0 0 0 0 0 0 I189_north_corridor_1 0 0 0 0 0 ! Exits from: I193_north_corridor__2
+ 0 0 0 I119_southwest_corridor 0 0 I150_north_faculty_atrium 0 0 0 0 0 ! Exits from: I148_northwest_corridor
+ I195_csl_239_d 0 0 I205_csl_238c_d_u 0 0 0 I150_north_faculty_atrium 0 0 0 0 ! Exits from: I149_northeast_corridor
+ I151_faculty_entrances3 0 0 I152_faculty_entrances4 0 0 I149_northeast_corridor I148_northwest_corridor 0 0 0 0 ! Exits from: I150_north_faculty_atrium
+ 0 0 0 I150_north_faculty_atrium 0 0 0 0 0 0 0 0 ! Exits from: I151_faculty_entrances3
+ I150_north_faculty_atrium 0 0 0 0 0 0 0 0 0 0 0 ! Exits from: I152_faculty_entrances4
+ 0 0 0 I195_csl_239_d 0 0 0 0 0 0 0 0 ! Exits from: I165_csl_239
+ 0 0 0 0 0 0 0 I197_csl_hall_l_d_l 0 0 0 0 ! Exits from: I166_csl_238d
+ I198_csl_hall_l_d_d 0 0 I196_csl_hall_l_d_u 0 0 I197_csl_hall_l_d_l I199_csl_hall_l_d_r 0 0 0 0 ! Exits from: I167_csl_hall_l
+ 0 0 0 0 0 0 I199_csl_hall_l_d_r 0 0 0 0 0 ! Exits from: I168_csl_238g
+ 0 0 0 0 0 0 0 I201_csl_hall_r_d_l 0 0 0 0 ! Exits from: I169_csl_236
+ I202_csl_hall_r_d_d 0 0 I200_csl_hall_r_d_u 0 0 I201_csl_hall_r_d_l I203_csl_hall_r_d_r 0 0 0 0 ! Exits from: I170_csl_hall_r
+ 0 0 0 0 0 0 I203_csl_hall_r_d_r 0 0 0 0 0 ! Exits from: I171_csl_234
+ 0 0 0 0 0 0 0 0 0 0 0 0 ! Exits from: I172_csl_233
+ 0 0 0 0 0 0 0 I206_csl_238c_d_r 0 0 0 0 ! Exits from: I173_csl_238c
+ 0 0 0 0 0 0 I206_csl_238c_d_r I207_csl_238_d 0 0 0 0 ! Exits from: I174_csl_238
+ 0 0 0 0 0 0 0 I208_csl_238b_d 0 0 0 0 ! Exits from: I175_csl_238b
+ 0 0 0 0 0 I209_csl_240_d 0 0 0 0 0 0 ! Exits from: I176_csl_240
+ 0 0 0 I210_csl_hall_b_u 0 0 0 0 0 0 0 0 ! Exits from: I177_csl_hall_b
+ 0 0 0 I211_csl_235d_d 0 0 0 0 0 0 0 0 ! Exits from: I178_csl_235d
+ 0 0 0 I212_csl_235c_d 0 0 0 0 0 0 0 0 ! Exits from: I179_csl_235c
+ I181_csl_232_2 0 0 0 0 0 I214_csl_232_1_d 0 0 0 0 0 ! Exits from: I180_csl_232_1
+ 0 0 0 I180_csl_232_1 0 0 I213_csl_232_2_d_l 0 0 0 0 0 ! Exits from: I181_csl_232_2
+ I185_csl_235_4 0 0 I198_csl_hall_l_d_d 0 0 I207_csl_238_d I183_csl_235_2 0 0 0 0 ! Exits from: I182_csl_235_1
+ I186_csl_235_5 0 0 0 0 0 I182_csl_235_1 I184_csl_235_3 0 0 0 0 ! Exits from: I183_csl_235_2
+ 0 0 0 I202_csl_hall_r_d_d 0 0 I183_csl_235_2 I214_csl_232_1_d 0 0 0 0 ! Exits from: I184_csl_235_3
+ I210_csl_hall_b_u I209_csl_240_d 0 I182_csl_235_1 0 0 I208_csl_238b_d I186_csl_235_5 0 0 0 0 ! Exits from: I185_csl_235_4
+ I211_csl_235d_d 0 0 I183_csl_235_2 0 0 I185_csl_235_4 I187_csl_235_6 0 0 0 0 ! Exits from: I186_csl_235_5
+ I212_csl_235c_d 0 0 0 0 0 I186_csl_235_5 I213_csl_232_2_d_l 0 0 0 0 ! Exits from: I187_csl_235_6
+ 0 0 0 0 0 0 0 0 0 0 0 0 ! Exits from: I188_csl_east_stairs
+ 0 0 0 0 0 0 0 0 0 0 0 0 ! Exits from: I189_csl_west_stairs
+ I196_csl_hall_l_d_u 0 0 0 0 0 0 I194_north_corridor__2 0 0 0 0 ! Exits from: I190_north_corridor_1
+ I200_csl_hall_r_d_u 0 0 0 0 0 0 I192_north_corridor_3 0 0 0 0 ! Exits from: I191_north_corridor_2
+ I204_csl_233_d 0 0 0 0 0 I191_north_corridor_2 I193_north_corridor_4 0 0 0 0 ! Exits from: I192_north_corridor_3
+ I215_csl_232_1_d_u 0 0 0 0 0 I192_north_corridor_3 0 0 0 0 0 ! Exits from: I193_north_corridor_4
+ 0 0 0 0 0 0 I190_north_corridor_1 0 0 0 0 0 ! Exits from: I194_north_corridor__2
 ;
 
 Class VPH_Class;
@@ -10500,7 +10500,7 @@ Object I118_door_252 ""
     with IK2_Count 10
     with IK2_Link I143_backpack
     with IK4_Count 7
-    with IK4_Link I204_csl_238c_d_u
+    with IK4_Link I205_csl_238c_d_u
     with KD_Count 4
     with name 'door' '252' 
     with action_bitmap 0 0 0 0 0 0 
@@ -10612,7 +10612,7 @@ Object I121_faculty_entrances2 ""
     with list_together 0
     has mark_as_room
     with IK1_Count 21
-    with IK1_Link I147_northwest_corridor
+    with IK1_Link I148_northwest_corridor
     with KD_Count 1
     with name 'faculty' 'entrances2' 
 ;
@@ -10776,7 +10776,7 @@ Object -> I136_14_216 ""
     with IK5_Count 14
     with IK5_Link I140_nokia_phone_s_battery_c
     with IK17_Count 13
-    with IK17_Link I152_14_219
+    with IK17_Link I153_14_219
     with KD_Count 17
     with name '14-216' '216' 
     with parse_name Parse_Name_GV109
@@ -10809,9 +10809,9 @@ Object I142_solder_pen_s_battery_co ""
     has mark_as_thing
     with component_parent I141_solder_pen
     with IK2_Count 29
-    with IK2_Link I204_csl_238c_d_u
+    with IK2_Link I147_desk
     with IK5_Count 16
-    with IK5_Link I152_14_219
+    with IK5_Link I153_14_219
     with IK19_Count 1
     with IK19_Link nothing
     with KD_Count 19
@@ -10819,35 +10819,52 @@ Object I142_solder_pen_s_battery_co ""
     with action_bitmap 0 0 0 0 0 0 
 ;
 
-Object I147_northwest_corridor ""
-    class K1_room
-    with short_name "NorthWest Corridor"
+Object I147_desk ""
+    class K7_backdrop
+    with short_name "desk"
     with description SC_28
     with vector 0
-    with room_index -1
+    with found_in I122_14_205 I123_14_206 I124_14_207 I125_14_208 I126_14_209 I127_14_210 I128_14_211 I129_14_203 I130_14_204 I131_14_212 I132_14_213 I134_14_214 I135_14_215 I136_14_216 
     with list_together 0
-    has mark_as_room
-    with IK1_Count 22
-    with IK1_Link I148_northeast_corridor
-    with KD_Count 1
-    with name 'northwest' 'corridor' 
+    has mark_as_thing
+    with IK2_Count 34
+    with IK2_Link I205_csl_238c_d_u
+    with IK7_Count 0
+    with IK7_Link nothing
+    with KD_Count 7
+    with name 'desk' 
+    with action_bitmap 0 0 0 0 0 0 
 ;
 
-Object I148_northeast_corridor ""
+Object I148_northwest_corridor ""
     class K1_room
-    with short_name "NorthEast Corridor"
+    with short_name "NorthWest Corridor"
     with description SC_29
     with vector 0
     with room_index -1
     with list_together 0
     has mark_as_room
+    with IK1_Count 22
+    with IK1_Link I149_northeast_corridor
+    with KD_Count 1
+    with name 'northwest' 'corridor' 
+;
+
+Object I149_northeast_corridor ""
+    class K1_room
+    with short_name "NorthEast Corridor"
+    with description SC_30
+    with vector 0
+    with room_index -1
+    with list_together 0
+    has mark_as_room
     with IK1_Count 23
-    with IK1_Link I149_north_faculty_atrium
+    with IK1_Link I150_north_faculty_atrium
     with KD_Count 1
     with name 'northeast' 'corridor' 
 ;
 
-Object -> I204_csl_238c_d_u ""
+Object -> I205_csl_238c_d_u ""
     class K4_door
     with short_name "csl-238C-D-U"
     has proper
@@ -10857,264 +10874,264 @@ Object -> I204_csl_238c_d_u ""
     with list_together 0
     with cap_short_name "Csl-238C-D-U"
     has mark_as_thing
-    with IK2_Count 56
-    with IK2_Link I152_14_219
+    with IK2_Count 57
+    with IK2_Link I153_14_219
     with IK4_Count 18
-    with IK4_Link I203_csl_233_d
+    with IK4_Link I204_csl_233_d
     with KD_Count 4
     with name 'csl-238c-d-u' 
     with action_bitmap 0 0 0 0 0 0 
 ;
 
-Object I149_north_faculty_atrium ""
+Object I150_north_faculty_atrium ""
     class K1_room
     with short_name "North Faculty Atrium"
-    with description SC_30
-    with vector 0
-    with room_index -1
-    with list_together 0
-    has mark_as_room
-    with IK1_Count 24
-    with IK1_Link I150_faculty_entrances3
-    with KD_Count 1
-    with name 'north' 'faculty' 'atrium' 
-;
-
-Object I150_faculty_entrances3 ""
-    class K1_room
-    with short_name "Faculty Entrances3"
     with description SC_31
     with vector 0
     with room_index -1
     with list_together 0
     has mark_as_room
+    with IK1_Count 24
+    with IK1_Link I151_faculty_entrances3
+    with KD_Count 1
+    with name 'north' 'faculty' 'atrium' 
+;
+
+Object I151_faculty_entrances3 ""
+    class K1_room
+    with short_name "Faculty Entrances3"
+    with description SC_32
+    with vector 0
+    with room_index -1
+    with list_together 0
+    has mark_as_room
     with IK1_Count 25
-    with IK1_Link I151_faculty_entrances4
+    with IK1_Link I152_faculty_entrances4
     with KD_Count 1
     with name 'faculty' 'entrances3' 
 ;
 
-Object -> I152_14_219 ""
+Object -> I153_14_219 ""
     class K17_faculty_room
     with short_name "14-219"
     has static
     with vector 0
     with list_together 0
     has mark_as_thing
-    with IK2_Count 34
-    with IK2_Link I153_14_221
+    with IK2_Count 35
+    with IK2_Link I154_14_221
     with IK5_Count 18
-    with IK5_Link I153_14_221
+    with IK5_Link I154_14_221
     with IK17_Count 14
-    with IK17_Link I153_14_221
+    with IK17_Link I154_14_221
     with KD_Count 17
     with name '14-219' 
     with action_bitmap 0 0 0 0 0 0 
 ;
 
-Object -> I153_14_221 ""
+Object -> I154_14_221 ""
     class K17_faculty_room
     with short_name "14-221"
     has static
     with vector 0
     with list_together 0
     has mark_as_thing
-    with IK2_Count 35
-    with IK2_Link I154_14_222
+    with IK2_Count 36
+    with IK2_Link I155_14_222
     with IK5_Count 19
-    with IK5_Link I154_14_222
+    with IK5_Link I155_14_222
     with IK17_Count 15
-    with IK17_Link I154_14_222
+    with IK17_Link I155_14_222
     with KD_Count 17
     with name '14-221' 
     with action_bitmap 0 0 0 0 0 0 
 ;
 
-Object -> I154_14_222 ""
+Object -> I155_14_222 ""
     class K17_faculty_room
     with short_name "14-222"
     has static
     with vector 0
     with list_together 0
     has mark_as_thing
-    with IK2_Count 36
-    with IK2_Link I155_14_223
+    with IK2_Count 37
+    with IK2_Link I156_14_223
     with IK5_Count 20
-    with IK5_Link I155_14_223
+    with IK5_Link I156_14_223
     with IK17_Count 16
-    with IK17_Link I155_14_223
+    with IK17_Link I156_14_223
     with KD_Count 17
     with name '14-222' 
     with action_bitmap 0 0 0 0 0 0 
 ;
 
-Object -> I155_14_223 ""
+Object -> I156_14_223 ""
     class K17_faculty_room
     with short_name "14-223"
     has static
     with vector 0
     with list_together 0
     has mark_as_thing
-    with IK2_Count 37
-    with IK2_Link I156_14_226
+    with IK2_Count 38
+    with IK2_Link I157_14_226
     with IK5_Count 21
-    with IK5_Link I156_14_226
+    with IK5_Link I157_14_226
     with IK17_Count 17
-    with IK17_Link I156_14_226
+    with IK17_Link I157_14_226
     with KD_Count 17
     with name '14-223' 
     with action_bitmap 0 0 0 0 0 0 
 ;
 
-Object -> I156_14_226 ""
+Object -> I157_14_226 ""
     class K17_faculty_room
     with short_name "14-226"
     has static
     with vector 0
     with list_together 0
     has mark_as_thing
-    with IK2_Count 38
-    with IK2_Link I157_14_217
+    with IK2_Count 39
+    with IK2_Link I158_14_217
     with IK5_Count 22
-    with IK5_Link I157_14_217
+    with IK5_Link I158_14_217
     with IK17_Count 18
-    with IK17_Link I157_14_217
+    with IK17_Link I158_14_217
     with KD_Count 17
     with name '14-226' 
     with action_bitmap 0 0 0 0 0 0 
 ;
 
-Object I151_faculty_entrances4 ""
+Object I152_faculty_entrances4 ""
     class K1_room
     with short_name "Faculty Entrances4"
-    with description SC_32
+    with description SC_33
     with vector 0
     with room_index -1
     with list_together 0
     has mark_as_room
     with IK1_Count 26
-    with IK1_Link I164_csl_239
+    with IK1_Link I165_csl_239
     with KD_Count 1
     with name 'faculty' 'entrances4' 
 ;
 
-Object -> I157_14_217 ""
+Object -> I158_14_217 ""
     class K17_faculty_room
     with short_name "14-217"
     has static
     with vector 0
     with list_together 0
     has mark_as_thing
-    with IK2_Count 39
-    with IK2_Link I158_14_218
+    with IK2_Count 40
+    with IK2_Link I159_14_218
     with IK5_Count 23
-    with IK5_Link I158_14_218
+    with IK5_Link I159_14_218
     with IK17_Count 19
-    with IK17_Link I158_14_218
+    with IK17_Link I159_14_218
     with KD_Count 17
     with name '14-217' 
     with action_bitmap 0 0 0 0 0 0 
 ;
 
-Object -> I158_14_218 ""
+Object -> I159_14_218 ""
     class K17_faculty_room
     with short_name "14-218"
     has static
     with vector 0
     with list_together 0
     has mark_as_thing
-    with IK2_Count 40
-    with IK2_Link I159_14_227
+    with IK2_Count 41
+    with IK2_Link I160_14_227
     with IK5_Count 24
-    with IK5_Link I159_14_227
+    with IK5_Link I160_14_227
     with IK17_Count 20
-    with IK17_Link I159_14_227
+    with IK17_Link I160_14_227
     with KD_Count 17
     with name '14-218' 
     with action_bitmap 0 0 0 0 0 0 
 ;
 
-Object -> I159_14_227 ""
+Object -> I160_14_227 ""
     class K17_faculty_room
     with short_name "14-227"
     has static
     with vector 0
     with list_together 0
     has mark_as_thing
-    with IK2_Count 41
-    with IK2_Link I160_14_228
+    with IK2_Count 42
+    with IK2_Link I161_14_228
     with IK5_Count 25
-    with IK5_Link I160_14_228
+    with IK5_Link I161_14_228
     with IK17_Count 21
-    with IK17_Link I160_14_228
+    with IK17_Link I161_14_228
     with KD_Count 17
     with name '14-227' 
     with action_bitmap 0 0 0 0 0 0 
 ;
 
-Object -> I160_14_228 ""
+Object -> I161_14_228 ""
     class K17_faculty_room
     with short_name "14-228"
     has static
     with vector 0
     with list_together 0
     has mark_as_thing
-    with IK2_Count 42
-    with IK2_Link I161_14_229
+    with IK2_Count 43
+    with IK2_Link I162_14_229
     with IK5_Count 26
-    with IK5_Link I161_14_229
+    with IK5_Link I162_14_229
     with IK17_Count 22
-    with IK17_Link I161_14_229
+    with IK17_Link I162_14_229
     with KD_Count 17
     with name '14-228' 
     with action_bitmap 0 0 0 0 0 0 
 ;
 
-Object -> I161_14_229 ""
+Object -> I162_14_229 ""
     class K17_faculty_room
     with short_name "14-229"
     has static
     with vector 0
     with list_together 0
     has mark_as_thing
-    with IK2_Count 43
-    with IK2_Link I162_14_230
+    with IK2_Count 44
+    with IK2_Link I163_14_230
     with IK5_Count 27
-    with IK5_Link I162_14_230
+    with IK5_Link I163_14_230
     with IK17_Count 23
-    with IK17_Link I162_14_230
+    with IK17_Link I163_14_230
     with KD_Count 17
     with name '14-229' 
     with action_bitmap 0 0 0 0 0 0 
 ;
 
-Object -> I162_14_230 ""
+Object -> I163_14_230 ""
     class K17_faculty_room
     with short_name "14-230"
     has static
     with vector 0
     with list_together 0
     has mark_as_thing
-    with IK2_Count 44
-    with IK2_Link I163_14_231
+    with IK2_Count 45
+    with IK2_Link I164_14_231
     with IK5_Count 28
-    with IK5_Link I163_14_231
+    with IK5_Link I164_14_231
     with IK17_Count 24
-    with IK17_Link I163_14_231
+    with IK17_Link I164_14_231
     with KD_Count 17
     with name '14-230' 
     with action_bitmap 0 0 0 0 0 0 
 ;
 
-Object -> I163_14_231 ""
+Object -> I164_14_231 ""
     class K17_faculty_room
     with short_name "14-231"
     has static
     with vector 0
     with list_together 0
     has mark_as_thing
-    with IK2_Count 45
-    with IK2_Link I203_csl_233_d
+    with IK2_Count 46
+    with IK2_Link I204_csl_233_d
     with IK5_Count 29
     with IK5_Link nothing
     with IK17_Count 25
@@ -11124,7 +11141,7 @@ Object -> I163_14_231 ""
     with action_bitmap 0 0 0 0 0 0 
 ;
 
-Object I164_csl_239 ""
+Object I165_csl_239 ""
     class K1_room
     with short_name "csl-239"
     has proper
@@ -11134,12 +11151,12 @@ Object I164_csl_239 ""
     with cap_short_name "Csl-239"
     has mark_as_room
     with IK1_Count 27
-    with IK1_Link I165_csl_238d
+    with IK1_Link I166_csl_238d
     with KD_Count 1
     with name 'csl-239' 
 ;
 
-Object I165_csl_238d ""
+Object I166_csl_238d ""
     class K1_room
     with short_name "csl-238D"
     has proper
@@ -11149,12 +11166,12 @@ Object I165_csl_238d ""
     with cap_short_name "Csl-238D"
     has mark_as_room
     with IK1_Count 28
-    with IK1_Link I166_csl_hall_l
+    with IK1_Link I167_csl_hall_l
     with KD_Count 1
     with name 'csl-238d' 
 ;
 
-Object I166_csl_hall_l ""
+Object I167_csl_hall_l ""
     class K1_room
     with short_name "csl-hall-L"
     has proper
@@ -11164,12 +11181,12 @@ Object I166_csl_hall_l ""
     with cap_short_name "Csl-hall-L"
     has mark_as_room
     with IK1_Count 29
-    with IK1_Link I167_csl_238g
+    with IK1_Link I168_csl_238g
     with KD_Count 1
     with name 'csl-hall-l' 
 ;
 
-Object I167_csl_238g ""
+Object I168_csl_238g ""
     class K1_room
     with short_name "csl-238G"
     has proper
@@ -11179,12 +11196,12 @@ Object I167_csl_238g ""
     with cap_short_name "Csl-238G"
     has mark_as_room
     with IK1_Count 30
-    with IK1_Link I168_csl_236
+    with IK1_Link I169_csl_236
     with KD_Count 1
     with name 'csl-238g' 
 ;
 
-Object I168_csl_236 ""
+Object I169_csl_236 ""
     class K1_room
     with short_name "csl-236"
     has proper
@@ -11194,12 +11211,12 @@ Object I168_csl_236 ""
     with cap_short_name "Csl-236"
     has mark_as_room
     with IK1_Count 31
-    with IK1_Link I169_csl_hall_r
+    with IK1_Link I170_csl_hall_r
     with KD_Count 1
     with name 'csl-236' 
 ;
 
-Object I169_csl_hall_r ""
+Object I170_csl_hall_r ""
     class K1_room
     with short_name "csl-hall-R"
     has proper
@@ -11209,12 +11226,12 @@ Object I169_csl_hall_r ""
     with cap_short_name "Csl-hall-R"
     has mark_as_room
     with IK1_Count 32
-    with IK1_Link I170_csl_234
+    with IK1_Link I171_csl_234
     with KD_Count 1
     with name 'csl-hall-r' 
 ;
 
-Object I170_csl_234 ""
+Object I171_csl_234 ""
     class K1_room
     with short_name "csl-234"
     has proper
@@ -11224,12 +11241,12 @@ Object I170_csl_234 ""
     with cap_short_name "Csl-234"
     has mark_as_room
     with IK1_Count 33
-    with IK1_Link I171_csl_233
+    with IK1_Link I172_csl_233
     with KD_Count 1
     with name 'csl-234' 
 ;
 
-Object I171_csl_233 ""
+Object I172_csl_233 ""
     class K1_room
     with short_name "csl-233"
     has proper
@@ -11239,12 +11256,12 @@ Object I171_csl_233 ""
     with cap_short_name "Csl-233"
     has mark_as_room
     with IK1_Count 34
-    with IK1_Link I172_csl_238c
+    with IK1_Link I173_csl_238c
     with KD_Count 1
     with name 'csl-233' 
 ;
 
-Object I172_csl_238c ""
+Object I173_csl_238c ""
     class K1_room
     with short_name "csl-238C"
     has proper
@@ -11254,15 +11271,15 @@ Object I172_csl_238c ""
     with cap_short_name "Csl-238C"
     has mark_as_room
     with IK1_Count 35
-    with IK1_Link I173_csl_238
+    with IK1_Link I174_csl_238
     with KD_Count 1
     with name 'csl-238c' 
 ;
 
-Object I173_csl_238 ""
+Object I174_csl_238 ""
     class K1_room
     with short_name "csl-238"
-    with description SC_33
+    with description SC_34
     has proper
     with vector 0
     with room_index -1
@@ -11270,12 +11287,12 @@ Object I173_csl_238 ""
     with cap_short_name "Csl-238"
     has mark_as_room
     with IK1_Count 36
-    with IK1_Link I174_csl_238b
+    with IK1_Link I175_csl_238b
     with KD_Count 1
     with name 'csl-238' 
 ;
 
-Object I174_csl_238b ""
+Object I175_csl_238b ""
     class K1_room
     with short_name "csl-238B"
     has proper
@@ -11285,12 +11302,12 @@ Object I174_csl_238b ""
     with cap_short_name "Csl-238B"
     has mark_as_room
     with IK1_Count 37
-    with IK1_Link I175_csl_240
+    with IK1_Link I176_csl_240
     with KD_Count 1
     with name 'csl-238b' 
 ;
 
-Object I175_csl_240 ""
+Object I176_csl_240 ""
     class K1_room
     with short_name "csl-240"
     has proper
@@ -11300,12 +11317,12 @@ Object I175_csl_240 ""
     with cap_short_name "Csl-240"
     has mark_as_room
     with IK1_Count 38
-    with IK1_Link I176_csl_hall_b
+    with IK1_Link I177_csl_hall_b
     with KD_Count 1
     with name 'csl-240' 
 ;
 
-Object I176_csl_hall_b ""
+Object I177_csl_hall_b ""
     class K1_room
     with short_name "csl-hall-B"
     has proper
@@ -11315,12 +11332,12 @@ Object I176_csl_hall_b ""
     with cap_short_name "Csl-hall-B"
     has mark_as_room
     with IK1_Count 39
-    with IK1_Link I177_csl_235d
+    with IK1_Link I178_csl_235d
     with KD_Count 1
     with name 'csl-hall-b' 
 ;
 
-Object I177_csl_235d ""
+Object I178_csl_235d ""
     class K1_room
     with short_name "csl-235D"
     has proper
@@ -11330,12 +11347,12 @@ Object I177_csl_235d ""
     with cap_short_name "Csl-235D"
     has mark_as_room
     with IK1_Count 40
-    with IK1_Link I178_csl_235c
+    with IK1_Link I179_csl_235c
     with KD_Count 1
     with name 'csl-235d' 
 ;
 
-Object I178_csl_235c ""
+Object I179_csl_235c ""
     class K1_room
     with short_name "csl-235C"
     has proper
@@ -11345,12 +11362,12 @@ Object I178_csl_235c ""
     with cap_short_name "Csl-235C"
     has mark_as_room
     with IK1_Count 41
-    with IK1_Link I179_csl_232_1
+    with IK1_Link I180_csl_232_1
     with KD_Count 1
     with name 'csl-235c' 
 ;
 
-Object I179_csl_232_1 ""
+Object I180_csl_232_1 ""
     class K1_room
     with short_name "csl-232-1"
     has proper
@@ -11360,12 +11377,12 @@ Object I179_csl_232_1 ""
     with cap_short_name "Csl-232-1"
     has mark_as_room
     with IK1_Count 42
-    with IK1_Link I180_csl_232_2
+    with IK1_Link I181_csl_232_2
     with KD_Count 1
     with name 'csl-232-1' 
 ;
 
-Object I180_csl_232_2 ""
+Object I181_csl_232_2 ""
     class K1_room
     with short_name "csl-232-2"
     has proper
@@ -11375,96 +11392,96 @@ Object I180_csl_232_2 ""
     with cap_short_name "Csl-232-2"
     has mark_as_room
     with IK1_Count 43
-    with IK1_Link I181_csl_235_1
+    with IK1_Link I182_csl_235_1
     with KD_Count 1
     with name 'csl-232-2' 
 ;
 
-Object I181_csl_235_1 ""
+Object I182_csl_235_1 ""
     class K1_room
-    with short_name SC_34
+    with short_name SC_35
     has proper
     with vector 0
     with room_index -1
     with list_together 0
     has mark_as_room
     with IK1_Count 44
-    with IK1_Link I182_csl_235_2
+    with IK1_Link I183_csl_235_2
     with KD_Count 1
     with name 'csl-235-1' 
 ;
 
-Object I182_csl_235_2 ""
+Object I183_csl_235_2 ""
     class K1_room
-    with short_name SC_34
+    with short_name SC_35
     has proper
     with vector 0
     with room_index -1
     with list_together 0
     has mark_as_room
     with IK1_Count 45
-    with IK1_Link I183_csl_235_3
+    with IK1_Link I184_csl_235_3
     with KD_Count 1
     with name 'csl-235-2' 
 ;
 
-Object I183_csl_235_3 ""
+Object I184_csl_235_3 ""
     class K1_room
-    with short_name SC_34
+    with short_name SC_35
     has proper
     with vector 0
     with room_index -1
     with list_together 0
     has mark_as_room
     with IK1_Count 46
-    with IK1_Link I184_csl_235_4
+    with IK1_Link I185_csl_235_4
     with KD_Count 1
     with name 'csl-235-3' 
 ;
 
-Object I184_csl_235_4 ""
+Object I185_csl_235_4 ""
     class K1_room
-    with short_name SC_34
+    with short_name SC_35
     has proper
     with vector 0
     with room_index -1
     with list_together 0
     has mark_as_room
     with IK1_Count 47
-    with IK1_Link I185_csl_235_5
+    with IK1_Link I186_csl_235_5
     with KD_Count 1
     with name 'csl-235-4' 
 ;
 
-Object I185_csl_235_5 ""
+Object I186_csl_235_5 ""
     class K1_room
-    with short_name SC_34
+    with short_name SC_35
     has proper
     with vector 0
     with room_index -1
     with list_together 0
     has mark_as_room
     with IK1_Count 48
-    with IK1_Link I186_csl_235_6
+    with IK1_Link I187_csl_235_6
     with KD_Count 1
     with name 'csl-235-5' 
 ;
 
-Object I186_csl_235_6 ""
+Object I187_csl_235_6 ""
     class K1_room
-    with short_name SC_34
+    with short_name SC_35
     has proper
     with vector 0
     with room_index -1
     with list_together 0
     has mark_as_room
     with IK1_Count 49
-    with IK1_Link I187_csl_east_stairs
+    with IK1_Link I188_csl_east_stairs
     with KD_Count 1
     with name 'csl-235-6' 
 ;
 
-Object I187_csl_east_stairs ""
+Object I188_csl_east_stairs ""
     class K1_room
     with short_name "csl-east-stairs"
     has proper
@@ -11474,12 +11491,12 @@ Object I187_csl_east_stairs ""
     with cap_short_name "Csl-east-stairs"
     has mark_as_room
     with IK1_Count 50
-    with IK1_Link I188_csl_west_stairs
+    with IK1_Link I189_csl_west_stairs
     with KD_Count 1
     with name 'csl-east-stairs' 
 ;
 
-Object I188_csl_west_stairs ""
+Object I189_csl_west_stairs ""
     class K1_room
     with short_name "csl-west-stairs"
     has proper
@@ -11489,12 +11506,12 @@ Object I188_csl_west_stairs ""
     with cap_short_name "Csl-west-stairs"
     has mark_as_room
     with IK1_Count 51
-    with IK1_Link I189_north_corridor_1
+    with IK1_Link I190_north_corridor_1
     with KD_Count 1
     with name 'csl-west-stairs' 
 ;
 
-Object I189_north_corridor_1 ""
+Object I190_north_corridor_1 ""
     class K1_room
     with short_name "north corridor-1"
     has proper
@@ -11504,12 +11521,12 @@ Object I189_north_corridor_1 ""
     with cap_short_name "North corridor-1"
     has mark_as_room
     with IK1_Count 52
-    with IK1_Link I190_north_corridor_2
+    with IK1_Link I191_north_corridor_2
     with KD_Count 1
     with name 'north' 'corridor-1' 
 ;
 
-Object I190_north_corridor_2 ""
+Object I191_north_corridor_2 ""
     class K1_room
     with short_name "north corridor-2"
     has proper
@@ -11519,12 +11536,12 @@ Object I190_north_corridor_2 ""
     with cap_short_name "North corridor-2"
     has mark_as_room
     with IK1_Count 53
-    with IK1_Link I191_north_corridor_3
+    with IK1_Link I192_north_corridor_3
     with KD_Count 1
     with name 'north' 'corridor-2' 
 ;
 
-Object I191_north_corridor_3 ""
+Object I192_north_corridor_3 ""
     class K1_room
     with short_name "north corridor-3"
     has proper
@@ -11534,12 +11551,12 @@ Object I191_north_corridor_3 ""
     with cap_short_name "North corridor-3"
     has mark_as_room
     with IK1_Count 54
-    with IK1_Link I192_north_corridor_4
+    with IK1_Link I193_north_corridor_4
     with KD_Count 1
     with name 'north' 'corridor-3' 
 ;
 
-Object -> I203_csl_233_d ""
+Object -> I204_csl_233_d ""
     class K4_door
     with short_name "csl-233-D"
     has proper
@@ -11549,16 +11566,16 @@ Object -> I203_csl_233_d ""
     with list_together 0
     with cap_short_name "Csl-233-D"
     has mark_as_thing
-    with IK2_Count 55
-    with IK2_Link I214_csl_232_1_d_u
+    with IK2_Count 56
+    with IK2_Link I215_csl_232_1_d_u
     with IK4_Count 17
-    with IK4_Link I214_csl_232_1_d_u
+    with IK4_Link I215_csl_232_1_d_u
     with KD_Count 4
     with name 'csl-233-d' 
     with action_bitmap 0 0 0 0 0 0 
 ;
 
-Object I192_north_corridor_4 ""
+Object I193_north_corridor_4 ""
     class K1_room
     with short_name "north corridor-4"
     has proper
@@ -11568,12 +11585,12 @@ Object I192_north_corridor_4 ""
     with cap_short_name "North corridor-4"
     has mark_as_room
     with IK1_Count 55
-    with IK1_Link I193_north_corridor__2
+    with IK1_Link I194_north_corridor__2
     with KD_Count 1
     with name 'north' 'corridor-4' 
 ;
 
-Object -> I214_csl_232_1_d_u ""
+Object -> I215_csl_232_1_d_u ""
     class K4_door
     with short_name "csl-232-1-D-U"
     has proper
@@ -11583,16 +11600,16 @@ Object -> I214_csl_232_1_d_u ""
     with list_together 0
     with cap_short_name "Csl-232-1-D-U"
     has mark_as_thing
-    with IK2_Count 66
-    with IK2_Link I194_csl_239_d
+    with IK2_Count 67
+    with IK2_Link I195_csl_239_d
     with IK4_Count 28
-    with IK4_Link I194_csl_239_d
+    with IK4_Link I195_csl_239_d
     with KD_Count 4
     with name 'csl-232-1-d-u' 
     with action_bitmap 0 0 0 0 0 0 
 ;
 
-Object I193_north_corridor__2 ""
+Object I194_north_corridor__2 ""
     class K1_room
     with short_name "north corridor -2"
     has proper
@@ -11607,7 +11624,7 @@ Object I193_north_corridor__2 ""
     with name 'north' 'corridor' '-2' 
 ;
 
-Object I194_csl_239_d ""
+Object I195_csl_239_d ""
     class K4_door
     with short_name "csl-239-D"
     has proper
@@ -11615,24 +11632,24 @@ Object I194_csl_239_d ""
     with vector 0
     with door_dir [ loc; loc = location;
             if (loc == thedark) loc = real_location;
-            if (loc == I164_csl_239) return I49_south; return I46_north; ],
+            if (loc == I165_csl_239) return I49_south; return I46_north; ],
     with door_to [ loc; loc = location;
             if (loc == thedark) loc = real_location;
-            if (loc == I164_csl_239) return I148_northeast_corridor; return I164_csl_239; ],
-    with found_in I164_csl_239 I148_northeast_corridor
+            if (loc == I165_csl_239) return I149_northeast_corridor; return I165_csl_239; ],
+    with found_in I165_csl_239 I149_northeast_corridor
     with list_together 0
     with cap_short_name "Csl-239-D"
     has mark_as_thing
-    with IK2_Count 46
-    with IK2_Link I195_csl_hall_l_d_u
+    with IK2_Count 47
+    with IK2_Link I196_csl_hall_l_d_u
     with IK4_Count 8
-    with IK4_Link I195_csl_hall_l_d_u
+    with IK4_Link I196_csl_hall_l_d_u
     with KD_Count 4
     with name 'csl-239-d' 
     with action_bitmap 0 0 0 0 0 0 
 ;
 
-Object I195_csl_hall_l_d_u ""
+Object I196_csl_hall_l_d_u ""
     class K4_door
     with short_name "csl-hall-L-D-U"
     has proper
@@ -11640,24 +11657,24 @@ Object I195_csl_hall_l_d_u ""
     with vector 0
     with door_dir [ loc; loc = location;
             if (loc == thedark) loc = real_location;
-            if (loc == I166_csl_hall_l) return I49_south; return I46_north; ],
+            if (loc == I167_csl_hall_l) return I49_south; return I46_north; ],
     with door_to [ loc; loc = location;
             if (loc == thedark) loc = real_location;
-            if (loc == I166_csl_hall_l) return I189_north_corridor_1; return I166_csl_hall_l; ],
-    with found_in I166_csl_hall_l I189_north_corridor_1
+            if (loc == I167_csl_hall_l) return I190_north_corridor_1; return I167_csl_hall_l; ],
+    with found_in I167_csl_hall_l I190_north_corridor_1
     with list_together 0
     with cap_short_name "Csl-hall-L-D-U"
     has mark_as_thing
-    with IK2_Count 47
-    with IK2_Link I196_csl_hall_l_d_l
+    with IK2_Count 48
+    with IK2_Link I197_csl_hall_l_d_l
     with IK4_Count 9
-    with IK4_Link I196_csl_hall_l_d_l
+    with IK4_Link I197_csl_hall_l_d_l
     with KD_Count 4
     with name 'csl-hall-l-d-u' 
     with action_bitmap 0 0 0 0 0 0 
 ;
 
-Object I196_csl_hall_l_d_l ""
+Object I197_csl_hall_l_d_l ""
     class K4_door
     with short_name "csl-hall-L-D-L"
     has proper
@@ -11665,24 +11682,24 @@ Object I196_csl_hall_l_d_l ""
     with vector 0
     with door_dir [ loc; loc = location;
             if (loc == thedark) loc = real_location;
-            if (loc == I165_csl_238d) return I53_west; return I52_east; ],
+            if (loc == I166_csl_238d) return I53_west; return I52_east; ],
     with door_to [ loc; loc = location;
             if (loc == thedark) loc = real_location;
-            if (loc == I165_csl_238d) return I166_csl_hall_l; return I165_csl_238d; ],
-    with found_in I165_csl_238d I166_csl_hall_l
+            if (loc == I166_csl_238d) return I167_csl_hall_l; return I166_csl_238d; ],
+    with found_in I166_csl_238d I167_csl_hall_l
     with list_together 0
     with cap_short_name "Csl-hall-L-D-L"
     has mark_as_thing
-    with IK2_Count 48
-    with IK2_Link I197_csl_hall_l_d_d
+    with IK2_Count 49
+    with IK2_Link I198_csl_hall_l_d_d
     with IK4_Count 10
-    with IK4_Link I197_csl_hall_l_d_d
+    with IK4_Link I198_csl_hall_l_d_d
     with KD_Count 4
     with name 'csl-hall-l-d-l' 
     with action_bitmap 0 0 0 0 0 0 
 ;
 
-Object I197_csl_hall_l_d_d ""
+Object I198_csl_hall_l_d_d ""
     class K4_door
     with short_name "csl-hall-L-D-D"
     has proper
@@ -11690,24 +11707,24 @@ Object I197_csl_hall_l_d_d ""
     with vector 0
     with door_dir [ loc; loc = location;
             if (loc == thedark) loc = real_location;
-            if (loc == I181_csl_235_1) return I49_south; return I46_north; ],
+            if (loc == I182_csl_235_1) return I49_south; return I46_north; ],
     with door_to [ loc; loc = location;
             if (loc == thedark) loc = real_location;
-            if (loc == I181_csl_235_1) return I166_csl_hall_l; return I181_csl_235_1; ],
-    with found_in I181_csl_235_1 I166_csl_hall_l
+            if (loc == I182_csl_235_1) return I167_csl_hall_l; return I182_csl_235_1; ],
+    with found_in I182_csl_235_1 I167_csl_hall_l
     with list_together 0
     with cap_short_name "Csl-hall-L-D-D"
     has mark_as_thing
-    with IK2_Count 49
-    with IK2_Link I198_csl_hall_l_d_r
+    with IK2_Count 50
+    with IK2_Link I199_csl_hall_l_d_r
     with IK4_Count 11
-    with IK4_Link I198_csl_hall_l_d_r
+    with IK4_Link I199_csl_hall_l_d_r
     with KD_Count 4
     with name 'csl-hall-l-d-d' 
     with action_bitmap 0 0 0 0 0 0 
 ;
 
-Object I198_csl_hall_l_d_r ""
+Object I199_csl_hall_l_d_r ""
     class K4_door
     with short_name "csl-hall-L-D-R"
     has proper
@@ -11715,24 +11732,24 @@ Object I198_csl_hall_l_d_r ""
     with vector 0
     with door_dir [ loc; loc = location;
             if (loc == thedark) loc = real_location;
-            if (loc == I166_csl_hall_l) return I53_west; return I52_east; ],
+            if (loc == I167_csl_hall_l) return I53_west; return I52_east; ],
     with door_to [ loc; loc = location;
             if (loc == thedark) loc = real_location;
-            if (loc == I166_csl_hall_l) return I167_csl_238g; return I166_csl_hall_l; ],
-    with found_in I166_csl_hall_l I167_csl_238g
+            if (loc == I167_csl_hall_l) return I168_csl_238g; return I167_csl_hall_l; ],
+    with found_in I167_csl_hall_l I168_csl_238g
     with list_together 0
     with cap_short_name "Csl-hall-L-D-R"
     has mark_as_thing
-    with IK2_Count 50
-    with IK2_Link I199_csl_hall_r_d_u
+    with IK2_Count 51
+    with IK2_Link I200_csl_hall_r_d_u
     with IK4_Count 12
-    with IK4_Link I199_csl_hall_r_d_u
+    with IK4_Link I200_csl_hall_r_d_u
     with KD_Count 4
     with name 'csl-hall-l-d-r' 
     with action_bitmap 0 0 0 0 0 0 
 ;
 
-Object I199_csl_hall_r_d_u ""
+Object I200_csl_hall_r_d_u ""
     class K4_door
     with short_name "csl-hall-R-D-U"
     has proper
@@ -11740,24 +11757,24 @@ Object I199_csl_hall_r_d_u ""
     with vector 0
     with door_dir [ loc; loc = location;
             if (loc == thedark) loc = real_location;
-            if (loc == I169_csl_hall_r) return I49_south; return I46_north; ],
+            if (loc == I170_csl_hall_r) return I49_south; return I46_north; ],
     with door_to [ loc; loc = location;
             if (loc == thedark) loc = real_location;
-            if (loc == I169_csl_hall_r) return I190_north_corridor_2; return I169_csl_hall_r; ],
-    with found_in I169_csl_hall_r I190_north_corridor_2
+            if (loc == I170_csl_hall_r) return I191_north_corridor_2; return I170_csl_hall_r; ],
+    with found_in I170_csl_hall_r I191_north_corridor_2
     with list_together 0
     with cap_short_name "Csl-hall-R-D-U"
     has mark_as_thing
-    with IK2_Count 51
-    with IK2_Link I200_csl_hall_r_d_l
+    with IK2_Count 52
+    with IK2_Link I201_csl_hall_r_d_l
     with IK4_Count 13
-    with IK4_Link I200_csl_hall_r_d_l
+    with IK4_Link I201_csl_hall_r_d_l
     with KD_Count 4
     with name 'csl-hall-r-d-u' 
     with action_bitmap 0 0 0 0 0 0 
 ;
 
-Object I200_csl_hall_r_d_l ""
+Object I201_csl_hall_r_d_l ""
     class K4_door
     with short_name "csl-hall-R-D-L"
     has proper
@@ -11765,24 +11782,24 @@ Object I200_csl_hall_r_d_l ""
     with vector 0
     with door_dir [ loc; loc = location;
             if (loc == thedark) loc = real_location;
-            if (loc == I168_csl_236) return I53_west; return I52_east; ],
+            if (loc == I169_csl_236) return I53_west; return I52_east; ],
     with door_to [ loc; loc = location;
             if (loc == thedark) loc = real_location;
-            if (loc == I168_csl_236) return I169_csl_hall_r; return I168_csl_236; ],
-    with found_in I168_csl_236 I169_csl_hall_r
+            if (loc == I169_csl_236) return I170_csl_hall_r; return I169_csl_236; ],
+    with found_in I169_csl_236 I170_csl_hall_r
     with list_together 0
     with cap_short_name "Csl-hall-R-D-L"
     has mark_as_thing
-    with IK2_Count 52
-    with IK2_Link I201_csl_hall_r_d_d
+    with IK2_Count 53
+    with IK2_Link I202_csl_hall_r_d_d
     with IK4_Count 14
-    with IK4_Link I201_csl_hall_r_d_d
+    with IK4_Link I202_csl_hall_r_d_d
     with KD_Count 4
     with name 'csl-hall-r-d-l' 
     with action_bitmap 0 0 0 0 0 0 
 ;
 
-Object I201_csl_hall_r_d_d ""
+Object I202_csl_hall_r_d_d ""
     class K4_door
     with short_name "csl-hall-R-D-D"
     has proper
@@ -11790,24 +11807,24 @@ Object I201_csl_hall_r_d_d ""
     with vector 0
     with door_dir [ loc; loc = location;
             if (loc == thedark) loc = real_location;
-            if (loc == I183_csl_235_3) return I49_south; return I46_north; ],
+            if (loc == I184_csl_235_3) return I49_south; return I46_north; ],
     with door_to [ loc; loc = location;
             if (loc == thedark) loc = real_location;
-            if (loc == I183_csl_235_3) return I169_csl_hall_r; return I183_csl_235_3; ],
-    with found_in I183_csl_235_3 I169_csl_hall_r
+            if (loc == I184_csl_235_3) return I170_csl_hall_r; return I184_csl_235_3; ],
+    with found_in I184_csl_235_3 I170_csl_hall_r
     with list_together 0
     with cap_short_name "Csl-hall-R-D-D"
     has mark_as_thing
-    with IK2_Count 53
-    with IK2_Link I202_csl_hall_r_d_r
+    with IK2_Count 54
+    with IK2_Link I203_csl_hall_r_d_r
     with IK4_Count 15
-    with IK4_Link I202_csl_hall_r_d_r
+    with IK4_Link I203_csl_hall_r_d_r
     with KD_Count 4
     with name 'csl-hall-r-d-d' 
     with action_bitmap 0 0 0 0 0 0 
 ;
 
-Object I202_csl_hall_r_d_r ""
+Object I203_csl_hall_r_d_r ""
     class K4_door
     with short_name "csl-hall-R-D-R"
     has proper
@@ -11815,24 +11832,24 @@ Object I202_csl_hall_r_d_r ""
     with vector 0
     with door_dir [ loc; loc = location;
             if (loc == thedark) loc = real_location;
-            if (loc == I169_csl_hall_r) return I53_west; return I52_east; ],
+            if (loc == I170_csl_hall_r) return I53_west; return I52_east; ],
     with door_to [ loc; loc = location;
             if (loc == thedark) loc = real_location;
-            if (loc == I169_csl_hall_r) return I170_csl_234; return I169_csl_hall_r; ],
-    with found_in I169_csl_hall_r I170_csl_234
+            if (loc == I170_csl_hall_r) return I171_csl_234; return I170_csl_hall_r; ],
+    with found_in I170_csl_hall_r I171_csl_234
     with list_together 0
     with cap_short_name "Csl-hall-R-D-R"
     has mark_as_thing
-    with IK2_Count 54
-    with IK2_Link I205_csl_238c_d_r
+    with IK2_Count 55
+    with IK2_Link I206_csl_238c_d_r
     with IK4_Count 16
-    with IK4_Link I205_csl_238c_d_r
+    with IK4_Link I206_csl_238c_d_r
     with KD_Count 4
     with name 'csl-hall-r-d-r' 
     with action_bitmap 0 0 0 0 0 0 
 ;
 
-Object I205_csl_238c_d_r ""
+Object I206_csl_238c_d_r ""
     class K4_door
     with short_name "csl-238C-D-R"
     has proper
@@ -11840,24 +11857,24 @@ Object I205_csl_238c_d_r ""
     with vector 0
     with door_dir [ loc; loc = location;
             if (loc == thedark) loc = real_location;
-            if (loc == I172_csl_238c) return I53_west; return I52_east; ],
+            if (loc == I173_csl_238c) return I53_west; return I52_east; ],
     with door_to [ loc; loc = location;
             if (loc == thedark) loc = real_location;
-            if (loc == I172_csl_238c) return I173_csl_238; return I172_csl_238c; ],
-    with found_in I172_csl_238c I173_csl_238
+            if (loc == I173_csl_238c) return I174_csl_238; return I173_csl_238c; ],
+    with found_in I173_csl_238c I174_csl_238
     with list_together 0
     with cap_short_name "Csl-238C-D-R"
     has mark_as_thing
-    with IK2_Count 57
-    with IK2_Link I206_csl_238_d
+    with IK2_Count 58
+    with IK2_Link I207_csl_238_d
     with IK4_Count 19
-    with IK4_Link I206_csl_238_d
+    with IK4_Link I207_csl_238_d
     with KD_Count 4
     with name 'csl-238c-d-r' 
     with action_bitmap 0 0 0 0 0 0 
 ;
 
-Object I206_csl_238_d ""
+Object I207_csl_238_d ""
     class K4_door
     with short_name "csl-238-D"
     has proper
@@ -11865,24 +11882,24 @@ Object I206_csl_238_d ""
     with vector 0
     with door_dir [ loc; loc = location;
             if (loc == thedark) loc = real_location;
-            if (loc == I173_csl_238) return I53_west; return I52_east; ],
+            if (loc == I174_csl_238) return I53_west; return I52_east; ],
     with door_to [ loc; loc = location;
             if (loc == thedark) loc = real_location;
-            if (loc == I173_csl_238) return I181_csl_235_1; return I173_csl_238; ],
-    with found_in I173_csl_238 I181_csl_235_1
+            if (loc == I174_csl_238) return I182_csl_235_1; return I174_csl_238; ],
+    with found_in I174_csl_238 I182_csl_235_1
     with list_together 0
     with cap_short_name "Csl-238-D"
     has mark_as_thing
-    with IK2_Count 58
-    with IK2_Link I207_csl_238b_d
+    with IK2_Count 59
+    with IK2_Link I208_csl_238b_d
     with IK4_Count 20
-    with IK4_Link I207_csl_238b_d
+    with IK4_Link I208_csl_238b_d
     with KD_Count 4
     with name 'csl-238-d' 
     with action_bitmap 0 0 0 0 0 0 
 ;
 
-Object I207_csl_238b_d ""
+Object I208_csl_238b_d ""
     class K4_door
     with short_name "csl-238B-D"
     has proper
@@ -11890,24 +11907,24 @@ Object I207_csl_238b_d ""
     with vector 0
     with door_dir [ loc; loc = location;
             if (loc == thedark) loc = real_location;
-            if (loc == I174_csl_238b) return I53_west; return I52_east; ],
+            if (loc == I175_csl_238b) return I53_west; return I52_east; ],
     with door_to [ loc; loc = location;
             if (loc == thedark) loc = real_location;
-            if (loc == I174_csl_238b) return I184_csl_235_4; return I174_csl_238b; ],
-    with found_in I174_csl_238b I184_csl_235_4
+            if (loc == I175_csl_238b) return I185_csl_235_4; return I175_csl_238b; ],
+    with found_in I175_csl_238b I185_csl_235_4
     with list_together 0
     with cap_short_name "Csl-238B-D"
     has mark_as_thing
-    with IK2_Count 59
-    with IK2_Link I208_csl_240_d
+    with IK2_Count 60
+    with IK2_Link I209_csl_240_d
     with IK4_Count 21
-    with IK4_Link I208_csl_240_d
+    with IK4_Link I209_csl_240_d
     with KD_Count 4
     with name 'csl-238b-d' 
     with action_bitmap 0 0 0 0 0 0 
 ;
 
-Object I208_csl_240_d ""
+Object I209_csl_240_d ""
     class K4_door
     with short_name "csl-240-D"
     has proper
@@ -11915,24 +11932,24 @@ Object I208_csl_240_d ""
     with vector 0
     with door_dir [ loc; loc = location;
             if (loc == thedark) loc = real_location;
-            if (loc == I175_csl_240) return I51_southwest; return I47_northeast; ],
+            if (loc == I176_csl_240) return I51_southwest; return I47_northeast; ],
     with door_to [ loc; loc = location;
             if (loc == thedark) loc = real_location;
-            if (loc == I175_csl_240) return I184_csl_235_4; return I175_csl_240; ],
-    with found_in I175_csl_240 I184_csl_235_4
+            if (loc == I176_csl_240) return I185_csl_235_4; return I176_csl_240; ],
+    with found_in I176_csl_240 I185_csl_235_4
     with list_together 0
     with cap_short_name "Csl-240-D"
     has mark_as_thing
-    with IK2_Count 60
-    with IK2_Link I209_csl_hall_b_u
+    with IK2_Count 61
+    with IK2_Link I210_csl_hall_b_u
     with IK4_Count 22
-    with IK4_Link I209_csl_hall_b_u
+    with IK4_Link I210_csl_hall_b_u
     with KD_Count 4
     with name 'csl-240-d' 
     with action_bitmap 0 0 0 0 0 0 
 ;
 
-Object I209_csl_hall_b_u ""
+Object I210_csl_hall_b_u ""
     class K4_door
     with short_name "csl-hall-B-U"
     has proper
@@ -11940,24 +11957,24 @@ Object I209_csl_hall_b_u ""
     with vector 0
     with door_dir [ loc; loc = location;
             if (loc == thedark) loc = real_location;
-            if (loc == I176_csl_hall_b) return I49_south; return I46_north; ],
+            if (loc == I177_csl_hall_b) return I49_south; return I46_north; ],
     with door_to [ loc; loc = location;
             if (loc == thedark) loc = real_location;
-            if (loc == I176_csl_hall_b) return I184_csl_235_4; return I176_csl_hall_b; ],
-    with found_in I176_csl_hall_b I184_csl_235_4
+            if (loc == I177_csl_hall_b) return I185_csl_235_4; return I177_csl_hall_b; ],
+    with found_in I177_csl_hall_b I185_csl_235_4
     with list_together 0
     with cap_short_name "Csl-hall-B-U"
     has mark_as_thing
-    with IK2_Count 61
-    with IK2_Link I210_csl_235d_d
+    with IK2_Count 62
+    with IK2_Link I211_csl_235d_d
     with IK4_Count 23
-    with IK4_Link I210_csl_235d_d
+    with IK4_Link I211_csl_235d_d
     with KD_Count 4
     with name 'csl-hall-b-u' 
     with action_bitmap 0 0 0 0 0 0 
 ;
 
-Object I210_csl_235d_d ""
+Object I211_csl_235d_d ""
     class K4_door
     with short_name "csl-235D-D"
     has proper
@@ -11965,24 +11982,24 @@ Object I210_csl_235d_d ""
     with vector 0
     with door_dir [ loc; loc = location;
             if (loc == thedark) loc = real_location;
-            if (loc == I177_csl_235d) return I49_south; return I46_north; ],
+            if (loc == I178_csl_235d) return I49_south; return I46_north; ],
     with door_to [ loc; loc = location;
             if (loc == thedark) loc = real_location;
-            if (loc == I177_csl_235d) return I185_csl_235_5; return I177_csl_235d; ],
-    with found_in I177_csl_235d I185_csl_235_5
+            if (loc == I178_csl_235d) return I186_csl_235_5; return I178_csl_235d; ],
+    with found_in I178_csl_235d I186_csl_235_5
     with list_together 0
     with cap_short_name "Csl-235D-D"
     has mark_as_thing
-    with IK2_Count 62
-    with IK2_Link I211_csl_235c_d
+    with IK2_Count 63
+    with IK2_Link I212_csl_235c_d
     with IK4_Count 24
-    with IK4_Link I211_csl_235c_d
+    with IK4_Link I212_csl_235c_d
     with KD_Count 4
     with name 'csl-235d-d' 
     with action_bitmap 0 0 0 0 0 0 
 ;
 
-Object I211_csl_235c_d ""
+Object I212_csl_235c_d ""
     class K4_door
     with short_name "csl-235C-D"
     has proper
@@ -11990,24 +12007,24 @@ Object I211_csl_235c_d ""
     with vector 0
     with door_dir [ loc; loc = location;
             if (loc == thedark) loc = real_location;
-            if (loc == I178_csl_235c) return I49_south; return I46_north; ],
+            if (loc == I179_csl_235c) return I49_south; return I46_north; ],
     with door_to [ loc; loc = location;
             if (loc == thedark) loc = real_location;
-            if (loc == I178_csl_235c) return I186_csl_235_6; return I178_csl_235c; ],
-    with found_in I178_csl_235c I186_csl_235_6
+            if (loc == I179_csl_235c) return I187_csl_235_6; return I179_csl_235c; ],
+    with found_in I179_csl_235c I187_csl_235_6
     with list_together 0
     with cap_short_name "Csl-235C-D"
     has mark_as_thing
-    with IK2_Count 63
-    with IK2_Link I212_csl_232_2_d_l
+    with IK2_Count 64
+    with IK2_Link I213_csl_232_2_d_l
     with IK4_Count 25
-    with IK4_Link I212_csl_232_2_d_l
+    with IK4_Link I213_csl_232_2_d_l
     with KD_Count 4
     with name 'csl-235c-d' 
     with action_bitmap 0 0 0 0 0 0 
 ;
 
-Object I212_csl_232_2_d_l ""
+Object I213_csl_232_2_d_l ""
     class K4_door
     with short_name "csl-232-2-D-L"
     has proper
@@ -12015,24 +12032,24 @@ Object I212_csl_232_2_d_l ""
     with vector 0
     with door_dir [ loc; loc = location;
             if (loc == thedark) loc = real_location;
-            if (loc == I186_csl_235_6) return I53_west; return I52_east; ],
+            if (loc == I187_csl_235_6) return I53_west; return I52_east; ],
     with door_to [ loc; loc = location;
             if (loc == thedark) loc = real_location;
-            if (loc == I186_csl_235_6) return I180_csl_232_2; return I186_csl_235_6; ],
-    with found_in I186_csl_235_6 I180_csl_232_2
+            if (loc == I187_csl_235_6) return I181_csl_232_2; return I187_csl_235_6; ],
+    with found_in I187_csl_235_6 I181_csl_232_2
     with list_together 0
     with cap_short_name "Csl-232-2-D-L"
     has mark_as_thing
-    with IK2_Count 64
-    with IK2_Link I213_csl_232_1_d
+    with IK2_Count 65
+    with IK2_Link I214_csl_232_1_d
     with IK4_Count 26
-    with IK4_Link I213_csl_232_1_d
+    with IK4_Link I214_csl_232_1_d
     with KD_Count 4
     with name 'csl-232-2-d-l' 
     with action_bitmap 0 0 0 0 0 0 
 ;
 
-Object I213_csl_232_1_d ""
+Object I214_csl_232_1_d ""
     class K4_door
     with short_name "csl-232-1-D"
     has proper
@@ -12040,15 +12057,15 @@ Object I213_csl_232_1_d ""
     with vector 0
     with door_dir [ loc; loc = location;
             if (loc == thedark) loc = real_location;
-            if (loc == I183_csl_235_3) return I53_west; return I52_east; ],
+            if (loc == I184_csl_235_3) return I53_west; return I52_east; ],
     with door_to [ loc; loc = location;
             if (loc == thedark) loc = real_location;
-            if (loc == I183_csl_235_3) return I179_csl_232_1; return I183_csl_235_3; ],
-    with found_in I183_csl_235_3 I179_csl_232_1
+            if (loc == I184_csl_235_3) return I180_csl_232_1; return I184_csl_235_3; ],
+    with found_in I184_csl_235_3 I180_csl_232_1
     with list_together 0
     with cap_short_name "Csl-232-1-D"
     has mark_as_thing
-    with IK2_Count 65
+    with IK2_Count 66
     with IK2_Link nothing
     with IK4_Count 27
     with IK4_Link nothing
@@ -12081,7 +12098,7 @@ Constant I86_referred_to_a_determinat = 19;
 Constant I87_i_beg_your_pardon_error = 20;
 Array Global_Vars -->
   (false) ! 7
-  (SC_35) ! 24
+  (SC_36) ! 24
   (SC_2) ! 29
   (EMPTY_TEXT_VALUE) ! 30
   (EMPTY_TEXT_VALUE) ! 31
@@ -12094,14 +12111,14 @@ Array Global_Vars -->
 
 
 Array T0_final_question_options table  tab_0_0 tab_0_1 tab_0_2 tab_0_3 tab_0_4;
-Array tab_0_0 table $0064 0  (SC_36)  (SC_37)  (SC_38)  (SC_39)  (SC_40) ;
+Array tab_0_0 table $0064 0  (SC_37)  (SC_38)  (SC_39)  (SC_40)  (SC_41) ;
 Array tab_0_1 table $0465 1  (0)  (0)  (1)  (0)  (0) ;
 Array tab_0_2 table $2066 2  (Consult_Grammar_110)  (Consult_Grammar_111)  (Consult_Grammar_112)  (Consult_Grammar_113)  (Consult_Grammar_114) ;
 Array tab_0_3 table $0067 3  (IMMEDIATELY_RESTART_VM_R)  (IMMEDIATELY_RESTORE_SAVED_R)  TABLE_NOVALUE (IMMEDIATELY_QUIT_R)  (IMMEDIATELY_UNDO_R) ;
 Array tab_0_4 table $0068 4  TABLE_NOVALUE TABLE_NOVALUE (V26_amusing_a_victorious_pla)  TABLE_NOVALUE TABLE_NOVALUE;
 Array T1_locale_priorities table  tab_1_0 tab_1_1;
-Array tab_1_0 table $0869 NULL  TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE;
-Array tab_1_1 table $446a 5  TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE;
+Array tab_1_0 table $0869 NULL  TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE;
+Array tab_1_1 table $446a 5  TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE;
 Array TB_Blanks -> 
   ! For table T0_final_question_options
   $00  ! Column 0
@@ -12111,7 +12128,7 @@ Array TB_Blanks ->
   $1b  ! Column 4
   
   ! For table T1_locale_priorities
-  $ff $ff $ff $ff $ff $ff $ff $ff $0f  ! Column 1
+  $ff $ff $ff $ff $ff $ff $ff $ff $1f  ! Column 1
   
   ! End of table
   NULL NULL;
@@ -12218,9 +12235,10 @@ Array ActionData table
   ##NotifyOn  $$00100000  OBJECT_TY OBJECT_TY  0 20077
   ##NotifyOff  $$00100000  OBJECT_TY OBJECT_TY  0 20078
   ##Pronouns  $$00100000  OBJECT_TY OBJECT_TY  0 20079
-  ##A80_talking_to  $$00001000  OBJECT_TY OBJECT_TY  0 20080
+  ##A80_smashing_it_with  $$00011011  OBJECT_TY OBJECT_TY  0 20080
+  ##A81_talking_to  $$00001000  OBJECT_TY OBJECT_TY  0 20081
 ;
-Constant AD_RECORDS = 81;
+Constant AD_RECORDS = 82;
 [ ANSTVC_7 pos state;
     if (state == 1) {
         MStack-->pos = I88_faculty_entrances1; pos++;
@@ -12349,7 +12367,8 @@ Constant AD_RECORDS = 81;
         ##NotifyOn: print "switching score notification on"; 
         ##NotifyOff: print "switching score notification off"; 
         ##Pronouns: print "requesting the pronoun meanings"; 
-        ##A80_talking_to: print "talking to"; if (for_say ~= 2) { print " "; DA_Name(n); }
+        ##A80_smashing_it_with: print "smashing"; print " "; if (for_say == 2) print "it"; else DA_Name(n); print " "; print "with"; if (for_say ~= 2) { print " "; DA_Name(s); }
+        ##A81_talking_to: print "talking to"; if (for_say ~= 2) { print " "; DA_Name(n); }
     }
 ];
 
@@ -12364,7 +12383,7 @@ Array ActionCoding -->
     ##Mild ##Swing ##Rub ##SetTo ##WaveHands ##Buy ##Sing ##Climb
     ##Sleep ##Quit ##Save ##Restore ##Restart ##Verify ##ScriptOn ##ScriptOff
     ##Version ##Score ##LMode3 ##LMode2 ##LMode1 ##NotifyOn ##NotifyOff ##Pronouns
-    ##A80_talking_to;
+    ##A80_smashing_it_with ##A81_talking_to;
 
 
 Array ActionHappened --> 0 0 0 0 0 0;
@@ -12450,7 +12469,8 @@ Array ActionHappened --> 0 0 0 0 0 0;
 [ NotifyOnSub; return GenericVerbSub(356,357,358); ];
 [ NotifyOffSub; return GenericVerbSub(359,360,361); ];
 [ PronounsSub; return GenericVerbSub(362,363,364); ];
-[ A80_talking_toSub; return GenericVerbSub(365,366,367); ];
+[ A80_smashing_it_withSub; return GenericVerbSub(365,366,367); ];
+[ A81_talking_toSub; return GenericVerbSub(368,369,370); ];
 
 [ MistakeActionSub;
     switch(understand_as_mistake_number) {
@@ -12706,7 +12726,7 @@ Array ActionHappened --> 0 0 0 0 0 0;
 [ R_20 ;
       ! phrase 1
       ! [1: if the current item from the multiple object list is not nothing , say ~[current item from the multiple object list]: [run paragraph on]~]
-       if (((~~((multiple_object_item == nothing))))) { say__p=1;ParaContent();  print (PrintShortName) multiple_object_item; ParaContent();  print (PrintText) SC_41; ParaContent();  RunParagraphOn();  .L_Say3; .L_SayX3;  }
+       if (((~~((multiple_object_item == nothing))))) { say__p=1;ParaContent();  print (PrintShortName) multiple_object_item; ParaContent();  print (PrintText) SC_42; ParaContent();  RunParagraphOn();  .L_Say3; .L_SayX3;  }
    rfalse;
 ];
 ! No specific request
@@ -13046,7 +13066,7 @@ self = noun;
           if ((((Adj_16_t1_v9(noun)))))  {
             ! phrase 3
             ! [3: say ~This is useless with out a battery~]
-            say__p=1;ParaContent();  print (PrintText) SC_42;  .L_Say4; .L_SayX4;
+            say__p=1;ParaContent();  print (PrintText) SC_43;  .L_Say4; .L_SayX4;
             ! phrase 4
             ! [4: stop the action]
              rtrue; 
@@ -13059,7 +13079,7 @@ self = noun;
           if (((~~(((Adj_16_t1_v9(noun)))))))  {
             ! phrase 7
             ! [7: say ~Ah this will help me alot. What did you say you were doing? anyways I have this 'A' I can give you, but how about this key? [paragraph break] ::you now carry the key foaad gave you::~]
-            say__p=1;ParaContent();  print (PrintText) SC_43; ParaContent();  DivideParagraphPoint(); new_line; ParaContent();  print (PrintText) SC_44;  .L_Say5; .L_SayX5;
+            say__p=1;ParaContent();  print (PrintText) SC_44; ParaContent();  DivideParagraphPoint(); new_line; ParaContent();  print (PrintText) SC_45;  .L_Say5; .L_SayX5;
             ! phrase 8
             ! [8: now the player has the north atrium key]
              MoveObject(I146_north_atrium_key,player); 
@@ -13073,7 +13093,7 @@ self = noun;
 
          ! phrase 11
          ! [11: say ~I only want the solder pen~]
-         say__p=1;ParaContent();  print (PrintText) SC_45;  .L_Say6; .L_SayX6;
+         say__p=1;ParaContent();  print (PrintText) SC_46;  .L_Say6; .L_SayX6;
          ! phrase 12
          ! [12: stop the action]
           rtrue; 
@@ -13112,7 +13132,7 @@ self = noun;
    if (debug_rules) DB_Rule(R_742, 742);
       ! phrase 1
       ! [1: say ~Nothing will happen by inserting that into the slot since its not a battery~]
-      say__p=1;ParaContent();  print (PrintText) SC_46;  .L_Say7; .L_SayX7;
+      say__p=1;ParaContent();  print (PrintText) SC_47;  .L_Say7; .L_SayX7;
       RulebookFails(); rtrue;
    } ! Runs only when pattern matches
    else if (debug_rules > 1) DB_Rule(R_742, 742, true);
@@ -13140,7 +13160,7 @@ self = noun;
    if (debug_rules) DB_Rule(R_753, 753);
       ! phrase 1
       ! [1: say ~[The noun] looks like he could use a solder pen. Better go find that~]
-      say__p=1;ParaContent();  print (The) noun; ParaContent();  print (PrintText) SC_47;  .L_Say8; .L_SayX8;
+      say__p=1;ParaContent();  print (The) noun; ParaContent();  print (PrintText) SC_48;  .L_Say8; .L_SayX8;
       RulebookFails(); rtrue;
    } ! Runs only when pattern matches
    else if (debug_rules > 1) DB_Rule(R_753, 753, true);
@@ -13149,12 +13169,12 @@ self = noun;
 ! No specific request
 ! Instead of talking to Foaad:
 [ R_754 ;
-   if ((action ==##A80_talking_to) &&  (actor==player) && ((noun == I145_foaad) && (true))) { ! Runs only when pattern matches
+   if ((action ==##A81_talking_to) &&  (actor==player) && ((noun == I145_foaad) && (true))) { ! Runs only when pattern matches
 self = noun;
    if (debug_rules) DB_Rule(R_754, 754);
       ! phrase 1
       ! [1: say ~I could really use a solder pen for my side project, I'm sure I can give you something for it~]
-      say__p=1;ParaContent();  print (PrintText) SC_48;  .L_Say9; .L_SayX9;
+      say__p=1;ParaContent();  print (PrintText) SC_49;  .L_Say9; .L_SayX9;
       RulebookFails(); rtrue;
    } ! Runs only when pattern matches
    else if (debug_rules > 1) DB_Rule(R_754, 754, true);
@@ -13168,7 +13188,7 @@ self = noun;
    if (debug_rules) DB_Rule(R_746, 746);
       ! phrase 1
       ! [1: say ~You need a power source!~]
-      say__p=1;ParaContent();  print (PrintText) SC_49;  new_line; .L_Say10; .L_SayX10;
+      say__p=1;ParaContent();  print (PrintText) SC_50;  new_line; .L_Say10; .L_SayX10;
       RulebookFails(); rtrue;
    } ! Runs only when pattern matches
    else if (debug_rules > 1) DB_Rule(R_746, 746, true);
@@ -13380,7 +13400,7 @@ self = noun;
    if (debug_rules) DB_Rule(R_60, 60);
       ! phrase 1
       ! [1: say ~[listing group size in words] ~]
-      say__p=1;ParaContent();  print (number) say__n=(listing_size); ParaContent();  print (PrintText) SC_50;  .L_Say12; .L_SayX12;
+      say__p=1;ParaContent();  print (number) say__n=(listing_size); ParaContent();  print (PrintText) SC_51;  .L_Say12; .L_SayX12;
       ! phrase 2
       ! [2: carry out the printing the plural name activity with the item]
        CarryOutActivity(V1_printing_the_plural_name_, t_0); 
@@ -13593,7 +13613,7 @@ self = noun;
        if (((t_0 < 1))) {  if (ProcessRulebook(IMMEDIATELY_QUIT_R)) rtrue;   }
       ! phrase 10
       ! [10: say ~Would you like to ~]
-      say__p=1;ParaContent();  print (PrintText) SC_51;  .L_Say13; .L_SayX13;
+      say__p=1;ParaContent();  print (PrintText) SC_52;  .L_Say13; .L_SayX13;
       ! phrase 11
       ! [11: repeat through the table of final question options begin]
        @push ct_0; @push ct_1;
@@ -13620,23 +13640,23 @@ self = noun;
                    if (((t_0 == 0)))  {
                      ! phrase 18
                      ! [18: say ~?[line break]~]
-                     say__p=1;ParaContent();  print (PrintText) SC_52; ParaContent();  new_line;  .L_Say15; .L_SayX15;
+                     say__p=1;ParaContent();  print (PrintText) SC_53; ParaContent();  new_line;  .L_Say15; .L_SayX15;
                      ! phrase 19
                      ! [19: otherwise if the named options count is 1]
                       } else if (((t_0 == 1))) { 
                      ! phrase 20
                      ! [20: if the serial comma option is active , say ~,~]
-                      if ((((Adj_22_t1_v15(5))))) { say__p=1;ParaContent();  print (PrintText) SC_53;  .L_Say16; .L_SayX16;  }
+                      if ((((Adj_22_t1_v15(5))))) { say__p=1;ParaContent();  print (PrintText) SC_54;  .L_Say16; .L_SayX16;  }
                      ! phrase 21
                      ! [21: say ~ or ~]
-                     say__p=1;ParaContent();  print (PrintText) SC_54;  .L_Say17; .L_SayX17;
+                     say__p=1;ParaContent();  print (PrintText) SC_55;  .L_Say17; .L_SayX17;
                      ! phrase 22
                      ! [22: otherwise]
                      } else {
 
                      ! phrase 23
                      ! [23: say ~, ~]
-                     say__p=1;ParaContent();  print (PrintText) SC_55;  .L_Say18; .L_SayX18;
+                     say__p=1;ParaContent();  print (PrintText) SC_56;  .L_Say18; .L_SayX18;
                      ! phrase 24
                      ! [24: end if]
                      }
@@ -13665,7 +13685,7 @@ self = noun;
 [ R_68 ;
       ! phrase 1
       ! [1: say ~> [run paragraph on]~]
-      say__p=1;ParaContent();  print (PrintText) SC_56; ParaContent();  RunParagraphOn();  .L_Say19; .L_SayX19;
+      say__p=1;ParaContent();  print (PrintText) SC_57; ParaContent();  RunParagraphOn();  .L_Say19; .L_SayX19;
    rfalse;
 ];
 ! ----------------------------------------------------------------------------------------------------
@@ -13918,40 +13938,40 @@ self = noun;
                 if (((t_0 ofclass K1_room)))  {
                   ! phrase 22
                   ! [22: if the domain is the location , say ~You ~]
-                   if (((t_0 == real_location))) { say__p=1;ParaContent();  print (PrintText) SC_57;  .L_Say20; .L_SayX20;  }
+                   if (((t_0 == real_location))) { say__p=1;ParaContent();  print (PrintText) SC_58;  .L_Say20; .L_SayX20;  }
                   ! phrase 23
                   ! [23: otherwise say ~In [the domain] you ~]
-                   else { say__p=1;ParaContent();  print (PrintText) SC_58; ParaContent();  print (the) t_0; ParaContent();  print (PrintText) SC_59;  .L_Say21; .L_SayX21;  }
+                   else { say__p=1;ParaContent();  print (PrintText) SC_59; ParaContent();  print (the) t_0; ParaContent();  print (PrintText) SC_60;  .L_Say21; .L_SayX21;  }
                   ! phrase 24
                   ! [24: otherwise if the domain is a supporter]
                    } else if (((t_0 ofclass K6_supporter))) { 
                   ! phrase 25
                   ! [25: say ~On [the domain] you ~]
-                  say__p=1;ParaContent();  print (PrintText) SC_60; ParaContent();  print (the) t_0; ParaContent();  print (PrintText) SC_59;  .L_Say22; .L_SayX22;
+                  say__p=1;ParaContent();  print (PrintText) SC_61; ParaContent();  print (the) t_0; ParaContent();  print (PrintText) SC_60;  .L_Say22; .L_SayX22;
                   ! phrase 26
                   ! [26: otherwise if the domain is an animal]
                    } else if (((t_0 ofclass K12_animal))) { 
                   ! phrase 27
                   ! [27: say ~On [the domain] you ~]
-                  say__p=1;ParaContent();  print (PrintText) SC_60; ParaContent();  print (the) t_0; ParaContent();  print (PrintText) SC_59;  .L_Say23; .L_SayX23;
+                  say__p=1;ParaContent();  print (PrintText) SC_61; ParaContent();  print (the) t_0; ParaContent();  print (PrintText) SC_60;  .L_Say23; .L_SayX23;
                   ! phrase 28
                   ! [28: otherwise]
                   } else {
 
                   ! phrase 29
                   ! [29: say ~In [the domain] you ~]
-                  say__p=1;ParaContent();  print (PrintText) SC_58; ParaContent();  print (the) t_0; ParaContent();  print (PrintText) SC_59;  .L_Say24; .L_SayX24;
+                  say__p=1;ParaContent();  print (PrintText) SC_59; ParaContent();  print (the) t_0; ParaContent();  print (PrintText) SC_60;  .L_Say24; .L_SayX24;
                   ! phrase 30
                   ! [30: end if]
                   }
 
                ! phrase 31
                ! [31: say ~can [if the locale paragraph count is greater than 0]also [end if]see ~]
-               say__p=1;ParaContent();  print (PrintText) SC_61; 
+               say__p=1;ParaContent();  print (PrintText) SC_62; 
 	if (~~(((((Global_Vars-->8) > 0))))) jump L_Say25;
-		ParaContent();  print (PrintText) SC_62; 
+		ParaContent();  print (PrintText) SC_63; 
 	.L_Say25; .L_SayX25;
-		ParaContent();  print (PrintText) SC_63;  .L_Say26; .L_SayX26;
+		ParaContent();  print (PrintText) SC_64;  .L_Say26; .L_SayX26;
                ! phrase 32
                ! [32: let the common holder be nothing]
                 t_2 = nothing; 
@@ -13997,10 +14017,10 @@ self = noun;
 		@pull subst__v;  .L_Say27; .L_SayX27;  }
                ! phrase 44
                ! [44: if the domain is the location , say ~ here~]
-                if (((t_0 == real_location))) { say__p=1;ParaContent();  print (PrintText) SC_64;  .L_Say28; .L_SayX28;  }
+                if (((t_0 == real_location))) { say__p=1;ParaContent();  print (PrintText) SC_65;  .L_Say28; .L_SayX28;  }
                ! phrase 45
                ! [45: say ~.[paragraph break]~]
-               say__p=1;ParaContent();  print (PrintText) SC_65; ParaContent();  DivideParagraphPoint(); new_line;  .L_Say29; .L_SayX29;
+               say__p=1;ParaContent();  print (PrintText) SC_66; ParaContent();  DivideParagraphPoint(); new_line;  .L_Say29; .L_SayX29;
                ! phrase 46
                ! [46: unfilter list recursion]
                 list_filter_routine = 0; 
@@ -14261,13 +14281,13 @@ self = noun;
 
                ! phrase 13
                ! [13: say ~On [the item] ~]
-               say__p=1;ParaContent();  print (PrintText) SC_60; ParaContent();  print (the) t_0; ParaContent();  print (PrintText) SC_50;  .L_Say34; .L_SayX34;
+               say__p=1;ParaContent();  print (PrintText) SC_61; ParaContent();  print (the) t_0; ParaContent();  print (PrintText) SC_51;  .L_Say34; .L_SayX34;
                ! phrase 14
                ! [14: list the contents of the item , as a sentence , including contents , giving brief inventory information , tersely , not listing concealed items , prefacing with is/are , listing marked items only]
                 WriteListFrom(child(t_0), 3800); 
                ! phrase 15
                ! [15: say ~.[paragraph break]~]
-               say__p=1;ParaContent();  print (PrintText) SC_65; ParaContent();  DivideParagraphPoint(); new_line;  .L_Say35; .L_SayX35;
+               say__p=1;ParaContent();  print (PrintText) SC_66; ParaContent();  DivideParagraphPoint(); new_line;  .L_Say35; .L_SayX35;
                ! phrase 16
                ! [16: end if]
                }
@@ -14335,13 +14355,13 @@ self = noun;
              (Global_Vars-->8) = (Global_Vars-->8) + 1; 
             ! phrase 11
             ! [11: say ~On [the item] ~]
-            say__p=1;ParaContent();  print (PrintText) SC_60; ParaContent();  print (the) t_0; ParaContent();  print (PrintText) SC_50;  .L_Say36; .L_SayX36;
+            say__p=1;ParaContent();  print (PrintText) SC_61; ParaContent();  print (the) t_0; ParaContent();  print (PrintText) SC_51;  .L_Say36; .L_SayX36;
             ! phrase 12
             ! [12: list the contents of the item , as a sentence , including contents , giving brief inventory information , tersely , not listing concealed items , prefacing with is/are , listing marked items only]
              WriteListFrom(child(t_0), 3800); 
             ! phrase 13
             ! [13: say ~.[paragraph break]~]
-            say__p=1;ParaContent();  print (PrintText) SC_65; ParaContent();  DivideParagraphPoint(); new_line;  .L_Say37; .L_SayX37;
+            say__p=1;ParaContent();  print (PrintText) SC_66; ParaContent();  DivideParagraphPoint(); new_line;  .L_Say37; .L_SayX37;
             ! phrase 14
             ! [14: end if]
             }
@@ -14391,7 +14411,7 @@ self = noun;
        GL__M(##Inv,2,noun); 
       ! phrase 2
       ! [2: say ~:[line break]~]
-      say__p=1;ParaContent();  print (PrintText) SC_66; ParaContent();  new_line;  .L_Say38; .L_SayX38;
+      say__p=1;ParaContent();  print (PrintText) SC_67; ParaContent();  new_line;  .L_Say38; .L_SayX38;
       ! phrase 3
       ! [3: list the contents of the player , with newlines , indented , including contents , giving inventory information , with extra indentation]
        WriteListFrom(child(player), 8215); 
@@ -15987,7 +16007,7 @@ self = noun;
           if (((~~(((MStack-->MstVO(20007,3)) == nothing)))))  {
             ! phrase 49
             ! [49: say ~ ~]
-            say__p=1;ParaContent();  print (PrintText) SC_50;  .L_Say39; .L_SayX39;
+            say__p=1;ParaContent();  print (PrintText) SC_51;  .L_Say39; .L_SayX39;
             ! phrase 50
             ! [50: if the vehicle gone by is a supporter , issue actor-based library message going action number 20 for the vehicle gone by]
              if ((((MStack-->MstVO(20007,3)) ofclass K6_supporter))) {  AGL__M(##Go,20,(MStack-->MstVO(20007,3)));   }
@@ -16042,7 +16062,7 @@ self = noun;
              AGL__M(##Go,26,noun); 
             ! phrase 66
             ! [66: say ~.~]
-            say__p=1;ParaContent();  print (PrintText) SC_65;  new_line; .L_Say40; .L_SayX40;
+            say__p=1;ParaContent();  print (PrintText) SC_66;  new_line; .L_Say40; .L_SayX40;
             ! phrase 67
             ! [67: try looking]
              TryAction(0, player, ##Look, 0, 0);; 
@@ -16055,7 +16075,7 @@ self = noun;
 
          ! phrase 70
          ! [70: say ~.~]
-         say__p=1;ParaContent();  print (PrintText) SC_65;  new_line; .L_Say41; .L_SayX41;
+         say__p=1;ParaContent();  print (PrintText) SC_66;  new_line; .L_Say41; .L_SayX41;
          ! phrase 71
          ! [71: end if]
          }
@@ -19541,6 +19561,61 @@ self = noun;
    rfalse;
 ];
 ! ----------------------------------------------------------------------------------------------------
+
+! ----------------------------------------------------------------------------------------------------
+! Rules in rulebook: check smashing it with (B365_check_smashing_it_with)
+! ----------------------------------------------------------------------------------------------------
+! Rule 1/1 ! Check smashing it with:
+! ----------------------------------------------------------------------------------------------------
+! No specific request
+! Check smashing it with:
+[ R_757 ;
+   if (actor == player) {
+   if (debug_rules) DB_Rule(R_757, 757);
+      ! phrase 1
+      ! [1: if the noun is a person , say ~why would you want to smash [noun]?!~ instead]
+       if (((noun ofclass K8_person))) { say__p=1;ParaContent();  print (PrintText) SC_68; ParaContent();  print (PrintShortName) noun; ParaContent();  print (PrintText) SC_69;  new_line; .L_Say49; .L_SayX49;  rtrue; }
+      ! phrase 2
+      ! [2: if the second noun is not a nokia phone , say ~[The second noun] does not have the properties of a nokia phone~ instead]
+       if (((~~((second == I139_nokia_phone))))) { say__p=1;ParaContent();  print (The) second; ParaContent();  print (PrintText) SC_70;  .L_Say50; .L_SayX50;  rtrue; }
+      ! phrase 3
+      ! [3: if the noun is not a faculty room , say ~that is a waste of time t smash the [noun]~]
+       if (((~~((noun ofclass K17_faculty_room))))) { say__p=1;ParaContent();  print (PrintText) SC_71; ParaContent();  print (PrintShortName) noun;  .L_Say51; .L_SayX51;  }
+   } ! Runs only when actor is the player
+   else if (debug_rules > 1) DB_Rule(R_757, 757, true);
+   rfalse;
+];
+! ----------------------------------------------------------------------------------------------------
+
+! ----------------------------------------------------------------------------------------------------
+! Rules in rulebook: carry out smashing it with (B366_carry_out_smashing_it_w)
+! ----------------------------------------------------------------------------------------------------
+! Rule 1/1 ! Carry out smashing a container with something:
+! ----------------------------------------------------------------------------------------------------
+! No specific request
+! Carry out smashing a container with something:
+[ R_756 ;
+   if ( (actor==player) && ((noun ofclass K5_container)) && ((second ofclass K2_thing))) { ! Runs only when pattern matches
+self = noun;
+   if (debug_rules) DB_Rule(R_756, 756);
+      ! phrase 1
+      ! [1: if noun is a faculty room begin]
+       if (((noun ofclass K17_faculty_room)))  {
+         ! phrase 2
+         ! [2: now the noun is open]
+          (Adj_60_t2_v9(noun)); 
+         ! phrase 3
+         ! [3: say ~You smash [noun] open!~]
+         say__p=1;ParaContent();  print (PrintText) SC_72; ParaContent();  print (PrintShortName) noun; ParaContent();  print (PrintText) SC_73;  new_line; .L_Say52; .L_SayX52;
+         ! phrase 4
+         ! [4: end if]
+         }
+
+   } ! Runs only when pattern matches
+   else if (debug_rules > 1) DB_Rule(R_756, 756, true);
+   rfalse;
+];
+! ----------------------------------------------------------------------------------------------------
 ! Definitions of displaced and unbooked rules
 
 ! No specific request
@@ -21436,7 +21511,7 @@ Array TimedEventTimesTable table 0 0;
 
 
 
-Array rulebooks_array --> B0_procedural B1_startup B2_turn_sequence B3_shutdown B4_scene_changing B5_when_play_begins B6_when_play_ends B7_when_scene_begins B8_when_scene_ends B9_every_turn B10_action_processing B11_setting_action_variables B12_specific_action_processi B13_player_s_action_awarenes B14_accessibility B15_reaching_inside B16_reaching_outside B17_visibility B18_persuasion B19_unsuccessful_attempt_by B20_before B21_instead B22_check B23_carry_out B24_after B25_report B26_does_the_player_mean B27_when_entire_game_begins B28_when_entire_game_ends B29_before_printing_the_name B30_for_printing_the_name B31_after_printing_the_name B32_before_printing_the_plur B33_for_printing_the_plural_ B34_after_printing_the_plura B35_before_printing_a_number B36_for_printing_a_number B37_after_printing_a_number B38_before_printing_room_des B39_for_printing_room_descri B40_after_printing_room_desc B41_before_listing_contents B42_for_listing_contents B43_after_listing_contents B44_before_grouping_together B45_for_grouping_together B46_after_grouping_together B47_before_writing_a_paragra B48_for_writing_a_paragraph_ B49_after_writing_a_paragrap B50_before_listing_nondescri B51_for_listing_nondescript_ B52_after_listing_nondescrip B53_before_printing_the_name B54_for_printing_the_name_of B55_after_printing_the_name_ B56_before_printing_the_desc B57_for_printing_the_descrip B58_after_printing_the_descr B59_before_printing_the_anno B60_for_printing_the_announc B61_after_printing_the_annou B62_before_printing_the_anno B63_for_printing_the_announc B64_after_printing_the_annou B65_before_printing_a_refusa B66_for_printing_a_refusal_t B67_after_printing_a_refusal B68_before_constructing_the_ B69_for_constructing_the_sta B70_after_constructing_the_s B71_before_printing_the_bann B72_for_printing_the_banner_ B73_after_printing_the_banne B74_before_reading_a_command B75_for_reading_a_command B76_after_reading_a_command B77_before_deciding_the_scop B78_for_deciding_the_scope B79_after_deciding_the_scope B80_before_deciding_the_conc B81_for_deciding_the_conceal B82_after_deciding_the_conce B83_before_deciding_whether_ B84_for_deciding_whether_all B85_after_deciding_whether_a B86_before_clarifying_the_pa B87_for_clarifying_the_parse B88_after_clarifying_the_par B89_before_asking_which_do_y B90_for_asking_which_do_you_ B91_after_asking_which_do_yo B92_before_printing_a_parser B93_for_printing_a_parser_er B94_after_printing_a_parser_ B95_before_supplying_a_missi B96_for_supplying_a_missing_ B97_after_supplying_a_missin B98_before_supplying_a_missi B99_for_supplying_a_missing_ B100_after_supplying_a_missi B101_before_implicitly_takin B102_for_implicitly_taking B103_after_implicitly_taking B104_before_starting_the_vir B105_for_starting_the_virtua B106_after_starting_the_virt B107_before_amusing_a_victor B108_for_amusing_a_victoriou B109_after_amusing_a_victori B110_before_printing_the_pla B111_for_printing_the_player B112_after_printing_the_play B113_before_handling_the_fin B114_for_handling_the_final_ B115_after_handling_the_fina B116_before_printing_the_loc B117_for_printing_the_locale B118_after_printing_the_loca B119_before_choosing_notable B120_for_choosing_notable_lo B121_after_choosing_notable_ B122_before_printing_a_local B123_for_printing_a_locale_p B124_after_printing_a_locale B125_check_taking_inventory B126_carry_out_taking_invent B127_report_taking_inventory B128_check_taking B129_carry_out_taking B130_report_taking B131_check_removing_it_from B132_carry_out_removing_it_f B133_report_removing_it_from B134_check_dropping B135_carry_out_dropping B136_report_dropping B137_check_putting_it_on B138_carry_out_putting_it_on B139_report_putting_it_on B140_check_inserting_it_into B141_carry_out_inserting_it_ B142_report_inserting_it_int B143_check_eating B144_carry_out_eating B145_report_eating B146_check_going B147_carry_out_going B148_report_going B149_check_entering B150_carry_out_entering B151_report_entering B152_check_exiting B153_carry_out_exiting B154_report_exiting B155_check_getting_off B156_carry_out_getting_off B157_report_getting_off B158_check_looking B159_carry_out_looking B160_report_looking B161_check_examining B162_carry_out_examining B163_report_examining B164_check_looking_under B165_carry_out_looking_under B166_report_looking_under B167_check_searching B168_carry_out_searching B169_report_searching B170_check_consulting_it_abo B171_carry_out_consulting_it B172_report_consulting_it_ab B173_check_locking_it_with B174_carry_out_locking_it_wi B175_report_locking_it_with B176_check_unlocking_it_with B177_carry_out_unlocking_it_ B178_report_unlocking_it_wit B179_check_switching_on B180_carry_out_switching_on B181_report_switching_on B182_check_switching_off B183_carry_out_switching_off B184_report_switching_off B185_check_opening B186_carry_out_opening B187_report_opening B188_check_closing B189_carry_out_closing B190_report_closing B191_check_wearing B192_carry_out_wearing B193_report_wearing B194_check_taking_off B195_carry_out_taking_off B196_report_taking_off B197_check_giving_it_to B198_carry_out_giving_it_to B199_report_giving_it_to B200_check_showing_it_to B201_carry_out_showing_it_to B202_report_showing_it_to B203_check_waking B204_carry_out_waking B205_report_waking B206_check_throwing_it_at B207_carry_out_throwing_it_a B208_report_throwing_it_at B209_check_attacking B210_carry_out_attacking B211_report_attacking B212_check_kissing B213_carry_out_kissing B214_report_kissing B215_check_answering_it_that B216_carry_out_answering_it_ B217_report_answering_it_tha B218_check_telling_it_about B219_carry_out_telling_it_ab B220_report_telling_it_about B221_check_asking_it_about B222_carry_out_asking_it_abo B223_report_asking_it_about B224_check_asking_it_for B225_carry_out_asking_it_for B226_report_asking_it_for B227_check_waiting B228_carry_out_waiting B229_report_waiting B230_check_touching B231_carry_out_touching B232_report_touching B233_check_waving B234_carry_out_waving B235_report_waving B236_check_pulling B237_carry_out_pulling B238_report_pulling B239_check_pushing B240_carry_out_pushing B241_report_pushing B242_check_turning B243_carry_out_turning B244_report_turning B245_check_pushing_it_to B246_carry_out_pushing_it_to B247_report_pushing_it_to B248_check_squeezing B249_carry_out_squeezing B250_report_squeezing B251_check_saying_yes B252_carry_out_saying_yes B253_report_saying_yes B254_check_saying_no B255_carry_out_saying_no B256_report_saying_no B257_check_burning B258_carry_out_burning B259_report_burning B260_check_waking_up B261_carry_out_waking_up B262_report_waking_up B263_check_thinking B264_carry_out_thinking B265_report_thinking B266_check_smelling B267_carry_out_smelling B268_report_smelling B269_check_listening_to B270_carry_out_listening_to B271_report_listening_to B272_check_tasting B273_carry_out_tasting B274_report_tasting B275_check_cutting B276_carry_out_cutting B277_report_cutting B278_check_jumping B279_carry_out_jumping B280_report_jumping B281_check_tying_it_to B282_carry_out_tying_it_to B283_report_tying_it_to B284_check_drinking B285_carry_out_drinking B286_report_drinking B287_check_saying_sorry B288_carry_out_saying_sorry B289_report_saying_sorry B290_check_swearing_obscenel B291_carry_out_swearing_obsc B292_report_swearing_obscene B293_check_swearing_mildly B294_carry_out_swearing_mild B295_report_swearing_mildly B296_check_swinging B297_carry_out_swinging B298_report_swinging B299_check_rubbing B300_carry_out_rubbing B301_report_rubbing B302_check_setting_it_to B303_carry_out_setting_it_to B304_report_setting_it_to B305_check_waving_hands B306_carry_out_waving_hands B307_report_waving_hands B308_check_buying B309_carry_out_buying B310_report_buying B311_check_singing B312_carry_out_singing B313_report_singing B314_check_climbing B315_carry_out_climbing B316_report_climbing B317_check_sleeping B318_carry_out_sleeping B319_report_sleeping B320_check_quitting_the_game B321_carry_out_quitting_the_ B322_report_quitting_the_gam B323_check_saving_the_game B324_carry_out_saving_the_ga B325_report_saving_the_game B326_check_restoring_the_gam B327_carry_out_restoring_the B328_report_restoring_the_ga B329_check_restarting_the_ga B330_carry_out_restarting_th B331_report_restarting_the_g B332_check_verifying_the_sto B333_carry_out_verifying_the B334_report_verifying_the_st B335_check_switching_the_sto B336_carry_out_switching_the B337_report_switching_the_st B338_check_switching_the_sto B339_carry_out_switching_the B340_report_switching_the_st B341_check_requesting_the_st B342_carry_out_requesting_th B343_report_requesting_the_s B344_check_requesting_the_sc B345_carry_out_requesting_th B346_report_requesting_the_s B347_check_preferring_abbrev B348_carry_out_preferring_ab B349_report_preferring_abbre B350_check_preferring_unabbr B351_carry_out_preferring_un B352_report_preferring_unabb B353_check_preferring_someti B354_carry_out_preferring_so B355_report_preferring_somet B356_check_switching_score_n B357_carry_out_switching_sco B358_report_switching_score_ B359_check_switching_score_n B360_carry_out_switching_sco B361_report_switching_score_ B362_check_requesting_the_pr B363_carry_out_requesting_th B364_report_requesting_the_p B365_check_talking_to B366_carry_out_talking_to B367_report_talking_to 0;
+Array rulebooks_array --> B0_procedural B1_startup B2_turn_sequence B3_shutdown B4_scene_changing B5_when_play_begins B6_when_play_ends B7_when_scene_begins B8_when_scene_ends B9_every_turn B10_action_processing B11_setting_action_variables B12_specific_action_processi B13_player_s_action_awarenes B14_accessibility B15_reaching_inside B16_reaching_outside B17_visibility B18_persuasion B19_unsuccessful_attempt_by B20_before B21_instead B22_check B23_carry_out B24_after B25_report B26_does_the_player_mean B27_when_entire_game_begins B28_when_entire_game_ends B29_before_printing_the_name B30_for_printing_the_name B31_after_printing_the_name B32_before_printing_the_plur B33_for_printing_the_plural_ B34_after_printing_the_plura B35_before_printing_a_number B36_for_printing_a_number B37_after_printing_a_number B38_before_printing_room_des B39_for_printing_room_descri B40_after_printing_room_desc B41_before_listing_contents B42_for_listing_contents B43_after_listing_contents B44_before_grouping_together B45_for_grouping_together B46_after_grouping_together B47_before_writing_a_paragra B48_for_writing_a_paragraph_ B49_after_writing_a_paragrap B50_before_listing_nondescri B51_for_listing_nondescript_ B52_after_listing_nondescrip B53_before_printing_the_name B54_for_printing_the_name_of B55_after_printing_the_name_ B56_before_printing_the_desc B57_for_printing_the_descrip B58_after_printing_the_descr B59_before_printing_the_anno B60_for_printing_the_announc B61_after_printing_the_annou B62_before_printing_the_anno B63_for_printing_the_announc B64_after_printing_the_annou B65_before_printing_a_refusa B66_for_printing_a_refusal_t B67_after_printing_a_refusal B68_before_constructing_the_ B69_for_constructing_the_sta B70_after_constructing_the_s B71_before_printing_the_bann B72_for_printing_the_banner_ B73_after_printing_the_banne B74_before_reading_a_command B75_for_reading_a_command B76_after_reading_a_command B77_before_deciding_the_scop B78_for_deciding_the_scope B79_after_deciding_the_scope B80_before_deciding_the_conc B81_for_deciding_the_conceal B82_after_deciding_the_conce B83_before_deciding_whether_ B84_for_deciding_whether_all B85_after_deciding_whether_a B86_before_clarifying_the_pa B87_for_clarifying_the_parse B88_after_clarifying_the_par B89_before_asking_which_do_y B90_for_asking_which_do_you_ B91_after_asking_which_do_yo B92_before_printing_a_parser B93_for_printing_a_parser_er B94_after_printing_a_parser_ B95_before_supplying_a_missi B96_for_supplying_a_missing_ B97_after_supplying_a_missin B98_before_supplying_a_missi B99_for_supplying_a_missing_ B100_after_supplying_a_missi B101_before_implicitly_takin B102_for_implicitly_taking B103_after_implicitly_taking B104_before_starting_the_vir B105_for_starting_the_virtua B106_after_starting_the_virt B107_before_amusing_a_victor B108_for_amusing_a_victoriou B109_after_amusing_a_victori B110_before_printing_the_pla B111_for_printing_the_player B112_after_printing_the_play B113_before_handling_the_fin B114_for_handling_the_final_ B115_after_handling_the_fina B116_before_printing_the_loc B117_for_printing_the_locale B118_after_printing_the_loca B119_before_choosing_notable B120_for_choosing_notable_lo B121_after_choosing_notable_ B122_before_printing_a_local B123_for_printing_a_locale_p B124_after_printing_a_locale B125_check_taking_inventory B126_carry_out_taking_invent B127_report_taking_inventory B128_check_taking B129_carry_out_taking B130_report_taking B131_check_removing_it_from B132_carry_out_removing_it_f B133_report_removing_it_from B134_check_dropping B135_carry_out_dropping B136_report_dropping B137_check_putting_it_on B138_carry_out_putting_it_on B139_report_putting_it_on B140_check_inserting_it_into B141_carry_out_inserting_it_ B142_report_inserting_it_int B143_check_eating B144_carry_out_eating B145_report_eating B146_check_going B147_carry_out_going B148_report_going B149_check_entering B150_carry_out_entering B151_report_entering B152_check_exiting B153_carry_out_exiting B154_report_exiting B155_check_getting_off B156_carry_out_getting_off B157_report_getting_off B158_check_looking B159_carry_out_looking B160_report_looking B161_check_examining B162_carry_out_examining B163_report_examining B164_check_looking_under B165_carry_out_looking_under B166_report_looking_under B167_check_searching B168_carry_out_searching B169_report_searching B170_check_consulting_it_abo B171_carry_out_consulting_it B172_report_consulting_it_ab B173_check_locking_it_with B174_carry_out_locking_it_wi B175_report_locking_it_with B176_check_unlocking_it_with B177_carry_out_unlocking_it_ B178_report_unlocking_it_wit B179_check_switching_on B180_carry_out_switching_on B181_report_switching_on B182_check_switching_off B183_carry_out_switching_off B184_report_switching_off B185_check_opening B186_carry_out_opening B187_report_opening B188_check_closing B189_carry_out_closing B190_report_closing B191_check_wearing B192_carry_out_wearing B193_report_wearing B194_check_taking_off B195_carry_out_taking_off B196_report_taking_off B197_check_giving_it_to B198_carry_out_giving_it_to B199_report_giving_it_to B200_check_showing_it_to B201_carry_out_showing_it_to B202_report_showing_it_to B203_check_waking B204_carry_out_waking B205_report_waking B206_check_throwing_it_at B207_carry_out_throwing_it_a B208_report_throwing_it_at B209_check_attacking B210_carry_out_attacking B211_report_attacking B212_check_kissing B213_carry_out_kissing B214_report_kissing B215_check_answering_it_that B216_carry_out_answering_it_ B217_report_answering_it_tha B218_check_telling_it_about B219_carry_out_telling_it_ab B220_report_telling_it_about B221_check_asking_it_about B222_carry_out_asking_it_abo B223_report_asking_it_about B224_check_asking_it_for B225_carry_out_asking_it_for B226_report_asking_it_for B227_check_waiting B228_carry_out_waiting B229_report_waiting B230_check_touching B231_carry_out_touching B232_report_touching B233_check_waving B234_carry_out_waving B235_report_waving B236_check_pulling B237_carry_out_pulling B238_report_pulling B239_check_pushing B240_carry_out_pushing B241_report_pushing B242_check_turning B243_carry_out_turning B244_report_turning B245_check_pushing_it_to B246_carry_out_pushing_it_to B247_report_pushing_it_to B248_check_squeezing B249_carry_out_squeezing B250_report_squeezing B251_check_saying_yes B252_carry_out_saying_yes B253_report_saying_yes B254_check_saying_no B255_carry_out_saying_no B256_report_saying_no B257_check_burning B258_carry_out_burning B259_report_burning B260_check_waking_up B261_carry_out_waking_up B262_report_waking_up B263_check_thinking B264_carry_out_thinking B265_report_thinking B266_check_smelling B267_carry_out_smelling B268_report_smelling B269_check_listening_to B270_carry_out_listening_to B271_report_listening_to B272_check_tasting B273_carry_out_tasting B274_report_tasting B275_check_cutting B276_carry_out_cutting B277_report_cutting B278_check_jumping B279_carry_out_jumping B280_report_jumping B281_check_tying_it_to B282_carry_out_tying_it_to B283_report_tying_it_to B284_check_drinking B285_carry_out_drinking B286_report_drinking B287_check_saying_sorry B288_carry_out_saying_sorry B289_report_saying_sorry B290_check_swearing_obscenel B291_carry_out_swearing_obsc B292_report_swearing_obscene B293_check_swearing_mildly B294_carry_out_swearing_mild B295_report_swearing_mildly B296_check_swinging B297_carry_out_swinging B298_report_swinging B299_check_rubbing B300_carry_out_rubbing B301_report_rubbing B302_check_setting_it_to B303_carry_out_setting_it_to B304_report_setting_it_to B305_check_waving_hands B306_carry_out_waving_hands B307_report_waving_hands B308_check_buying B309_carry_out_buying B310_report_buying B311_check_singing B312_carry_out_singing B313_report_singing B314_check_climbing B315_carry_out_climbing B316_report_climbing B317_check_sleeping B318_carry_out_sleeping B319_report_sleeping B320_check_quitting_the_game B321_carry_out_quitting_the_ B322_report_quitting_the_gam B323_check_saving_the_game B324_carry_out_saving_the_ga B325_report_saving_the_game B326_check_restoring_the_gam B327_carry_out_restoring_the B328_report_restoring_the_ga B329_check_restarting_the_ga B330_carry_out_restarting_th B331_report_restarting_the_g B332_check_verifying_the_sto B333_carry_out_verifying_the B334_report_verifying_the_st B335_check_switching_the_sto B336_carry_out_switching_the B337_report_switching_the_st B338_check_switching_the_sto B339_carry_out_switching_the B340_report_switching_the_st B341_check_requesting_the_st B342_carry_out_requesting_th B343_report_requesting_the_s B344_check_requesting_the_sc B345_carry_out_requesting_th B346_report_requesting_the_s B347_check_preferring_abbrev B348_carry_out_preferring_ab B349_report_preferring_abbre B350_check_preferring_unabbr B351_carry_out_preferring_un B352_report_preferring_unabb B353_check_preferring_someti B354_carry_out_preferring_so B355_report_preferring_somet B356_check_switching_score_n B357_carry_out_switching_sco B358_report_switching_score_ B359_check_switching_score_n B360_carry_out_switching_sco B361_report_switching_score_ B362_check_requesting_the_pr B363_carry_out_requesting_th B364_report_requesting_the_p B365_check_smashing_it_with B366_carry_out_smashing_it_w B367_report_smashing_it_with B368_check_talking_to B369_carry_out_talking_to B370_report_talking_to 0;
 
 Constant B0_procedural = EMPTY_RULEBOOK;
 Array B1_startup --> INITIALISE_MEMORY_R VIRTUAL_MACHINE_STARTUP_R SEED_RANDOM_NUMBER_GENERATOR_R UPDATE_CHRONOLOGICAL_RECORDS_R POSITION_PLAYER_IN_MODEL_R R_8 R_9 R_10 R_11 R_12 NULL; ! 10 rule(s)
@@ -21803,9 +21878,12 @@ Array B361_report_switching_score_ --> REP_SWITCH_NOTIFY_OFF_R NULL; ! 1 rule(s)
 Constant B362_check_requesting_the_pr = EMPTY_RULEBOOK;
 Array B363_carry_out_requesting_th --> ANNOUNCE_PRONOUN_MEANINGS_R NULL; ! 1 rule(s)
 Constant B364_report_requesting_the_p = EMPTY_RULEBOOK;
-Constant B365_check_talking_to = EMPTY_RULEBOOK;
-Constant B366_carry_out_talking_to = EMPTY_RULEBOOK;
-Constant B367_report_talking_to = EMPTY_RULEBOOK;
+Array B365_check_smashing_it_with --> R_757 NULL; ! 1 rule(s)
+Array B366_carry_out_smashing_it_w --> R_756 NULL; ! 1 rule(s)
+Constant B367_report_smashing_it_with = EMPTY_RULEBOOK;
+Constant B368_check_talking_to = EMPTY_RULEBOOK;
+Constant B369_carry_out_talking_to = EMPTY_RULEBOOK;
+Constant B370_report_talking_to = EMPTY_RULEBOOK;
 
 Constant BR_0 = R_8;
 Constant BR_1 = R_9;
@@ -22072,28 +22150,28 @@ Constant BR_261 = R_296;
 Constant BR_262 = R_297;
 Constant BR_263 = R_298;
 Constant BR_264 = R_299;
-Constant BR_708 = R_8;
-Constant BR_714 = R_9;
-Constant BR_715 = R_10;
-Constant BR_716 = R_11;
-Constant BR_717 = R_12;
-Constant BR_725 = R_16;
-Constant BR_726 = R_17;
-Constant BR_728 = R_18;
-Constant BR_731 = R_21;
-Constant BR_732 = R_19;
-Constant BR_733 = R_20;
-Constant BR_737 = R_22;
-Constant BR_741 = R_23;
-Constant BR_747 = R_35;
-Constant BR_749 = R_59;
-Constant BR_750 = R_60;
-Constant BR_752 = R_61;
-Constant BR_757 = R_69;
-Constant BR_758 = R_68;
-Constant BR_760 = R_70;
-Constant BR_761 = R_91;
-Constant BR_762 = R_148;
+Constant BR_713 = R_8;
+Constant BR_719 = R_9;
+Constant BR_720 = R_10;
+Constant BR_721 = R_11;
+Constant BR_722 = R_12;
+Constant BR_730 = R_16;
+Constant BR_731 = R_17;
+Constant BR_733 = R_18;
+Constant BR_736 = R_21;
+Constant BR_737 = R_19;
+Constant BR_738 = R_20;
+Constant BR_742 = R_22;
+Constant BR_746 = R_23;
+Constant BR_752 = R_35;
+Constant BR_754 = R_59;
+Constant BR_755 = R_60;
+Constant BR_757 = R_61;
+Constant BR_762 = R_69;
+Constant BR_763 = R_68;
+Constant BR_765 = R_70;
+Constant BR_766 = R_91;
+Constant BR_767 = R_148;
 
 
 
@@ -23172,7 +23250,7 @@ Global MStack_Frame_Extent = 0;
 ];
 
 #IFNDEF MEMORY_ECONOMY;
-Array rulebook_var_creators --> 0 0 0 0 0 0 0 0 0 0 RBSTVC_10 0 RBSTVC_12 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+Array rulebook_var_creators --> 0 0 0 0 0 0 0 0 0 0 RBSTVC_10 0 RBSTVC_12 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 #ENDIF;
 [  RBSTVC_10 pos state;
     if (state == 1) {
@@ -24516,7 +24594,7 @@ Array FWMatrix --> NUM_ROOMS*NUM_ROOMS;
 ];
 #ENDIF;
 
-Constant MAX_ROUTE_LENGTH = 136 + 32;
+Constant MAX_ROUTE_LENGTH = 137 + 32;
 
 [ RelationRouteTo relation from to count  handler;
 	if (count) {
@@ -25658,9 +25736,12 @@ Array RulebookNames -->
     "check Requesting the pronoun meanings rulebook" ! 362
     "carry out Requesting the pronoun meanings rulebook" ! 363
     "report Requesting the pronoun meanings rulebook" ! 364
-    "check Talking to rulebook" ! 365
-    "carry out Talking to rulebook" ! 366
-    "report Talking to rulebook" ! 367
+    "check smashing it with rulebook" ! 365
+    "carry out smashing it with rulebook" ! 366
+    "report smashing it with rulebook" ! 367
+    "check Talking to rulebook" ! 368
+    "carry out Talking to rulebook" ! 369
+    "report Talking to rulebook" ! 370
 ;
 
 
@@ -25993,99 +26074,101 @@ Array RulebookNames -->
 		if (R == SWITCH_SCORE_NOTIFY_OFF_R) { print "switch score notification off rule"; return; } ! 681, case 1
 		if (R == REP_SWITCH_NOTIFY_OFF_R) { print "standard report switching score notification off rule"; return; } ! 682, case 1
 		if (R == ANNOUNCE_PRONOUN_MEANINGS_R) { print "announce the pronoun meanings rule"; return; } ! 686, case 1
-		if (R == R_14) { print "A first turn sequence rule"; return; } ! 690, case 2
-		if (R == R_15) { print "A last turn sequence rule"; return; } ! 691, case 2
-		if (R == R_30) { print "last specific action-processing rule"; return; } ! 692, case 2
-		if (R == R_159) { print "Setting action variables for exiting"; return; } ! 693, case 2
-		if (R == R_741) { print "When play begins"; return; } ! 694, case 2
-		if (R == R_742) { print "Instead of inserting something which is not a battery into a battery compartment"; return; } ! 695, case 2
-		if (R == R_743) { print "Instead of opening a device"; return; } ! 696, case 2
-		if (R == R_744) { print "Instead of closing a device"; return; } ! 697, case 2
-		if (R == R_745) { print "Instead of inserting a battery into a device"; return; } ! 698, case 2
-		if (R == R_746) { print "Instead of switching on an empty device"; return; } ! 699, case 2
-		if (R == R_748) { print "Does the player mean doing something other than searching to a battery compartment"; return; } ! 700, case 2
-		if (R == R_749) { print "Does the player mean inserting into a battery compartment"; return; } ! 701, case 2
-		if (R == R_750) { print "Does the player mean inserting a battery compartment into"; return; } ! 702, case 2
-		if (R == R_751) { print "Does the player mean inserting something into a device"; return; } ! 703, case 2
-		if (R == R_752) { print "Does the player mean searching a battery compartment"; return; } ! 704, case 2
-		if (R == R_753) { print "Instead of examining Foaad"; return; } ! 705, case 2
-		if (R == R_754) { print "Instead of talking to Foaad"; return; } ! 706, case 2
-		if (R == R_755) { print "before giving something to foaad"; return; } ! 707, case 2
-		if (R == R_8) { print "start in the correct scenes rule"; return; } ! 708, case 1
-		if (R == POSITION_PLAYER_IN_MODEL_R) { print "position player in model world rule"; return; } ! 709, case 1
-		if (R == UPDATE_CHRONOLOGICAL_RECORDS_R) { print "update chronological records rule"; return; } ! 710, case 1
-		if (R == SEED_RANDOM_NUMBER_GENERATOR_R) { print "seed random number generator rule"; return; } ! 711, case 1
-		if (R == VIRTUAL_MACHINE_STARTUP_R) { print "virtual machine startup rule"; return; } ! 712, case 1
-		if (R == INITIALISE_MEMORY_R) { print "initialise memory rule"; return; } ! 713, case 1
-		if (R == R_9) { print "when play begins stage rule"; return; } ! 714, case 1
-		if (R == R_10) { print "fix baseline scoring rule"; return; } ! 715, case 1
-		if (R == R_11) { print "display banner rule"; return; } ! 716, case 1
-		if (R == R_12) { print "initial room description rule"; return; } ! 717, case 1
-		if (R == GENERATE_ACTION_R) { print "generate action rule"; return; } ! 718, case 1
-		if (R == PARSE_COMMAND_R) { print "parse command rule"; return; } ! 719, case 1
-		if (R == TIMED_EVENTS_R) { print "timed events rule"; return; } ! 720, case 1
-		if (R == ADVANCE_TIME_R) { print "advance time rule"; return; } ! 721, case 1
-		if (R == UPDATE_CHRONOLOGICAL_RECORDS_R) { print "update chronological records rule"; return; } ! 722, case 1
-		if (R == ADJUST_LIGHT_R) { print "adjust light rule"; return; } ! 723, case 1
-		if (R == NOTE_OBJECT_ACQUISITIONS_R) { print "note object acquisitions rule"; return; } ! 724, case 1
-		if (R == R_16) { print "notify score changes rule"; return; } ! 725, case 1
-		if (R == R_17) { print "when play ends stage rule"; return; } ! 726, case 1
-		if (R == RESURRECT_PLAYER_IF_ASKED_R) { print "resurrect player if asked rule"; return; } ! 727, case 1
-		if (R == R_18) { print "print player's obituary rule"; return; } ! 728, case 1
-		if (R == ASK_FINAL_QUESTION_R) { print "ask the final question rule"; return; } ! 729, case 1
-		if (R == DetectSceneChange) { print "scene change machinery rule"; return; } ! 730, case 1
-		if (R == R_21) { print "before stage rule"; return; } ! 731, case 1
-		if (R == R_19) { print "set pronouns from items from multiple object lists rule"; return; } ! 732, case 1
-		if (R == R_20) { print "announce items from multiple object lists rule"; return; } ! 733, case 1
-		if (R == BASIC_VISIBILITY_R) { print "basic visibility rule"; return; } ! 734, case 1
-		if (R == BASIC_ACCESSIBILITY_R) { print "basic accessibility rule"; return; } ! 735, case 1
-		if (R == CARRYING_REQUIREMENTS_R) { print "carrying requirements rule"; return; } ! 736, case 1
-		if (R == R_22) { print "instead stage rule"; return; } ! 737, case 1
-		if (R == REQUESTED_ACTIONS_REQUIRE_R) { print "requested actions require persuasion rule"; return; } ! 738, case 1
-		if (R == CARRY_OUT_REQUESTED_ACTIONS_R) { print "carry out requested actions rule"; return; } ! 739, case 1
-		if (R == DESCEND_TO_SPECIFIC_ACTION_R) { print "descend to specific action-processing rule"; return; } ! 740, case 1
-		if (R == R_23) { print "end action-processing in success rule"; return; } ! 741, case 1
-		if (R == WORK_OUT_DETAILS_OF_SPECIFIC_R) { print "work out details of specific action rule"; return; } ! 742, case 1
-		if (R == ACCESS_THROUGH_BARRIERS_R) { print "access through barriers rule"; return; } ! 743, case 1
-		if (R == CANT_REACH_INSIDE_ROOMS_R) { print "can't reach inside rooms rule"; return; } ! 744, case 1
-		if (R == CANT_REACH_INSIDE_CLOSED_R) { print "can't reach inside closed containers rule"; return; } ! 745, case 1
-		if (R == CANT_REACH_OUTSIDE_CLOSED_R) { print "can't reach outside closed containers rule"; return; } ! 746, case 1
-		if (R == R_35) { print "can't act in the dark rule"; return; } ! 747, case 1
-		if (R == STANDARD_NAME_PRINTING_R) { print "standard name printing rule"; return; } ! 748, case 1
-		if (R == R_59) { print "standard printing the plural name rule"; return; } ! 749, case 1
-		if (R == R_60) { print "standard printing a number of something rule"; return; } ! 750, case 1
-		if (R == STANDARD_CONTENTS_LISTING_R) { print "standard contents listing rule"; return; } ! 751, case 1
-		if (R == R_61) { print "look around once light available rule"; return; } ! 752, case 1
-		if (R == ENABLE_GLULX_ACCEL_R) { print "enable Glulx acceleration rule"; return; } ! 753, case 1
-		if (R == PRINT_OBITUARY_HEADLINE_R) { print "print obituary headline rule"; return; } ! 754, case 1
-		if (R == PRINT_FINAL_SCORE_R) { print "print final score rule"; return; } ! 755, case 1
-		if (R == DISPLAY_FINAL_STATUS_LINE_R) { print "display final status line rule"; return; } ! 756, case 1
-		if (R == R_69) { print "print the final question rule"; return; } ! 757, case 1
-		if (R == R_68) { print "print the final prompt rule"; return; } ! 758, case 1
-		if (R == READ_FINAL_ANSWER_R) { print "read the final answer rule"; return; } ! 759, case 1
-		if (R == R_70) { print "standard respond to final question rule"; return; } ! 760, case 1
-		if (R == R_91) { print "can't take component parts rule"; return; } ! 761, case 1
-		if (R == R_148) { print "find what to enter rule"; return; } ! 762, case 1
-		if (R == QUIT_THE_GAME_R) { print "quit the game rule"; return; } ! 763, case 1
-		if (R == SAVE_THE_GAME_R) { print "save the game rule"; return; } ! 764, case 1
-		if (R == RESTORE_THE_GAME_R) { print "restore the game rule"; return; } ! 765, case 1
-		if (R == RESTART_THE_GAME_R) { print "restart the game rule"; return; } ! 766, case 1
-		if (R == VERIFY_THE_STORY_FILE_R) { print "verify the story file rule"; return; } ! 767, case 1
-		if (R == SWITCH_TRANSCRIPT_ON_R) { print "switch the story transcript on rule"; return; } ! 768, case 1
-		if (R == SWITCH_TRANSCRIPT_OFF_R) { print "switch the story transcript off rule"; return; } ! 769, case 1
-		if (R == ANNOUNCE_STORY_FILE_VERSION_R) { print "announce the story file version rule"; return; } ! 770, case 1
-		if (R == ANNOUNCE_SCORE_R) { print "announce the score rule"; return; } ! 771, case 1
-		if (R == PREFER_ABBREVIATED_R) { print "prefer abbreviated room descriptions rule"; return; } ! 772, case 1
-		if (R == REP_PREFER_ABBREVIATED_R) { print "standard report preferring abbreviated room descriptions rule"; return; } ! 773, case 1
-		if (R == PREFER_UNABBREVIATED_R) { print "prefer unabbreviated room descriptions rule"; return; } ! 774, case 1
-		if (R == REP_PREFER_UNABBREVIATED_R) { print "standard report preferring unabbreviated room descriptions rule"; return; } ! 775, case 1
-		if (R == PREFER_SOMETIMES_ABBREVIATED_R) { print "prefer sometimes abbreviated room descriptions rule"; return; } ! 776, case 1
-		if (R == REP_PREFER_SOMETIMES_ABBR_R) { print "standard report preferring sometimes abbreviated room descriptions rule"; return; } ! 777, case 1
-		if (R == SWITCH_SCORE_NOTIFY_ON_R) { print "switch score notification on rule"; return; } ! 778, case 1
-		if (R == REP_SWITCH_NOTIFY_ON_R) { print "standard report switching score notification on rule"; return; } ! 779, case 1
-		if (R == SWITCH_SCORE_NOTIFY_OFF_R) { print "switch score notification off rule"; return; } ! 780, case 1
-		if (R == REP_SWITCH_NOTIFY_OFF_R) { print "standard report switching score notification off rule"; return; } ! 781, case 1
-		if (R == ANNOUNCE_PRONOUN_MEANINGS_R) { print "announce the pronoun meanings rule"; return; } ! 782, case 1
+		if (R == R_14) { print "A first turn sequence rule"; return; } ! 693, case 2
+		if (R == R_15) { print "A last turn sequence rule"; return; } ! 694, case 2
+		if (R == R_30) { print "last specific action-processing rule"; return; } ! 695, case 2
+		if (R == R_159) { print "Setting action variables for exiting"; return; } ! 696, case 2
+		if (R == R_741) { print "When play begins"; return; } ! 697, case 2
+		if (R == R_742) { print "Instead of inserting something which is not a battery into a battery compartment"; return; } ! 698, case 2
+		if (R == R_743) { print "Instead of opening a device"; return; } ! 699, case 2
+		if (R == R_744) { print "Instead of closing a device"; return; } ! 700, case 2
+		if (R == R_745) { print "Instead of inserting a battery into a device"; return; } ! 701, case 2
+		if (R == R_746) { print "Instead of switching on an empty device"; return; } ! 702, case 2
+		if (R == R_748) { print "Does the player mean doing something other than searching to a battery compartment"; return; } ! 703, case 2
+		if (R == R_749) { print "Does the player mean inserting into a battery compartment"; return; } ! 704, case 2
+		if (R == R_750) { print "Does the player mean inserting a battery compartment into"; return; } ! 705, case 2
+		if (R == R_751) { print "Does the player mean inserting something into a device"; return; } ! 706, case 2
+		if (R == R_752) { print "Does the player mean searching a battery compartment"; return; } ! 707, case 2
+		if (R == R_753) { print "Instead of examining Foaad"; return; } ! 708, case 2
+		if (R == R_754) { print "Instead of talking to Foaad"; return; } ! 709, case 2
+		if (R == R_755) { print "before giving something to foaad"; return; } ! 710, case 2
+		if (R == R_756) { print "Carry out smashing a container with something"; return; } ! 711, case 2
+		if (R == R_757) { print "Check smashing it with"; return; } ! 712, case 2
+		if (R == R_8) { print "start in the correct scenes rule"; return; } ! 713, case 1
+		if (R == POSITION_PLAYER_IN_MODEL_R) { print "position player in model world rule"; return; } ! 714, case 1
+		if (R == UPDATE_CHRONOLOGICAL_RECORDS_R) { print "update chronological records rule"; return; } ! 715, case 1
+		if (R == SEED_RANDOM_NUMBER_GENERATOR_R) { print "seed random number generator rule"; return; } ! 716, case 1
+		if (R == VIRTUAL_MACHINE_STARTUP_R) { print "virtual machine startup rule"; return; } ! 717, case 1
+		if (R == INITIALISE_MEMORY_R) { print "initialise memory rule"; return; } ! 718, case 1
+		if (R == R_9) { print "when play begins stage rule"; return; } ! 719, case 1
+		if (R == R_10) { print "fix baseline scoring rule"; return; } ! 720, case 1
+		if (R == R_11) { print "display banner rule"; return; } ! 721, case 1
+		if (R == R_12) { print "initial room description rule"; return; } ! 722, case 1
+		if (R == GENERATE_ACTION_R) { print "generate action rule"; return; } ! 723, case 1
+		if (R == PARSE_COMMAND_R) { print "parse command rule"; return; } ! 724, case 1
+		if (R == TIMED_EVENTS_R) { print "timed events rule"; return; } ! 725, case 1
+		if (R == ADVANCE_TIME_R) { print "advance time rule"; return; } ! 726, case 1
+		if (R == UPDATE_CHRONOLOGICAL_RECORDS_R) { print "update chronological records rule"; return; } ! 727, case 1
+		if (R == ADJUST_LIGHT_R) { print "adjust light rule"; return; } ! 728, case 1
+		if (R == NOTE_OBJECT_ACQUISITIONS_R) { print "note object acquisitions rule"; return; } ! 729, case 1
+		if (R == R_16) { print "notify score changes rule"; return; } ! 730, case 1
+		if (R == R_17) { print "when play ends stage rule"; return; } ! 731, case 1
+		if (R == RESURRECT_PLAYER_IF_ASKED_R) { print "resurrect player if asked rule"; return; } ! 732, case 1
+		if (R == R_18) { print "print player's obituary rule"; return; } ! 733, case 1
+		if (R == ASK_FINAL_QUESTION_R) { print "ask the final question rule"; return; } ! 734, case 1
+		if (R == DetectSceneChange) { print "scene change machinery rule"; return; } ! 735, case 1
+		if (R == R_21) { print "before stage rule"; return; } ! 736, case 1
+		if (R == R_19) { print "set pronouns from items from multiple object lists rule"; return; } ! 737, case 1
+		if (R == R_20) { print "announce items from multiple object lists rule"; return; } ! 738, case 1
+		if (R == BASIC_VISIBILITY_R) { print "basic visibility rule"; return; } ! 739, case 1
+		if (R == BASIC_ACCESSIBILITY_R) { print "basic accessibility rule"; return; } ! 740, case 1
+		if (R == CARRYING_REQUIREMENTS_R) { print "carrying requirements rule"; return; } ! 741, case 1
+		if (R == R_22) { print "instead stage rule"; return; } ! 742, case 1
+		if (R == REQUESTED_ACTIONS_REQUIRE_R) { print "requested actions require persuasion rule"; return; } ! 743, case 1
+		if (R == CARRY_OUT_REQUESTED_ACTIONS_R) { print "carry out requested actions rule"; return; } ! 744, case 1
+		if (R == DESCEND_TO_SPECIFIC_ACTION_R) { print "descend to specific action-processing rule"; return; } ! 745, case 1
+		if (R == R_23) { print "end action-processing in success rule"; return; } ! 746, case 1
+		if (R == WORK_OUT_DETAILS_OF_SPECIFIC_R) { print "work out details of specific action rule"; return; } ! 747, case 1
+		if (R == ACCESS_THROUGH_BARRIERS_R) { print "access through barriers rule"; return; } ! 748, case 1
+		if (R == CANT_REACH_INSIDE_ROOMS_R) { print "can't reach inside rooms rule"; return; } ! 749, case 1
+		if (R == CANT_REACH_INSIDE_CLOSED_R) { print "can't reach inside closed containers rule"; return; } ! 750, case 1
+		if (R == CANT_REACH_OUTSIDE_CLOSED_R) { print "can't reach outside closed containers rule"; return; } ! 751, case 1
+		if (R == R_35) { print "can't act in the dark rule"; return; } ! 752, case 1
+		if (R == STANDARD_NAME_PRINTING_R) { print "standard name printing rule"; return; } ! 753, case 1
+		if (R == R_59) { print "standard printing the plural name rule"; return; } ! 754, case 1
+		if (R == R_60) { print "standard printing a number of something rule"; return; } ! 755, case 1
+		if (R == STANDARD_CONTENTS_LISTING_R) { print "standard contents listing rule"; return; } ! 756, case 1
+		if (R == R_61) { print "look around once light available rule"; return; } ! 757, case 1
+		if (R == ENABLE_GLULX_ACCEL_R) { print "enable Glulx acceleration rule"; return; } ! 758, case 1
+		if (R == PRINT_OBITUARY_HEADLINE_R) { print "print obituary headline rule"; return; } ! 759, case 1
+		if (R == PRINT_FINAL_SCORE_R) { print "print final score rule"; return; } ! 760, case 1
+		if (R == DISPLAY_FINAL_STATUS_LINE_R) { print "display final status line rule"; return; } ! 761, case 1
+		if (R == R_69) { print "print the final question rule"; return; } ! 762, case 1
+		if (R == R_68) { print "print the final prompt rule"; return; } ! 763, case 1
+		if (R == READ_FINAL_ANSWER_R) { print "read the final answer rule"; return; } ! 764, case 1
+		if (R == R_70) { print "standard respond to final question rule"; return; } ! 765, case 1
+		if (R == R_91) { print "can't take component parts rule"; return; } ! 766, case 1
+		if (R == R_148) { print "find what to enter rule"; return; } ! 767, case 1
+		if (R == QUIT_THE_GAME_R) { print "quit the game rule"; return; } ! 768, case 1
+		if (R == SAVE_THE_GAME_R) { print "save the game rule"; return; } ! 769, case 1
+		if (R == RESTORE_THE_GAME_R) { print "restore the game rule"; return; } ! 770, case 1
+		if (R == RESTART_THE_GAME_R) { print "restart the game rule"; return; } ! 771, case 1
+		if (R == VERIFY_THE_STORY_FILE_R) { print "verify the story file rule"; return; } ! 772, case 1
+		if (R == SWITCH_TRANSCRIPT_ON_R) { print "switch the story transcript on rule"; return; } ! 773, case 1
+		if (R == SWITCH_TRANSCRIPT_OFF_R) { print "switch the story transcript off rule"; return; } ! 774, case 1
+		if (R == ANNOUNCE_STORY_FILE_VERSION_R) { print "announce the story file version rule"; return; } ! 775, case 1
+		if (R == ANNOUNCE_SCORE_R) { print "announce the score rule"; return; } ! 776, case 1
+		if (R == PREFER_ABBREVIATED_R) { print "prefer abbreviated room descriptions rule"; return; } ! 777, case 1
+		if (R == REP_PREFER_ABBREVIATED_R) { print "standard report preferring abbreviated room descriptions rule"; return; } ! 778, case 1
+		if (R == PREFER_UNABBREVIATED_R) { print "prefer unabbreviated room descriptions rule"; return; } ! 779, case 1
+		if (R == REP_PREFER_UNABBREVIATED_R) { print "standard report preferring unabbreviated room descriptions rule"; return; } ! 780, case 1
+		if (R == PREFER_SOMETIMES_ABBREVIATED_R) { print "prefer sometimes abbreviated room descriptions rule"; return; } ! 781, case 1
+		if (R == REP_PREFER_SOMETIMES_ABBR_R) { print "standard report preferring sometimes abbreviated room descriptions rule"; return; } ! 782, case 1
+		if (R == SWITCH_SCORE_NOTIFY_ON_R) { print "switch score notification on rule"; return; } ! 783, case 1
+		if (R == REP_SWITCH_NOTIFY_ON_R) { print "standard report switching score notification on rule"; return; } ! 784, case 1
+		if (R == SWITCH_SCORE_NOTIFY_OFF_R) { print "switch score notification off rule"; return; } ! 785, case 1
+		if (R == REP_SWITCH_NOTIFY_OFF_R) { print "standard report switching score notification off rule"; return; } ! 786, case 1
+		if (R == ANNOUNCE_PRONOUN_MEANINGS_R) { print "announce the pronoun meanings rule"; return; } ! 787, case 1
 
 		print "(nameless rule at address ", R, ")";
 	}
@@ -28227,7 +28310,7 @@ Verb meta 'tree'
 [ PHR_740_r3 ;
       ! phrase 1
       ! [1: say ~Your homework is due. Finish your assignment or else you will drop of out Cal Poly!~]
-      say__p=1;ParaContent();  print (PrintText) SC_67;  new_line; .L_Say49; .L_SayX49;
+      say__p=1;ParaContent();  print (PrintText) SC_74;  new_line; .L_Say53; .L_SayX53;
    rfalse;
 ];
 ! Request 4: phrase (object, number) -> nothing
@@ -28329,12 +28412,12 @@ Verb meta 'tree'
    rfalse;
 ];
 [ text_routine_0;
-say__p=1;ParaContent();  print (PrintText) SC_68; ParaContent();  DivideParagraphPoint(); new_line; ParaContent();  print (PrintText) SC_69;  .L_Say50; .L_SayX50;
+say__p=1;ParaContent();  print (PrintText) SC_75; ParaContent();  DivideParagraphPoint(); new_line; ParaContent();  print (PrintText) SC_76;  .L_Say54; .L_SayX54;
     rtrue;
 ];
 
 [ text_routine_1;
-say__p=1;ParaContent();  print (PrintText) SC_70; ParaContent();  DivideParagraphPoint(); new_line; ParaContent();  print (PrintText) SC_69;  .L_Say51; .L_SayX51;
+say__p=1;ParaContent();  print (PrintText) SC_77; ParaContent();  DivideParagraphPoint(); new_line; ParaContent();  print (PrintText) SC_76;  .L_Say55; .L_SayX55;
     rtrue;
 ];
 
@@ -28604,6 +28687,7 @@ Verb 'unlock'
 ;
 Verb 'attack' 'break' 'smash' 'hit' 'fight' 'torture' 'wreck' 'crack' 'destroy' 'murder' 'kill' 'punch' 'thump'
     * noun  -> Attack
+    * noun 'with' noun  -> A80_smashing_it_with
 ;
 Verb 'wait' 'z//'
     *  -> Wait
@@ -28753,8 +28837,8 @@ Verb 'notify'
     * 'off'  -> NotifyOff
 ;
 Verb 'talk'
-    * 'to' creature  -> A80_talking_to
-    * 'to' noun  -> A80_talking_to
+    * 'to' creature  -> A81_talking_to
+    * 'to' noun  -> A81_talking_to
 ;
 [ Parse_Name_GV1
     original_wn  ! first word of text parsed
@@ -30869,23 +30953,26 @@ ArgumentTypeFailed(filename, line);
 Array ConstantListPointers --> 
  0 0;
 
-Constant SC_50 = " ";
-Constant SC_44 = " ::you now carry the key foaad gave you::";
-Constant SC_64 = " here";
-Constant SC_47 = " looks like he could use a solder pen. Better go find that";
-Constant SC_54 = " or ";
-Constant SC_59 = " you ";
-Constant SC_55 = ", ";
-Constant SC_53 = ",";
-Constant SC_65 = ".";
-Constant SC_41 = ": ";
-Constant SC_66 = ":";
-Constant SC_69 = "::Refer to the room by the last 3 digits. ie. 14-205 as 205::";
-Constant SC_56 = "> ";
-Constant SC_35 = ">";
-Constant SC_52 = "?";
+Constant SC_51 = " ";
+Constant SC_45 = " ::you now carry the key foaad gave you::";
+Constant SC_70 = " does not have the properties of a nokia phone";
+Constant SC_65 = " here";
+Constant SC_48 = " looks like he could use a solder pen. Better go find that";
+Constant SC_73 = " open!";
+Constant SC_55 = " or ";
+Constant SC_60 = " you ";
+Constant SC_56 = ", ";
+Constant SC_54 = ",";
+Constant SC_66 = ".";
+Constant SC_42 = ": ";
+Constant SC_67 = ":";
+Constant SC_76 = "::Refer to the room by the last 3 digits. ie. 14-205 as 205::";
+Constant SC_57 = "> ";
+Constant SC_36 = ">";
+Constant SC_69 = "?!";
+Constant SC_53 = "?";
 Constant SC_8 = "A lab room lined with computers with a projector and table at the center. North is a doorway leading to the hall.";
-Constant SC_43 = "Ah this will help me alot. What did you say you were doing? anyways I have this ~A~ I can give you, but how about this key? ";
+Constant SC_44 = "Ah this will help me alot. What did you say you were doing? anyways I have this ~A~ I can give you, but how about this key? ";
 Constant SC_4 = "As good-looking as ever.";
 Constant SC_7 = "Borrowed from the Janitor's Closet. Perhaps it has access to a particular room in building 14.";
 Constant SC_11 = "Continue East down the Hallway or south into the Game Design Lab";
@@ -30893,17 +30980,17 @@ Constant SC_12 = "Continue East down the Hallway";
 Constant SC_13 = "Continue North to the South Faculty Offices or east down the hallway.";
 Constant SC_19 = "Continue east down the hallway.";
 Constant SC_6 = "Engraved into the scratched and heavily used key is ~14-21...~";
-Constant SC_33 = "Here lives vogon";
-Constant SC_48 = "I could really use a solder pen for my side project, I'm sure I can give you something for it";
-Constant SC_45 = "I only want the solder pen";
-Constant SC_58 = "In ";
+Constant SC_34 = "Here lives vogon";
+Constant SC_49 = "I could really use a solder pen for my side project, I'm sure I can give you something for it";
+Constant SC_46 = "I only want the solder pen";
+Constant SC_59 = "In ";
 Constant SC_26 = "NOKIA PORTABLE CELLULAR DEVCE";
-Constant SC_46 = "Nothing will happen by inserting that into the slot since its not a battery";
-Constant SC_60 = "On ";
+Constant SC_47 = "Nothing will happen by inserting that into the slot since its not a battery";
+Constant SC_61 = "On ";
 Constant SC_27 = "Portable Soldering Pen";
-Constant SC_39 = "QUIT";
-Constant SC_36 = "RESTART";
-Constant SC_37 = "RESTORE a saved game";
+Constant SC_40 = "QUIT";
+Constant SC_37 = "RESTART";
+Constant SC_38 = "RESTORE a saved game";
 Constant SC_25 = "Recon. A familiar Northface backpack. You know the ins and out of this packpack. You easily can find the contents within";
 Constant SC_2 = "Robin Verweij, David O'Connor, Ryan Chan, Luke Plewa, Lauren Thurston, and Russell Taylor";
 Constant SC_9 = "The Game Design Lab is filled computers and with a projector and table at the center.";
@@ -30911,33 +30998,37 @@ Constant SC_17 = "There is a door to the north. You can move west.";
 Constant SC_18 = "There is a door to the north.";
 Constant SC_16 = "There is a door to the south. You can move west.";
 Constant SC_15 = "There is a door to the south.";
-Constant SC_42 = "This is useless with out a battery";
+Constant SC_43 = "This is useless with out a battery";
 Constant SC_22 = "To the east is a staircase. To the south is a door leading out. To the north is Room 249 and to the south is Room 250. You can go west in the East Hall.";
 Constant SC_21 = "To the north is room 249. To the south is room 250. You can go east or west down the East Hall.";
 Constant SC_20 = "To the south is room 250. You can go east or west in the East Hall.";
 Constant SC_10 = "To the west there is a staircase, but you have no need to go downstairs. To the north is a door leading outside. Continue East down the Hallway";
-Constant SC_40 = "UNDO the last command";
-Constant SC_51 = "Would you like to ";
-Constant SC_57 = "You ";
-Constant SC_49 = "You need a power source!";
-Constant SC_31 = "You see five faculty offices:  14-219, 14-221, 14-222, 14-223, 14-226. You can enter each office and look around.";
-Constant SC_70 = "You see seven faculty offices:  14-203, 14-204, 14-212, 14-213, 14-214, 14-215, 14-216. You can enter each office and look around.";
-Constant SC_68 = "You see seven faculty offices:  14-205, 14-206, 14-207, 14-208, 14-209, 14-210, 14-211. You can enter each office and look around.";
-Constant SC_32 = "You see seven faculty offices:  14-217, 14-218, 14-227, 14-228, 14-229, 14-230, 14-231. You can enter each office and look around.";
-Constant SC_29 = "You're in the Northern end of the Eastern Corridor. To the south is the first fallen vending machine you saw. The eastern archways are still fenced off. You can see that to the north the path is clear.";
+Constant SC_28 = "Typical desk you would see in a teachers office. Messy with papers.";
+Constant SC_41 = "UNDO the last command";
+Constant SC_52 = "Would you like to ";
+Constant SC_58 = "You ";
+Constant SC_50 = "You need a power source!";
+Constant SC_32 = "You see five faculty offices:  14-219, 14-221, 14-222, 14-223, 14-226. You can enter each office and look around.";
+Constant SC_77 = "You see seven faculty offices:  14-203, 14-204, 14-212, 14-213, 14-214, 14-215, 14-216. You can enter each office and look around.";
+Constant SC_75 = "You see seven faculty offices:  14-205, 14-206, 14-207, 14-208, 14-209, 14-210, 14-211. You can enter each office and look around.";
+Constant SC_33 = "You see seven faculty offices:  14-217, 14-218, 14-227, 14-228, 14-229, 14-230, 14-231. You can enter each office and look around.";
+Constant SC_72 = "You smash ";
+Constant SC_30 = "You're in the Northern end of the Eastern Corridor. To the south is the first fallen vending machine you saw. The eastern archways are still fenced off. You can see that to the north the path is clear.";
 Constant SC_23 = "You're in the Northern end of the West Outdoor Corridor. The west is fenced off, but the corridor continues to the North. To the south is a locked door and to the west are the South Faculty Offices.";
 Constant SC_14 = "You're in the Southern end of the East Outdoor Corridor. To the north is a fallen vending machine that is blocking your path. The archways to the east have been fenced off. Your only option is to head west toward the the South Faculty Offices.";
-Constant SC_28 = "You're in the West Corridor. The west is still fenced off. To the north is another fallen vending machine. Weird... Seems your only option is to head east toward the North Faculty Offices";
-Constant SC_30 = "You're in the center of the northern faculty offices. To the north and south are enterances to the faculty offices.";
+Constant SC_29 = "You're in the West Corridor. The west is still fenced off. To the north is another fallen vending machine. Weird... Seems your only option is to head east toward the North Faculty Offices";
+Constant SC_31 = "You're in the center of the northern faculty offices. To the north and south are enterances to the faculty offices.";
 Constant SC_24 = "You're in the center of the southern faculty offices. To the north and south are enterances to the faculty offices.";
-Constant SC_67 = "Your homework is due. Finish your assignment or else you will drop of out Cal Poly!";
-Constant SC_62 = "also ";
-Constant SC_61 = "can ";
-Constant SC_34 = "csl-235";
+Constant SC_74 = "Your homework is due. Finish your assignment or else you will drop of out Cal Poly!";
+Constant SC_63 = "also ";
+Constant SC_62 = "can ";
+Constant SC_35 = "csl-235";
 Constant SC_5 = "gene fisher";
-Constant SC_63 = "see ";
-Constant SC_38 = "see some suggestions for AMUSING things to do";
+Constant SC_64 = "see ";
+Constant SC_39 = "see some suggestions for AMUSING things to do";
+Constant SC_71 = "that is a waste of time t smash the ";
 Constant SC_3 = "the";
+Constant SC_68 = "why would you want to smash ";
 
 #ifndef p0_specification; Constant p0_specification = 0; #endif;
 #ifndef p1_indefinite_appearance_tex; Constant p1_indefinite_appearance_tex = 0; #endif;
