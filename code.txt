@@ -3,16 +3,34 @@
 use no scoring. use full-length room descriptions.
 The player is in Software Design Lab.
 
+[-----------------------]
+[-----          People         ---]
+[-----------------------]
+Dr Zoe Wood is a person. Zoe is in the Game Design Lab.
+The description of Zoe Wood is "The graphics professor at Cal Poly. If you talk to her, she may be able to help you.".
+Dr Gene Fisher is a person. Gene is in the Software Design Lab.
+The description of Gene Fisher is "The software engineering professor at Cal Poly. If you talk to him, he may be able to help you.".
+To say talk to instead: 
+	say "(To communicate, TALK TO a character.) ".
+Understand "talk to [someone]" as talking to. Understand "talk to [something]" as talking to. Talking to is an action applying to one visible thing.
+Instead of talking to Gene Fisher:
+	if the person is Gene, say "Dr. Fisher declares, 'There seems to be something with the servers.[paragraph break]I'm going to leave and look for help. You can do the same if you wish, but don't leave without taking your phone charger. I have heard of phone applications that professors have made to help debug the servers. One of those professors may be on campus right now. If your phone isn't charged, you won't be able to use these applications.'[paragraph break]Dr. Fisher leaves the room.";
+	if the person is Gene Fisher, remove Gene from play;
+Instead of talking to Zoe Wood:
+	if the person is Zoe Wood, say "Dr. Zoe Wood approaches you, 'Hello, student! If you have noticed, something is wrong with the servers. If you're willing to help me, I suggest we split up and investigate the building. The best place to look first is in the server room in the CSL.[paragraph break]I see you have a smart phone. I have prepared a phone application to attack the servers should anything go wrong. You can download the app, DDOS, onto your phone. I can't upload the app to the app store, because the servers might abuse it; however, I have left a version in the lab for you. I have heard of other professor who have created phone apps of their own in case of this emergency. Perhaps they are in the building and can help as well. Good luck, I'm going to get to the bottom of the mystery!'[paragraph break]Dr. Wood leaves the room.";
+	if the person is Zoe Wood, remove Zoe from play.
+
 [ -----------------------]
 [                 Items                     ]
 [ -----------------------]
-A key is a thing. Key is in Janitor's Closet. The description of key is "Borrowed from the Janitor's Closet. Perhaps it has access to a particular room in building 14.". The key unlocks Game Design Door.
+A key is a thing. Key is in Janitor's Closet. The description of key is "Borrowed from the Janitor's Closet. Perhaps it has access to a locked room in building 14.". The key unlocks Game Design Door.
 
 The charger is a thing in the Software Design Lab.
 
-The phone is a thing. The player carries the phone.
+The phone is a supporter. The player carries the phone. The description of the phone is "Battery Life: [battery life]%.".
+Battery life is a number variable. Battery life is 100.
 
-app is a kind of thing. DDOS, packet spoofer, keylogger, TBD is an app. DDOS is in the Game Design Lab. keylogger is in the Software Design Lab.
+app is a kind of thing. DDOS, packet spoofer, keylogger is an app. DDOS is in the Game Design Lab. keylogger is in the Software Design Lab. packet spoofer is in the HCI Lab.
 
 [ -----------------------]
 [                 Actions                     ]
@@ -20,9 +38,28 @@ app is a kind of thing. DDOS, packet spoofer, keylogger, TBD is an app. DDOS is 
 Launching it is an action applying to one thing.
 Check launching it:
 	if the noun is not an app, say "You can't do that." instead;
+	if the noun is an app, now battery life is battery life minus 10;
+	if the noun is DDOS, say "DDOS!";
 	if the noun is keylogger, say "You're logging its keys!";
 	if the player is not carrying the phone, say "You need your phone to do that.".
 Understand "launch [something]" as launching it.
+
+Downloading it is an action applying to one thing.
+Check downloading it:
+	if the noun is not an app, say "You can't do that." instead;
+	if the noun is an app and the player is carrying the noun, say "Successfully reinstalled the app!";
+	if the noun is an app and the player is not carrying the noun, say "Successfully downloaded the app!";
+	if the noun is an app, now the player carries the noun;
+	if the player is not carrying the phone, say "You need your phone to do that.".
+Understand "download [something]" as downloading it.
+
+Charging it is an action applying to one thing.
+Check Charging it:
+	if the noun is not the phone, say "You can only do that with your phone." instead;
+	if the noun is the phone and the player is carrying the charger, say "You have finished charging." instead;
+	if the noun is the phone, now battery life is 100;
+	if the player is not carrying the charger, say "You need your charger to do that." instead.
+Understand "charge [something]" as Charging it.
 
 [ -----------------------]
 [                 Text Instantials                     ]
@@ -37,15 +74,15 @@ When play begins:
 [ -----------------------]
 
 luke_hallway1, luke_hallway2, luke_hallway3, luke_hallway4 is a room. luke_hallway1 is west of luke_hallway2. luke_hallway2 is west of luke_hallway3. luke_hallway3 is west of luke_hallway4.
-Storage Room, Janitor's Closet, Software Design Lab, Game Design Lab, HCI Lab, and Women's Restroom is a room. HCI Lab is north of luke_hallway1. Software Design Lab is south of luke_hallway1. Women's Restroom is north of luke_hallway3. Janitor's Closet is north of luke_hallway4.
+Storage Room, Janitor's Closet, Software Design Lab, Game Design Lab, HCI Lab, and Women's Restroom is a room. HCI Lab is north of luke_hallway1. Software Design Lab is south of luke_hallway1. Women's Restroom is north of luke_hallway4. Janitor's Closet is north of luke_hallway3.
 Game Design Door is a door and scenery. It is south of luke_hallway2 and north of Game Design Lab. Game Design Door is locked. 
 the printed name of luke_hallway1 is "East-West Hallway". the printed name of luke_hallway2 is "East-West Hallway". the printed name of luke_hallway3 is "East-West Hallway". the printed name of luke_hallway4 is "East-West Hallway".
 The description of Janitor's Closet is "A collection of janitorial items. Perhaps something useful is in there."
 The description of Software Design Lab is "A lab room lined with computers with a projector and table at the center. There is a door to the north.".
 The description of luke_hallway1 is "To the south is the Software Design Lab. To the north is the HCI Lab. There are stairs to the west, but you have no reason to go down there. The hallway continues to the east.".
 The description of luke_hallway2 is "The Game Design Lab is to the south. The hallway continues to the east and west.".
-The description of luke_hallway3 is "To the north is the Women's Restroom. The hallway continues to the east and west.".
-The description of luke_hallway4 is "To the north is the Janitor's Closet. The hallway continues to the east and west.".
+The description of luke_hallway4 is "To the north is the Women's Restroom. The hallway continues to the east and west.".
+The description of luke_hallway3 is "To the north is the Janitor's Closet. The hallway continues to the east and west.".
 
 [ ---------------------------------]
 [               South Faculty Offices                 ]

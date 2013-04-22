@@ -6,23 +6,70 @@
 [ -----------------------]
 
 use no scoring. use full-length room descriptions.
-[The player is in Software Design Lab.]
-The player is in Faculty Entrances1.
+The player is in Software Design Lab.
+[The player is in Faculty Entrances1.]
 [Pseudo Rooms]
 Classroom is a kind of container. classroom is scenery, lockable, closed, enterable, fixed in place, openable.
 Faculty Room is a kind of container. Faculty Room is scenery, closed, enterable, fixed in place, openable, lockable. A Faculty Room is usually locked.
 
 [items]
-A key is a thing. Key is in Janitor's Closet. The description of key is "Borrowed from the Janitor's Closet. Perhaps it has access to a particular room in building 14.". 
-[The key unlocks Game Design Lab.]
+A key is a thing. Key is in Janitor's Closet. The description of key is "Borrowed from the Janitor's Closet. Perhaps it has access to a particular room in building 14.". The key unlocks Door2.
+
+The charger is a thing. The charger is in the Software Design Lab.
+
+The phone is a supporter. The player carries the phone. The description of the phone is "Battery Life: [battery life]%.".
+Battery life is a number variable. Battery life is 100.
+
+app is a kind of thing. DDOS, packet spoofer, keylogger is an app. DDOS is in the Game Design Lab. keylogger is in the Software Design Lab. packet spoofer is in the HCI Lab.
 
 [actions]
+Launching it is an action applying to one thing.
+Check launching it:
+	if the noun is not an app, say "You can't do that." instead;
+	if the noun is an app, now battery life is battery life minus 10;
+	if the noun is DDOS, say "DDOS!";
+	if the noun is keylogger, say "You're logging its keys!";
+	if the player is not carrying the phone, say "You need your phone to do that.".
+Understand "launch [something]" as launching it.
+
+Downloading it is an action applying to one thing.
+Check downloading it:
+	if the noun is not an app, say "You can't do that." instead;
+	if the noun is an app and the player is carrying the noun, say "Successfully reinstalled the app!";
+	if the noun is an app and the player is not carrying the noun, say "Successfully downloaded the app!";
+	if the noun is an app, now the player carries the noun;
+	if the player is not carrying the phone, say "You need your phone to do that.".
+Understand "download [something]" as downloading it.
+
+Charging it is an action applying to one thing.
+Check Charging it:
+	if the noun is not the phone, say "You can only do that with your phone." instead;
+	if the noun is the phone and the player is carrying the charger, say "You have finished charging." instead;
+	if the noun is the phone, now battery life is 100;
+	if the player is not carrying the charger, say "You need your charger to do that." instead.
+Understand "charge [something]" as Charging it.
 
 [Text instantials]
 To say Opening text: say "Your homework is due. Finish your assignment or else you will drop of out Cal Poly!".
 
 When play begins:
 	say "[Opening text]".
+	
+[-----------------------]
+[-----          People         ---]
+[-----------------------]
+Dr Zoe Wood is a person. Zoe is in the Game Design Lab.
+The description of Zoe Wood is "The graphics professor at Cal Poly. If you talk to her, she may be able to help you.".
+Dr Gene Fisher is a person. Gene is in the Software Design Lab.
+The description of Gene Fisher is "The software engineering professor at Cal Poly. If you talk to him, he may be able to help you.".
+To say talk to instead: 
+	say "(To communicate, TALK TO a character.) ".
+Instead of talking to Gene Fisher:
+	if the person is Gene, say "Dr. Fisher declares, 'There seems to be something with the servers.[paragraph break]I'm going to leave and look for help. You can do the same if you wish, but don't leave without taking your phone charger. I have heard of phone applications that professors have made to help debug the servers. One of those professors may be on campus right now. If your phone isn't charged, you won't be able to use these applications.'[paragraph break]Dr. Fisher leaves the room.";
+	if the person is Gene Fisher, remove Gene from play;
+Instead of talking to Zoe Wood:
+	if the person is Zoe Wood, say "Dr. Zoe Wood approaches you, 'Hello, student! If you have noticed, something is wrong with the servers. If you're willing to help me, I suggest we split up and investigate the building. The best place to look first is in the server room in the CSL.[paragraph break]I see you have a smart phone. I have prepared a phone application to attack the servers should anything go wrong. You can download the app, DDOS, onto your phone. I can't upload the app to the app store, because the servers might abuse it; however, I have left a version in the lab for you. I have heard of other professor who have created phone apps of their own in case of this emergency. Perhaps they are in the building and can help as well. Good luck, I'm going to get to the bottom of the mystery!'[paragraph break]Dr. Wood leaves the room.";
+	if the person is Zoe Wood, remove Zoe from play.
 
 
 [ --------------------------]
@@ -32,24 +79,30 @@ When play begins:
 [Descriptions]
 Software Design Lab is a room with a description "A lab room lined with computers with a projector and table at the center. North is a doorway leading to the hall.".
 Game Design Lab is a room with a description "The Game Design Lab is filled computers and with a projector and table at the center.".
+Janitor's Closet is a room with a description "Perhaps there is something useful in here.".
 
 Hallway 1 is a room with the description "To the west there is a staircase, but you have no need to go downstairs. To the north is a door leading outside. Continue East down the Hallway". 
-Hallway 2 is a room with the description "Continue East down the Hallway or south into the Game Design Lab". 
-Hallway 3 is a room with the description "Continue East down the Hallway". 
+Hallway 2 is a room with the description "Continue east down the Hallway or south into the Game Design Lab". 
+Hallway 3 is a room with the description "Continue East down the Hallway or north into the Janitor's Closet.". 
 Hallway 4 is a room with the description "Continue North to the South Faculty Offices or east down the hallway.". 
 
 [Doors]
 Door1 is a closed, unlocked door. 
 Door2 is a closed, unlocked door. 
+Door3 is a closed, unlocked door.
 
 [Directions]
 Door1 is north of the Software Design Lab.
 Door2 is north of the Game Design Lab. 
+Door3 is south of the Janitor's Closet. 
+the printed name of Door1 is "Software Design Lab Door". 
+the printed name of Door2 is "Game Design Lab Door".
+the printed name of Door3 is "Janitor's Closet Door".
 Hallway 1 is north of Door1.
 Hallway 2 is east of the Hallway 1 and north of Door2.
-Hallway 3 is east of the Hallway 2.
+Hallway 3 is east of the Hallway 2 and south of Door3.
 Hallway 4 is east of the Hallway 3 and south of the SouthEast Corridor.
-
+the printed name of Hallway1 is "East-West Hallway". the printed name of Hallway2 is "East-West Hallway". the printed name of Hallway3 is "East-West Hallway". the printed name of Hallway4 is "East-West Hallway".
 
 
 [ -----------------------------------]
