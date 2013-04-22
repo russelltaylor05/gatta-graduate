@@ -6,7 +6,7 @@ The player is in Software Design Lab.
 [ -----------------------]
 [                 Items                     ]
 [ -----------------------]
-A key is a thing. Key is in Janitor's Closet. The description of key is "Borrowed from the Janitor's Closet. Perhaps it has access to a particular room in building 14.". The key unlocks Game_Door.
+A key is a thing. Key is in Janitor's Closet. The description of key is "Borrowed from the Janitor's Closet. Perhaps it has access to a particular room in building 14.". The key unlocks Game Design Door.
 
 The charger is a thing in the Software Design Lab.
 
@@ -19,7 +19,7 @@ app is a kind of thing. DDOS, packet spoofer, keylogger, TBD is an app. DDOS is 
 [ -----------------------]
 Launching it is an action applying to one thing.
 Check launching it:
-	if the noun is not an app, say "You can't do that.";
+	if the noun is not an app, say "You can't do that." instead;
 	if the noun is keylogger, say "You're logging its keys!";
 	if the player is not carrying the phone, say "You need your phone to do that.".
 Understand "launch [something]" as launching it.
@@ -37,12 +37,15 @@ When play begins:
 [ -----------------------]
 
 luke_hallway1, luke_hallway2, luke_hallway3, luke_hallway4 is a room. luke_hallway1 is west of luke_hallway2. luke_hallway2 is west of luke_hallway3. luke_hallway3 is west of luke_hallway4.
-Storage Room, Janitor's Closet, Software Design Lab, Game Design Lab, HCI Lab, and Women's Restroom is a room. HCI Lab is north of luke_hallway1. Software Design Lab is south of luke_hallway1. Women's Restroom is south of luke_hallway3.
-Game_Door is a door and scenery. It is south of luke_hallway2 and north of Game Design Lab. Game_Door is locked. 
+Storage Room, Janitor's Closet, Software Design Lab, Game Design Lab, HCI Lab, and Women's Restroom is a room. HCI Lab is north of luke_hallway1. Software Design Lab is south of luke_hallway1. Women's Restroom is north of luke_hallway3. Janitor's Closet is north of luke_hallway4.
+Game Design Door is a door and scenery. It is south of luke_hallway2 and north of Game Design Lab. Game Design Door is locked. 
 the printed name of luke_hallway1 is "East-West Hallway". the printed name of luke_hallway2 is "East-West Hallway". the printed name of luke_hallway3 is "East-West Hallway". the printed name of luke_hallway4 is "East-West Hallway".
 The description of Janitor's Closet is "A collection of janitorial items. Perhaps something useful is in there."
 The description of Software Design Lab is "A lab room lined with computers with a projector and table at the center. There is a door to the north.".
 The description of luke_hallway1 is "To the south is the Software Design Lab. To the north is the HCI Lab. There are stairs to the west, but you have no reason to go down there. The hallway continues to the east.".
+The description of luke_hallway2 is "The Game Design Lab is to the south. The hallway continues to the east and west.".
+The description of luke_hallway3 is "To the north is the Women's Restroom. The hallway continues to the east and west.".
+The description of luke_hallway4 is "To the north is the Janitor's Closet. The hallway continues to the east and west.".
 
 [ ---------------------------------]
 [               South Faculty Offices                 ]
