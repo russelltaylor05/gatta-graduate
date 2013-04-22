@@ -202,8 +202,9 @@ Understand "214" as 14-214.
 Understand "215" as 14-215.
 Understand "216" as 14-216. 
 
+A desk is in 14-205.
 
-
+[furnature]
 
 
 [ --------------------------]
