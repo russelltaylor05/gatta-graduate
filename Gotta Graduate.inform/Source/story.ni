@@ -183,7 +183,7 @@ The 14-207 is a Faculty Room inside the Faculty Entrances1.
 The 14-208 is a Faculty Room inside the Faculty Entrances1.
 The 14-209 is a Faculty Room inside the Faculty Entrances1.
 The 14-210 is a Faculty Room inside the Faculty Entrances1. The description of 14-210 is "gene fisher".
-The 14-211 is a Faculty Room inside the Faculty Entrances1. 14-211 is open.
+The 14-211 is a Faculty Room inside the Faculty Entrances1. 14-211 is open.  The description is "the door looks ajar".
 
 The 14-203 is a Faculty Room inside the Faculty Entrances2.
 The 14-204 is a Faculty Room inside the Faculty Entrances2. 
