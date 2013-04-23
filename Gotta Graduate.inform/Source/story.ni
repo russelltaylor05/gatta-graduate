@@ -525,9 +525,11 @@ Every turn during Unix1 Battle:
 			Let enemy-attack be a random number between 1 and 2;
 			if enemy-attack is 1:
 				say "[currentEnemy] uses open browser twice.[Paragraph break]";
-				say "You lose a set amout of Battery life. (1)[Paragraph break]"; [Change this to say and decrease actual battery life.]
+				say "You lose 1 Battery life. (1)[Paragraph break]"; [Change this to say and decrease actual battery life.]
+				Decrease Battery Life by 1;
 			else if enemy-attack is 2:
 				say "[currentEnemy] uses Cntr^D on you.[Paragraph break]";
-				say "You lose a set amount of Battery life. (2?)[Paragraph break]". [Change this to say and decrease actual battery life.]
+				say "You lose 1 Battery life. (2?)[Paragraph break]"; [Change this to say and decrease actual battery life.]
+				Decrease Battery Life by 1.
 			[say "[currentEnemy]: Attack! [enemy-health of currentEnemy] [Paragraph break]";
 			Decrease the Enemy-Health of Unix1 by 1;]
