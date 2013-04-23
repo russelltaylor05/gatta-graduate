@@ -7,22 +7,29 @@
 
 use no scoring. use full-length room descriptions.
 The player is in Software Design Lab.
+
 [The player is in Faculty Entrances1.]
+
 [Pseudo Rooms]
 Classroom is a kind of container. classroom is scenery, lockable, closed, enterable, fixed in place, openable.
 Faculty Room is a kind of container. Faculty Room is scenery, closed, enterable, fixed in place, openable, lockable. A Faculty Room is usually locked.
 
-[items]
-A key is a thing. Key is in Janitor's Closet. The description of key is "Borrowed from the Janitor's Closet. Perhaps it has access to a particular room in building 14.". The key unlocks Door2.
+[ -----------------------]
+[       Items         ]
+[ -----------------------]
+A key is a thing. Key is in Janitor's Closet. The description of key is "Borrowed from the Janitor's Closet. Perhaps it has access to a particular room in building 14.". The key unlocks Game Design Door.
 
-The charger is a thing. The charger is in the Software Design Lab.
+The charger is a thing in the Software Design Lab.
 
 The phone is a supporter. The player carries the phone. The description of the phone is "Battery Life: [battery life]%.".
+
 Battery life is a number variable. Battery life is 100.
 
 app is a kind of thing. DDOS, packet spoofer, keylogger is an app. DDOS is in the Game Design Lab. keylogger is in the Software Design Lab. packet spoofer is in the HCI Lab.
 
-[actions]
+[ -----------------------]
+[     Actions         ]
+[ -----------------------]
 Launching it is an action applying to one thing.
 Check launching it:
 	if the noun is not an app, say "You can't do that." instead;
@@ -49,8 +56,10 @@ Check Charging it:
 	if the player is not carrying the charger, say "You need your charger to do that." instead.
 Understand "charge [something]" as Charging it.
 
-[Text instantials]
-To say Opening text: say "Your homework is due. Finish your assignment or else you will drop of out Cal Poly!".
+[ -----------------------]
+[   Text instantials   ]
+[ -----------------------]
+To say Opening text: say "You are in the Software Design Lab at 9pm working on the last programming assignment of your last day of your last quarter at Cal Poly. In order to graduate you NEED to finish this program, or else you will get kicked out of college.".
 
 When play begins:
 	say "[Opening text]".
@@ -62,10 +71,13 @@ Dr Zoe Wood is a person. Zoe is in the Game Design Lab.
 The description of Zoe Wood is "The graphics professor at Cal Poly. If you talk to her, she may be able to help you.".
 Dr Gene Fisher is a person. Gene is in the Software Design Lab.
 The description of Gene Fisher is "The software engineering professor at Cal Poly. If you talk to him, he may be able to help you.".
+
 To say talk to instead: 
 	say "(To communicate, TALK TO a character.) ".
+Understand "talk to [someone]" as talking to. Understand "talk to [something]" as talking to. Talking to is an action applying to one visible thing.
+	
 Instead of talking to Gene Fisher:
-	if the person is Gene, say "Dr. Fisher declares, 'There seems to be something with the servers.[paragraph break]I'm going to leave and look for help. You can do the same if you wish, but don't leave without taking your phone charger. I have heard of phone applications that professors have made to help debug the servers. One of those professors may be on campus right now. If your phone isn't charged, you won't be able to use these applications.'[paragraph break]Dr. Fisher leaves the room.";
+	if the person is Gene, say "Dr. Fisher looks up from his laptop. 'There seems to be something with the servers.'[paragraph break]'I'm going to go see what is up. You can go too, but you shouldn't leave without taking your phone charger. I have heard of phone applications that professors have made to help debug the servers. Some professors may be on campus right now. If your phone isn't charged, you won't be able to use these applications.'[paragraph break]Dr. Fisher packs up and leaves the room.";
 	if the person is Gene Fisher, remove Gene from play;
 Instead of talking to Zoe Wood:
 	if the person is Zoe Wood, say "Dr. Zoe Wood approaches you, 'Hello, student! If you have noticed, something is wrong with the servers. If you're willing to help me, I suggest we split up and investigate the building. The best place to look first is in the server room in the CSL.[paragraph break]I see you have a smart phone. I have prepared a phone application to attack the servers should anything go wrong. You can download the app, DDOS, onto your phone. I can't upload the app to the app store, because the servers might abuse it; however, I have left a version in the lab for you. I have heard of other professor who have created phone apps of their own in case of this emergency. Perhaps they are in the building and can help as well. Good luck, I'm going to get to the bottom of the mystery!'[paragraph break]Dr. Wood leaves the room.";
@@ -76,8 +88,18 @@ Instead of talking to Zoe Wood:
 [        SOUTH WEST HALLWAY       ]
 [ --------------------------]
 
+[TODO]
+[Steer player to talking to Fisher]
+[Timing for statements]
+
+[Story]
+To say Intro text: say "[paragraph break]You are finishing up your program, checking to make sure everything compiles and that your name is on the source code. You go to SSH into Vogon, when you realize that something is wrong. You cannot access Vogon, so you shrug it off and try Unix1. After you realize that Unix1 is not working, you start to lightly perspire. You desperately want to go home to your bed and fluffy pillow and sleep. As you try Unix2 and fail to connect once again, you bang your head on the table. What to do?".
+
+Instead of going to Hallway 1 when charger is not held:
+	say "Maybe you should heed Fisher's suggestion and bring your phone charger.".
+
 [Descriptions]
-Software Design Lab is a room with a description "A lab room lined with computers with a projector and table at the center. North is a doorway leading to the hall.".
+Software Design Lab is a room with a description "A lab room lined with computers with a projector and table at the center. North is a doorway leading to the hall.[if Hallway 1 is unvisited][Intro text][end if]".
 Game Design Lab is a room with a description "The Game Design Lab is filled computers and with a projector and table at the center.".
 Janitor's Closet is a room with a description "Perhaps there is something useful in here.".
 
@@ -214,9 +236,6 @@ The pin is in 14-208. The description is "This pin might come in use to unlock a
 The note is in 14-211. The description is "Busy,  if anyone reads this can you get my cell phone from 14-205?".
 [The South Faculty key is in 14-205. "Engraved into the key is 'gate key'".]
 
-
-
-
 The block giving rule is not listed in the check giving it to rules.
 Foaad is a man in 14-213. He carries the North Atrium Key.
 
@@ -254,10 +273,8 @@ Check smashing it with:
 		
 smashing it with is an action applying to two things.
 
-
-	
 Understand "smash [something] with [something]" as smashing it with.
-Understand "talk to [someone]" as talking to. Understand "talk to [something]" as talking to. Talking to is an action applying to one visible thing.
+[Understand "talk to [someone]" as talking to. Understand "talk to [something]" as talking to. Talking to is an action applying to one visible thing.]
 Understand "205" as 14-205.
 Understand "206" as 14-206.
 Understand "207" as 14-207.
@@ -445,3 +462,57 @@ It is  south of South Hall 5 and north of 14-254.
 254A-D is a door and a scenery.
 It is south of South Hall 2 and north of 14-254A.
 ]
+
+[-------Enemy Battle--------]
+
+[Player is in South Hall 5.]
+
+Enemy is a kind of thing. An enemy can be dead. An enemy is usually not dead. An enemy has a number called enemy-health. The plural of enemy is enemies.
+
+[Unix1 is a kind of enemy. Enemy-health of Unix1 is 5.
+There is 1 Unix1 in 14-254. It is scenery.]
+
+Unix1 is an enemy. Enemy-health of Unix1 is 5.
+Unix1 Battle is a scene.
+
+[Started substituting Room 252 for 14-254 for the time being]
+Unix1 Battle begins when (the player is in Room 252 for the first time) or (the player is in Room 252 and the enemy is not dead).
+
+[Unix1 Battle begins when the player is in 14-254 and the enemy is not dead.]
+
+When Unix1 Battle begins:
+	Move Unix1 to Room 252; 
+	say "The door behind you closes and locks itself. It's a trap! [Paragraph break]";
+	Now Door 252 is closed; [Close all the doors in room.]
+	Now Door 252 is locked; [Lock all the doors in room.]
+	say "Unix1 is on the computer. It looks pissed.".
+
+When Unix1 Battle ends:
+	Remove Unix1 from play; [Unlock all doors in room.]
+	say "The screen fades to the usual terminal. [Paragraph break]";
+	now Door 252 is unlocked;
+	say "The door to the north makes a clicking noise. It seems to be unlocked.".
+
+Unix1 Battle ends when (Unix1 is dead). [The enemy will always be present till it dies.]
+
+[Every turn:
+	Let playerLocation be the location of the player;
+	if an enemy is in playerLocation and an enemy is not dead:
+		say "I am here.";
+	otherwise:
+		say "What enemy.".]
+
+Every turn during Unix1 Battle:
+	Let playerLocation be the location of the player; [Create a condition that the player is in combat, possibly turn wifi on or off. Give a chance for the player to leave and charge phone and kick them out of battle till they recharge. Also regain enemy health when they are not battling.]
+	Repeat with currentEnemy running through enemies in playerLocation:
+		Let enemy-attack be a random number between 1 and 2;
+		if enemy-attack is 1:
+			say "[currentEnemy] uses open browser twice.[Paragraph break]";
+			say "You lose a set amout of Battery life. (1)[Paragraph break]"; [Change this to say and decrease actual battery life.]
+		else if enemy-attack is 2:
+			say "[currentEnemy] uses Cntr^D on you.[Paragraph break]";
+			say "You lose a set amount of Battery life. (2?)[Paragraph break]"; [Change this to say and decrease actual battery life.]
+		[say "[currentEnemy]: Attack! [enemy-health of currentEnemy] [Paragraph break]";
+		Decrease the Enemy-Health of Unix1 by 1;]
+	If the Enemy-health of Unix1 is 0:
+		Now Unix1 is dead.
