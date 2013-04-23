@@ -25,7 +25,7 @@ The phone is a supporter. The player carries the phone. The description of the p
 
 Battery life is a number variable. Battery life is 100.
 
-app is a kind of thing. DDOS, packet spoofer, keylogger is an app. DDOS is in the Game Design Lab. keylogger is in the Software Design Lab. packet spoofer is in the HCI Lab.
+app is a kind of thing. DDOS, packet spoofer, keylogger is an app.
 
 [ -----------------------]
 [     Actions         ]
@@ -39,14 +39,16 @@ Check launching it:
 	if the player is not carrying the phone, say "You need your phone to do that.".
 Understand "launch [something]" as launching it.
 
-Downloading it is an action applying to one thing.
-Check downloading it:
-	if the noun is not an app, say "You can't do that." instead;
-	if the noun is an app and the player is carrying the noun, say "Successfully reinstalled the app!";
-	if the noun is an app and the player is not carrying the noun, say "Successfully downloaded the app!";
-	if the noun is an app, now the player carries the noun;
-	if the player is not carrying the phone, say "You need your phone to do that.".
-Understand "download [something]" as downloading it.
+Downloading DDOS is an action applying to nothing.
+Understand "Download DDOS" as downloading DDOS.
+Instead of downloading DDOS:
+	if the player is not carrying DDOS, say "Successfully downloaded the app!";
+	now the player carries DDOS.
+Downloading keylogger is an action applying to nothing.
+Understand "Download keylogger" as downloading keylogger.
+Instead of downloading keylogger:
+	if the player is not carrying keylogger, say "Successfully downloaded the app!";
+	now the player carries keylogger.
 
 Charging it is an action applying to one thing.
 Check Charging it:
@@ -80,7 +82,7 @@ Instead of talking to Gene Fisher:
 	if the person is Gene, say "Dr. Fisher looks up from his laptop. 'There seems to be something with the servers.'[paragraph break]'I'm going to go see what is up. You can go too, but you shouldn't leave without taking your phone charger. I have heard of phone applications that professors have made to help debug the servers. Some professors may be on campus right now. If your phone isn't charged, you won't be able to use these applications.'[paragraph break]Dr. Fisher packs up and leaves the room.";
 	if the person is Gene Fisher, remove Gene from play;
 Instead of talking to Zoe Wood:
-	if the person is Zoe Wood, say "Dr. Zoe Wood approaches you, 'Hello, student! If you have noticed, something is wrong with the servers. If you're willing to help me, I suggest we split up and investigate the building. The best place to look first is in the server room in the CSL.[paragraph break]I see you have a smart phone. I have prepared a phone application to attack the servers should anything go wrong. You can download the app, DDOS, onto your phone. I can't upload the app to the app store, because the servers might abuse it; however, I have left a version in the lab for you. I have heard of other professor who have created phone apps of their own in case of this emergency. Perhaps they are in the building and can help as well. Good luck, I'm going to get to the bottom of the mystery!'[paragraph break]Dr. Wood leaves the room.";
+	if the person is Zoe Wood, say "Dr. Zoe Wood approaches you, 'Hello, student! If you have noticed, something is wrong with the servers. If you're willing to help me, I suggest we split up and investigate the building. The best place to look first is in the server room in the CSL.[paragraph break]I see you have a smart phone. I have prepared a phone application to attack the servers should anything go wrong. You can download the app, DDOS, onto your phone from the app store. I have heard of other professor who have created phone apps of their own in case of this emergency. Perhaps they are in the building and can help as well. Good luck, I'm going to get to the bottom of the mystery!'[paragraph break]Dr. Wood leaves the room.";
 	if the person is Zoe Wood, remove Zoe from play.
 
 
