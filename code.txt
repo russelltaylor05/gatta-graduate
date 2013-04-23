@@ -21,7 +21,7 @@ A key is a thing. Key is in Janitor's Closet. The description of key is "Borrowe
 
 The charger is a thing in the Software Design Lab.
 
-The phone is a supporter. The player carries the phone. The description of the phone is "Battery Life: [battery life]%.".
+The phone is a transparent container. The player carries the phone. The description of the phone is "Battery Life: [battery life]%.".
 
 Battery life is a number variable. Battery life is 100.
 
@@ -33,7 +33,6 @@ app is a kind of thing. DDOS, packet spoofer, keylogger is an app.
 Launching it is an action applying to one thing.
 Check launching it:
 	if the noun is not an app, say "You can't do that." instead;
-	if the noun is an app, now battery life is battery life minus 10;
 	if the noun is DDOS, say "DDOS!";
 	if the noun is keylogger, say "You're logging its keys!";
 	if the player is not carrying the phone, say "You need your phone to do that.".
@@ -47,20 +46,20 @@ Understand "Download [something]" as downloading it.
 Downloading DDOS is an action applying to nothing.
 Understand "Download DDOS" as downloading DDOS.
 Instead of downloading DDOS:
-	if the player is not carrying DDOS, say "Successfully downloaded the app!";
-	now the player carries DDOS.
+	if DDOS is not in the phone, say "Successfully downloaded the app!";
+	now DDOS is in the phone.
 	
 Downloading keylogger is an action applying to nothing.
 Understand "Download keylogger" as downloading keylogger.
 Instead of downloading keylogger:
-	if the player is not carrying keylogger, say "Successfully downloaded the app!";
-	now the player carries keylogger.
+	if keylogger is not in the phone, say "Successfully downloaded the app!";
+	now keylogger is in the phone.
 	
 Downloading packet spoofer is an action applying to nothing.
 Understand "Download packet spoofer" as downloading packet spoofer.
 Instead of downloading packet spoofer:
-	if the player is not carrying packet spoofer, say "Successfully downloaded the app!";
-	now the player carries packet spoofer.
+	if packet spoofer is not in the phone, say "Successfully downloaded the app!";
+	now packet spoofer is in the phone.
 
 Charging it is an action applying to one thing.
 Check Charging it:
