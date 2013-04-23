@@ -1,12 +1,16 @@
 Debugging log of Inform 7
-Inform called as: /Applications/Inform.app/Contents/Resources/Compilers/ni -rules /Applications/Inform.app/Contents/Resources/Inform7/Extensions -package /Users/luke/Documents/378/gatta-graduate/Gotta Graduate.inform -extension=z5 
+Inform called as: C:\Program Files\Inform 7\Compilers\ni -rules C:\Program Files\Inform 7\Inform7\Extensions -package C:\Users\Owner\Documents\GitHub\gatta-graduate\Gotta Graduate.inform -extension=z5 
 
 
 -----------------------------------------------------
 Phase I ... Lexical analysis
 -----------------------------------------------------
 
+<<<<<<< HEAD
 I've now read your source text, which is 4072 words long.
+=======
+I've now read your source text, which is 4077 words long.
+>>>>>>> 036ae7fc8f74b26f7ed7971bda2f8a98e5724ce3
 
 
 -----------------------------------------------------

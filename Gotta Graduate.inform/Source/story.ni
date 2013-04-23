@@ -1,6 +1,6 @@
 "Gotta Graduate" by Robin Verweij, David O’Connor, Ryan Chan, Luke Plewa, Lauren Thurston, and Russell Taylor
 
-
+[]
 [ -----------------------]
 [               SETUP                     ]
 [ -----------------------]
@@ -518,6 +518,7 @@ Unix1 Battle ends when (Unix1 is dead). [The enemy will always be present till i
 
 Every turn during Unix1 Battle:
 	Let playerLocation be the location of the player; [Create a condition that the player is in combat, possibly turn wifi on or off. Give a chance for the player to leave and charge phone and kick them out of battle till they recharge. Also regain enemy health when they are not battling.]
+<<<<<<< HEAD
 	Repeat with currentEnemy running through enemies in playerLocation:
 		Let enemy-attack be a random number between 1 and 2;
 		if enemy-attack is 1:
@@ -530,3 +531,18 @@ Every turn during Unix1 Battle:
 		Decrease the Enemy-Health of Unix1 by 1;]
 	If the Enemy-health of Unix1 is 0:
 		Now Unix1 is dead.
+=======
+	If phone is switched on:
+		Repeat with currentEnemy running through enemies in playerLocation:
+			Let enemy-attack be a random number between 1 and 2;
+			if enemy-attack is 1:
+				say "[currentEnemy] uses open browser twice.[Paragraph break]";
+				say "You lose 1 Battery life. (1)[Paragraph break]"; [Change this to say and decrease actual battery life.]
+				Decrease Battery Life by 1;
+			else if enemy-attack is 2:
+				say "[currentEnemy] uses Cntr^D on you.[Paragraph break]";
+				say "You lose 1 Battery life. (2?)[Paragraph break]"; [Change this to say and decrease actual battery life.]
+				Decrease Battery Life by 1.
+			[say "[currentEnemy]: Attack! [enemy-health of currentEnemy] [Paragraph break]";
+			Decrease the Enemy-Health of Unix1 by 1;]
+>>>>>>> 036ae7fc8f74b26f7ed7971bda2f8a98e5724ce3

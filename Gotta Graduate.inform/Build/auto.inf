@@ -13023,50 +13023,63 @@ Array ActionHappened --> 0 0 0 0 0 0;
    if (scene_status-->1 == 1) { ! Runs only during scene
    if (debug_rules) DB_Rule(R_771, 771);
       ! phrase 1
-      ! [1: let playerlocation be the location of the player]
-       t_0 =  LocationOf(player) ; 
-      ! phrase 2
-      ! [2: repeat with currentenemy running through enemies in playerlocation begin]
-       for (t_1=Prop_0(,t_0,0), t_2=Prop_0(,t_0,t_1): t_1: t_1=t_2, t_2=Prop_0(,t_0,t_2))  {
-           if (debug_rules>1) print "  [repetition with currentEnemy set to ", (PrintShortName) t_1, "]^";
+      ! [1: if the enemy-health of unix1 is 0 begin]
+       if (((GProperty(9, I233_unix1,p13_enemy_health) == 0)))  {
+         ! phrase 2
+         ! [2: now unix1 is dead]
+          (Adj_74_t2_v9(I233_unix1)); 
          ! phrase 3
-         ! [3: let enemy-attack be a random number between 1 and 2]
-          t_3 =  R_DecimalNumber(1, 2) ; 
-         ! phrase 4
-         ! [4: if enemy-attack is 1 begin]
-          if (((t_3 == 1)))  {
-            ! phrase 5
-            ! [5: say ~[currentEnemy] uses open browser twice.[Paragraph break]~]
-            say__p=1;ParaContent();  print (PrintShortName) t_1; ParaContent();  print (PrintText) SC_51; ParaContent();  DivideParagraphPoint(); new_line;  .L_Say3; .L_SayX3;
-            ! phrase 6
-            ! [6: say ~You lose a set amout of Battery life. (1)[Paragraph break]~]
-            say__p=1;ParaContent();  print (PrintText) SC_52; ParaContent();  DivideParagraphPoint(); new_line;  .L_Say4; .L_SayX4;
-            ! phrase 7
-            ! [7: else if enemy-attack is 2]
-             } else if (((t_3 == 2))) { 
-            ! phrase 8
-            ! [8: say ~[currentEnemy] uses Cntr@@94D on you.[Paragraph break]~]
-            say__p=1;ParaContent();  print (PrintShortName) t_1; ParaContent();  print (PrintText) SC_53; ParaContent();  DivideParagraphPoint(); new_line;  .L_Say5; .L_SayX5;
-            ! phrase 9
-            ! [9: say ~You lose a set amount of Battery life. (2?)[Paragraph break]~]
-            say__p=1;ParaContent();  print (PrintText) SC_54; ParaContent();  DivideParagraphPoint(); new_line;  .L_Say6; .L_SayX6;
-            ! phrase 10
-            ! [10: end if]
-            }
-
-         ! phrase 11
-         ! [11: end repeat]
+         ! [3: end if]
          }
 
-        if (debug_rules>1) print "  [11: end repeat]^";
-      ! phrase 12
-      ! [12: if the enemy-health of unix1 is 0 begin]
-       if (((GProperty(9, I233_unix1,p13_enemy_health) == 0)))  {
-         ! phrase 13
-         ! [13: now unix1 is dead]
-          (Adj_74_t2_v9(I233_unix1)); 
-         ! phrase 14
-         ! [14: end if]
+      ! phrase 4
+      ! [4: let playerlocation be the location of the player]
+       t_0 =  LocationOf(player) ; 
+      ! phrase 5
+      ! [5: if phone is switched on begin]
+       if ((((Adj_70_t1_v9(I95_phone)))))  {
+         ! phrase 6
+         ! [6: repeat with currentenemy running through enemies in playerlocation begin]
+          for (t_1=Prop_0(,t_0,0), t_2=Prop_0(,t_0,t_1): t_1: t_1=t_2, t_2=Prop_0(,t_0,t_2))  {
+              if (debug_rules>1) print "  [repetition with currentEnemy set to ", (PrintShortName) t_1, "]^";
+            ! phrase 7
+            ! [7: let enemy-attack be a random number between 1 and 2]
+             t_3 =  R_DecimalNumber(1, 2) ; 
+            ! phrase 8
+            ! [8: if enemy-attack is 1 begin]
+             if (((t_3 == 1)))  {
+               ! phrase 9
+               ! [9: say ~[currentEnemy] uses open browser twice.[Paragraph break]~]
+               say__p=1;ParaContent();  print (PrintShortName) t_1; ParaContent();  print (PrintText) SC_51; ParaContent();  DivideParagraphPoint(); new_line;  .L_Say3; .L_SayX3;
+               ! phrase 10
+               ! [10: say ~You lose 1 Battery life. (1)[Paragraph break]~]
+               say__p=1;ParaContent();  print (PrintText) SC_52; ParaContent();  DivideParagraphPoint(); new_line;  .L_Say4; .L_SayX4;
+               ! phrase 11
+               ! [11: decrease battery life by 1]
+                (Global_Vars-->9) = (Global_Vars-->9) - 1; 
+               ! phrase 12
+               ! [12: else if enemy-attack is 2]
+                } else if (((t_3 == 2))) { 
+               ! phrase 13
+               ! [13: say ~[currentEnemy] uses Cntr@@94D on you.[Paragraph break]~]
+               say__p=1;ParaContent();  print (PrintShortName) t_1; ParaContent();  print (PrintText) SC_53; ParaContent();  DivideParagraphPoint(); new_line;  .L_Say5; .L_SayX5;
+               ! phrase 14
+               ! [14: say ~You lose 1 Battery life. (2?)[Paragraph break]~]
+               say__p=1;ParaContent();  print (PrintText) SC_54; ParaContent();  DivideParagraphPoint(); new_line;  .L_Say6; .L_SayX6;
+               ! phrase 15
+               ! [15: decrease battery life by 1]
+                (Global_Vars-->9) = (Global_Vars-->9) - 1; 
+               ! phrase 16
+               ! [16: end if]
+               }
+
+            ! phrase 17
+            ! [17: end repeat]
+            }
+
+           if (debug_rules>1) print "  [17: end repeat]^";
+         ! phrase 18
+         ! [18: end if]
          }
 
    } ! Runs only during scene
@@ -31846,8 +31859,8 @@ Constant SC_94 = "You can only do that with your phone.";
 Constant SC_89 = "You can't do that.";
 Constant SC_93 = "You can't download that!";
 Constant SC_95 = "You have finished charging.";
-Constant SC_54 = "You lose a set amount of Battery life. (2?)";
-Constant SC_52 = "You lose a set amout of Battery life. (1)";
+Constant SC_52 = "You lose 1 Battery life. (1)";
+Constant SC_54 = "You lose 1 Battery life. (2?)";
 Constant SC_70 = "You need a power source!";
 Constant SC_96 = "You need your charger to do that.";
 Constant SC_92 = "You need your phone to do that.";
@@ -35906,7 +35919,6 @@ Global precopied_comb_kov;
 
 #ENDIF; ! IFDEF MEMORY_HEAP_SIZE
 
-
 Constant RRV_NAME     		RR_NAME-4;
 Constant RRV_PERMISSIONS	RR_PERMISSIONS-4;
 Constant RRV_STORAGE		RR_STORAGE-4;
@@ -35967,7 +35979,6 @@ Constant RLIST_ALL_X 1;
 Constant RLIST_ALL_Y 2;
 Constant RLIST_ALL_PAIRS 3;
 
-
 Constant RRP_MIN_SIZE      8;   ! minimum number of entries (DO NOT CHANGE)
 Constant RRP_PERTURB_SHIFT 5;   ! affects the probe sequence
 Constant RRP_RESIZE_SMALL  4;   ! resize factor for small tables
@@ -35975,21 +35986,17 @@ Constant RRP_RESIZE_LARGE  2;   ! resize factor for large tables
 Constant RRP_LARGE_IS      256; ! how many entries make a table "large"?
 Constant RRP_CROWDED_IS    2;   ! when filled entries outnumber unfilled by _ to 1
 
-
 [ RelationTest relation task X Y  handler;
 	handler = relation-->RR_HANDLER;
 	return handler(relation, task, X, Y);
 ];
-
 
 [ EmptyRelationHandler relation task X Y;
 	if (task == RELS_EMPTY) rtrue;
 	rfalse;
 ];
 
-
 #IFDEF MEMORY_HEAP_SIZE; ! Will exist if any use is made of heap
-
 
 [ RELATION_TY_Support task arg1 arg2 arg3;
 	switch(task) {
@@ -36005,7 +36012,6 @@ Constant RRP_CROWDED_IS    2;   ! when filled entries outnumber unfilled by _ to
 		HASH_KOVS:       return arg1;
 	}
 ];
-
 
 [ RELATION_TY_Create kov from rel i skov handler;
 	rel = BlkAllocate((RRV_DATA_BASE + 3*RRP_MIN_SIZE)*WORDSIZE,
@@ -36039,19 +36045,16 @@ Constant RRP_CROWDED_IS    2;   ! when filled entries outnumber unfilled by _ to
 	return rel;
 ];
 
-
 [ RELATION_TY_Destroy rel  handler;
 	handler = BlkValueRead(rel, RRV_HANDLER);
 	handler(rel, RELS_DESTROY);
 	return rel;
 ];
 
-
 [ RELATION_TY_Copy lto lfrom  handler;
 	handler = BlkValueRead(lto, RRV_HANDLER);
 	handler(lto, RELS_COPY);
 ];
-
 
 [ RELATION_TY_Compare rleft rright ind1 ind2;
 	ind1 = BlkValueRead(rleft, RRV_HANDLER);
@@ -36066,12 +36069,10 @@ Constant RRP_CROWDED_IS    2;   ! when filled entries outnumber unfilled by _ to
 	rtrue;
 ];
 
-
 [ RELATION_TY_Say rel;
 	if (rel == 0) print "(null relation)"; ! shouldn't happen
 	else print (string) rel-->RR_NAME;
 ];
-
 
 [ RELATION_TY_Name rel txt;
 	if (rel) {
@@ -36079,7 +36080,6 @@ Constant RRP_CROWDED_IS    2;   ! when filled entries outnumber unfilled by _ to
 		BlkValueWrite(rel, RRV_DESCRIPTION, txt);
 	}
 ];
-
 
 [ ChooseRelationHandler kov sym;
 	if (KOVIsBlockValue(KindBaseTerm(kov, 0))) {
@@ -36089,7 +36089,6 @@ Constant RRP_CROWDED_IS    2;   ! when filled entries outnumber unfilled by _ to
 	if (sym) return SymDoubleHashSetRelationHandler;
 	return DoubleHashSetRelationHandler;
 ];
-
 
 [ RELATION_TY_SetValency rel val  kov filled cur handler ext;
 	filled = BlkValueRead(rel, RRV_FILLED);
@@ -36127,7 +36126,6 @@ Constant RRP_CROWDED_IS    2;   ! when filled entries outnumber unfilled by _ to
 [ RELATION_TY_GetValency rel  handler;
 	return BlkValueRead(rel, RRV_PERMISSIONS) & VALENCY_MASK;
 ];
-
 
 [ DoubleHashSetRelationHandler rel task X Y sym  kov kx ky at tmp v;
 	kov = BlkValueRead(rel, RRV_KIND);
@@ -36416,20 +36414,17 @@ Constant RRP_CROWDED_IS    2;   ! when filled entries outnumber unfilled by _ to
 	rtrue;
 ];
 
-
 [ HashListRelationHandler rel task X Y  sym kov kx ky;
 	kov = BlkValueRead(rel, RRV_KIND);
 	kx = KindBaseTerm(kov, 0); ky = KindBaseTerm(kov, 1);
 	return HashCoreRelationHandler(rel, task, kx, ky, X, Y, 1);
 ];
 
-
 [ HashTableRelationHandler rel task X Y  kov kx ky;
 	kov = BlkValueRead(rel, RRV_KIND);
 	kx = KindBaseTerm(kov, 0); ky = KindBaseTerm(kov, 1);
 	return HashCoreRelationHandler(rel, task, kx, ky, X, Y, 0);
 ];
-
 
 [ ReversedHashTableRelationHandler rel task X Y  kov kx ky;
 	kov = BlkValueRead(rel, RRV_KIND);
@@ -36460,7 +36455,6 @@ Constant RRP_CROWDED_IS    2;   ! when filled entries outnumber unfilled by _ to
 	return HashCoreRelationHandler(rel, task, kx, ky, X, Y, 0);
 ];
 
-
 [ SymDoubleHashSetRelationHandler rel task X Y;
 	if (task == RELS_ASSERT_TRUE or RELS_ASSERT_FALSE)
 		DoubleHashSetRelationHandler(rel, task, Y, X);
@@ -36478,7 +36472,6 @@ Constant RRP_CROWDED_IS    2;   ! when filled entries outnumber unfilled by _ to
 		TwoInOneHashTableRelationHandler(rel, task, Y, X);
 	return TwoInOneHashTableRelationHandler(rel, task, X, Y, 1);
 ];
-
 
 [ HashCoreRelationHandler rel task kx ky X Y mult  sym rev at tmp fl;
 	if (task == RELS_SET_VALENCY) {
@@ -36889,7 +36882,6 @@ Constant RRP_CROWDED_IS    2;   ! when filled entries outnumber unfilled by _ to
 	rtrue;
 ];
 
-
 [ EquivHashTableRelationHandler rel task X Y  kx at at2 tmp fl i ext;
 	kx = KindBaseTerm(BlkValueRead(rel, RRV_KIND), 0);
 	if (task == RELS_SET_VALENCY) {
@@ -37100,7 +37092,6 @@ Constant RRP_CROWDED_IS    2;   ! when filled entries outnumber unfilled by _ to
 			rtrue;
 	}
 ];
-
 
 [ TwoInOneHashTableRelationHandler rel task X Y sym  kov kx ky at at2 tmp fl;
 	kov = BlkValueRead(rel, RRV_KIND);
@@ -37503,7 +37494,6 @@ Constant RRP_CROWDED_IS    2;   ! when filled entries outnumber unfilled by _ to
 	rtrue;
 ];
 
-
 #IFNOT; ! IFDEF MEMORY_HEAP_SIZE
 
 [ RELATION_TY_Support t a b c; rfalse; ];
@@ -37511,7 +37501,6 @@ Constant RRP_CROWDED_IS    2;   ! when filled entries outnumber unfilled by _ to
 [ RELATION_TY_Name rel txt; ];
 
 #ENDIF; ! IFDEF MEMORY_HEAP_SIZE
-
 
 [ RELATION_TY_Empty rel set  handler;
 	handler = rel-->RR_HANDLER;
