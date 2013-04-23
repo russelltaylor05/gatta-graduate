@@ -21,7 +21,7 @@ A key is a thing. Key is in Janitor's Closet. The description of key is "Borrowe
 
 The charger is a thing in the Software Design Lab.
 
-The phone is a supporter. The player carries the phone. The description of the phone is "Battery Life: [battery life]%.".
+The phone is a transparent container. The player carries the phone. The description of the phone is "Battery Life: [battery life]%.".
 
 Battery life is a number variable. Battery life is 100.
 
@@ -47,20 +47,20 @@ Understand "Download [something]" as downloading it.
 Downloading DDOS is an action applying to nothing.
 Understand "Download DDOS" as downloading DDOS.
 Instead of downloading DDOS:
-	if the player is not carrying DDOS, say "Successfully downloaded the app!";
-	now the player carries DDOS.
+	if DDOS is not in the phone, say "Successfully downloaded the app!";
+	now DDOS is in the phone.
 	
 Downloading keylogger is an action applying to nothing.
 Understand "Download keylogger" as downloading keylogger.
 Instead of downloading keylogger:
-	if the player is not carrying keylogger, say "Successfully downloaded the app!";
-	now the player carries keylogger.
+	if keylogger is not in the phone, say "Successfully downloaded the app!";
+	now keylogger is in the phone.
 	
 Downloading packet spoofer is an action applying to nothing.
 Understand "Download packet spoofer" as downloading packet spoofer.
 Instead of downloading packet spoofer:
-	if the player is not carrying packet spoofer, say "Successfully downloaded the app!";
-	now the player carries packet spoofer.
+	if packet spoofer is not in the phone, say "Successfully downloaded the app!";
+	now packet spoofer is in the phone.
 
 Charging it is an action applying to one thing.
 Check Charging it:
@@ -517,17 +517,16 @@ Unix1 Battle ends when (Unix1 is dead). [The enemy will always be present till i
 		say "What enemy.".]
 
 Every turn during Unix1 Battle:
-	If the Enemy-health of Unix1 is 0:
-		Now Unix1 is dead;
 	Let playerLocation be the location of the player; [Create a condition that the player is in combat, possibly turn wifi on or off. Give a chance for the player to leave and charge phone and kick them out of battle till they recharge. Also regain enemy health when they are not battling.]
-	If phone is switched on:
-		Repeat with currentEnemy running through enemies in playerLocation:
-			Let enemy-attack be a random number between 1 and 2;
-			if enemy-attack is 1:
-				say "[currentEnemy] uses open browser twice.[Paragraph break]";
-				say "You lose a set amout of Battery life. (1)[Paragraph break]"; [Change this to say and decrease actual battery life.]
-			else if enemy-attack is 2:
-				say "[currentEnemy] uses Cntr^D on you.[Paragraph break]";
-				say "You lose a set amount of Battery life. (2?)[Paragraph break]". [Change this to say and decrease actual battery life.]
-			[say "[currentEnemy]: Attack! [enemy-health of currentEnemy] [Paragraph break]";
-			Decrease the Enemy-Health of Unix1 by 1;]
+	Repeat with currentEnemy running through enemies in playerLocation:
+		Let enemy-attack be a random number between 1 and 2;
+		if enemy-attack is 1:
+			say "[currentEnemy] uses open browser twice.[Paragraph break]";
+			say "You lose a set amout of Battery life. (1)[Paragraph break]"; [Change this to say and decrease actual battery life.]
+		else if enemy-attack is 2:
+			say "[currentEnemy] uses Cntr^D on you.[Paragraph break]";
+			say "You lose a set amount of Battery life. (2?)[Paragraph break]"; [Change this to say and decrease actual battery life.]
+		[say "[currentEnemy]: Attack! [enemy-health of currentEnemy] [Paragraph break]";
+		Decrease the Enemy-Health of Unix1 by 1;]
+	If the Enemy-health of Unix1 is 0:
+		Now Unix1 is dead.

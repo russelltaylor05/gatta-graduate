@@ -9362,8 +9362,8 @@ Constant IK1_First = I88_software_design_lab;
 Constant IK2_First = selfobj;
 Constant IK3_First = I46_north;
 Constant IK4_First = I107_door1;
-Constant IK5_First = I136_14_205;
-Constant IK6_First = I95_phone;
+Constant IK5_First = I95_phone;
+Constant IK6_First = nothing;
 Constant IK7_First = I163_desk;
 Constant IK8_First = selfobj;
 Constant IK9_First = nothing;
@@ -9887,17 +9887,18 @@ Object -> selfobj ""
 ;
 
 Object -> -> I95_phone ""
-    class K6_supporter
+    class K5_container
     with short_name "phone"
     with description text_routine_1
+    has transparent
     with vector 0
     with list_together 0
     has mark_as_thing
     with IK2_Count 4
     with IK2_Link I94_charger
-    with IK6_Count 0
-    with IK6_Link nothing
-    with KD_Count 6
+    with IK5_Count 0
+    with IK5_Link I136_14_205
+    with KD_Count 5
     with name 'phone' 
     with action_bitmap 0 0 0 0 0 0 
 ;
@@ -10657,7 +10658,7 @@ Object -> I136_14_205 ""
     has mark_as_thing
     with IK2_Count 23
     with IK2_Link I154_nokia_phone
-    with IK5_Count 0
+    with IK5_Count 1
     with IK5_Link I138_14_206
     with IK17_Count 0
     with IK17_Link I138_14_206
@@ -10693,7 +10694,7 @@ Object -> I138_14_206 ""
     has mark_as_thing
     with IK2_Count 25
     with IK2_Link I139_14_207
-    with IK5_Count 1
+    with IK5_Count 2
     with IK5_Link I139_14_207
     with IK17_Count 1
     with IK17_Link I139_14_207
@@ -10712,7 +10713,7 @@ Object -> I139_14_207 ""
     has mark_as_thing
     with IK2_Count 26
     with IK2_Link I140_14_208
-    with IK5_Count 2
+    with IK5_Count 3
     with IK5_Link I140_14_208
     with IK17_Count 2
     with IK17_Link I140_14_208
@@ -10731,7 +10732,7 @@ Object -> I140_14_208 ""
     has mark_as_thing
     with IK2_Count 27
     with IK2_Link I137_pin
-    with IK5_Count 3
+    with IK5_Count 4
     with IK5_Link I141_14_209
     with IK17_Count 3
     with IK17_Link I141_14_209
@@ -10764,7 +10765,7 @@ Object -> I141_14_209 ""
     has mark_as_thing
     with IK2_Count 28
     with IK2_Link I142_14_210
-    with IK5_Count 4
+    with IK5_Count 5
     with IK5_Link I142_14_210
     with IK17_Count 4
     with IK17_Link I142_14_210
@@ -10784,7 +10785,7 @@ Object -> I142_14_210 ""
     has mark_as_thing
     with IK2_Count 29
     with IK2_Link I143_14_211
-    with IK5_Count 5
+    with IK5_Count 6
     with IK5_Link I143_14_211
     with IK17_Count 5
     with IK17_Link I143_14_211
@@ -10804,7 +10805,7 @@ Object -> I143_14_211 ""
     has mark_as_thing
     with IK2_Count 30
     with IK2_Link I160_note
-    with IK5_Count 6
+    with IK5_Count 7
     with IK5_Link I144_14_203
     with IK17_Count 6
     with IK17_Link I144_14_203
@@ -10865,7 +10866,7 @@ Object -> I144_14_203 ""
     has mark_as_thing
     with IK2_Count 31
     with IK2_Link I145_14_204
-    with IK5_Count 7
+    with IK5_Count 8
     with IK5_Link I145_14_204
     with IK17_Count 7
     with IK17_Link I145_14_204
@@ -10884,7 +10885,7 @@ Object -> I145_14_204 ""
     has mark_as_thing
     with IK2_Count 32
     with IK2_Link I156_solder_pen
-    with IK5_Count 8
+    with IK5_Count 9
     with IK5_Link I146_14_212
     with IK17_Count 8
     with IK17_Link I146_14_212
@@ -10921,7 +10922,7 @@ Object -> I146_14_212 ""
     has mark_as_thing
     with IK2_Count 33
     with IK2_Link I147_14_213
-    with IK5_Count 9
+    with IK5_Count 10
     with IK5_Link I147_14_213
     with IK17_Count 9
     with IK17_Link I147_14_213
@@ -10940,7 +10941,7 @@ Object -> I147_14_213 ""
     has mark_as_thing
     with IK2_Count 34
     with IK2_Link I161_foaad
-    with IK5_Count 10
+    with IK5_Count 11
     with IK5_Link I148_14_214
     with IK17_Count 10
     with IK17_Link I148_14_214
@@ -10991,7 +10992,7 @@ Object -> I148_14_214 ""
     has mark_as_thing
     with IK2_Count 35
     with IK2_Link I149_14_215
-    with IK5_Count 11
+    with IK5_Count 12
     with IK5_Link I149_14_215
     with IK17_Count 11
     with IK17_Link I149_14_215
@@ -11011,7 +11012,7 @@ Object -> I149_14_215 ""
     has mark_as_thing
     with IK2_Count 36
     with IK2_Link I151_14_216
-    with IK5_Count 12
+    with IK5_Count 13
     with IK5_Link I151_14_216
     with IK17_Count 12
     with IK17_Link I151_14_216
@@ -11030,7 +11031,7 @@ Object -> I151_14_216 ""
     has mark_as_thing
     with IK2_Count 38
     with IK2_Link I159_aa_cell
-    with IK5_Count 13
+    with IK5_Count 14
     with IK5_Link I155_nokia_phone_s_battery_c
     with IK17_Count 13
     with IK17_Link I169_14_219
@@ -11065,7 +11066,7 @@ Object I155_nokia_phone_s_battery_c ""
     with component_parent I154_nokia_phone
     with IK2_Count 40
     with IK2_Link I157_solder_pen_s_battery_co
-    with IK5_Count 14
+    with IK5_Count 15
     with IK5_Link I157_solder_pen_s_battery_co
     with IK20_Count 0
     with IK20_Link I157_solder_pen_s_battery_co
@@ -11083,7 +11084,7 @@ Object I157_solder_pen_s_battery_co ""
     with component_parent I156_solder_pen
     with IK2_Count 42
     with IK2_Link I163_desk
-    with IK5_Count 15
+    with IK5_Count 16
     with IK5_Link I169_14_219
     with IK20_Count 1
     with IK20_Link nothing
@@ -11193,7 +11194,7 @@ Object -> I169_14_219 ""
     has mark_as_thing
     with IK2_Count 49
     with IK2_Link I170_14_221
-    with IK5_Count 16
+    with IK5_Count 17
     with IK5_Link I170_14_221
     with IK17_Count 14
     with IK17_Link I170_14_221
@@ -11211,7 +11212,7 @@ Object -> I170_14_221 ""
     has mark_as_thing
     with IK2_Count 50
     with IK2_Link I171_14_222
-    with IK5_Count 17
+    with IK5_Count 18
     with IK5_Link I171_14_222
     with IK17_Count 15
     with IK17_Link I171_14_222
@@ -11229,7 +11230,7 @@ Object -> I171_14_222 ""
     has mark_as_thing
     with IK2_Count 51
     with IK2_Link I172_14_223
-    with IK5_Count 18
+    with IK5_Count 19
     with IK5_Link I172_14_223
     with IK17_Count 16
     with IK17_Link I172_14_223
@@ -11247,7 +11248,7 @@ Object -> I172_14_223 ""
     has mark_as_thing
     with IK2_Count 52
     with IK2_Link I173_14_226
-    with IK5_Count 19
+    with IK5_Count 20
     with IK5_Link I173_14_226
     with IK17_Count 17
     with IK17_Link I173_14_226
@@ -11265,7 +11266,7 @@ Object -> I173_14_226 ""
     has mark_as_thing
     with IK2_Count 53
     with IK2_Link I174_14_217
-    with IK5_Count 20
+    with IK5_Count 21
     with IK5_Link I174_14_217
     with IK17_Count 18
     with IK17_Link I174_14_217
@@ -11297,7 +11298,7 @@ Object -> I174_14_217 ""
     has mark_as_thing
     with IK2_Count 54
     with IK2_Link I175_14_218
-    with IK5_Count 21
+    with IK5_Count 22
     with IK5_Link I175_14_218
     with IK17_Count 19
     with IK17_Link I175_14_218
@@ -11315,7 +11316,7 @@ Object -> I175_14_218 ""
     has mark_as_thing
     with IK2_Count 55
     with IK2_Link I176_14_227
-    with IK5_Count 22
+    with IK5_Count 23
     with IK5_Link I176_14_227
     with IK17_Count 20
     with IK17_Link I176_14_227
@@ -11333,7 +11334,7 @@ Object -> I176_14_227 ""
     has mark_as_thing
     with IK2_Count 56
     with IK2_Link I177_14_228
-    with IK5_Count 23
+    with IK5_Count 24
     with IK5_Link I177_14_228
     with IK17_Count 21
     with IK17_Link I177_14_228
@@ -11351,7 +11352,7 @@ Object -> I177_14_228 ""
     has mark_as_thing
     with IK2_Count 57
     with IK2_Link I178_14_229
-    with IK5_Count 24
+    with IK5_Count 25
     with IK5_Link I178_14_229
     with IK17_Count 22
     with IK17_Link I178_14_229
@@ -11369,7 +11370,7 @@ Object -> I178_14_229 ""
     has mark_as_thing
     with IK2_Count 58
     with IK2_Link I179_14_230
-    with IK5_Count 25
+    with IK5_Count 26
     with IK5_Link I179_14_230
     with IK17_Count 23
     with IK17_Link I179_14_230
@@ -11387,7 +11388,7 @@ Object -> I179_14_230 ""
     has mark_as_thing
     with IK2_Count 59
     with IK2_Link I180_14_231
-    with IK5_Count 26
+    with IK5_Count 27
     with IK5_Link I180_14_231
     with IK17_Count 24
     with IK17_Link I180_14_231
@@ -11405,7 +11406,7 @@ Object -> I180_14_231 ""
     has mark_as_thing
     with IK2_Count 60
     with IK2_Link I220_csl_233_d
-    with IK5_Count 27
+    with IK5_Count 28
     with IK5_Link nothing
     with IK17_Count 25
     with IK17_Link nothing
@@ -13668,11 +13669,11 @@ self = noun;
 self = noun;
    if (debug_rules) DB_Rule(R_742, 742);
       ! phrase 1
-      ! [1: if the player is not carrying ddos , say ~Successfully downloaded the app!~]
-       if (((~~((player == CarrierOf(I97_ddos)))))) { say__p=1;ParaContent();  print (PrintText) SC_71;  new_line; .L_Say18; .L_SayX18;  }
+      ! [1: if ddos is not in the phone , say ~Successfully downloaded the app!~]
+       if (((~~((I95_phone == ContainerOf(I97_ddos)))))) { say__p=1;ParaContent();  print (PrintText) SC_71;  new_line; .L_Say18; .L_SayX18;  }
       ! phrase 2
-      ! [2: now the player carries ddos]
-       MoveObject(I97_ddos,player); 
+      ! [2: now ddos is in the phone]
+       MoveObject(I97_ddos,I95_phone); 
       RulebookFails(); rtrue;
    } ! Runs only when pattern matches
    else if (debug_rules > 1) DB_Rule(R_742, 742, true);
@@ -13685,11 +13686,11 @@ self = noun;
 self = noun;
    if (debug_rules) DB_Rule(R_743, 743);
       ! phrase 1
-      ! [1: if the player is not carrying keylogger , say ~Successfully downloaded the app!~]
-       if (((~~((player == CarrierOf(I99_keylogger)))))) { say__p=1;ParaContent();  print (PrintText) SC_71;  new_line; .L_Say19; .L_SayX19;  }
+      ! [1: if keylogger is not in the phone , say ~Successfully downloaded the app!~]
+       if (((~~((I95_phone == ContainerOf(I99_keylogger)))))) { say__p=1;ParaContent();  print (PrintText) SC_71;  new_line; .L_Say19; .L_SayX19;  }
       ! phrase 2
-      ! [2: now the player carries keylogger]
-       MoveObject(I99_keylogger,player); 
+      ! [2: now keylogger is in the phone]
+       MoveObject(I99_keylogger,I95_phone); 
       RulebookFails(); rtrue;
    } ! Runs only when pattern matches
    else if (debug_rules > 1) DB_Rule(R_743, 743, true);
@@ -13702,11 +13703,11 @@ self = noun;
 self = noun;
    if (debug_rules) DB_Rule(R_744, 744);
       ! phrase 1
-      ! [1: if the player is not carrying packet spoofer , say ~Successfully downloaded the app!~]
-       if (((~~((player == CarrierOf(I98_packet_spoofer)))))) { say__p=1;ParaContent();  print (PrintText) SC_71;  new_line; .L_Say20; .L_SayX20;  }
+      ! [1: if packet spoofer is not in the phone , say ~Successfully downloaded the app!~]
+       if (((~~((I95_phone == ContainerOf(I98_packet_spoofer)))))) { say__p=1;ParaContent();  print (PrintText) SC_71;  new_line; .L_Say20; .L_SayX20;  }
       ! phrase 2
-      ! [2: now the player carries packet spoofer]
-       MoveObject(I98_packet_spoofer,player); 
+      ! [2: now packet spoofer is in the phone]
+       MoveObject(I98_packet_spoofer,I95_phone); 
       RulebookFails(); rtrue;
    } ! Runs only when pattern matches
    else if (debug_rules > 1) DB_Rule(R_744, 744, true);

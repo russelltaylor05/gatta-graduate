@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
-<Skein rootNode="node-0x12ba0f80" xmlns="http://www.logicalshift.org.uk/IF/Skein">
+<Skein rootNode="node-0x87dd150" xmlns="http://www.logicalshift.org.uk/IF/Skein">
   <generator>Zoom</generator>
-  <activeNode nodeId="node-0x13284c20" />
-  <item nodeId="node-0x12ba0f80">
+  <activeNode nodeId="node-0x87dcf50" />
+  <item nodeId="node-0x87dd150">
     <command xml:space="preserve">- start -</command>
     <result xml:space="preserve">
 
@@ -25,46 +25,78 @@ You can see Software Design Lab Door, a charger and Dr Gene Fisher here.
 &gt;</result>
     <played>YES</played>
     <changed>NO</changed>
-    <temporary score="36">NO</temporary>
+    <temporary score="51">NO</temporary>
     <children>
-      <child nodeId="node-0x132625e0" />
-      <child nodeId="node-0x12ba14b0" />
-      <child nodeId="node-0x1da3fa0" />
-      <child nodeId="node-0x12ba11c0" />
+      <child nodeId="node-0x12bd80e0" />
+      <child nodeId="node-0x1dae1e0" />
+      <child nodeId="node-0x12bd5ac0" />
+      <child nodeId="node-0x132a0300" />
+      <child nodeId="node-0x87dcfa0" />
+      <child nodeId="node-0x12b02a60" />
     </children>
   </item>
-  <item nodeId="node-0x12ba11c0">
+  <item nodeId="node-0x12b02a60">
     <command xml:space="preserve">download ddos</command>
     <result xml:space="preserve">Successfully downloaded the app!
 
 &gt;</result>
     <played>YES</played>
     <changed>NO</changed>
-    <temporary score="22">YES</temporary>
+    <temporary score="51">YES</temporary>
     <children>
-      <child nodeId="node-0x12ba1460" />
-      <child nodeId="node-0x12ba1210" />
+      <child nodeId="node-0x87dcf50" />
+      <child nodeId="node-0x87dcf00" />
     </children>
   </item>
-  <item nodeId="node-0x12ba1210">
+  <item nodeId="node-0x87dcf00">
     <command xml:space="preserve">download ddos</command>
     <result xml:space="preserve">&gt;</result>
     <played>YES</played>
     <changed>YES</changed>
     <temporary score="21">YES</temporary>
   </item>
-  <item nodeId="node-0x12ba1460">
+  <item nodeId="node-0x87dcf50">
     <command xml:space="preserve">i</command>
     <result xml:space="preserve">You are carrying:
-  DDOS
   a phone
+    DDOS
 
 &gt;</result>
     <played>YES</played>
     <changed>YES</changed>
-    <temporary score="19">YES</temporary>
+    <temporary score="50">YES</temporary>
+    <children>
+      <child nodeId="node-0x132cc480" />
+    </children>
   </item>
-  <item nodeId="node-0x1da3fa0">
+  <item nodeId="node-0x132cc480">
+    <command xml:space="preserve">l</command>
+    <result xml:space="preserve">Software Design Lab
+A lab room lined with computers with a projector and table at the center. North is a doorway leading to the hall.
+
+You are finishing up your program, checking to make sure everything compiles and that your name is on the source code. You go to SSH into Vogon, when you realize that something is wrong. You cannot access Vogon, so you shrug it off and try Unix1. After you realize that Unix1 is not working, you start to lightly perspire. You desperately want to go home to your bed and fluffy pillow and sleep. As you try Unix2 and fail to connect once again, you bang your head on the table. What to do?
+
+
+You can see Software Design Lab Door, a charger and Dr Gene Fisher here.
+
+&gt;</result>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="40">YES</temporary>
+    <children>
+      <child nodeId="node-0x9569690" />
+    </children>
+  </item>
+  <item nodeId="node-0x9569690">
+    <command xml:space="preserve">i</command>
+    <result xml:space="preserve">You are carrying nothing.
+
+&gt;</result>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="39">YES</temporary>
+  </item>
+  <item nodeId="node-0x87dcfa0">
     <command xml:space="preserve">take charger</command>
     <result xml:space="preserve">Taken.
 
@@ -73,10 +105,10 @@ You can see Software Design Lab Door, a charger and Dr Gene Fisher here.
     <changed>YES</changed>
     <temporary score="32">YES</temporary>
     <children>
-      <child nodeId="node-0x132e5e40" />
+      <child nodeId="node-0x12b05a80" />
     </children>
   </item>
-  <item nodeId="node-0x132e5e40">
+  <item nodeId="node-0x12b05a80">
     <command xml:space="preserve">talk to fisher</command>
     <result xml:space="preserve">Dr. Fisher looks up from his laptop. &quot;There seems to be something with the servers.&quot;
 
@@ -89,10 +121,10 @@ Dr. Fisher packs up and leaves the room.
     <changed>YES</changed>
     <temporary score="32">YES</temporary>
     <children>
-      <child nodeId="node-0x1bf5b60" />
+      <child nodeId="node-0x12b05ad0" />
     </children>
   </item>
-  <item nodeId="node-0x1bf5b60">
+  <item nodeId="node-0x12b05ad0">
     <command xml:space="preserve">s</command>
     <result xml:space="preserve">You can&apos;t go that way.
 
@@ -101,10 +133,10 @@ Dr. Fisher packs up and leaves the room.
     <changed>YES</changed>
     <temporary score="32">YES</temporary>
     <children>
-      <child nodeId="node-0x1bb8bb0" />
+      <child nodeId="node-0x12b05bc0" />
     </children>
   </item>
-  <item nodeId="node-0x1bb8bb0">
+  <item nodeId="node-0x12b05bc0">
     <command xml:space="preserve">n</command>
     <result xml:space="preserve">(first opening Software Design Lab Door)
 
@@ -118,10 +150,10 @@ You can see Software Design Lab Door here.
     <changed>YES</changed>
     <temporary score="32">YES</temporary>
     <children>
-      <child nodeId="node-0x13274e30" />
+      <child nodeId="node-0x12b05c10" />
     </children>
   </item>
-  <item nodeId="node-0x13274e30">
+  <item nodeId="node-0x12b05c10">
     <command xml:space="preserve">e</command>
     <result xml:space="preserve">
 Hallway 2
@@ -134,10 +166,10 @@ You can see Game Design Lab Door here.
     <changed>YES</changed>
     <temporary score="32">YES</temporary>
     <children>
-      <child nodeId="node-0x12b7a410" />
+      <child nodeId="node-0x12bbf210" />
     </children>
   </item>
-  <item nodeId="node-0x12b7a410">
+  <item nodeId="node-0x12bbf210">
     <command xml:space="preserve">n</command>
     <result xml:space="preserve">You can&apos;t go that way.
 
@@ -146,10 +178,10 @@ You can see Game Design Lab Door here.
     <changed>YES</changed>
     <temporary score="32">YES</temporary>
     <children>
-      <child nodeId="node-0x1bf26b0" />
+      <child nodeId="node-0x12bbf260" />
     </children>
   </item>
-  <item nodeId="node-0x1bf26b0">
+  <item nodeId="node-0x12bbf260">
     <command xml:space="preserve">s</command>
     <result xml:space="preserve">(first opening Game Design Lab Door)
 
@@ -163,10 +195,10 @@ You can see Game Design Lab Door and Dr Zoe Wood here.
     <changed>YES</changed>
     <temporary score="32">YES</temporary>
     <children>
-      <child nodeId="node-0x12bbaa10" />
+      <child nodeId="node-0x12bbf2d0" />
     </children>
   </item>
-  <item nodeId="node-0x12bbaa10">
+  <item nodeId="node-0x12bbf2d0">
     <command xml:space="preserve">talk to zoe</command>
     <result xml:space="preserve">Dr. Zoe Wood approaches you, &quot;Hello, student! If you have noticed, something is wrong with the servers. If you&apos;re willing to help me, I suggest we split up and investigate the building. The best place to look first is in the server room in the CSL.
 
@@ -179,10 +211,10 @@ Dr. Wood leaves the room.
     <changed>YES</changed>
     <temporary score="32">YES</temporary>
     <children>
-      <child nodeId="node-0x1b27c70" />
+      <child nodeId="node-0x12bbf400" />
     </children>
   </item>
-  <item nodeId="node-0x1b27c70">
+  <item nodeId="node-0x12bbf400">
     <command xml:space="preserve">download ddos</command>
     <result xml:space="preserve">Successfully downloaded the app!
 
@@ -191,10 +223,10 @@ Dr. Wood leaves the room.
     <changed>YES</changed>
     <temporary score="32">YES</temporary>
     <children>
-      <child nodeId="node-0x13266e70" />
+      <child nodeId="node-0x12b05b60" />
     </children>
   </item>
-  <item nodeId="node-0x13266e70">
+  <item nodeId="node-0x12b05b60">
     <command xml:space="preserve">i</command>
     <result xml:space="preserve">You are carrying:
   DDOS
@@ -206,7 +238,34 @@ Dr. Wood leaves the room.
     <changed>YES</changed>
     <temporary score="31">YES</temporary>
   </item>
-  <item nodeId="node-0x12ba14b0">
+  <item nodeId="node-0x132a0300">
+    <command xml:space="preserve">l</command>
+    <result xml:space="preserve">Software Design Lab
+A lab room lined with computers with a projector and table at the center. North is a doorway leading to the hall.
+
+You are finishing up your program, checking to make sure everything compiles and that your name is on the source code. You go to SSH into Vogon, when you realize that something is wrong. You cannot access Vogon, so you shrug it off and try Unix1. After you realize that Unix1 is not working, you start to lightly perspire. You desperately want to go home to your bed and fluffy pillow and sleep. As you try Unix2 and fail to connect once again, you bang your head on the table. What to do?
+
+
+You can see Software Design Lab Door, a charger and Dr Gene Fisher here.
+
+&gt;</result>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="46">YES</temporary>
+    <children>
+      <child nodeId="node-0x1b12950" />
+    </children>
+  </item>
+  <item nodeId="node-0x1b12950">
+    <command xml:space="preserve">i</command>
+    <result xml:space="preserve">You are carrying nothing.
+
+&gt;</result>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="45">YES</temporary>
+  </item>
+  <item nodeId="node-0x12bd5ac0">
     <command xml:space="preserve">n</command>
     <result xml:space="preserve">(first opening Door1)
 
@@ -220,12 +279,12 @@ You can see Door1 here.
     <changed>NO</changed>
     <temporary score="198">YES</temporary>
     <children>
-      <child nodeId="node-0x12b1f720" />
-      <child nodeId="node-0x12b1f9c0" />
-      <child nodeId="node-0x12ba1500" />
+      <child nodeId="node-0x12bd74a0" />
+      <child nodeId="node-0x12bd7430" />
+      <child nodeId="node-0x12bd5b30" />
     </children>
   </item>
-  <item nodeId="node-0x12ba1500">
+  <item nodeId="node-0x12bd5b30">
     <command xml:space="preserve">e</command>
     <result xml:space="preserve">
 Hallway 2
@@ -238,10 +297,10 @@ You can see Door2 here.
     <changed>NO</changed>
     <temporary score="169">YES</temporary>
     <children>
-      <child nodeId="node-0x12b20b00" />
+      <child nodeId="node-0x12bd5ba0" />
     </children>
   </item>
-  <item nodeId="node-0x12b20b00">
+  <item nodeId="node-0x12bd5ba0">
     <command xml:space="preserve">e</command>
     <result xml:space="preserve">
 Hallway 3
@@ -252,10 +311,10 @@ Continue East down the Hallway
     <changed>NO</changed>
     <temporary score="169">YES</temporary>
     <children>
-      <child nodeId="node-0x12b20ab0" />
+      <child nodeId="node-0x12bd5c10" />
     </children>
   </item>
-  <item nodeId="node-0x12b20ab0">
+  <item nodeId="node-0x12bd5c10">
     <command xml:space="preserve">e</command>
     <result xml:space="preserve">
 Hallway 4
@@ -266,11 +325,11 @@ Continue North to the South Faculty Offices or east down the hallway.
     <changed>NO</changed>
     <temporary score="169">YES</temporary>
     <children>
-      <child nodeId="node-0x12ba1590" />
-      <child nodeId="node-0x12b20a60" />
+      <child nodeId="node-0x12bd5ee0" />
+      <child nodeId="node-0x12bd5c80" />
     </children>
   </item>
-  <item nodeId="node-0x12b20a60">
+  <item nodeId="node-0x12bd5c80">
     <command xml:space="preserve">n</command>
     <result xml:space="preserve">
 SouthEast Corridor
@@ -281,10 +340,10 @@ You&apos;re in the Southern end of the East Outdoor Corridor. To the north is a 
     <changed>YES</changed>
     <temporary score="110">YES</temporary>
     <children>
-      <child nodeId="node-0x12b20a10" />
+      <child nodeId="node-0x12bd5cf0" />
     </children>
   </item>
-  <item nodeId="node-0x12b20a10">
+  <item nodeId="node-0x12bd5cf0">
     <command xml:space="preserve">w</command>
     <result xml:space="preserve">
 South Faculty Atrium
@@ -295,10 +354,10 @@ You&apos;re in the center of the southern faculty offices. To the north and sout
     <changed>YES</changed>
     <temporary score="110">YES</temporary>
     <children>
-      <child nodeId="node-0x12b209c0" />
+      <child nodeId="node-0x12bbf340" />
     </children>
   </item>
-  <item nodeId="node-0x12b209c0">
+  <item nodeId="node-0x12bbf340">
     <command xml:space="preserve">w</command>
     <result xml:space="preserve">
 SouthWest Corridor
@@ -309,10 +368,10 @@ You&apos;re in the Northern end of the West Outdoor Corridor. The west is fenced
     <changed>YES</changed>
     <temporary score="110">YES</temporary>
     <children>
-      <child nodeId="node-0x12b20890" />
+      <child nodeId="node-0x12bbf390" />
     </children>
   </item>
-  <item nodeId="node-0x12b20890">
+  <item nodeId="node-0x12bbf390">
     <command xml:space="preserve">w</command>
     <result xml:space="preserve">You can&apos;t go that way.
 
@@ -321,7 +380,7 @@ You&apos;re in the Northern end of the West Outdoor Corridor. The west is fenced
     <changed>YES</changed>
     <temporary score="110">YES</temporary>
   </item>
-  <item nodeId="node-0x12ba1590">
+  <item nodeId="node-0x12bd5ee0">
     <command xml:space="preserve">e</command>
     <result xml:space="preserve">
 Hallway 5
@@ -332,11 +391,11 @@ Continue east down the hallway.
     <changed>YES</changed>
     <temporary score="169">YES</temporary>
     <children>
-      <child nodeId="node-0x12b1fcd0" />
-      <child nodeId="node-0x12b20820" />
+      <child nodeId="node-0x12bd7120" />
+      <child nodeId="node-0x12bd5f50" />
     </children>
   </item>
-  <item nodeId="node-0x12b20820">
+  <item nodeId="node-0x12bd5f50">
     <command xml:space="preserve">e</command>
     <result xml:space="preserve">
 Hallway 6
@@ -347,10 +406,10 @@ Continue east down the hallway.
     <changed>YES</changed>
     <temporary score="169">YES</temporary>
     <children>
-      <child nodeId="node-0x12b207b0" />
+      <child nodeId="node-0x12bd5fc0" />
     </children>
   </item>
-  <item nodeId="node-0x12b207b0">
+  <item nodeId="node-0x12bd5fc0">
     <command xml:space="preserve">e</command>
     <result xml:space="preserve">
 Hallway 7
@@ -363,12 +422,12 @@ You can see Door 252 and Door 246 here.
     <changed>YES</changed>
     <temporary score="169">YES</temporary>
     <children>
-      <child nodeId="node-0x12b1ff80" />
-      <child nodeId="node-0x12b20660" />
-      <child nodeId="node-0x12b20740" />
+      <child nodeId="node-0x12bbb380" />
+      <child nodeId="node-0x12bd6110" />
+      <child nodeId="node-0x12bd6030" />
     </children>
   </item>
-  <item nodeId="node-0x12b20740">
+  <item nodeId="node-0x12bd6030">
     <command xml:space="preserve">open door</command>
     <result xml:space="preserve">You can&apos;t see any such thing.
 
@@ -377,10 +436,10 @@ You can see Door 252 and Door 246 here.
     <changed>YES</changed>
     <temporary score="137">YES</temporary>
     <children>
-      <child nodeId="node-0x12b206d0" />
+      <child nodeId="node-0x12bd60a0" />
     </children>
   </item>
-  <item nodeId="node-0x12b206d0">
+  <item nodeId="node-0x12bd60a0">
     <command xml:space="preserve">open door 251</command>
     <result xml:space="preserve">You can&apos;t see any such thing.
 
@@ -389,7 +448,7 @@ You can see Door 252 and Door 246 here.
     <changed>YES</changed>
     <temporary score="136">YES</temporary>
   </item>
-  <item nodeId="node-0x12b20660">
+  <item nodeId="node-0x12bd6110">
     <command xml:space="preserve">s</command>
     <result xml:space="preserve">(first opening Door 252)
 
@@ -403,10 +462,10 @@ You can see Door 252 here.
     <changed>YES</changed>
     <temporary score="169">YES</temporary>
     <children>
-      <child nodeId="node-0x12b205f0" />
+      <child nodeId="node-0x12bd6180" />
     </children>
   </item>
-  <item nodeId="node-0x12b205f0">
+  <item nodeId="node-0x12bd6180">
     <command xml:space="preserve">n</command>
     <result xml:space="preserve">
 Hallway 7
@@ -419,10 +478,10 @@ You can see Door 252 and Door 246 here.
     <changed>YES</changed>
     <temporary score="169">YES</temporary>
     <children>
-      <child nodeId="node-0x12b20940" />
+      <child nodeId="node-0x12bd61f0" />
     </children>
   </item>
-  <item nodeId="node-0x12b20940">
+  <item nodeId="node-0x12bd61f0">
     <command xml:space="preserve">n</command>
     <result xml:space="preserve">(first opening Door 246)
 
@@ -436,10 +495,10 @@ You can see Door 246 here.
     <changed>YES</changed>
     <temporary score="169">YES</temporary>
     <children>
-      <child nodeId="node-0x12b208e0" />
+      <child nodeId="node-0x12bd6260" />
     </children>
   </item>
-  <item nodeId="node-0x12b208e0">
+  <item nodeId="node-0x12bd6260">
     <command xml:space="preserve">s</command>
     <result xml:space="preserve">
 Hallway 7
@@ -452,10 +511,10 @@ You can see Door 246 and Door 252 here.
     <changed>YES</changed>
     <temporary score="169">YES</temporary>
     <children>
-      <child nodeId="node-0x12b203e0" />
+      <child nodeId="node-0x12bd62d0" />
     </children>
   </item>
-  <item nodeId="node-0x12b203e0">
+  <item nodeId="node-0x12bd62d0">
     <command xml:space="preserve">e</command>
     <result xml:space="preserve">
 Hallway 8
@@ -468,10 +527,10 @@ You can see Door 251 and Door 248 here.
     <changed>YES</changed>
     <temporary score="169">YES</temporary>
     <children>
-      <child nodeId="node-0x12b20370" />
+      <child nodeId="node-0x12bd6340" />
     </children>
   </item>
-  <item nodeId="node-0x12b20370">
+  <item nodeId="node-0x12bd6340">
     <command xml:space="preserve">n</command>
     <result xml:space="preserve">(first opening Door 248)
 
@@ -485,10 +544,10 @@ You can see Door 248 here.
     <changed>YES</changed>
     <temporary score="169">YES</temporary>
     <children>
-      <child nodeId="node-0x12b20300" />
+      <child nodeId="node-0x12bd5d60" />
     </children>
   </item>
-  <item nodeId="node-0x12b20300">
+  <item nodeId="node-0x12bd5d60">
     <command xml:space="preserve">s</command>
     <result xml:space="preserve">
 Hallway 8
@@ -501,10 +560,10 @@ You can see Door 248 and Door 251 here.
     <changed>YES</changed>
     <temporary score="169">YES</temporary>
     <children>
-      <child nodeId="node-0x12b20290" />
+      <child nodeId="node-0x12bd63b0" />
     </children>
   </item>
-  <item nodeId="node-0x12b20290">
+  <item nodeId="node-0x12bd63b0">
     <command xml:space="preserve">s</command>
     <result xml:space="preserve">(first opening Door 251)
 
@@ -518,10 +577,10 @@ You can see Door 251 here.
     <changed>YES</changed>
     <temporary score="169">YES</temporary>
     <children>
-      <child nodeId="node-0x12b20220" />
+      <child nodeId="node-0x12bd6420" />
     </children>
   </item>
-  <item nodeId="node-0x12b20220">
+  <item nodeId="node-0x12bd6420">
     <command xml:space="preserve">n</command>
     <result xml:space="preserve">
 Hallway 8
@@ -534,10 +593,10 @@ You can see Door 251 and Door 248 here.
     <changed>YES</changed>
     <temporary score="169">YES</temporary>
     <children>
-      <child nodeId="node-0x12b201b0" />
+      <child nodeId="node-0x12bd5dd0" />
     </children>
   </item>
-  <item nodeId="node-0x12b201b0">
+  <item nodeId="node-0x12bd5dd0">
     <command xml:space="preserve">e</command>
     <result xml:space="preserve">
 Hallway 9
@@ -550,10 +609,10 @@ You can see Door 250 and Door 249 here.
     <changed>YES</changed>
     <temporary score="169">YES</temporary>
     <children>
-      <child nodeId="node-0x12b20140" />
+      <child nodeId="node-0x12bd5e40" />
     </children>
   </item>
-  <item nodeId="node-0x12b20140">
+  <item nodeId="node-0x12bd5e40">
     <command xml:space="preserve">s</command>
     <result xml:space="preserve">(first opening Door 250)
 
@@ -567,10 +626,10 @@ You can see Door 250 here.
     <changed>YES</changed>
     <temporary score="169">YES</temporary>
     <children>
-      <child nodeId="node-0x12b200d0" />
+      <child nodeId="node-0x12bbb230" />
     </children>
   </item>
-  <item nodeId="node-0x12b200d0">
+  <item nodeId="node-0x12bbb230">
     <command xml:space="preserve">n</command>
     <result xml:space="preserve">
 Hallway 9
@@ -583,10 +642,10 @@ You can see Door 250 and Door 249 here.
     <changed>YES</changed>
     <temporary score="169">YES</temporary>
     <children>
-      <child nodeId="node-0x12b20060" />
+      <child nodeId="node-0x12bbb2a0" />
     </children>
   </item>
-  <item nodeId="node-0x12b20060">
+  <item nodeId="node-0x12bbb2a0">
     <command xml:space="preserve">n</command>
     <result xml:space="preserve">(first opening Door 249)
 
@@ -600,10 +659,10 @@ You can see Door 249 here.
     <changed>YES</changed>
     <temporary score="169">YES</temporary>
     <children>
-      <child nodeId="node-0x12b1fff0" />
+      <child nodeId="node-0x12bbb310" />
     </children>
   </item>
-  <item nodeId="node-0x12b1fff0">
+  <item nodeId="node-0x12bbb310">
     <command xml:space="preserve">s</command>
     <result xml:space="preserve">
 Hallway 9
@@ -616,7 +675,7 @@ You can see Door 249 and Door 250 here.
     <changed>YES</changed>
     <temporary score="168">YES</temporary>
   </item>
-  <item nodeId="node-0x12b1ff80">
+  <item nodeId="node-0x12bbb380">
     <command xml:space="preserve">e</command>
     <result xml:space="preserve">
 Hallway 8
@@ -629,10 +688,10 @@ You can see 249-Door here.
     <changed>YES</changed>
     <temporary score="128">YES</temporary>
     <children>
-      <child nodeId="node-0x12b20520" />
+      <child nodeId="node-0x12bbb3f0" />
     </children>
   </item>
-  <item nodeId="node-0x12b20520">
+  <item nodeId="node-0x12bbb3f0">
     <command xml:space="preserve">e</command>
     <result xml:space="preserve">
 Hallway 9
@@ -643,10 +702,10 @@ To the east is a staircase. To the south is a door leading out. To the north is 
     <changed>YES</changed>
     <temporary score="128">YES</temporary>
     <children>
-      <child nodeId="node-0x12b20470" />
+      <child nodeId="node-0x12bbb460" />
     </children>
   </item>
-  <item nodeId="node-0x12b20470">
+  <item nodeId="node-0x12bbb460">
     <command xml:space="preserve">e</command>
     <result xml:space="preserve">You can&apos;t go that way.
 
@@ -655,10 +714,10 @@ To the east is a staircase. To the south is a door leading out. To the north is 
     <changed>YES</changed>
     <temporary score="128">YES</temporary>
     <children>
-      <child nodeId="node-0x12b204c0" />
+      <child nodeId="node-0x12bd70d0" />
     </children>
   </item>
-  <item nodeId="node-0x12b204c0">
+  <item nodeId="node-0x12bd70d0">
     <command xml:space="preserve">e</command>
     <result xml:space="preserve">You can&apos;t go that way.
 
@@ -667,7 +726,7 @@ To the east is a staircase. To the south is a door leading out. To the north is 
     <changed>YES</changed>
     <temporary score="127">YES</temporary>
   </item>
-  <item nodeId="node-0x12b1fcd0">
+  <item nodeId="node-0x12bd7120">
     <command xml:space="preserve">n</command>
     <result xml:space="preserve">You can&apos;t go that way.
 
@@ -676,10 +735,10 @@ To the east is a staircase. To the south is a door leading out. To the north is 
     <changed>YES</changed>
     <temporary score="147">YES</temporary>
     <children>
-      <child nodeId="node-0x12b1fc60" />
+      <child nodeId="node-0x12bd7190" />
     </children>
   </item>
-  <item nodeId="node-0x12b1fc60">
+  <item nodeId="node-0x12bd7190">
     <command xml:space="preserve">n</command>
     <result xml:space="preserve">You can&apos;t go that way.
 
@@ -688,10 +747,10 @@ To the east is a staircase. To the south is a door leading out. To the north is 
     <changed>YES</changed>
     <temporary score="38">YES</temporary>
     <children>
-      <child nodeId="node-0x12b1fbf0" />
+      <child nodeId="node-0x12bd7200" />
     </children>
   </item>
-  <item nodeId="node-0x12b1fbf0">
+  <item nodeId="node-0x12bd7200">
     <command xml:space="preserve">n</command>
     <result xml:space="preserve">You can&apos;t go that way.
 
@@ -700,10 +759,10 @@ To the east is a staircase. To the south is a door leading out. To the north is 
     <changed>YES</changed>
     <temporary score="38">YES</temporary>
     <children>
-      <child nodeId="node-0x12b1fb80" />
+      <child nodeId="node-0x12bd7270" />
     </children>
   </item>
-  <item nodeId="node-0x12b1fb80">
+  <item nodeId="node-0x12bd7270">
     <command xml:space="preserve">w</command>
     <result xml:space="preserve">
 South Faculty Atrium
@@ -714,10 +773,10 @@ You&apos;re in the center of the southern faculty offices. To the north and sout
     <changed>YES</changed>
     <temporary score="38">YES</temporary>
     <children>
-      <child nodeId="node-0x12b1fb10" />
+      <child nodeId="node-0x12bd72e0" />
     </children>
   </item>
-  <item nodeId="node-0x12b1fb10">
+  <item nodeId="node-0x12bd72e0">
     <command xml:space="preserve">n</command>
     <result xml:space="preserve">
 Faculty Entrances1
@@ -728,10 +787,10 @@ You see seven faculty offices:  14-205, 14-206, 14-207, 14-208, 14-209, 14-210, 
     <changed>YES</changed>
     <temporary score="38">YES</temporary>
     <children>
-      <child nodeId="node-0x12b1faa0" />
+      <child nodeId="node-0x12bd7350" />
     </children>
   </item>
-  <item nodeId="node-0x12b1faa0">
+  <item nodeId="node-0x12bd7350">
     <command xml:space="preserve">enter 14-205</command>
     <result xml:space="preserve">You get into the 14-205.
 
@@ -740,10 +799,10 @@ You see seven faculty offices:  14-205, 14-206, 14-207, 14-208, 14-209, 14-210, 
     <changed>YES</changed>
     <temporary score="38">YES</temporary>
     <children>
-      <child nodeId="node-0x12b1fa30" />
+      <child nodeId="node-0x12bd73c0" />
     </children>
   </item>
-  <item nodeId="node-0x12b1fa30">
+  <item nodeId="node-0x12bd73c0">
     <command xml:space="preserve">exit</command>
     <result xml:space="preserve">You get out of the 14-205.
 
@@ -755,7 +814,7 @@ You see seven faculty offices:  14-205, 14-206, 14-207, 14-208, 14-209, 14-210, 
     <changed>YES</changed>
     <temporary score="37">YES</temporary>
   </item>
-  <item nodeId="node-0x12b1f9c0">
+  <item nodeId="node-0x12bd7430">
     <command xml:space="preserve">n</command>
     <result xml:space="preserve">You can&apos;t go that way.
 
@@ -764,11 +823,11 @@ You see seven faculty offices:  14-205, 14-206, 14-207, 14-208, 14-209, 14-210, 
     <changed>NO</changed>
     <temporary score="142">YES</temporary>
     <children>
-      <child nodeId="node-0x12b1f870" />
-      <child nodeId="node-0x12b1f950" />
+      <child nodeId="node-0x12bbb0d0" />
+      <child nodeId="node-0x12bbaff0" />
     </children>
   </item>
-  <item nodeId="node-0x12b1f950">
+  <item nodeId="node-0x12bbaff0">
     <command xml:space="preserve">open door</command>
     <result xml:space="preserve">You can&apos;t see any such thing.
 
@@ -777,10 +836,10 @@ You see seven faculty offices:  14-205, 14-206, 14-207, 14-208, 14-209, 14-210, 
     <changed>YES</changed>
     <temporary score="70">YES</temporary>
     <children>
-      <child nodeId="node-0x12b1f8e0" />
+      <child nodeId="node-0x12bbb060" />
     </children>
   </item>
-  <item nodeId="node-0x12b1f8e0">
+  <item nodeId="node-0x12bbb060">
     <command xml:space="preserve">x door</command>
     <result xml:space="preserve">You can&apos;t see any such thing.
 
@@ -789,7 +848,7 @@ You see seven faculty offices:  14-205, 14-206, 14-207, 14-208, 14-209, 14-210, 
     <changed>YES</changed>
     <temporary score="69">YES</temporary>
   </item>
-  <item nodeId="node-0x12b1f870">
+  <item nodeId="node-0x12bbb0d0">
     <command xml:space="preserve">e</command>
     <result xml:space="preserve">
 Hallway 2
@@ -802,10 +861,10 @@ You can see Door2 here.
     <changed>YES</changed>
     <temporary score="142">YES</temporary>
     <children>
-      <child nodeId="node-0x12b1f800" />
+      <child nodeId="node-0x12bbb140" />
     </children>
   </item>
-  <item nodeId="node-0x12b1f800">
+  <item nodeId="node-0x12bbb140">
     <command xml:space="preserve">e</command>
     <result xml:space="preserve">
 Hallway 3
@@ -816,10 +875,10 @@ Continue East down the Hallway
     <changed>YES</changed>
     <temporary score="142">YES</temporary>
     <children>
-      <child nodeId="node-0x12b1f790" />
+      <child nodeId="node-0x12bbb1b0" />
     </children>
   </item>
-  <item nodeId="node-0x12b1f790">
+  <item nodeId="node-0x12bbb1b0">
     <command xml:space="preserve">e</command>
     <result xml:space="preserve">
 Hallway 4
@@ -830,7 +889,7 @@ Continue North to the South Faculty Offices
     <changed>YES</changed>
     <temporary score="141">YES</temporary>
   </item>
-  <item nodeId="node-0x12b1f720">
+  <item nodeId="node-0x12bd74a0">
     <command xml:space="preserve">w</command>
     <result xml:space="preserve">You can&apos;t go that way.
 
@@ -839,10 +898,10 @@ Continue North to the South Faculty Offices
     <changed>YES</changed>
     <temporary score="198">YES</temporary>
     <children>
-      <child nodeId="node-0x12b1f6b0" />
+      <child nodeId="node-0x12bd7510" />
     </children>
   </item>
-  <item nodeId="node-0x12b1f6b0">
+  <item nodeId="node-0x12bd7510">
     <command xml:space="preserve">e</command>
     <result xml:space="preserve">
 Hallway 2
@@ -855,10 +914,10 @@ You can see Door2 here.
     <changed>YES</changed>
     <temporary score="198">YES</temporary>
     <children>
-      <child nodeId="node-0x12b1f640" />
+      <child nodeId="node-0x12bd7580" />
     </children>
   </item>
-  <item nodeId="node-0x12b1f640">
+  <item nodeId="node-0x12bd7580">
     <command xml:space="preserve">e</command>
     <result xml:space="preserve">
 Hallway 3
@@ -869,10 +928,10 @@ Continue East down the Hallway
     <changed>YES</changed>
     <temporary score="198">YES</temporary>
     <children>
-      <child nodeId="node-0x12b1f5d0" />
+      <child nodeId="node-0x12bd75f0" />
     </children>
   </item>
-  <item nodeId="node-0x12b1f5d0">
+  <item nodeId="node-0x12bd75f0">
     <command xml:space="preserve">e</command>
     <result xml:space="preserve">
 Hallway 4
@@ -883,10 +942,10 @@ Continue North to the South Faculty Offices or east down the hallway.
     <changed>YES</changed>
     <temporary score="198">YES</temporary>
     <children>
-      <child nodeId="node-0x12b1fd20" />
+      <child nodeId="node-0x12bd7660" />
     </children>
   </item>
-  <item nodeId="node-0x12b1fd20">
+  <item nodeId="node-0x12bd7660">
     <command xml:space="preserve">e</command>
     <result xml:space="preserve">
 Hallway 5
@@ -897,10 +956,10 @@ Continue east down the hallway.
     <changed>YES</changed>
     <temporary score="198">YES</temporary>
     <children>
-      <child nodeId="node-0x12b1fd90" />
+      <child nodeId="node-0x12bd76d0" />
     </children>
   </item>
-  <item nodeId="node-0x12b1fd90">
+  <item nodeId="node-0x12bd76d0">
     <command xml:space="preserve">e</command>
     <result xml:space="preserve">
 Hallway 6
@@ -911,10 +970,10 @@ Continue east down the hallway.
     <changed>YES</changed>
     <temporary score="198">YES</temporary>
     <children>
-      <child nodeId="node-0x12b1fe00" />
+      <child nodeId="node-0x12bd7740" />
     </children>
   </item>
-  <item nodeId="node-0x12b1fe00">
+  <item nodeId="node-0x12bd7740">
     <command xml:space="preserve">e</command>
     <result xml:space="preserve">
 Hallway 7
@@ -927,10 +986,10 @@ You can see Door 252 and Door 246 here.
     <changed>YES</changed>
     <temporary score="198">YES</temporary>
     <children>
-      <child nodeId="node-0x12b1fe70" />
+      <child nodeId="node-0x12bd77b0" />
     </children>
   </item>
-  <item nodeId="node-0x12b1fe70">
+  <item nodeId="node-0x12bd77b0">
     <command xml:space="preserve">e</command>
     <result xml:space="preserve">
 Hallway 8
@@ -943,10 +1002,10 @@ You can see Door 251 and Door 248 here.
     <changed>YES</changed>
     <temporary score="198">YES</temporary>
     <children>
-      <child nodeId="node-0x12b1fee0" />
+      <child nodeId="node-0x12bd7820" />
     </children>
   </item>
-  <item nodeId="node-0x12b1fee0">
+  <item nodeId="node-0x12bd7820">
     <command xml:space="preserve">e</command>
     <result xml:space="preserve">
 Hallway 9
@@ -959,10 +1018,10 @@ You can see Door 250 and Door 249 here.
     <changed>YES</changed>
     <temporary score="198">YES</temporary>
     <children>
-      <child nodeId="node-0x12b1f560" />
+      <child nodeId="node-0x12bd7890" />
     </children>
   </item>
-  <item nodeId="node-0x12b1f560">
+  <item nodeId="node-0x12bd7890">
     <command xml:space="preserve">e</command>
     <result xml:space="preserve">You can&apos;t go that way.
 
@@ -971,10 +1030,10 @@ You can see Door 250 and Door 249 here.
     <changed>YES</changed>
     <temporary score="198">YES</temporary>
     <children>
-      <child nodeId="node-0x12b1f4f0" />
+      <child nodeId="node-0x12bd7900" />
     </children>
   </item>
-  <item nodeId="node-0x12b1f4f0">
+  <item nodeId="node-0x12bd7900">
     <command xml:space="preserve">w</command>
     <result xml:space="preserve">
 Hallway 8
@@ -987,10 +1046,10 @@ You can see Door 251 and Door 248 here.
     <changed>YES</changed>
     <temporary score="198">YES</temporary>
     <children>
-      <child nodeId="node-0x12b1f480" />
+      <child nodeId="node-0x12bd7970" />
     </children>
   </item>
-  <item nodeId="node-0x12b1f480">
+  <item nodeId="node-0x12bd7970">
     <command xml:space="preserve">w</command>
     <result xml:space="preserve">
 Hallway 7
@@ -1003,10 +1062,10 @@ You can see Door 252 and Door 246 here.
     <changed>YES</changed>
     <temporary score="198">YES</temporary>
     <children>
-      <child nodeId="node-0x12b1f410" />
+      <child nodeId="node-0x12bd79e0" />
     </children>
   </item>
-  <item nodeId="node-0x12b1f410">
+  <item nodeId="node-0x12bd79e0">
     <command xml:space="preserve">w</command>
     <result xml:space="preserve">
 Hallway 6
@@ -1017,10 +1076,10 @@ Continue east down the hallway.
     <changed>YES</changed>
     <temporary score="198">YES</temporary>
     <children>
-      <child nodeId="node-0x12b1f3a0" />
+      <child nodeId="node-0x12bd7a50" />
     </children>
   </item>
-  <item nodeId="node-0x12b1f3a0">
+  <item nodeId="node-0x12bd7a50">
     <command xml:space="preserve">w</command>
     <result xml:space="preserve">
 Hallway 5
@@ -1031,10 +1090,10 @@ Continue east down the hallway.
     <changed>YES</changed>
     <temporary score="198">YES</temporary>
     <children>
-      <child nodeId="node-0x12b1f330" />
+      <child nodeId="node-0x12bd7ac0" />
     </children>
   </item>
-  <item nodeId="node-0x12b1f330">
+  <item nodeId="node-0x12bd7ac0">
     <command xml:space="preserve">w</command>
     <result xml:space="preserve">
 Hallway 4
@@ -1045,10 +1104,10 @@ Continue North to the South Faculty Offices or east down the hallway.
     <changed>YES</changed>
     <temporary score="198">YES</temporary>
     <children>
-      <child nodeId="node-0x12b1f2c0" />
+      <child nodeId="node-0x12bd7b30" />
     </children>
   </item>
-  <item nodeId="node-0x12b1f2c0">
+  <item nodeId="node-0x12bd7b30">
     <command xml:space="preserve">n</command>
     <result xml:space="preserve">
 SouthEast Corridor
@@ -1059,10 +1118,10 @@ You&apos;re in the Southern end of the East Outdoor Corridor. To the north is a 
     <changed>YES</changed>
     <temporary score="198">YES</temporary>
     <children>
-      <child nodeId="node-0x12b1f250" />
+      <child nodeId="node-0x12bd7ba0" />
     </children>
   </item>
-  <item nodeId="node-0x12b1f250">
+  <item nodeId="node-0x12bd7ba0">
     <command xml:space="preserve">e</command>
     <result xml:space="preserve">You can&apos;t go that way.
 
@@ -1071,10 +1130,10 @@ You&apos;re in the Southern end of the East Outdoor Corridor. To the north is a 
     <changed>YES</changed>
     <temporary score="198">YES</temporary>
     <children>
-      <child nodeId="node-0x12b1f1e0" />
+      <child nodeId="node-0x12bd7c10" />
     </children>
   </item>
-  <item nodeId="node-0x12b1f1e0">
+  <item nodeId="node-0x12bd7c10">
     <command xml:space="preserve">w</command>
     <result xml:space="preserve">
 South Faculty Atrium
@@ -1085,10 +1144,10 @@ You&apos;re in the center of the southern faculty offices. To the north and sout
     <changed>YES</changed>
     <temporary score="198">YES</temporary>
     <children>
-      <child nodeId="node-0x12b1f170" />
+      <child nodeId="node-0x12bd7c80" />
     </children>
   </item>
-  <item nodeId="node-0x12b1f170">
+  <item nodeId="node-0x12bd7c80">
     <command xml:space="preserve">w</command>
     <result xml:space="preserve">
 SouthWest Corridor
@@ -1099,10 +1158,10 @@ You&apos;re in the Northern end of the West Outdoor Corridor. The west is fenced
     <changed>YES</changed>
     <temporary score="198">YES</temporary>
     <children>
-      <child nodeId="node-0x12b1f100" />
+      <child nodeId="node-0x12bd7cf0" />
     </children>
   </item>
-  <item nodeId="node-0x12b1f100">
+  <item nodeId="node-0x12bd7cf0">
     <command xml:space="preserve">n</command>
     <result xml:space="preserve">
 NorthWest Corridor
@@ -1113,10 +1172,10 @@ You&apos;re in the West Corridor. The west is still fenced off. To the north is 
     <changed>YES</changed>
     <temporary score="198">YES</temporary>
     <children>
-      <child nodeId="node-0x12b1f090" />
+      <child nodeId="node-0x12bd7d60" />
     </children>
   </item>
-  <item nodeId="node-0x12b1f090">
+  <item nodeId="node-0x12bd7d60">
     <command xml:space="preserve">e</command>
     <result xml:space="preserve">
 North Faculty Atrium
@@ -1127,10 +1186,10 @@ You&apos;re in the center of the northern faculty offices. To the north and sout
     <changed>YES</changed>
     <temporary score="198">YES</temporary>
     <children>
-      <child nodeId="node-0x12b1f020" />
+      <child nodeId="node-0x12bd7dd0" />
     </children>
   </item>
-  <item nodeId="node-0x12b1f020">
+  <item nodeId="node-0x12bd7dd0">
     <command xml:space="preserve">e</command>
     <result xml:space="preserve">
 NorthEast Corridor
@@ -1141,10 +1200,10 @@ You&apos;re in the Northern end of the Eastern Corridor. To the south is the fir
     <changed>YES</changed>
     <temporary score="198">YES</temporary>
     <children>
-      <child nodeId="node-0x12b1efb0" />
+      <child nodeId="node-0x12bd7e40" />
     </children>
   </item>
-  <item nodeId="node-0x12b1efb0">
+  <item nodeId="node-0x12bd7e40">
     <command xml:space="preserve">n</command>
     <result xml:space="preserve">(first opening csl-239-D)
 
@@ -1155,10 +1214,10 @@ csl-239
     <changed>YES</changed>
     <temporary score="198">YES</temporary>
     <children>
-      <child nodeId="node-0x12b1ef40" />
+      <child nodeId="node-0x12bd7eb0" />
     </children>
   </item>
-  <item nodeId="node-0x12b1ef40">
+  <item nodeId="node-0x12bd7eb0">
     <command xml:space="preserve">n</command>
     <result xml:space="preserve">You can&apos;t go that way.
 
@@ -1167,10 +1226,10 @@ csl-239
     <changed>YES</changed>
     <temporary score="198">YES</temporary>
     <children>
-      <child nodeId="node-0x12b1eed0" />
+      <child nodeId="node-0x12bd7f20" />
     </children>
   </item>
-  <item nodeId="node-0x12b1eed0">
+  <item nodeId="node-0x12bd7f20">
     <command xml:space="preserve">s</command>
     <result xml:space="preserve">
 NorthEast Corridor
@@ -1181,10 +1240,10 @@ You&apos;re in the Northern end of the Eastern Corridor. To the south is the fir
     <changed>YES</changed>
     <temporary score="198">YES</temporary>
     <children>
-      <child nodeId="node-0x12b1ee60" />
+      <child nodeId="node-0x12bd7f90" />
     </children>
   </item>
-  <item nodeId="node-0x12b1ee60">
+  <item nodeId="node-0x12bd7f90">
     <command xml:space="preserve">n</command>
     <result xml:space="preserve">
 csl-239
@@ -1194,10 +1253,10 @@ csl-239
     <changed>YES</changed>
     <temporary score="198">YES</temporary>
     <children>
-      <child nodeId="node-0x12b1edf0" />
+      <child nodeId="node-0x12bd8000" />
     </children>
   </item>
-  <item nodeId="node-0x12b1edf0">
+  <item nodeId="node-0x12bd8000">
     <command xml:space="preserve">e</command>
     <result xml:space="preserve">You can&apos;t go that way.
 
@@ -1206,10 +1265,10 @@ csl-239
     <changed>YES</changed>
     <temporary score="198">YES</temporary>
     <children>
-      <child nodeId="node-0x12b1ed80" />
+      <child nodeId="node-0x12bd8070" />
     </children>
   </item>
-  <item nodeId="node-0x12b1ed80">
+  <item nodeId="node-0x12bd8070">
     <command xml:space="preserve">w</command>
     <result xml:space="preserve">You can&apos;t go that way.
 
@@ -1218,7 +1277,77 @@ csl-239
     <changed>YES</changed>
     <temporary score="197">YES</temporary>
   </item>
-  <item nodeId="node-0x132625e0">
+  <item nodeId="node-0x1dae1e0">
+    <command xml:space="preserve">i</command>
+    <result xml:space="preserve">You are carrying:
+  a phone (empty)
+
+&gt;</result>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="49">YES</temporary>
+    <children>
+      <child nodeId="node-0x132c6600" />
+      <child nodeId="node-0x1326ebd0" />
+    </children>
+  </item>
+  <item nodeId="node-0x1326ebd0">
+    <command xml:space="preserve">download ddos</command>
+    <result xml:space="preserve">Successfully downloaded the app!
+
+&gt;</result>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="49">YES</temporary>
+    <children>
+      <child nodeId="node-0x13273cf0" />
+    </children>
+  </item>
+  <item nodeId="node-0x13273cf0">
+    <command xml:space="preserve">i</command>
+    <result xml:space="preserve">You are carrying:
+  a phone
+    DDOS
+
+&gt;</result>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="48">YES</temporary>
+  </item>
+  <item nodeId="node-0x132c6600">
+    <command xml:space="preserve">take phone</command>
+    <result xml:space="preserve">You can&apos;t see any such thing.
+
+&gt;</result>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="44">YES</temporary>
+    <children>
+      <child nodeId="node-0x1326ea40" />
+    </children>
+  </item>
+  <item nodeId="node-0x1326ea40">
+    <command xml:space="preserve">l phone</command>
+    <result xml:space="preserve">You can&apos;t see any such thing.
+
+&gt;</result>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="44">YES</temporary>
+    <children>
+      <child nodeId="node-0xe81ef00" />
+    </children>
+  </item>
+  <item nodeId="node-0xe81ef00">
+    <command xml:space="preserve">download ddos</command>
+    <result xml:space="preserve">Successfully downloaded the app!
+
+&gt;</result>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="43">YES</temporary>
+  </item>
+  <item nodeId="node-0x12bd80e0">
     <command xml:space="preserve">download</command>
     <result xml:space="preserve">(the phone)
 You can&apos;t download that!
@@ -1228,10 +1357,10 @@ You can&apos;t download that!
     <changed>YES</changed>
     <temporary score="36">YES</temporary>
     <children>
-      <child nodeId="node-0x132cc2a0" />
+      <child nodeId="node-0x12bd8150" />
     </children>
   </item>
-  <item nodeId="node-0x132cc2a0">
+  <item nodeId="node-0x12bd8150">
     <command xml:space="preserve">download charger</command>
     <result xml:space="preserve">You can&apos;t download that!
 
@@ -1240,10 +1369,10 @@ You can&apos;t download that!
     <changed>YES</changed>
     <temporary score="36">YES</temporary>
     <children>
-      <child nodeId="node-0x13284c20" />
+      <child nodeId="node-0x12bd81c0" />
     </children>
   </item>
-  <item nodeId="node-0x13284c20">
+  <item nodeId="node-0x12bd81c0">
     <command xml:space="preserve">download ddos</command>
     <result xml:space="preserve">Successfully downloaded the app!
 
