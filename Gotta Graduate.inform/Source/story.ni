@@ -144,6 +144,7 @@ Door 252 is a door. It is north of Room 252 and south of Hallway 7.
 [        South Faculty Offices            ]
 [ ---------------------------]
 
+
 The SouthEast Corridor is a room. It has the description "You're in the Southern end of the East Outdoor Corridor. To the north is a fallen vending machine that is blocking your path. The archways to the east have been fenced off. Your only option is to head west toward the the South Faculty Offices."
 The SouthWest Corridor is a room. It has the description "You're in the Northern end of the West Outdoor Corridor. The west is fenced off, but the corridor continues to the North. To the south is a locked door and to the west are the South Faculty Offices.".
 
@@ -152,20 +153,20 @@ The Faculty Entrances1 is a room. It is north of the South Faculty Atrium. It ha
 
 The Faculty Entrances2 is a room. It is south of the South Faculty Atrium. It has the description "You see seven faculty offices:  14-203, 14-204, 14-212, 14-213, 14-214, 14-215, 14-216. You can enter each office and look around.[paragraph break]::Refer to the room by the last 3 digits. ie. 14-205 as 205::"
 
-The 14-205 is a Faculty Room inside the Faculty Entrances1.
+The 14-205 is a Faculty Room inside the Faculty Entrances1. The pin unlocks it.
 The 14-206 is a Faculty Room inside the Faculty Entrances1.
 The 14-207 is a Faculty Room inside the Faculty Entrances1.
 The 14-208 is a Faculty Room inside the Faculty Entrances1.
 The 14-209 is a Faculty Room inside the Faculty Entrances1.
 The 14-210 is a Faculty Room inside the Faculty Entrances1. The description of 14-210 is "gene fisher".
-The 14-211 is a Faculty Room inside the Faculty Entrances1.
+The 14-211 is a Faculty Room inside the Faculty Entrances1. 14-211 is open.
 
 The 14-203 is a Faculty Room inside the Faculty Entrances2.
 The 14-204 is a Faculty Room inside the Faculty Entrances2. 
 The 14-212 is a Faculty Room inside the Faculty Entrances2.
-The 14-213 is a Faculty Room inside the Faculty Entrances2. The rusted key unlocks it. 
+The 14-213 is a Faculty Room inside the Faculty Entrances2. 
 The 14-214 is a Faculty Room inside the Faculty Entrances2.
-The 14-215 is a Faculty Room inside the Faculty Entrances2. 
+The 14-215 is a Faculty Room inside the Faculty Entrances2. The rusted key unlocks it. 
 The 14-216 is a Faculty Room inside the Faculty Entrances2. 
 
 A battery is a kind of thing.
@@ -202,10 +203,15 @@ Does the player mean searching a battery compartment: it is very likely.
 
 The nokia phone is a device. "NOKIA PORTABLE CELLULAR DEVCE".
 The solder pen is a device. "Portable Soldering Pen".
-The backpack is in the South Faculty Atrium. It is wearable and openable. In the backpack is a solder pen and the nokia phone.  The backpack is closed.
-An AA cell is a  battery.  it is in the backpack.
+The backpack is in the South Faculty Atrium.
+The nokia phone is in 14-205.
+The solder pen is in 14-204.
+
+An AA cell is a  battery.  It is in 14-216. The description of the AA Cell is "An AA cell battery is always found when you really need an AAA".
 The description of the backpack is "Recon. A familiar Northface backpack. You know the ins and out of this packpack. You easily can find the contents within".
-The rusted key is in Faculty Entrances1. The description is "Engraved into the scratched and heavily used key is '14-21...'".
+The rusted key is in Faculty Entrances1. The description is "Engraved into the scratched and heavily used key is '14-20...'".
+The pin is in 14-208. The description is "This pin might come in use to unlock a door".
+The note is in 14-211. The description is "Busy,  if anyone reads this can you get my cell phone from 14-205?".
 [The South Faculty key is in 14-205. "Engraved into the key is 'gate key'".]
 
 
@@ -286,6 +292,8 @@ A desk is a backdrop in 14-213.
 A desk is a backdrop in 14-214.
 A desk is a backdrop in 14-215.
 A desk is a backdrop in 14-216. 
+
+
 
 [ --------------------------]
 [    North Faculty Offices   ]
