@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Skein rootNode="node-0x02C50BB8" xmlns="http://www.logicalshift.org.uk/IF/Skein">
+<Skein rootNode="node-0x029D3FC0" xmlns="http://www.logicalshift.org.uk/IF/Skein">
   <generator>Inform 7 for Windows</generator>
-  <activeNode nodeId="node-0x02C50BB8"/>
-  <item nodeId="node-0x02C50BB8">
+  <activeNode nodeId="node-0x029D3FC0"/>
+  <item nodeId="node-0x029D3FC0">
     <command xml:space="preserve">- start -</command>
     <result xml:space="preserve">You are in the Software Design Lab at 9pm working on the last programming assignment of your last day of your last quarter at Cal Poly. In order to graduate you NEED to finish this program, or else you will get kicked out of college.&#x000A;&#x000A;Gotta Graduate&#x000A;An Interactive Fiction by Robin Verweij, David O'Connor, Ryan Chan, Luke Plewa, Lauren Thurston, and Russell Taylor&#x000A;Release 1 / Serial number 130423 / Inform 7 build 6G60 (I6/v6.32 lib 6/12N) SD&#x000A;&#x000A;Software Design Lab&#x000A;A lab room lined with computers with a projector and table at the center. North is a doorway leading to the hall.&#x000A;&#x000A;You are finishing up your program, checking to make sure everything compiles and that your name is on the source code. You go to SSH into Vogon, when you realize that something is wrong. You cannot access Vogon, so you shrug it off and try Unix1. After you realize that Unix1 is not working, you start to lightly perspire. You desperately want to go home to your bed and fluffy pillow and sleep. As you try Unix2 and fail to connect once again, you bang your head on the table. What to do?&#x000A;&#x000A;&#x000A;You can see Software Design Lab Door, a charger, keylogger and Dr Gene Fisher here.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -10,11 +10,11 @@
     <changed>NO</changed>
     <temporary score="656">NO</temporary>
     <children>
-      <child nodeId="node-0x02C86F28"/>
-      <child nodeId="node-0x02C6D700"/>
+      <child nodeId="node-0x029D4140"/>
+      <child nodeId="node-0x02A34EE8"/>
     </children>
   </item>
-  <item nodeId="node-0x02C86F28">
+  <item nodeId="node-0x029D4140">
     <command xml:space="preserve">l</command>
     <result xml:space="preserve">Software Design Lab&#x000A;A lab room lined with computers with a projector and table at the center. North is a doorway leading to the hall.&#x000A;&#x000A;You can see Software Design Lab Door, a charger, keylogger and Dr Gene Fisher here.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -22,14 +22,14 @@
     <changed>YES</changed>
     <temporary score="92">YES</temporary>
     <children>
-      <child nodeId="node-0x02C56668"/>
-      <child nodeId="node-0x02C569B0"/>
-      <child nodeId="node-0x02C85DF8"/>
-      <child nodeId="node-0x02C6D5B0"/>
-      <child nodeId="node-0x02C6D620"/>
+      <child nodeId="node-0x02A03C80"/>
+      <child nodeId="node-0x02A36C18"/>
+      <child nodeId="node-0x02A36E48"/>
+      <child nodeId="node-0x02A34858"/>
+      <child nodeId="node-0x02A348C8"/>
     </children>
   </item>
-  <item nodeId="node-0x02C56668">
+  <item nodeId="node-0x02A03C80">
     <command xml:space="preserve">open door1</command>
     <result xml:space="preserve">You open Door1.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -37,10 +37,10 @@
     <changed>YES</changed>
     <temporary score="92">YES</temporary>
     <children>
-      <child nodeId="node-0x02C56860"/>
+      <child nodeId="node-0x02A0DFD0"/>
     </children>
   </item>
-  <item nodeId="node-0x02C56860">
+  <item nodeId="node-0x02A0DFD0">
     <command xml:space="preserve">n</command>
     <result xml:space="preserve">&#x000A;Hallway 1&#x000A;To the west there is a staircase, but you have no need to go downstairs. To the north is a door leading outside. Continue East down the Hallway&#x000A;&#x000A;You can see Door1 here.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -48,10 +48,10 @@
     <changed>YES</changed>
     <temporary score="92">YES</temporary>
     <children>
-      <child nodeId="node-0x02C568D0"/>
+      <child nodeId="node-0x02A0E440"/>
     </children>
   </item>
-  <item nodeId="node-0x02C568D0">
+  <item nodeId="node-0x02A0E440">
     <command xml:space="preserve">n</command>
     <result xml:space="preserve">You can't go that way.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -59,10 +59,10 @@
     <changed>YES</changed>
     <temporary score="92">YES</temporary>
     <children>
-      <child nodeId="node-0x02C56940"/>
+      <child nodeId="node-0x02A36BA8"/>
     </children>
   </item>
-  <item nodeId="node-0x02C56940">
+  <item nodeId="node-0x02A36BA8">
     <command xml:space="preserve">s</command>
     <result xml:space="preserve">&#x000A;Software Design Lab&#x000A;A lab room lined with computers with a projector and table at the center. North is a doorway leading to the hall.&#x000A;&#x000A;You can see Door1 here.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -70,7 +70,7 @@
     <changed>YES</changed>
     <temporary score="91">YES</temporary>
   </item>
-  <item nodeId="node-0x02C569B0">
+  <item nodeId="node-0x02A36C18">
     <command xml:space="preserve">n</command>
     <result xml:space="preserve">You can't go that way.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -78,10 +78,10 @@
     <changed>NO</changed>
     <temporary score="62">YES</temporary>
     <children>
-      <child nodeId="node-0x02C85C38"/>
+      <child nodeId="node-0x02A36C88"/>
     </children>
   </item>
-  <item nodeId="node-0x02C85C38">
+  <item nodeId="node-0x02A36C88">
     <command xml:space="preserve">n</command>
     <result xml:space="preserve">You can't go that way.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -89,10 +89,10 @@
     <changed>YES</changed>
     <temporary score="62">YES</temporary>
     <children>
-      <child nodeId="node-0x02C85CA8"/>
+      <child nodeId="node-0x02A36CF8"/>
     </children>
   </item>
-  <item nodeId="node-0x02C85CA8">
+  <item nodeId="node-0x02A36CF8">
     <command xml:space="preserve">s</command>
     <result xml:space="preserve">You can't go that way.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -100,10 +100,10 @@
     <changed>YES</changed>
     <temporary score="62">YES</temporary>
     <children>
-      <child nodeId="node-0x02C85D18"/>
+      <child nodeId="node-0x02A36D68"/>
     </children>
   </item>
-  <item nodeId="node-0x02C85D18">
+  <item nodeId="node-0x02A36D68">
     <command xml:space="preserve">w</command>
     <result xml:space="preserve">You can't go that way.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -111,10 +111,10 @@
     <changed>YES</changed>
     <temporary score="62">YES</temporary>
     <children>
-      <child nodeId="node-0x02C85D88"/>
+      <child nodeId="node-0x02A36DD8"/>
     </children>
   </item>
-  <item nodeId="node-0x02C85D88">
+  <item nodeId="node-0x02A36DD8">
     <command xml:space="preserve">e</command>
     <result xml:space="preserve">You can't go that way.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -122,7 +122,7 @@
     <changed>YES</changed>
     <temporary score="61">YES</temporary>
   </item>
-  <item nodeId="node-0x02C85DF8">
+  <item nodeId="node-0x02A36E48">
     <command xml:space="preserve">open door 1</command>
     <result xml:space="preserve">You can't see any such thing.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -130,10 +130,10 @@
     <changed>YES</changed>
     <temporary score="82">YES</temporary>
     <children>
-      <child nodeId="node-0x02C85FC8"/>
+      <child nodeId="node-0x02A360E0"/>
     </children>
   </item>
-  <item nodeId="node-0x02C85FC8">
+  <item nodeId="node-0x02A360E0">
     <command xml:space="preserve">l</command>
     <result xml:space="preserve">Software Design Lab&#x000A;A lab room lined with computers with a projector and table at the center. North is a doorway leading to the hall.&#x000A;&#x000A;You can see Door1 here.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -141,10 +141,10 @@
     <changed>YES</changed>
     <temporary score="82">YES</temporary>
     <children>
-      <child nodeId="node-0x02C86038"/>
+      <child nodeId="node-0x02A34778"/>
     </children>
   </item>
-  <item nodeId="node-0x02C86038">
+  <item nodeId="node-0x02A34778">
     <command xml:space="preserve">open Door1</command>
     <result xml:space="preserve">You open Door1.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -152,10 +152,10 @@
     <changed>YES</changed>
     <temporary score="82">YES</temporary>
     <children>
-      <child nodeId="node-0x02C6D540"/>
+      <child nodeId="node-0x02A347E8"/>
     </children>
   </item>
-  <item nodeId="node-0x02C6D540">
+  <item nodeId="node-0x02A347E8">
     <command xml:space="preserve">x Door1</command>
     <result xml:space="preserve">You see nothing special about Door1.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -163,7 +163,7 @@
     <changed>YES</changed>
     <temporary score="81">YES</temporary>
   </item>
-  <item nodeId="node-0x02C6D5B0">
+  <item nodeId="node-0x02A34858">
     <command xml:space="preserve">open Sofware Design Lab Door</command>
     <result xml:space="preserve">You can't see any such thing.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -171,7 +171,7 @@
     <changed>YES</changed>
     <temporary score="55">YES</temporary>
   </item>
-  <item nodeId="node-0x02C6D620">
+  <item nodeId="node-0x02A348C8">
     <command xml:space="preserve">l</command>
     <result xml:space="preserve">Software Design Lab&#x000A;A lab room lined with computers with a projector and table at the center. North is a doorway leading to the hall.&#x000A;&#x000A;You can see Software Design Lab Door, a charger, keylogger and Dr Gene Fisher here.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -179,11 +179,11 @@
     <changed>YES</changed>
     <temporary score="87">YES</temporary>
     <children>
-      <child nodeId="node-0x02C6D690"/>
-      <child nodeId="node-0x02C76A08"/>
+      <child nodeId="node-0x02A34938"/>
+      <child nodeId="node-0x02A349A8"/>
     </children>
   </item>
-  <item nodeId="node-0x02C6D690">
+  <item nodeId="node-0x02A34938">
     <command xml:space="preserve">l</command>
     <result xml:space="preserve">Software Design Lab&#x000A;A lab room lined with computers with a projector and table at the center. North is a doorway leading to the hall.&#x000A;&#x000A;You can see Door1 here.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -191,7 +191,7 @@
     <changed>YES</changed>
     <temporary score="86">YES</temporary>
   </item>
-  <item nodeId="node-0x02C76A08">
+  <item nodeId="node-0x02A349A8">
     <command xml:space="preserve">take door</command>
     <result xml:space="preserve">You can't see any such thing.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -199,10 +199,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02C767D8"/>
+      <child nodeId="node-0x02A34A18"/>
     </children>
   </item>
-  <item nodeId="node-0x02C767D8">
+  <item nodeId="node-0x02A34A18">
     <command xml:space="preserve">take Software Design Lab Door</command>
     <result xml:space="preserve">You can't see any such thing.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -210,10 +210,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02C768B8"/>
+      <child nodeId="node-0x02A34A88"/>
     </children>
   </item>
-  <item nodeId="node-0x02C768B8">
+  <item nodeId="node-0x02A34A88">
     <command xml:space="preserve">take charger</command>
     <result xml:space="preserve">Taken.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -221,10 +221,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02C76A78"/>
+      <child nodeId="node-0x02A34AF8"/>
     </children>
   </item>
-  <item nodeId="node-0x02C76A78">
+  <item nodeId="node-0x02A34AF8">
     <command xml:space="preserve">take keylogger</command>
     <result xml:space="preserve">Taken.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -232,10 +232,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02C76AE8"/>
+      <child nodeId="node-0x02A34B68"/>
     </children>
   </item>
-  <item nodeId="node-0x02C76AE8">
+  <item nodeId="node-0x02A34B68">
     <command xml:space="preserve">take Dr Gene Fisher</command>
     <result xml:space="preserve">I don't suppose Dr Gene Fisher would care for that.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -243,10 +243,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02C76B58"/>
+      <child nodeId="node-0x02A34BD8"/>
     </children>
   </item>
-  <item nodeId="node-0x02C76B58">
+  <item nodeId="node-0x02A34BD8">
     <command xml:space="preserve">look</command>
     <result xml:space="preserve">Software Design Lab&#x000A;A lab room lined with computers with a projector and table at the center. North is a doorway leading to the hall.&#x000A;&#x000A;You can see Software Design Lab Door and Dr Gene Fisher here.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -254,10 +254,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02C76BC8"/>
+      <child nodeId="node-0x02A34C48"/>
     </children>
   </item>
-  <item nodeId="node-0x02C76BC8">
+  <item nodeId="node-0x02A34C48">
     <command xml:space="preserve">i</command>
     <result xml:space="preserve">You are carrying:&#x000A;  keylogger&#x000A;  a charger&#x000A;  a phone&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -265,10 +265,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02C76C38"/>
+      <child nodeId="node-0x02A34D28"/>
     </children>
   </item>
-  <item nodeId="node-0x02C76C38">
+  <item nodeId="node-0x02A34D28">
     <command xml:space="preserve">l keylogger</command>
     <result xml:space="preserve">You see nothing special about keylogger.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -276,10 +276,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02C76CA8"/>
+      <child nodeId="node-0x02A34D98"/>
     </children>
   </item>
-  <item nodeId="node-0x02C76CA8">
+  <item nodeId="node-0x02A34D98">
     <command xml:space="preserve">l charger</command>
     <result xml:space="preserve">You see nothing special about the charger.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -287,10 +287,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02C76D18"/>
+      <child nodeId="node-0x02A34E08"/>
     </children>
   </item>
-  <item nodeId="node-0x02C76D18">
+  <item nodeId="node-0x02A34E08">
     <command xml:space="preserve">l a charger</command>
     <result xml:space="preserve">You see nothing special about the charger.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -298,10 +298,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02C76D88"/>
+      <child nodeId="node-0x02A34E78"/>
     </children>
   </item>
-  <item nodeId="node-0x02C76D88">
+  <item nodeId="node-0x02A34E78">
     <command xml:space="preserve">l a phone</command>
     <result xml:space="preserve">Battery Life: 100%.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -309,7 +309,7 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
   </item>
-  <item nodeId="node-0x02C6D700">
+  <item nodeId="node-0x02A34EE8">
     <command xml:space="preserve">n</command>
     <result xml:space="preserve">(first opening Door1)&#x000A;&#x000A;Hallway 1&#x000A;To the west there is a staircase, but you have no need to go downstairs. To the north is a door leading outside. Continue East down the Hallway&#x000A;&#x000A;You can see Door1 here.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -317,12 +317,12 @@
     <changed>NO</changed>
     <temporary score="198">YES</temporary>
     <children>
-      <child nodeId="node-0x02C6D770"/>
-      <child nodeId="node-0x02C6E3B0"/>
-      <child nodeId="node-0x02C723A0"/>
+      <child nodeId="node-0x02A1A890"/>
+      <child nodeId="node-0x02A1D958"/>
+      <child nodeId="node-0x02A1DBF8"/>
     </children>
   </item>
-  <item nodeId="node-0x02C6D770">
+  <item nodeId="node-0x02A1A890">
     <command xml:space="preserve">w</command>
     <result xml:space="preserve">You can't go that way.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -330,10 +330,10 @@
     <changed>YES</changed>
     <temporary score="198">YES</temporary>
     <children>
-      <child nodeId="node-0x02C6D7E0"/>
+      <child nodeId="node-0x02A1A900"/>
     </children>
   </item>
-  <item nodeId="node-0x02C6D7E0">
+  <item nodeId="node-0x02A1A900">
     <command xml:space="preserve">e</command>
     <result xml:space="preserve">&#x000A;Hallway 2&#x000A;Continue East down the Hallway or south into the Game Design Lab&#x000A;&#x000A;You can see Door2 here.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -341,10 +341,10 @@
     <changed>YES</changed>
     <temporary score="198">YES</temporary>
     <children>
-      <child nodeId="node-0x02C6D850"/>
+      <child nodeId="node-0x02A1A970"/>
     </children>
   </item>
-  <item nodeId="node-0x02C6D850">
+  <item nodeId="node-0x02A1A970">
     <command xml:space="preserve">e</command>
     <result xml:space="preserve">&#x000A;Hallway 3&#x000A;Continue East down the Hallway&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -352,10 +352,10 @@
     <changed>YES</changed>
     <temporary score="198">YES</temporary>
     <children>
-      <child nodeId="node-0x02C6D8C0"/>
+      <child nodeId="node-0x02A1A9E0"/>
     </children>
   </item>
-  <item nodeId="node-0x02C6D8C0">
+  <item nodeId="node-0x02A1A9E0">
     <command xml:space="preserve">e</command>
     <result xml:space="preserve">&#x000A;Hallway 4&#x000A;Continue North to the South Faculty Offices or east down the hallway.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -363,10 +363,10 @@
     <changed>YES</changed>
     <temporary score="198">YES</temporary>
     <children>
-      <child nodeId="node-0x02C6D930"/>
+      <child nodeId="node-0x02A1AA50"/>
     </children>
   </item>
-  <item nodeId="node-0x02C6D930">
+  <item nodeId="node-0x02A1AA50">
     <command xml:space="preserve">e</command>
     <result xml:space="preserve">&#x000A;Hallway 5&#x000A;Continue east down the hallway.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -374,10 +374,10 @@
     <changed>YES</changed>
     <temporary score="198">YES</temporary>
     <children>
-      <child nodeId="node-0x02C6D9A0"/>
+      <child nodeId="node-0x02A1AAC0"/>
     </children>
   </item>
-  <item nodeId="node-0x02C6D9A0">
+  <item nodeId="node-0x02A1AAC0">
     <command xml:space="preserve">e</command>
     <result xml:space="preserve">&#x000A;Hallway 6&#x000A;Continue east down the hallway.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -385,10 +385,10 @@
     <changed>YES</changed>
     <temporary score="198">YES</temporary>
     <children>
-      <child nodeId="node-0x02C6DA10"/>
+      <child nodeId="node-0x02A1AB30"/>
     </children>
   </item>
-  <item nodeId="node-0x02C6DA10">
+  <item nodeId="node-0x02A1AB30">
     <command xml:space="preserve">e</command>
     <result xml:space="preserve">&#x000A;Hallway 7&#x000A;To the south is room 250. You can go east or west in the East Hall.&#x000A;&#x000A;You can see Door 252 and Door 246 here.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -396,10 +396,10 @@
     <changed>YES</changed>
     <temporary score="198">YES</temporary>
     <children>
-      <child nodeId="node-0x02C6DA80"/>
+      <child nodeId="node-0x02A1ABA0"/>
     </children>
   </item>
-  <item nodeId="node-0x02C6DA80">
+  <item nodeId="node-0x02A1ABA0">
     <command xml:space="preserve">e</command>
     <result xml:space="preserve">&#x000A;Hallway 8&#x000A;To the north is room 249. To the south is room 250. You can go east or west down the East Hall.&#x000A;&#x000A;You can see Door 251 and Door 248 here.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -407,10 +407,10 @@
     <changed>YES</changed>
     <temporary score="198">YES</temporary>
     <children>
-      <child nodeId="node-0x02C6DAF0"/>
+      <child nodeId="node-0x02A1AC10"/>
     </children>
   </item>
-  <item nodeId="node-0x02C6DAF0">
+  <item nodeId="node-0x02A1AC10">
     <command xml:space="preserve">e</command>
     <result xml:space="preserve">&#x000A;Hallway 9&#x000A;To the east is a staircase. To the south is a door leading out. To the north is Room 249 and to the south is Room 250. You can go west in the East Hall.&#x000A;&#x000A;You can see Door 250 and Door 249 here.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -418,10 +418,10 @@
     <changed>YES</changed>
     <temporary score="198">YES</temporary>
     <children>
-      <child nodeId="node-0x02C6DB60"/>
+      <child nodeId="node-0x02A1AC80"/>
     </children>
   </item>
-  <item nodeId="node-0x02C6DB60">
+  <item nodeId="node-0x02A1AC80">
     <command xml:space="preserve">e</command>
     <result xml:space="preserve">You can't go that way.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -429,10 +429,10 @@
     <changed>YES</changed>
     <temporary score="198">YES</temporary>
     <children>
-      <child nodeId="node-0x02C6DBD0"/>
+      <child nodeId="node-0x02A1ACF0"/>
     </children>
   </item>
-  <item nodeId="node-0x02C6DBD0">
+  <item nodeId="node-0x02A1ACF0">
     <command xml:space="preserve">w</command>
     <result xml:space="preserve">&#x000A;Hallway 8&#x000A;To the north is room 249. To the south is room 250. You can go east or west down the East Hall.&#x000A;&#x000A;You can see Door 251 and Door 248 here.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -440,10 +440,10 @@
     <changed>YES</changed>
     <temporary score="198">YES</temporary>
     <children>
-      <child nodeId="node-0x02C6DC40"/>
+      <child nodeId="node-0x02A1AD60"/>
     </children>
   </item>
-  <item nodeId="node-0x02C6DC40">
+  <item nodeId="node-0x02A1AD60">
     <command xml:space="preserve">w</command>
     <result xml:space="preserve">&#x000A;Hallway 7&#x000A;To the south is room 250. You can go east or west in the East Hall.&#x000A;&#x000A;You can see Door 252 and Door 246 here.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -451,10 +451,10 @@
     <changed>YES</changed>
     <temporary score="198">YES</temporary>
     <children>
-      <child nodeId="node-0x02C6DCB0"/>
+      <child nodeId="node-0x02A1ADD0"/>
     </children>
   </item>
-  <item nodeId="node-0x02C6DCB0">
+  <item nodeId="node-0x02A1ADD0">
     <command xml:space="preserve">w</command>
     <result xml:space="preserve">&#x000A;Hallway 6&#x000A;Continue east down the hallway.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -462,10 +462,10 @@
     <changed>YES</changed>
     <temporary score="198">YES</temporary>
     <children>
-      <child nodeId="node-0x02C6DD20"/>
+      <child nodeId="node-0x02A1AE40"/>
     </children>
   </item>
-  <item nodeId="node-0x02C6DD20">
+  <item nodeId="node-0x02A1AE40">
     <command xml:space="preserve">w</command>
     <result xml:space="preserve">&#x000A;Hallway 5&#x000A;Continue east down the hallway.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -473,10 +473,10 @@
     <changed>YES</changed>
     <temporary score="198">YES</temporary>
     <children>
-      <child nodeId="node-0x02C6DD90"/>
+      <child nodeId="node-0x02A1AEB0"/>
     </children>
   </item>
-  <item nodeId="node-0x02C6DD90">
+  <item nodeId="node-0x02A1AEB0">
     <command xml:space="preserve">w</command>
     <result xml:space="preserve">&#x000A;Hallway 4&#x000A;Continue North to the South Faculty Offices or east down the hallway.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -484,10 +484,10 @@
     <changed>YES</changed>
     <temporary score="198">YES</temporary>
     <children>
-      <child nodeId="node-0x02C6DE00"/>
+      <child nodeId="node-0x02A1AF20"/>
     </children>
   </item>
-  <item nodeId="node-0x02C6DE00">
+  <item nodeId="node-0x02A1AF20">
     <command xml:space="preserve">n</command>
     <result xml:space="preserve">&#x000A;SouthEast Corridor&#x000A;You're in the Southern end of the East Outdoor Corridor. To the north is a fallen vending machine that is blocking your path. The archways to the east have been fenced off. Your only option is to head west toward the the South Faculty Offices.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -495,10 +495,10 @@
     <changed>YES</changed>
     <temporary score="198">YES</temporary>
     <children>
-      <child nodeId="node-0x02C6DE70"/>
+      <child nodeId="node-0x02A1AF90"/>
     </children>
   </item>
-  <item nodeId="node-0x02C6DE70">
+  <item nodeId="node-0x02A1AF90">
     <command xml:space="preserve">e</command>
     <result xml:space="preserve">You can't go that way.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -506,10 +506,10 @@
     <changed>YES</changed>
     <temporary score="198">YES</temporary>
     <children>
-      <child nodeId="node-0x02C6DEE0"/>
+      <child nodeId="node-0x02A1B000"/>
     </children>
   </item>
-  <item nodeId="node-0x02C6DEE0">
+  <item nodeId="node-0x02A1B000">
     <command xml:space="preserve">w</command>
     <result xml:space="preserve">&#x000A;South Faculty Atrium&#x000A;You're in the center of the southern faculty offices. To the north and south are enterances to the faculty offices.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -517,10 +517,10 @@
     <changed>YES</changed>
     <temporary score="198">YES</temporary>
     <children>
-      <child nodeId="node-0x02C6DF50"/>
+      <child nodeId="node-0x02A1D4F8"/>
     </children>
   </item>
-  <item nodeId="node-0x02C6DF50">
+  <item nodeId="node-0x02A1D4F8">
     <command xml:space="preserve">w</command>
     <result xml:space="preserve">&#x000A;SouthWest Corridor&#x000A;You're in the Northern end of the West Outdoor Corridor. The west is fenced off, but the corridor continues to the North. To the south is a locked door and to the west are the South Faculty Offices.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -528,10 +528,10 @@
     <changed>YES</changed>
     <temporary score="198">YES</temporary>
     <children>
-      <child nodeId="node-0x02C6DFC0"/>
+      <child nodeId="node-0x02A1D568"/>
     </children>
   </item>
-  <item nodeId="node-0x02C6DFC0">
+  <item nodeId="node-0x02A1D568">
     <command xml:space="preserve">n</command>
     <result xml:space="preserve">&#x000A;NorthWest Corridor&#x000A;You're in the West Corridor. The west is still fenced off. To the north is another fallen vending machine. Weird... Seems your only option is to head east toward the North Faculty Offices&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -539,10 +539,10 @@
     <changed>YES</changed>
     <temporary score="198">YES</temporary>
     <children>
-      <child nodeId="node-0x02C6E030"/>
+      <child nodeId="node-0x02A1D5D8"/>
     </children>
   </item>
-  <item nodeId="node-0x02C6E030">
+  <item nodeId="node-0x02A1D5D8">
     <command xml:space="preserve">e</command>
     <result xml:space="preserve">&#x000A;North Faculty Atrium&#x000A;You're in the center of the northern faculty offices. To the north and south are enterances to the faculty offices.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -550,10 +550,10 @@
     <changed>YES</changed>
     <temporary score="198">YES</temporary>
     <children>
-      <child nodeId="node-0x02C6E0A0"/>
+      <child nodeId="node-0x02A1D648"/>
     </children>
   </item>
-  <item nodeId="node-0x02C6E0A0">
+  <item nodeId="node-0x02A1D648">
     <command xml:space="preserve">e</command>
     <result xml:space="preserve">&#x000A;NorthEast Corridor&#x000A;You're in the Northern end of the Eastern Corridor. To the south is the first fallen vending machine you saw. The eastern archways are still fenced off. You can see that to the north the path is clear.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -561,10 +561,10 @@
     <changed>YES</changed>
     <temporary score="198">YES</temporary>
     <children>
-      <child nodeId="node-0x02C6E110"/>
+      <child nodeId="node-0x02A1D6B8"/>
     </children>
   </item>
-  <item nodeId="node-0x02C6E110">
+  <item nodeId="node-0x02A1D6B8">
     <command xml:space="preserve">n</command>
     <result xml:space="preserve">(first opening csl-239-D)&#x000A;&#x000A;csl-239&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -572,10 +572,10 @@
     <changed>YES</changed>
     <temporary score="198">YES</temporary>
     <children>
-      <child nodeId="node-0x02C6E180"/>
+      <child nodeId="node-0x02A1D728"/>
     </children>
   </item>
-  <item nodeId="node-0x02C6E180">
+  <item nodeId="node-0x02A1D728">
     <command xml:space="preserve">n</command>
     <result xml:space="preserve">You can't go that way.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -583,10 +583,10 @@
     <changed>YES</changed>
     <temporary score="198">YES</temporary>
     <children>
-      <child nodeId="node-0x02C6E1F0"/>
+      <child nodeId="node-0x02A1D798"/>
     </children>
   </item>
-  <item nodeId="node-0x02C6E1F0">
+  <item nodeId="node-0x02A1D798">
     <command xml:space="preserve">s</command>
     <result xml:space="preserve">&#x000A;NorthEast Corridor&#x000A;You're in the Northern end of the Eastern Corridor. To the south is the first fallen vending machine you saw. The eastern archways are still fenced off. You can see that to the north the path is clear.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -594,10 +594,10 @@
     <changed>YES</changed>
     <temporary score="198">YES</temporary>
     <children>
-      <child nodeId="node-0x02C6E260"/>
+      <child nodeId="node-0x02A1D808"/>
     </children>
   </item>
-  <item nodeId="node-0x02C6E260">
+  <item nodeId="node-0x02A1D808">
     <command xml:space="preserve">n</command>
     <result xml:space="preserve">&#x000A;csl-239&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -605,10 +605,10 @@
     <changed>YES</changed>
     <temporary score="198">YES</temporary>
     <children>
-      <child nodeId="node-0x02C6E2D0"/>
+      <child nodeId="node-0x02A1D878"/>
     </children>
   </item>
-  <item nodeId="node-0x02C6E2D0">
+  <item nodeId="node-0x02A1D878">
     <command xml:space="preserve">e</command>
     <result xml:space="preserve">You can't go that way.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -616,10 +616,10 @@
     <changed>YES</changed>
     <temporary score="198">YES</temporary>
     <children>
-      <child nodeId="node-0x02C6E340"/>
+      <child nodeId="node-0x02A1D8E8"/>
     </children>
   </item>
-  <item nodeId="node-0x02C6E340">
+  <item nodeId="node-0x02A1D8E8">
     <command xml:space="preserve">w</command>
     <result xml:space="preserve">You can't go that way.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -627,7 +627,7 @@
     <changed>YES</changed>
     <temporary score="197">YES</temporary>
   </item>
-  <item nodeId="node-0x02C6E3B0">
+  <item nodeId="node-0x02A1D958">
     <command xml:space="preserve">n</command>
     <result xml:space="preserve">You can't go that way.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -635,11 +635,11 @@
     <changed>NO</changed>
     <temporary score="142">YES</temporary>
     <children>
-      <child nodeId="node-0x02C6E420"/>
-      <child nodeId="node-0x02C722C0"/>
+      <child nodeId="node-0x02A1D9C8"/>
+      <child nodeId="node-0x02A1DB18"/>
     </children>
   </item>
-  <item nodeId="node-0x02C6E420">
+  <item nodeId="node-0x02A1D9C8">
     <command xml:space="preserve">e</command>
     <result xml:space="preserve">&#x000A;Hallway 2&#x000A;Continue East down the Hallway or south into the Game Design Lab&#x000A;&#x000A;You can see Door2 here.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -647,10 +647,10 @@
     <changed>YES</changed>
     <temporary score="142">YES</temporary>
     <children>
-      <child nodeId="node-0x02C6E490"/>
+      <child nodeId="node-0x02A1DA38"/>
     </children>
   </item>
-  <item nodeId="node-0x02C6E490">
+  <item nodeId="node-0x02A1DA38">
     <command xml:space="preserve">e</command>
     <result xml:space="preserve">&#x000A;Hallway 3&#x000A;Continue East down the Hallway&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -658,10 +658,10 @@
     <changed>YES</changed>
     <temporary score="142">YES</temporary>
     <children>
-      <child nodeId="node-0x02C72250"/>
+      <child nodeId="node-0x02A1DAA8"/>
     </children>
   </item>
-  <item nodeId="node-0x02C72250">
+  <item nodeId="node-0x02A1DAA8">
     <command xml:space="preserve">e</command>
     <result xml:space="preserve">&#x000A;Hallway 4&#x000A;Continue North to the South Faculty Offices&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -669,7 +669,7 @@
     <changed>YES</changed>
     <temporary score="141">YES</temporary>
   </item>
-  <item nodeId="node-0x02C722C0">
+  <item nodeId="node-0x02A1DB18">
     <command xml:space="preserve">open door</command>
     <result xml:space="preserve">You can't see any such thing.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -677,10 +677,10 @@
     <changed>YES</changed>
     <temporary score="70">YES</temporary>
     <children>
-      <child nodeId="node-0x02C72330"/>
+      <child nodeId="node-0x02A1DB88"/>
     </children>
   </item>
-  <item nodeId="node-0x02C72330">
+  <item nodeId="node-0x02A1DB88">
     <command xml:space="preserve">x door</command>
     <result xml:space="preserve">You can't see any such thing.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -688,7 +688,7 @@
     <changed>YES</changed>
     <temporary score="69">YES</temporary>
   </item>
-  <item nodeId="node-0x02C723A0">
+  <item nodeId="node-0x02A1DBF8">
     <command xml:space="preserve">e</command>
     <result xml:space="preserve">&#x000A;Hallway 2&#x000A;Continue East down the Hallway or south into the Game Design Lab&#x000A;&#x000A;You can see Door2 here.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -696,10 +696,10 @@
     <changed>NO</changed>
     <temporary score="169">YES</temporary>
     <children>
-      <child nodeId="node-0x02C72410"/>
+      <child nodeId="node-0x02A1DC68"/>
     </children>
   </item>
-  <item nodeId="node-0x02C72410">
+  <item nodeId="node-0x02A1DC68">
     <command xml:space="preserve">e</command>
     <result xml:space="preserve">&#x000A;Hallway 3&#x000A;Continue East down the Hallway&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -707,10 +707,10 @@
     <changed>NO</changed>
     <temporary score="169">YES</temporary>
     <children>
-      <child nodeId="node-0x02C72480"/>
+      <child nodeId="node-0x02A1F3C0"/>
     </children>
   </item>
-  <item nodeId="node-0x02C72480">
+  <item nodeId="node-0x02A1F3C0">
     <command xml:space="preserve">e</command>
     <result xml:space="preserve">&#x000A;Hallway 4&#x000A;Continue North to the South Faculty Offices or east down the hallway.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -718,11 +718,11 @@
     <changed>NO</changed>
     <temporary score="169">YES</temporary>
     <children>
-      <child nodeId="node-0x02C724F0"/>
-      <child nodeId="node-0x02C76068"/>
+      <child nodeId="node-0x02A1F430"/>
+      <child nodeId="node-0x02A215B0"/>
     </children>
   </item>
-  <item nodeId="node-0x02C724F0">
+  <item nodeId="node-0x02A1F430">
     <command xml:space="preserve">e</command>
     <result xml:space="preserve">&#x000A;Hallway 5&#x000A;Continue east down the hallway.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -730,11 +730,11 @@
     <changed>YES</changed>
     <temporary score="169">YES</temporary>
     <children>
-      <child nodeId="node-0x02C72560"/>
-      <child nodeId="node-0x02C72870"/>
+      <child nodeId="node-0x02A1F4A0"/>
+      <child nodeId="node-0x02A1F7B0"/>
     </children>
   </item>
-  <item nodeId="node-0x02C72560">
+  <item nodeId="node-0x02A1F4A0">
     <command xml:space="preserve">n</command>
     <result xml:space="preserve">You can't go that way.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -742,10 +742,10 @@
     <changed>YES</changed>
     <temporary score="147">YES</temporary>
     <children>
-      <child nodeId="node-0x02C725D0"/>
+      <child nodeId="node-0x02A1F510"/>
     </children>
   </item>
-  <item nodeId="node-0x02C725D0">
+  <item nodeId="node-0x02A1F510">
     <command xml:space="preserve">n</command>
     <result xml:space="preserve">You can't go that way.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -753,10 +753,10 @@
     <changed>YES</changed>
     <temporary score="38">YES</temporary>
     <children>
-      <child nodeId="node-0x02C72640"/>
+      <child nodeId="node-0x02A1F580"/>
     </children>
   </item>
-  <item nodeId="node-0x02C72640">
+  <item nodeId="node-0x02A1F580">
     <command xml:space="preserve">n</command>
     <result xml:space="preserve">You can't go that way.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -764,10 +764,10 @@
     <changed>YES</changed>
     <temporary score="38">YES</temporary>
     <children>
-      <child nodeId="node-0x02C726B0"/>
+      <child nodeId="node-0x02A1F5F0"/>
     </children>
   </item>
-  <item nodeId="node-0x02C726B0">
+  <item nodeId="node-0x02A1F5F0">
     <command xml:space="preserve">w</command>
     <result xml:space="preserve">&#x000A;South Faculty Atrium&#x000A;You're in the center of the southern faculty offices. To the north and south are enterances to the faculty offices.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -775,10 +775,10 @@
     <changed>YES</changed>
     <temporary score="38">YES</temporary>
     <children>
-      <child nodeId="node-0x02C72720"/>
+      <child nodeId="node-0x02A1F660"/>
     </children>
   </item>
-  <item nodeId="node-0x02C72720">
+  <item nodeId="node-0x02A1F660">
     <command xml:space="preserve">n</command>
     <result xml:space="preserve">&#x000A;Faculty Entrances1&#x000A;You see seven faculty offices:  14-205, 14-206, 14-207, 14-208, 14-209, 14-210, 14-211. You can enter each office and look around.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -786,10 +786,10 @@
     <changed>YES</changed>
     <temporary score="38">YES</temporary>
     <children>
-      <child nodeId="node-0x02C72790"/>
+      <child nodeId="node-0x02A1F6D0"/>
     </children>
   </item>
-  <item nodeId="node-0x02C72790">
+  <item nodeId="node-0x02A1F6D0">
     <command xml:space="preserve">enter 14-205</command>
     <result xml:space="preserve">You get into the 14-205.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -797,10 +797,10 @@
     <changed>YES</changed>
     <temporary score="38">YES</temporary>
     <children>
-      <child nodeId="node-0x02C72800"/>
+      <child nodeId="node-0x02A1F740"/>
     </children>
   </item>
-  <item nodeId="node-0x02C72800">
+  <item nodeId="node-0x02A1F740">
     <command xml:space="preserve">exit</command>
     <result xml:space="preserve">You get out of the 14-205.&#x000A;&#x000A;Faculty Entrances1&#x000A;You see seven faculty offices:  14-205, 14-206, 14-207, 14-208, 14-209, 14-210, 14-211. You can enter each office and look around.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -808,7 +808,7 @@
     <changed>YES</changed>
     <temporary score="37">YES</temporary>
   </item>
-  <item nodeId="node-0x02C72870">
+  <item nodeId="node-0x02A1F7B0">
     <command xml:space="preserve">e</command>
     <result xml:space="preserve">&#x000A;Hallway 6&#x000A;Continue east down the hallway.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -816,10 +816,10 @@
     <changed>YES</changed>
     <temporary score="169">YES</temporary>
     <children>
-      <child nodeId="node-0x02C728E0"/>
+      <child nodeId="node-0x02A1F820"/>
     </children>
   </item>
-  <item nodeId="node-0x02C728E0">
+  <item nodeId="node-0x02A1F820">
     <command xml:space="preserve">e</command>
     <result xml:space="preserve">&#x000A;Hallway 7&#x000A;To the south is room 250. You can go east or west in the East Hall.&#x000A;&#x000A;You can see Door 252 and Door 246 here.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -827,12 +827,12 @@
     <changed>YES</changed>
     <temporary score="169">YES</temporary>
     <children>
-      <child nodeId="node-0x02C72950"/>
-      <child nodeId="node-0x02C72B10"/>
-      <child nodeId="node-0x02C73130"/>
+      <child nodeId="node-0x02A1F890"/>
+      <child nodeId="node-0x02A1FA50"/>
+      <child nodeId="node-0x02A214D0"/>
     </children>
   </item>
-  <item nodeId="node-0x02C72950">
+  <item nodeId="node-0x02A1F890">
     <command xml:space="preserve">e</command>
     <result xml:space="preserve">&#x000A;Hallway 8&#x000A;To the north is room 249. To the south is room 250. You can go east or west down the East Hall.&#x000A;&#x000A;You can see 249-Door here.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -840,10 +840,10 @@
     <changed>YES</changed>
     <temporary score="128">YES</temporary>
     <children>
-      <child nodeId="node-0x02C729C0"/>
+      <child nodeId="node-0x02A1F900"/>
     </children>
   </item>
-  <item nodeId="node-0x02C729C0">
+  <item nodeId="node-0x02A1F900">
     <command xml:space="preserve">e</command>
     <result xml:space="preserve">&#x000A;Hallway 9&#x000A;To the east is a staircase. To the south is a door leading out. To the north is Room 249. You can go west in the East Hall.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -851,10 +851,10 @@
     <changed>YES</changed>
     <temporary score="128">YES</temporary>
     <children>
-      <child nodeId="node-0x02C72A30"/>
+      <child nodeId="node-0x02A1F970"/>
     </children>
   </item>
-  <item nodeId="node-0x02C72A30">
+  <item nodeId="node-0x02A1F970">
     <command xml:space="preserve">e</command>
     <result xml:space="preserve">You can't go that way.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -862,10 +862,10 @@
     <changed>YES</changed>
     <temporary score="128">YES</temporary>
     <children>
-      <child nodeId="node-0x02C72AA0"/>
+      <child nodeId="node-0x02A1F9E0"/>
     </children>
   </item>
-  <item nodeId="node-0x02C72AA0">
+  <item nodeId="node-0x02A1F9E0">
     <command xml:space="preserve">e</command>
     <result xml:space="preserve">You can't go that way.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -873,7 +873,7 @@
     <changed>YES</changed>
     <temporary score="127">YES</temporary>
   </item>
-  <item nodeId="node-0x02C72B10">
+  <item nodeId="node-0x02A1FA50">
     <command xml:space="preserve">s</command>
     <result xml:space="preserve">(first opening Door 252)&#x000A;&#x000A;Room 252&#x000A;There is a door to the north.&#x000A;&#x000A;You can see Door 252 here.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -881,10 +881,10 @@
     <changed>YES</changed>
     <temporary score="169">YES</temporary>
     <children>
-      <child nodeId="node-0x02C72B80"/>
+      <child nodeId="node-0x02A1FAC0"/>
     </children>
   </item>
-  <item nodeId="node-0x02C72B80">
+  <item nodeId="node-0x02A1FAC0">
     <command xml:space="preserve">n</command>
     <result xml:space="preserve">&#x000A;Hallway 7&#x000A;To the south is room 250. You can go east or west in the East Hall.&#x000A;&#x000A;You can see Door 252 and Door 246 here.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -892,10 +892,10 @@
     <changed>YES</changed>
     <temporary score="169">YES</temporary>
     <children>
-      <child nodeId="node-0x02C72BF0"/>
+      <child nodeId="node-0x02A1FB30"/>
     </children>
   </item>
-  <item nodeId="node-0x02C72BF0">
+  <item nodeId="node-0x02A1FB30">
     <command xml:space="preserve">n</command>
     <result xml:space="preserve">(first opening Door 246)&#x000A;&#x000A;Room 246&#x000A;There is a door to the south.&#x000A;&#x000A;You can see Door 246 here.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -903,10 +903,10 @@
     <changed>YES</changed>
     <temporary score="169">YES</temporary>
     <children>
-      <child nodeId="node-0x02C72C60"/>
+      <child nodeId="node-0x02A21000"/>
     </children>
   </item>
-  <item nodeId="node-0x02C72C60">
+  <item nodeId="node-0x02A21000">
     <command xml:space="preserve">s</command>
     <result xml:space="preserve">&#x000A;Hallway 7&#x000A;To the south is room 250. You can go east or west in the East Hall.&#x000A;&#x000A;You can see Door 246 and Door 252 here.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -914,10 +914,10 @@
     <changed>YES</changed>
     <temporary score="169">YES</temporary>
     <children>
-      <child nodeId="node-0x02C72CD0"/>
+      <child nodeId="node-0x02A21070"/>
     </children>
   </item>
-  <item nodeId="node-0x02C72CD0">
+  <item nodeId="node-0x02A21070">
     <command xml:space="preserve">e</command>
     <result xml:space="preserve">&#x000A;Hallway 8&#x000A;To the north is room 249. To the south is room 250. You can go east or west down the East Hall.&#x000A;&#x000A;You can see Door 251 and Door 248 here.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -925,10 +925,10 @@
     <changed>YES</changed>
     <temporary score="169">YES</temporary>
     <children>
-      <child nodeId="node-0x02C72D40"/>
+      <child nodeId="node-0x02A210E0"/>
     </children>
   </item>
-  <item nodeId="node-0x02C72D40">
+  <item nodeId="node-0x02A210E0">
     <command xml:space="preserve">n</command>
     <result xml:space="preserve">(first opening Door 248)&#x000A;&#x000A;Room 248&#x000A;There is a door to the south.&#x000A;&#x000A;You can see Door 248 here.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -936,10 +936,10 @@
     <changed>YES</changed>
     <temporary score="169">YES</temporary>
     <children>
-      <child nodeId="node-0x02C72DB0"/>
+      <child nodeId="node-0x02A21150"/>
     </children>
   </item>
-  <item nodeId="node-0x02C72DB0">
+  <item nodeId="node-0x02A21150">
     <command xml:space="preserve">s</command>
     <result xml:space="preserve">&#x000A;Hallway 8&#x000A;To the north is room 249. To the south is room 250. You can go east or west down the East Hall.&#x000A;&#x000A;You can see Door 248 and Door 251 here.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -947,10 +947,10 @@
     <changed>YES</changed>
     <temporary score="169">YES</temporary>
     <children>
-      <child nodeId="node-0x02C72E20"/>
+      <child nodeId="node-0x02A211C0"/>
     </children>
   </item>
-  <item nodeId="node-0x02C72E20">
+  <item nodeId="node-0x02A211C0">
     <command xml:space="preserve">s</command>
     <result xml:space="preserve">(first opening Door 251)&#x000A;&#x000A;Room 251&#x000A;There is a door to the north.&#x000A;&#x000A;You can see Door 251 here.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -958,10 +958,10 @@
     <changed>YES</changed>
     <temporary score="169">YES</temporary>
     <children>
-      <child nodeId="node-0x02C72E90"/>
+      <child nodeId="node-0x02A21230"/>
     </children>
   </item>
-  <item nodeId="node-0x02C72E90">
+  <item nodeId="node-0x02A21230">
     <command xml:space="preserve">n</command>
     <result xml:space="preserve">&#x000A;Hallway 8&#x000A;To the north is room 249. To the south is room 250. You can go east or west down the East Hall.&#x000A;&#x000A;You can see Door 251 and Door 248 here.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -969,10 +969,10 @@
     <changed>YES</changed>
     <temporary score="169">YES</temporary>
     <children>
-      <child nodeId="node-0x02C72F00"/>
+      <child nodeId="node-0x02A212A0"/>
     </children>
   </item>
-  <item nodeId="node-0x02C72F00">
+  <item nodeId="node-0x02A212A0">
     <command xml:space="preserve">e</command>
     <result xml:space="preserve">&#x000A;Hallway 9&#x000A;To the east is a staircase. To the south is a door leading out. To the north is Room 249. You can go west in the East Hall.&#x000A;&#x000A;You can see Door 250 and Door 249 here.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -980,10 +980,10 @@
     <changed>YES</changed>
     <temporary score="169">YES</temporary>
     <children>
-      <child nodeId="node-0x02C72F70"/>
+      <child nodeId="node-0x02A21310"/>
     </children>
   </item>
-  <item nodeId="node-0x02C72F70">
+  <item nodeId="node-0x02A21310">
     <command xml:space="preserve">s</command>
     <result xml:space="preserve">(first opening Door 250)&#x000A;&#x000A;Room 250&#x000A;There is a door to the north. You can move west.&#x000A;&#x000A;You can see Door 250 here.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -991,10 +991,10 @@
     <changed>YES</changed>
     <temporary score="169">YES</temporary>
     <children>
-      <child nodeId="node-0x02C72FE0"/>
+      <child nodeId="node-0x02A21380"/>
     </children>
   </item>
-  <item nodeId="node-0x02C72FE0">
+  <item nodeId="node-0x02A21380">
     <command xml:space="preserve">n</command>
     <result xml:space="preserve">&#x000A;Hallway 9&#x000A;To the east is a staircase. To the south is a door leading out. To the north is Room 249. You can go west in the East Hall.&#x000A;&#x000A;You can see Door 250 and Door 249 here.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -1002,10 +1002,10 @@
     <changed>YES</changed>
     <temporary score="169">YES</temporary>
     <children>
-      <child nodeId="node-0x02C73050"/>
+      <child nodeId="node-0x02A213F0"/>
     </children>
   </item>
-  <item nodeId="node-0x02C73050">
+  <item nodeId="node-0x02A213F0">
     <command xml:space="preserve">n</command>
     <result xml:space="preserve">(first opening Door 249)&#x000A;&#x000A;Room 249&#x000A;There is a door to the south. You can move west.&#x000A;&#x000A;You can see Door 249 here.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -1013,10 +1013,10 @@
     <changed>YES</changed>
     <temporary score="169">YES</temporary>
     <children>
-      <child nodeId="node-0x02C730C0"/>
+      <child nodeId="node-0x02A21460"/>
     </children>
   </item>
-  <item nodeId="node-0x02C730C0">
+  <item nodeId="node-0x02A21460">
     <command xml:space="preserve">s</command>
     <result xml:space="preserve">&#x000A;Hallway 9&#x000A;To the east is a staircase. To the south is a door leading out. To the north is Room 249. You can go west in the East Hall.&#x000A;&#x000A;You can see Door 249 and Door 250 here.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -1024,7 +1024,7 @@
     <changed>YES</changed>
     <temporary score="168">YES</temporary>
   </item>
-  <item nodeId="node-0x02C73130">
+  <item nodeId="node-0x02A214D0">
     <command xml:space="preserve">open door</command>
     <result xml:space="preserve">You can't see any such thing.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -1032,10 +1032,10 @@
     <changed>YES</changed>
     <temporary score="137">YES</temporary>
     <children>
-      <child nodeId="node-0x02C731A0"/>
+      <child nodeId="node-0x02A21540"/>
     </children>
   </item>
-  <item nodeId="node-0x02C731A0">
+  <item nodeId="node-0x02A21540">
     <command xml:space="preserve">open door 251</command>
     <result xml:space="preserve">You can't see any such thing.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -1043,7 +1043,7 @@
     <changed>YES</changed>
     <temporary score="136">YES</temporary>
   </item>
-  <item nodeId="node-0x02C76068">
+  <item nodeId="node-0x02A215B0">
     <command xml:space="preserve">n</command>
     <result xml:space="preserve">&#x000A;SouthEast Corridor&#x000A;You're in the Southern end of the East Outdoor Corridor. To the north is a fallen vending machine that is blocking your path. The archways to the east have been fenced off. Your only option is to head west toward the the South Faculty Offices.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -1051,10 +1051,10 @@
     <changed>YES</changed>
     <temporary score="110">YES</temporary>
     <children>
-      <child nodeId="node-0x02C760D8"/>
+      <child nodeId="node-0x02A21620"/>
     </children>
   </item>
-  <item nodeId="node-0x02C760D8">
+  <item nodeId="node-0x02A21620">
     <command xml:space="preserve">w</command>
     <result xml:space="preserve">&#x000A;South Faculty Atrium&#x000A;You're in the center of the southern faculty offices. To the north and south are enterances to the faculty offices.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -1062,10 +1062,10 @@
     <changed>YES</changed>
     <temporary score="110">YES</temporary>
     <children>
-      <child nodeId="node-0x02C76148"/>
+      <child nodeId="node-0x02A21690"/>
     </children>
   </item>
-  <item nodeId="node-0x02C76148">
+  <item nodeId="node-0x02A21690">
     <command xml:space="preserve">w</command>
     <result xml:space="preserve">&#x000A;SouthWest Corridor&#x000A;You're in the Northern end of the West Outdoor Corridor. The west is fenced off, but the corridor continues to the North. To the south is a locked door and to the west are the South Faculty Offices.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -1073,10 +1073,10 @@
     <changed>YES</changed>
     <temporary score="110">YES</temporary>
     <children>
-      <child nodeId="node-0x02C761B8"/>
+      <child nodeId="node-0x02A21700"/>
     </children>
   </item>
-  <item nodeId="node-0x02C761B8">
+  <item nodeId="node-0x02A21700">
     <command xml:space="preserve">w</command>
     <result xml:space="preserve">You can't go that way.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
