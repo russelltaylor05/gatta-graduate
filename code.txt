@@ -15,7 +15,7 @@ Classroom is a kind of container. classroom is scenery, lockable, closed, entera
 Faculty Room is a kind of container. Faculty Room is scenery, closed, enterable, fixed in place, openable, lockable. A Faculty Room is usually locked.
 
 [ -----------------------]
-[       Items         ]
+[                     Items                ]
 [ -----------------------]
 A key is a thing. Key is in Janitor's Closet. The description of key is "Borrowed from the Janitor's Closet. Perhaps it has access to a particular room in building 14.". The key unlocks Game Design Door.
 
@@ -28,7 +28,7 @@ Battery life is a number variable. Battery life is 100.
 app is a kind of thing. DDOS, packet spoofer, keylogger is an app.
 
 [ -----------------------]
-[     Actions         ]
+[            Actions                      ]
 [ -----------------------]
 Launching it is an action applying to one thing.
 Check launching it:
@@ -356,128 +356,8 @@ The 14-231 is Faculty Room inside the Faculty Entrances4.
 [             CSL                                    ]
 [ ----------------------------]
 
-csl-239 is a room.
-csl-238D is a room.
-csl-hall-L is a room.
-csl-238G is a room.
-csl-236 is a room.
-csl-hall-R is a room.
-csl-234 is a room.
-csl-233 is a room.
-csl-238C is a room.
-csl-238 is a room. "Here lives vogon".
-csl-238B is a room.
-csl-240 is a room.
-csl-hall-B is a room.
-csl-235D is a room.
-csl-235C is a room.
-csl-232-1 is a room.
-csl-232-2 is a room.
-csl-235-1 is a room with printed name "csl-235".
-csl-235-2 is a room with printed name "csl-235".
-csl-235-3 is a room with printed name "csl-235".
-csl-235-4 is a room with printed name "csl-235".
-csl-235-5 is a room with printed name "csl-235".
-csl-235-6 is a room with printed name "csl-235".
-
-csl-east-stairs is a room.
-csl-west-stairs is a room.
-
-north corridor-1 is a room.
-north corridor-2 is a room.
-north corridor-3 is a room.
-north corridor-4 is a room.
-north corridor-1 is east of north corridor -2.
-north corridor-2 is east of north corridor-3.
-north corridor-3 is east of north corridor-4.
-
-csl-232-1 is south of csl-232-2.
-csl-235-1 is east of csl-235-2 and south of csl-235-4.
-csl-235-2 is east of csl-235-3 and south of csl-235-5.
-csl-235-4 is east of csl-235-5.
-csl-235-5 is east of csl-235-6.
-
-csl-239-D is a door and scenery. it is north of the northeast corridor and south of csl-239. 
-csl-hall-L-D-U is a door and a scenery. it is south of csl-hall-L and north of north corridor-1.
-csl-hall-L-D-L is a door and a scenery. it is west of csl-238D and east of csl-hall-L.
-csl-hall-L-D-D is a door and a scenery. it is north of csl-hall-L and south of csl-235-1.
-csl-hall-L-D-R is a door and a scenery. it is west of csl-hall-L and east of csl-238G.
-csl-hall-R-D-U is a door and a scenery. it is south of csl-hall-R and north of north corridor-2.
-csl-hall-R-D-L is a door and a scenery. it is west of csl-236 and east of csl-hall-R.
-csl-hall-R-D-D is a door and a scenery. it is north of csl-hall-R and south of csl-235-3.
-csl-hall-R-D-R is a door and a scenery. it is west of csl-hall-R and east of csl-234.
-csl-233-D is a door and a scenery. it is north of north corridor-3.
-csl-238C-D-U is a door and a scenery. it is south of the northeast corridor.
-csl-238C-D-R is a door and a scenery. it is west of csl-238C and east of csl-238.
-csl-238-D is a door and a scenery. it is west of csl-238 and east of csl-235-1.
-csl-238B-D is a door and a scenery. it is west of csl-238B and east of csl-235-4.
-csl-240-D is a door and a scenery. it is southwest of csl-240 and northeast of csl-235-4.
-csl-hall-B-U is a door and a scenery. it is north of csl-235-4 and  south of csl-hall-B.
-csl-235D-D is a door and a scenery. it is north of csl-235-5 and south of csl-235D.
-csl-235C-D is a door and a scenery. it is north of csl-235-6 and south of csl-235C.
-csl-232-2-D-L is a door and a scenery. it is west of csl-235-6 and east of csl-232-2.
-csl-232-1-D is a door and a scenery. it is west of csl-235-3 and east of csl-232-1.
-csl-232-1-D-U is a door and a scenery. it is north of north corridor-4
 
 
-[ ---------------------------------]
-[           South Corridor                   ]
-[ ---------------------------------]
-[
-14-243 is a room with description "There is a door to the south.".
-14-244 is a room with description "There is a door to the south.".
-14-245 is a room with description "There is a door to the east.".
-14-246 is a room with description "There is a door to the south.".
-14-253 is a room with description "There is a door to the north.".
-14-254 is a room with description "There is a door to the north.".
-14-254A is a room with description "There is a door to the north.".
-
-South Hall 1 is a room with printed name "South Hall". 
-The description of South Hall 1 is "There is more hallway to the east and west. North is a door to 14-246. South is a door to 14-253.".
-It is west of South-East-Hall-5.
-
-South Hall 2 is a room with printed name "South Hall".
-The description of South Hall 2 is "There is more hallway to the east, north, and west. South is a door to 14-254A.".
-It is west of South Hall 1 and south of South Hall 3.
-
-South Hall 3 is a room with printed name "South Hall".
-The description of South Hall 3 is "There is more hallway to the north and south.".
-
-South Hall 4 is a room with printed name "South Hall".
-The description of South Hall 4 is "There is more hallway to the south. To the west is a door to 14-245. North is a door to the south faculty offices.".
-It is north of South Hall 3. [It is south of a south corridor]
-
-South Hall 5 is a room with printed name "South Hall".
-The description of South Hall 5 is "There is more hallway to the east and west. North is a door to 14-244. South is a door to 254.".
-It is west of South Hall 2.
-
-South Hall 6 is a room with printed name "South Hall".
-The description of South Hall 6 is "There is more hallway to the east and west. North is a door to 14-243. South is the door to the Game Design Lab.".
-It is west of South Hall 5. [north of the Game Design Lab.]
-
-243-D is a door and a scenery. 
-It is north of South Hall 6 and south of 14-243.
-
-244-D is a door and a scenery.
-It is north of South Hall 5 and south of 14-244.
-
-245-D is a door and a scenery.
-It is west of South Hall 4 and east of 14-245.
-
-246-D is a door and a scenery.
-It is north of South Hall 1 and south of 14-246.
-
-253-D is a door and a scenery.
-It is south of South Hall 1 and north of 14-253.
-
-254-D is a door and a scenery.
-It is  south of South Hall 5 and north of 14-254.
-
-254A-D is a door and a scenery.
-It is south of South Hall 2 and north of 14-254A.
-]
-
-[-------Enemy Battle--------]
 
 [Player is in South Hall 5.]
 
