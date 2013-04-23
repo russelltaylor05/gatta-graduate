@@ -1,20 +1,20 @@
 ! Blurb file created by Inform build 6G60
 
-status "C:\Program Files (x86)\Inform 7\Inform7\Extensions\Reserved\CblorbModel.html" "C:\Users\Ryan\Documents\GitHub\gatta-graduate\Gotta Graduate.inform\Build\StatusCblorb.html"
+status "/Applications/Inform.app/Contents/Resources/Inform7/Extensions/Reserved/CblorbModel.html" "/Users/luke/Documents/378/gatta-graduate/Gotta Graduate.inform/Build/StatusCblorb.html"
 
 
 ! Identification
 
-project folder "C:\Users\Ryan\Documents\GitHub\gatta-graduate\Gotta Graduate.inform"
-release to "C:\Users\Ryan\Documents\GitHub\gatta-graduate\Gotta Graduate Materials\Release"
+project folder "/Users/luke/Documents/378/gatta-graduate/Gotta Graduate.inform"
+release to "/Users/luke/Documents/378/gatta-graduate/Gotta Graduate Materials/Release"
 
 ! Blorb instructions
 
 storyfile leafname "Gotta Graduate.zblorb"
-storyfile "C:\Users\Ryan\Documents\GitHub\gatta-graduate\Gotta Graduate.inform\Build\output.z5" include
-ifiction "C:\Users\Ryan\Documents\GitHub\gatta-graduate\Gotta Graduate.inform\Metadata.iFiction" include
-cover "C:\Program Files (x86)\Inform 7\Inform7\Extensions\Reserved\DefaultCover.jpg"
-picture 1 "C:\Program Files (x86)\Inform 7\Inform7\Extensions\Reserved\DefaultCover.jpg"
+storyfile "/Users/luke/Documents/378/gatta-graduate/Gotta Graduate.inform/Build/output.z5" include
+ifiction "/Users/luke/Documents/378/gatta-graduate/Gotta Graduate.inform/Metadata.iFiction" include
+cover "/Applications/Inform.app/Contents/Resources/Inform7/Extensions/Reserved/DefaultCover.jpg"
+picture 1 "/Applications/Inform.app/Contents/Resources/Inform7/Extensions/Reserved/DefaultCover.jpg"
 
 ! Placeholder variables
 

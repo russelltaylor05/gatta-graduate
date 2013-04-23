@@ -39,16 +39,28 @@ Check launching it:
 	if the player is not carrying the phone, say "You need your phone to do that.".
 Understand "launch [something]" as launching it.
 
+Downloading it is an action applying to one thing.
+Check downloading it:
+	if the noun is not an app, say "You can't download that!".
+Understand "Download [something]" as downloading it.
+
 Downloading DDOS is an action applying to nothing.
 Understand "Download DDOS" as downloading DDOS.
 Instead of downloading DDOS:
 	if the player is not carrying DDOS, say "Successfully downloaded the app!";
 	now the player carries DDOS.
+	
 Downloading keylogger is an action applying to nothing.
 Understand "Download keylogger" as downloading keylogger.
 Instead of downloading keylogger:
 	if the player is not carrying keylogger, say "Successfully downloaded the app!";
 	now the player carries keylogger.
+	
+Downloading packet spoofer is an action applying to nothing.
+Understand "Download packet spoofer" as downloading packet spoofer.
+Instead of downloading packet spoofer:
+	if the player is not carrying packet spoofer, say "Successfully downloaded the app!";
+	now the player carries packet spoofer.
 
 Charging it is an action applying to one thing.
 Check Charging it:
@@ -183,7 +195,7 @@ The 14-207 is a Faculty Room inside the Faculty Entrances1.
 The 14-208 is a Faculty Room inside the Faculty Entrances1.
 The 14-209 is a Faculty Room inside the Faculty Entrances1.
 The 14-210 is a Faculty Room inside the Faculty Entrances1. The description of 14-210 is "gene fisher".
-The 14-211 is a Faculty Room inside the Faculty Entrances1. 14-211 is open.  The description is "the door looks ajar".
+The 14-211 is a Faculty Room inside the Faculty Entrances1. 14-211 is open.
 
 The 14-203 is a Faculty Room inside the Faculty Entrances2.
 The 14-204 is a Faculty Room inside the Faculty Entrances2. 
