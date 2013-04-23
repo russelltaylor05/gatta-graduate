@@ -97,8 +97,9 @@ Instead of talking to Zoe Wood:
 	if the person is Zoe Wood, remove Zoe from play.
 
 
+
 [ --------------------------]
-[        SOUTH WEST HALLWAY       ]
+[            WEST HALLWAY               ]
 [ --------------------------]
 
 [TODO]
@@ -140,9 +141,10 @@ Hallway 4 is east of the Hallway 3 and south of the SouthEast Corridor.
 the printed name of Hallway1 is "East-West Hallway". the printed name of Hallway2 is "East-West Hallway". the printed name of Hallway3 is "East-West Hallway". the printed name of Hallway4 is "East-West Hallway".
 
 
-[ -----------------------------------]
-[         SOUTH EAST HALLWAY 	             ]
-[ -----------------------------------]
+
+[--------------------------]
+[         EAST HALLWAY 	             ]
+[ -------------------------]
 
 Room 246 is a Room. The description is "There is a door to the south.".
 Room 248 is a Room. The description is "There is a door to the south.".
@@ -175,10 +177,9 @@ Door 252 is a door. It is north of Room 252 and south of Hallway 7.
 
 
 
-[ ---------------------------]
-[        South Faculty Offices            ]
-[ ---------------------------]
-
+[ ------------------------]
+[        SOUTH FACULTY             ]
+[ ------------------------]
 
 The SouthEast Corridor is a room. It has the description "You're in the the Southern end of the East Outdoor Corridor. To the north is a fallen vending machine that is blocking your path. The archways to the east have been fenced off. Your only option is to head west toward the the South Faculty Offices."
 The SouthWest Corridor is a room. It has the description "You're in the Northern end of the West Outdoor Corridor. The west is fenced off, but the corridor continues to the North. To the south is a locked door and to the west are the South Faculty Offices.".
@@ -325,9 +326,9 @@ A desk is a backdrop in 14-216.
 
 
 
-[ --------------------------]
-[    North Faculty Offices   ]
-[ --------------------------]
+[ ------------------------]
+[         NORTH FACULTY            ]
+[ ------------------------]
 
 The NorthWest Corridor is a room. It has the description "You're in the West Corridor. The west is still fenced off. To the north is another fallen vending machine. Weird... Seems your only option is to head east toward the North Faculty Offices". It is north of the SouthWest Corridor.
 The NorthEast Corridor is a room. It has the description "You're in the Northern end of the Eastern Corridor. To the south is the first fallen vending machine you saw. The eastern archways are still fenced off. You can see that to the north the path is clear.". 
@@ -351,9 +352,15 @@ The 14-230 is Faculty Room inside the Faculty Entrances4.
 The 14-231 is Faculty Room inside the Faculty Entrances4.
 
 
-[ ----------------------------]
-[             CSL                                    ]
-[ ----------------------------]
+[ ----------------------]
+[             CSL                         ]
+[ ----------------------]
+
+The CLS is a room with the description "Main CSL Room.". It is north of NorthEast Corridor.
+
+The Server Room is a room with the description "Home of Vogon and Falcon." It is east of the CSL.
+
+
 
 
 
