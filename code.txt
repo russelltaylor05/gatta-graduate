@@ -1,4 +1,4 @@
-"Gotta Graduate" by Robin Verweij, David O’Connor, Ryan Chan, Luke Plewa, Lauren Thurston, and Russell Taylor
+﻿"Gotta Graduate" by Robin Verweij, David O’Connor, Ryan Chan, Luke Plewa, Lauren Thurston, and Russell Taylor
 
 
 [ -----------------------]
@@ -6,9 +6,12 @@
 [ -----------------------]
 
 use no scoring. use full-length room descriptions.
+
 The player is in Software Design Lab.
 
-[The player is in Faculty Entrances1.]
+[Instead of talking to Dr Gene Fisher:
+	now the player is in Faculty Entrances1.]
+
 
 [Pseudo Rooms]
 Classroom is a kind of container. classroom is scenery, lockable, closed, enterable, fixed in place, openable.
@@ -100,11 +103,22 @@ To say talk to instead:
 Understand "talk to [someone]" as talking to. Understand "talk to [something]" as talking to. Talking to is an action applying to one visible thing.
 	
 Instead of talking to Gene Fisher:
-	if the person is Gene, say "Dr. Fisher looks up from his laptop. 'There seems to be something with the servers.'[paragraph break]'I'm going to go see what is up. You can go too, but you shouldn't leave without taking your phone charger. I have heard of phone applications that professors have made to help debug the servers. Some professors may be on campus right now. If your phone isn't charged, you won't be able to use these applications.'[paragraph break]Dr. Fisher packs up and leaves the room.";
-	if the person is Gene Fisher, remove Gene from play;
+	if the location of the player is the southeast corridor:
+		say "I'll hold these unix minions off! go on ahead!!!";
+		now the description of gene is "Looks like fisher is fighting hard against the unix minios...better hurry along!";
+		stop the action;
+	if the person is Gene:
+		say "Dr. Fisher looks up from his laptop. 'There seems to be something with the servers.'[paragraph break]'I'm going to go see what is up. You can go too, but you shouldn't leave without taking your phone charger. I have heard of phone applications that professors have made to help debug the servers. Some professors may be on campus right now. If your phone isn't charged, you won't be able to use these applications.'[paragraph break]Dr. Fisher packs up and leaves the room.";
+		move Gene to the SouthEast  corridor;
+		stop the action;
 Instead of talking to Zoe Wood:
-	if the person is Zoe Wood, say "Dr. Zoe Wood approaches you, 'Hello, student! If you have noticed, something is wrong with the servers. If you're willing to help me, I suggest we split up and investigate the building. The best place to look first is in the server room in the CSL.[paragraph break]I see you have a smart phone. I have prepared a phone application to attack the servers should anything go wrong. You can download the app, DDOS, onto your phone from the app store. I have heard of other professor who have created phone apps of their own in case of this emergency. Perhaps they are in the building and can help as well. Good luck, I'm going to get to the bottom of the mystery!'[paragraph break]Dr. Wood leaves the room.";
-	if the person is Zoe Wood, remove Zoe from play.
+	if the location of the player is in the CSL:
+		say "Hurry and defeat vogon, I don't know how much longer I can old Sparx off!";
+		now the description of zoe wood is "Looks like Zoe is having some difficulty against sparx! Better hurry and defeat vogon!";
+		stop the action;
+	if the person is Zoe Wood:
+		say "Dr. Zoe Wood approaches you, 'Hello, student! If you have noticed, something is wrong with the servers. If you're willing to help me, I suggest we split up and investigate the building. The best place to look first is in the server room in the CSL.[paragraph break]I see you have a smart phone. I have prepared a phone application to attack the servers should anything go wrong. You can download the app, DDOS, onto your phone from the app store. I have heard of other professor who have created phone apps of their own in case of this emergency. Perhaps they are in the building and can help as well. Good luck, I'm going to get to the bottom of the mystery!'[paragraph break]Dr. Wood leaves the room.";
+		move zoe wood to the CSL.
 
 
 
@@ -194,7 +208,7 @@ Door 252 is a door. It is north of Room 252 and south of Hallway 7.
 The SouthEast Corridor is a room. It has the description "You're in the the Southern end of the East Outdoor Corridor. To the north is a fallen vending machine that is blocking your path. The archways to the east have been fenced off. Your only option is to head west toward the the South Faculty Offices."
 The SouthWest Corridor is a room. It has the description "You're in the Northern end of the West Outdoor Corridor. The west is fenced off, but the corridor continues to the North. To the south is a locked door and to the west are the South Faculty Offices.".
 
-The South Faculty Atrium is a room. It is west of the SouthEast Corridor and east of the SouthWest Corridor. It has the description "You're in the center of the southern faculty offices. To the north and south are enterances to the faculty offices."
+The South Faculty Atrium is a room. [It is west of the SouthEast Corridor and east of the SouthWest Corridor. ]It has the description "You're in the center of the southern faculty offices. To the north and south are enterances to the faculty offices."
 The Faculty Entrances1 is a room. It is north of the South Faculty Atrium. It has the description "You see seven faculty offices:  14-205, 14-206, 14-207, 14-208, 14-209, 14-210, 14-211. You can enter each office and look around.[paragraph break]::Refer to the room by the last 3 digits. ie. 14-205 as 205::"
 
 The Faculty Entrances2 is a room. It is south of the South Faculty Atrium. It has the description "You see seven faculty offices:  14-203, 14-204, 14-212, 14-213, 14-214, 14-215, 14-216. You can enter each office and look around.[paragraph break]::Refer to the room by the last 3 digits. ie. 14-205 as 205::"
@@ -202,7 +216,7 @@ The Faculty Entrances2 is a room. It is south of the South Faculty Atrium. It ha
 The 14-205 is a Faculty Room inside the Faculty Entrances1. The pin unlocks it.
 The 14-206 is a Faculty Room inside the Faculty Entrances1.
 The 14-207 is a Faculty Room inside the Faculty Entrances1.
-The 14-208 is a Faculty Room inside the Faculty Entrances1.
+The 14-208 is a Faculty Room inside the Faculty Entrances1. The rusted key unlocks it. 
 The 14-209 is a Faculty Room inside the Faculty Entrances1.
 The 14-210 is a Faculty Room inside the Faculty Entrances1. The description of 14-210 is "gene fisher".
 The 14-211 is a Faculty Room inside the Faculty Entrances1. 14-211 is open.
@@ -212,7 +226,7 @@ The 14-204 is a Faculty Room inside the Faculty Entrances2.
 The 14-212 is a Faculty Room inside the Faculty Entrances2.
 The 14-213 is a Faculty Room inside the Faculty Entrances2. 
 The 14-214 is a Faculty Room inside the Faculty Entrances2.
-The 14-215 is a Faculty Room inside the Faculty Entrances2. The rusted key unlocks it. 
+The 14-215 is a Faculty Room inside the Faculty Entrances2. 
 The 14-216 is a Faculty Room inside the Faculty Entrances2. 
 
 A battery is a kind of thing.
@@ -247,7 +261,7 @@ Does the player mean inserting something into a device: it is unlikely.
 Does the player mean searching a battery compartment: it is very likely.
 
 
-The nokia phone is a device. "NOKIA PORTABLE CELLULAR DEVCE".
+The nokia phone is a device. The description is "Nokia Phone: This phone has the properties all nokia phones have. (try smashing stuff)".
 The solder pen is a device. "Portable Soldering Pen".
 The backpack is in the South Faculty Atrium.
 The nokia phone is in 14-205.
@@ -267,15 +281,18 @@ Instead of examining Foaad:
 	say "[The noun] looks like he could use a solder pen. Better go find that"
 	
 Instead of talking to Foaad:
-	say "I could really use a solder pen for my side project, I'm sure I can give you something for it".
+	if foaad has the solder pen:
+		say "I'm busy working on my project!!";
+	otherwise:
+		say "I could really use a solder pen for my side project, I'm sure I can give you something for it".
 	
 before giving something to foaad:
 	if noun is a solder pen:
 		if noun is empty:
-			say "This is useless with out a battery";
+			say "This is useless with out a battery in it";
 			stop the action;
 		if noun is not empty:
-			say "Ah this will help me alot. What did you say you were doing? anyways I have this 'A' I can give you, but how about this key? [paragraph break] ::you now carry the key foaad gave you::";
+			say "Ah this will help me alot. What did you say you were doing? anyways I have this 'A' I can give you, but how about this key? [paragraph break] [paragraph break]::you now carry the key foaad gave you::";
 			now the player has the North Atrium Key;
 	otherwise:
 		say "I only want the solder pen";
@@ -298,7 +315,8 @@ Check smashing it with:
 smashing it with is an action applying to two things.
 
 Understand "smash [something] with [something]" as smashing it with.
-[Understand "talk to [someone]" as talking to. Understand "talk to [something]" as talking to. Talking to is an action applying to one visible thing.]
+
+
 Understand "205" as 14-205.
 Understand "206" as 14-206.
 Understand "207" as 14-207.
@@ -335,6 +353,11 @@ A desk is a backdrop in 14-215.
 A desk is a backdrop in 14-216. 
 
 
+SF-east-gate is a door and unlocked. It is west of the South Faculty Atrium and east of the SouthWest corridor.
+SF-west-gate is a door and unlocked. It is east of the South Faculty Atrium and west of the SouthEast corridor.
+NF-east gate is a door and unlocked. It is east of the northwest corridor and west of the north faculty atrium.
+NF-west gate is a door . it is east of the north faculty atrium and west of the northeast corridor. The north atrium key unlocks the nf-west-gate.
+
 
 [ ------------------------]
 [         NORTH FACULTY            ]
@@ -343,7 +366,7 @@ A desk is a backdrop in 14-216.
 The NorthWest Corridor is a room. It has the description "You're in the West Corridor. The west is still fenced off. To the north is another fallen vending machine. Weird... Seems your only option is to head east toward the North Faculty Offices". It is north of the SouthWest Corridor.
 The NorthEast Corridor is a room. It has the description "You're in the Northern end of the Eastern Corridor. To the south is the first fallen vending machine you saw. The eastern archways are still fenced off. You can see that to the north the path is clear.". 
 
-The North Faculty Atrium is a room. It is west of the NorthEast Corridor and east of the NorthWest Corridor. It has the description "You're in the center of the northern faculty offices. To the north and south are enterances to the faculty offices."
+The North Faculty Atrium is a room. [It is west of the NorthEast Corridor and east of the NorthWest Corridor. ]It has the description "You're in the center of the northern faculty offices. To the north and south are enterances to the faculty offices."
 The Faculty Entrances3 is a room. It is north of the North Faculty Atrium. It has the description "You see five faculty offices:  14-219, 14-221, 14-222, 14-223, 14-226. You can enter each office and look around."
 The Faculty Entrances4 is a room. It is south of the North Faculty Atrium. It has the description "You see seven faculty offices:  14-217, 14-218, 14-227, 14-228, 14-229, 14-230, 14-231. You can enter each office and look around."
 
