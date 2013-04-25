@@ -9,6 +9,7 @@ use no scoring. use full-length room descriptions.
 The player is in Software Design Lab.
 
 [Instead of talking to Dr Gene Fisher:
+	now the player is carrying the north atrium key;
 	now the player is in northwest corridor.]
 
 To say Opening text: say "[italic type]You are in the Software Design Lab at [time of day] working on the last programming assignment of your last day of your last quarter at Cal Poly. Failing this assignment means you fail the class, don't graduate, and need to come back for Fall quarter, meaning you won't be able to take that full time position at Google. Disappoint.[paragraph break][roman type][bold type]In order to graduate on time you need to turn your program in before 12:00 AM.[roman type][paragraph break]".
@@ -31,7 +32,7 @@ Faculty Room is a kind of container. Faculty Room is scenery, closed, enterable,
 Every turn:
 	if the phone is on, now Battery Life is Battery Life  minus 1;
 	if battery life is zero or battery life is less than zero:
-		say "Your battery has run out of power and turned off. You need to charge it in order to turn it back on again.".
+		say "Your battery has run out of power and turned off. You need to charge it in order to turn it back on again.";
 		now the phone is off;
 	if the player is in hallway 1 for the first time, say "There's a loud crash coming from inside the Game Design Lab to the east!";
 	if the player is in hallway 4 for the first time, say "There's a loud crash coming from inside one of the classrooms down the hallway to the east!";
