@@ -83,6 +83,16 @@ The pin is in 14-208. The description is "This pin might come in use to unlock a
 The note is in 14-211. The description is "Busy,  if anyone reads this can you get my cell phone from 14-205?".
 [The South Faculty key is in 14-205. "Engraved into the key is 'gate key'".]
 
+[---CSL Items---]
+A row of computers is a fixed in place thing. The description is "On closer inspection, you see that the script, 'protectOverlord' is running on all the computers. It seems like all the computers are preventing you from getting into the Server Room.".
+
+A power supply is a fixed in place device. The description is "All the computers are plugged into this one power supply.". The power supply is switched on.
+
+A line of tables is a fixed in place supporter. The description is "Tables on which the CSL computers reside on. You see a power supply underneath the tables.". 
+The row of computers is on line of tables.
+
+The line of tables is in the CSL.
+
 [ -----------------------]
 [       Actions/Rules        ]
 [ -----------------------]
@@ -224,7 +234,14 @@ smashing it with is an action applying to two things.
 
 Understand "smash [something] with [something]" as smashing it with.
 
-
+[---CSL actions---]
+After examining line of tables:
+	now power supply is in CSL.
+	
+After switching off power supply:
+	say "The room becomes instantly silent. The computers have stopped running, so you should be able to get into the Server Room now.";
+	now Server Room door is unlocked.
+	
 [ Check time verb can be used instead of spouting the time every turn. ]
 [ ---
 Checking time is an action applying to nothing. [Time automatically goes up 1 minute each turn]
@@ -489,12 +506,15 @@ Understand "231" as 14-231.
 [                CSL               ]
 [ ----------------------]
 
-The CSL is a room with the description "Main CSL Room.". 
-The CSL door is a door. It is south of the CSL and north of the NOrthEast Corridor.
+[---Story---]
+To say Enter CSL: say "You finally get to the CSL. The room is hotter than usual, but you don't seem to think anything of it. You try the door to the Server Room so you can finally end everything, but as soon as you touch it, you jump back. The door handle is extremely hot! Dumbfounded, you look around as you try to think of a way to get into the Server Room.".
+
+The CSL is a room with the description "Main CSL Room. You see rows of computers.". 
+The CSL door is a door. It is south of the CSL and north of the NorthEast Corridor.
 [It is north of NorthEast Corridor.]
 
 The Server Room is a room with the description "Home of Vogon and Falcon." 
-The Server Room door is a door. It is east of the CSL and west of the Server Room.
+The Server Room door is a closed locked door. It is east of the CSL and west of the Server Room.
 
 [ ----------------------]
 [       Enemy Setup        ]
