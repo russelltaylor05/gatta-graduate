@@ -93,13 +93,13 @@ Instead of checking time:
 
 Every turn: say "It's now [the time of day]".
 
-At 11 PM:
+At 12 AM:
 	end the game saying "It's past 11 PM, you've failed to turn in your assignment on time. You're now a college dropout!";
 
 [ -----------------------]
 [   Text instantials   ]
 [ -----------------------]
-To say Opening text: say "[italic type]You are in the Software Design Lab at [time of day] working on the last programming assignment of your last day of your last quarter at Cal Poly. Failing this assignment means you fail the class, don't graduate, and need to come back for Fall quarter, meaning you won't be able to take that full time position at Google. Disappoint.[paragraph break][roman type][bold type]In order to graduate on time you need to turn your program in before 11:00 PM.[roman type][paragraph break]".
+To say Opening text: say "[italic type]You are in the Software Design Lab at [time of day] working on the last programming assignment of your last day of your last quarter at Cal Poly. Failing this assignment means you fail the class, don't graduate, and need to come back for Fall quarter, meaning you won't be able to take that full time position at Google. Disappoint.[paragraph break][roman type][bold type]In order to graduate on time you need to turn your program in before 12:00 AM.[roman type][paragraph break]".
 
 When play begins:
 	say "[Opening text]".
