@@ -28,12 +28,12 @@ The phone is a transparent container. The phone can be on or off. The player car
 Turning on is an action applying to nothing.
 Understand "turn on phone" as turning on.
 Carry out turning on:
-	now phone is off;
+	now phone is on;
 	say "Phone turned on.".
 Turning off is an action applying to nothing.
 Understand "turn off phone" as turning off.
 Carry out turning off:
-	now phone is on;
+	now phone is off;
 	say "Phone turned off.".
 
 Battery life is a number variable. Battery life is 100.
