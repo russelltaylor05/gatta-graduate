@@ -1,8 +1,7 @@
 ﻿"Gotta Graduate" by Robin Verweij, David O’Connor, Ryan Chan, Luke Plewa, Lauren Thurston, and Russell Taylor
 
-
 [ -----------------------]
-[               SETUP                     ]
+[               Setup              ]
 [ -----------------------]
 
 use no scoring. use full-length room descriptions.
@@ -12,20 +11,84 @@ The player is in Software Design Lab.
 [Instead of talking to Dr Gene Fisher:
 	now the player is in Faculty Entrances1.]
 
-When play begins: now the time of day is 9:01 PM.
+To say Opening text: say "[italic type]You are in the Software Design Lab at [time of day] working on the last programming assignment of your last day of your last quarter at Cal Poly. Failing this assignment means you fail the class, don't graduate, and need to come back for Fall quarter, meaning you won't be able to take that full time position at Google. Disappoint.[paragraph break][roman type][bold type]In order to graduate on time you need to turn your program in before 12:00 AM.[roman type][paragraph break]".
 
-[Pseudo Rooms]
+When play begins:
+	say "[Opening text]";
+	now the time of day is 9:01 PM.
+	
+At 12 AM:
+	end the game saying "It's past 11 PM, you've failed to turn in your assignment on time. You're now a college dropout!";
+
+[---Pseudo Rooms---]
 Classroom is a kind of container. classroom is scenery, lockable, closed, enterable, fixed in place, openable.
 Faculty Room is a kind of container. Faculty Room is scenery, closed, enterable, fixed in place, openable, lockable. A Faculty Room is usually locked.
 
 [ -----------------------]
-[                     Items                ]
+[           Every Turn          ]
 [ -----------------------]
+
+Every turn:
+	say "It's now [the time of day]";
+	if the player is in hallway 1 for the first time, say "There's a loud crash coming from inside the Game Design Lab to the east!";
+	if the player is in hallway 4 for the first time, say "There's a loud crash coming from inside one of the classrooms down the hallway to the east!";
+	if the player is in hallway 5 for the first time, say "There is another loud crash towards the east!";
+	if the player is in hallway 6 for the first time, say "The smashing is getting even louder towards the east!";
+	if the player is in SouthEast Corridor for the first time and (Gene is in the Software Design Lab), say "It's dangerous to go alone. Talk to Dr Fisher before going any further!";
+	if the player is in SouthEast Corridor for the first time and (Zoe is in the Game Design Lab), say "It's dangerous to go alone. Maybe there is someone who can help in the Game Design Lab!";
+	if the player is in SouthEast Corridor for the first time and (Unix1 is not dead), say "You should probably check out those loud noises before going any further.";
+	if the player is in SouthEast Corridor for the first time and (Gene is in the Software Design Lab or Zoe is in the Game Design Lab or Unix1 is not dead), now the player is in Hallway 4;
+	if the player is in hallway 7 for the first time, say "The smashing and crashing is coming from behind Door 252!";
+	if the player is in South Faculty Atrium for the first time:
+		say "[italic type]As you enter the South Faculty Atrium the gates slam shut and lock themselves. Looks like you're going to need to find a way out.[roman type]";
+		now SF-east-gate is closed;
+		now SF-east-gate is locked;
+		now SF-west-gate is closed;
+		now SF-west-gate is locked;
+
+[ -----------------------]
+[              Items                ]
+[ -----------------------]
+
+[---Hallway Items---]
 A key is a thing. Key is in Janitor's Closet. The description of key is "Borrowed from the Janitor's Closet. Perhaps it has access to a particular room in building 14.". The key unlocks Game Design Door.
 
 The charger is a thing in the Software Design Lab.
 
 The phone is a transparent container. The phone can be on or off. The player carries the phone. The description of the phone is "Battery Life: [battery life]%.".
+
+Battery life is a number variable. Battery life is 100.
+
+app is a kind of thing. DDOS, packet spoofer, keylogger, lab door key is an app.
+
+[---South Faculty Items---]
+A battery is a kind of thing.
+
+A battery compartment is a kind of container. A battery compartment is usually closed and openable. One battery compartment is part of every device. Instead of inserting something which is not a battery into a battery compartment, say "Nothing will happen by inserting that into the slot since its not a battery".
+
+Definition: a device is empty: 
+	if a battery compartment which is part of it contains a battery (called the power source): 
+		no; 
+	yes.
+
+The nokia phone is a device. The description is "Nokia Phone: This phone has the properties all nokia phones have. (try smashing stuff)".
+The solder pen is a device. "Portable Soldering Pen".
+The backpack is in the South Faculty Atrium.
+The nokia phone is in 14-205.
+The solder pen is in 14-204.
+
+An AA cell is a  battery.  It is in 14-216. The description of the AA Cell is "An AA cell battery is always found when you really need an AAA".
+The description of the backpack is "Recon. A familiar Northface backpack. You know the ins and out of this packpack. You easily can find the contents within".
+The rusted key is in Faculty Entrances1. The description is "Engraved into the scratched and heavily used key is '14-20...'".
+The pin is in 14-208. The description is "This pin might come in use to unlock a door".
+The note is in 14-211. The description is "Busy,  if anyone reads this can you get my cell phone from 14-205?".
+[The South Faculty key is in 14-205. "Engraved into the key is 'gate key'".]
+
+[ -----------------------]
+[       Actions/Rules        ]
+[ -----------------------]
+
+[---Phone Actions---]
 Turning on is an action applying to nothing.
 Understand "turn on phone" and "turn phone on" as turning on.
 Carry out turning on:
@@ -36,26 +99,23 @@ Understand "turn off phone" and "turn phone off" as turning off.
 Carry out turning off:
 	now phone is off;
 	say "Phone turned off.".
-
-Battery life is a number variable. Battery life is 100.
-
-app is a kind of thing. DDOS, packet spoofer, keylogger, lab door key is an app.
-
-[ -----------------------]
-[            Actions                      ]
-[ -----------------------]
+	
+[---Application Actions---]
 Launching it is an action applying to one thing.
 Check launching it:
 	if the noun is not an app, say "You can't do that." instead;
 	if the noun is DDOS, say "DDOS!";
 	if the noun is keylogger, say "You're logging its keys!";
 	if the noun is lab door key:
-		if door1 is locked: 
-			now door1 is unlocked;
-			say "The lab door unlocks.";
+		if the player is in Software Design Lab:
+			if door1 is locked: 
+				now door1 is unlocked;
+				say "The lab door unlocks.";
+			else:
+				now door1 is locked;
+				say "The lab door locks.";
 		else:
-			now door1 is locked;
-			say "The lab door locks.";
+			say "It seems like the door this app unlocks is not close.";
 	if the player is not carrying the phone, say "You need your phone to do that.".
 Understand "launch [something]" as launching it.
 
@@ -96,186 +156,12 @@ Check Charging it:
 	if the player is not carrying the charger, say "You need your charger to do that." instead.
 Understand "charge [something]" as Charging it.
 
-[ Check time verb can be used instead of spouting the time every turn. ]
-[ ---
-Checking time is an action applying to nothing. [Time automatically goes up 1 minute each turn]
-Understand "check time" and "time" as checking time. [To change time, use "increase the time of day by x minutes"]
-Instead of checking time:
-	say "[the time of day]".
---- ]
-
-
-
-At 12 AM:
-	end the game saying "It's past 11 PM, you've failed to turn in your assignment on time. You're now a college dropout!";
-
-[ -----------------------]
-[   Text instantials   ]
-[ -----------------------]
-To say Opening text: say "[italic type]You are in the Software Design Lab at [time of day] working on the last programming assignment of your last day of your last quarter at Cal Poly. Failing this assignment means you fail the class, don't graduate, and need to come back for Fall quarter, meaning you won't be able to take that full time position at Google. Disappoint.[paragraph break][roman type][bold type]In order to graduate on time you need to turn your program in before 12:00 AM.[roman type][paragraph break]".
-
-When play begins:
-	say "[Opening text]".
-	
-[-----------------------]
-[-----          People         ---]
-[-----------------------]
-Dr Zoe Wood is a person. Zoe is in the Game Design Lab.
-The description of Zoe Wood is "The graphics professor at Cal Poly. If you talk to her, she may be able to help you.".
-Dr Gene Fisher is a person. Gene is in the Software Design Lab.
-The description of Gene Fisher is "The software engineering professor at Cal Poly. If you talk to him, he may be able to help you.".
-
+[---Talking---]
 To say talk to instead: 
 	say "(To communicate, TALK TO a character.) ".
 Understand "talk to [someone]" as talking to. Understand "talk to [something]" as talking to. Talking to is an action applying to one visible thing.
-	
-Instead of talking to Gene Fisher:
-	if the location of the player is the southeast corridor:
-		say "I'll hold these unix minions off! go on ahead!!!";
-		now the description of gene is "Looks like fisher is fighting hard against the unix minios...better hurry along!";
-		stop the action;
-	if the person is Gene:
-		say "Dr. Fisher looks up from his laptop. 'There seems to be something going on with the servers.'[paragraph break]'I'm going to go see what's up. I'm going to lock the door so you'll need this new app I made. It's called lab door key. All you have to do to get it is [bold type]download lab door key[roman type]. It'll automatically download into your phone, then you can [bold type]launch lab door key[roman type] to open this lab's door.'[paragraph break]'Oh, and don't forget your phone charger over there. If your phone isn't charged, you won't be able to use any apps. Try [bold type]charge phone[roman type].'[paragraph break]Dr. Fisher packs up and leaves the room.";
-		move Gene to the SouthEast  corridor;
-		stop the action;
-Instead of talking to Zoe Wood:
-	if the location of the player is in the CSL:
-		say "Hurry and defeat vogon, I don't know how much longer I can old Sparx off!";
-		now the description of zoe wood is "Looks like Zoe is having some difficulty against sparx! Better hurry and defeat vogon!";
-		stop the action;
-	if the person is Zoe Wood:
-		say "Dr. Zoe Wood approaches you, 'Hello, student! If you have noticed, something is wrong with the servers. If you're willing to help me, I suggest we split up and investigate the building. The best place to look first is in the server room in the CSL.'[paragraph break]'I see you have a smart phone. I have prepared a phone application to attack the servers should anything go wrong. You can download the app, DDOS, onto your phone from the app store. Make sure to examine your phone to check it's remaining battery - you wouldn't want to run out of battery life! Either way, I'm off to go see if I can help get the servers back up.'[paragraph break]Dr. Wood leaves the room.";
-		move zoe wood to the CSL;
-		now door 252 is unlocked.
 
-
-
-[ --------------------------]
-[            WEST HALLWAY               ]
-[ --------------------------]
-
-[TODO]
-[Steer player to talking to Fisher]
-[Timing for statements]
-
-[Story]
-To say Intro text: say "[paragraph break]You are finishing up your program, checking to make sure everything compiles and that your name is on the source code. You go to SSH into Vogon, when you realize that something is wrong. You cannot access Vogon, so you shrug it off and try Unix1. After you realize that Unix1 is not working, you start to lightly perspire. You desperately want to go home to your bed and fluffy pillow and sleep. As you try Unix2 and fail to connect once again, you bang your head on the table. What to do?".
-
-Instead of going to Hallway 1 when charger is not held:
-	say "Maybe you should heed Fisher's suggestion and bring your phone charger.".
-
-[Descriptions]
-Software Design Lab is a room with a description "A lab room lined with computers with a projector and table at the center. North is a doorway leading to the hall.[if Hallway 1 is unvisited][Intro text][end if]".
-Game Design Lab is a room with a description "The Game Design Lab is filled computers and with a projector and table at the center.".
-Janitor's Closet is a room with a description "Perhaps there is something useful in here.".
-
-Hallway 1 is a room with the description "To the west there is a staircase, but you have no need to go downstairs. To the north is a door leading outside. Continue East down the Hallway". 
-Hallway 2 is a room with the description "Continue east down the Hallway or south into the Game Design Lab". 
-Hallway 3 is a room with the description "Continue east down the Hallway or north into the Janitor's Closet.". 
-Hallway 4 is a room with the description "Continue north to the South Faculty Offices or east down the hallway. The Faculty Offices may be a good place to look for helpful professors.". 
-
-[Doors]
-Door1 is a closed, locked door.
-Door2 is a closed, unlocked door. 
-Door3 is a closed, unlocked door.	
-
-[Directions]
-Door1 is north of the Software Design Lab.
-Door2 is north of the Game Design Lab. 
-Door3 is south of the Janitor's Closet. 
-the printed name of Door1 is "Software Design Lab Door". 
-the printed name of Door2 is "Game Design Lab Door".
-the printed name of Door3 is "Janitor's Closet Door".
-Hallway 1 is north of Door1.
-Hallway 2 is east of the Hallway 1 and north of Door2.
-Hallway 3 is east of the Hallway 2 and south of Door3.
-Hallway 4 is east of the Hallway 3.
-
-Hallway Door is a locked door. Hallway Door is south of the SouthEast Corridor and north of Hallway 4.
-
-Every turn:
-	if the player is in hallway 1 for the first time, say "There's a loud crash coming from inside the Game Design Lab to the east!";
-	if the player is in hallway 4 for the first time, say "There's a loud crash coming from inside one of the classrooms down the hallway to the east!";
-	if the player is in hallway 5 for the first time, say "There is another loud crash towards the east!";
-	if the player is in hallway 6 for the first time, say "The smashing is getting even louder towards the east!";
-	if the player is in SouthEast Corridor for the first time and (Gene is in the Software Design Lab), say "It's dangerous to go alone. Talk to Dr Fisher before going any further!";
-	if the player is in SouthEast Corridor for the first time and (Zoe is in the Game Design Lab), say "It's dangerous to go alone. Maybe there is someone who can help in the Game Design Lab!";
-	if the player is in SouthEast Corridor for the first time and (Unix1 is not dead), say "You should probably check out those loud noises before going any further.";
-	if the player is in SouthEast Corridor for the first time and (Gene is in the Software Design Lab or Zoe is in the Game Design Lab or Unix1 is not dead), now the player is in Hallway 4;
-	if the player is in hallway 7 for the first time, say "The smashing and crashing is coming from behind Door 252!";
-	if the player is in South Faculty Atrium for the first time:
-		say "[italic type]As you enter the South Faculty Atrium the gates slam shut and lock themselves. Looks like you're going to need to find a way out.[roman type]";
-		now SF-east-gate is closed;
-		now SF-east-gate is locked;
-		now SF-west-gate is closed;
-		now SF-west-gate is locked;
-
-[--------------------------]
-[         EAST HALLWAY 	             ]
-[ -------------------------]
-
-Room 246 is a Room. The description is "There is a door to the south.".
-Room 248 is a Room. The description is "There is a door to the south.".
-Room 249 is a Room. The description is "There is a door to the south. You can move west.".
-Room 250 is a Room. The description is "There is a door to the north. You can move west.".
-Room 251 is a Room. The description is "There is a door to the north.".
-Room 252 is a Room. The description is "There is a door to the north.".
-
-Hallway 5 is a Room. The description is "Continue east down the hallway.". 
-Hallway 6 is a Room. The description is "Continue east down the hallway.".
-Hallway 7 is a Room. The description is "To the south is room 252. You can go east or west in the East Hall.".
-Hallway 8 is a Room. The description is "To the north is room 249. To the south is room 250. You can go east or west down the East Hall.".
-Hallway 9 is a Room. The description is "To the east is a staircase. To the south is a door leading out. To the north is Room 249 and to the south is Room 250. You can go west in the East Hall.".
-
-the printed name of Hallway 1 is "East-West Hallway". the printed name of Hallway 2 is "East-West Hallway". the printed name of Hallway 3 is "East-West Hallway". the printed name of Hallway 4 is "East-West Hallway". the printed name of Hallway 5 is "East-West Hallway". the printed name of Hallway 6 is "East-West Hallway". the printed name of Hallway 7 is "East-West Hallway". the printed name of Hallway 8 is "East-West Hallway". the printed name of Hallway 9 is "East-West Hallway".
-
-[Directions]
-Hallway 5 is east of Hallway 4.
-Hallway 6 is east of Hallway 5.
-Hallway 7 is east of Hallway 6.
-Hallway 8 is east of Hallway 7.
-Hallway 9 is east of Hallway 8.
-
-[Doors]
-Door 249 is a door. It is south of Room 249 and north of Hallway 9. 
-Door 250 is a door. It is north of Room 250 and south of Hallway 9.
-Door 248 is a door. It is south of Room 248 and north of Hallway 8.
-Door 251 is a door. It is north of Room 251 and south of Hallway 8.
-Door 246 is a door. It is south of Room 246 and north of Hallway 7.
-Door 252 is a locked door. It is north of Room 252 and south of Hallway 7.
-
-[ ------------------------]
-[        SOUTH FACULTY             ]
-[ ------------------------]
-
-The SouthEast Corridor is a room. It has the description "You're in the the Southern end of the East Outdoor Corridor. To the north is a fallen vending machine that is blocking your path. The archways to the east have been fenced off. Your only option is to head west toward the the South Faculty Offices."
-The SouthWest Corridor is a room. It has the description "You're in the Northern end of the West Outdoor Corridor. The west is fenced off, but the corridor continues to the North. To the south is a locked door and to the west are the South Faculty Offices.".
-
-The South Faculty Atrium is a room. [It is west of the SouthEast Corridor and east of the SouthWest Corridor. ]It has the description "You're in the center of the southern faculty offices. To the north and south are enterances to the faculty offices."
-The Faculty Entrances1 is a room. It is north of the South Faculty Atrium. It has the description "You see seven faculty offices:  14-205, 14-206, 14-207, 14-208, 14-209, 14-210, 14-211. You can enter each office and look around.[paragraph break]::Refer to the room by the last 3 digits. ie. 14-205 as 205::"
-
-The Faculty Entrances2 is a room. It is south of the South Faculty Atrium. It has the description "You see seven faculty offices:  14-203, 14-204, 14-212, 14-213, 14-214, 14-215, 14-216. You can enter each office and look around.[paragraph break]::Refer to the room by the last 3 digits. ie. 14-205 as 205::"
-
-The 14-205 is a Faculty Room inside the Faculty Entrances1. The pin unlocks it.
-The 14-206 is a Faculty Room inside the Faculty Entrances1.
-The 14-207 is a Faculty Room inside the Faculty Entrances1.
-The 14-208 is a Faculty Room inside the Faculty Entrances1. The rusted key unlocks it. 
-The 14-209 is a Faculty Room inside the Faculty Entrances1.
-The 14-210 is a Faculty Room inside the Faculty Entrances1. The description of 14-210 is "gene fisher".
-The 14-211 is a Faculty Room inside the Faculty Entrances1. 14-211 is open.
-
-The 14-203 is a Faculty Room inside the Faculty Entrances2.
-The 14-204 is a Faculty Room inside the Faculty Entrances2. 
-The 14-212 is a Faculty Room inside the Faculty Entrances2.
-The 14-213 is a Faculty Room inside the Faculty Entrances2. 
-The 14-214 is a Faculty Room inside the Faculty Entrances2.
-The 14-215 is a Faculty Room inside the Faculty Entrances2. 
-The 14-216 is a Faculty Room inside the Faculty Entrances2. 
-
-A battery is a kind of thing.
-
-A battery compartment is a kind of container. A battery compartment is usually closed and openable. One battery compartment is part of every device. Instead of inserting something which is not a battery into a battery compartment, say "Nothing will happen by inserting that into the slot since its not a battery".
-
+[---South Faculty Actions/Rules---]
 Understand "turn on [device]" as switching on.
 Understand "turn off [device]" as switching off.
 Understand "put [something] in [container]" as inserting it into.
@@ -286,11 +172,6 @@ Instead of opening a device, try opening a random battery compartment which is p
 
 Instead of switching on an empty device: 
 	say "You need a power source!"
-	
-Definition: a device is empty: 
-	if a battery compartment which is part of it contains a battery (called the power source): 
-		no; 
-	yes.
 
 Does the player mean doing something other than searching to a battery compartment: it is unlikely.
 
@@ -303,22 +184,67 @@ Does the player mean inserting a battery compartment into: it is very unlikely.
 Does the player mean inserting something into a device: it is unlikely.
 Does the player mean searching a battery compartment: it is very likely.
 
-
-The nokia phone is a device. The description is "Nokia Phone: This phone has the properties all nokia phones have. (try smashing stuff)".
-The solder pen is a device. "Portable Soldering Pen".
-The backpack is in the South Faculty Atrium.
-The nokia phone is in 14-205.
-The solder pen is in 14-204.
-
-An AA cell is a  battery.  It is in 14-216. The description of the AA Cell is "An AA cell battery is always found when you really need an AAA".
-The description of the backpack is "Recon. A familiar Northface backpack. You know the ins and out of this packpack. You easily can find the contents within".
-The rusted key is in Faculty Entrances1. The description is "Engraved into the scratched and heavily used key is '14-20...'".
-The pin is in 14-208. The description is "This pin might come in use to unlock a door".
-The note is in 14-211. The description is "Busy,  if anyone reads this can you get my cell phone from 14-205?".
-[The South Faculty key is in 14-205. "Engraved into the key is 'gate key'".]
-
 The block giving rule is not listed in the check giving it to rules.
-Foaad is a man in 14-213. He carries the North Atrium Key.
+
+Need relates one person to various things. The verb to need (he needs, they need, he needed, it is needed, he is needing) implies the need relation.
+
+Carry out smashing a container with something: 
+	if noun is a faculty room:
+		now the noun is open;
+		say "You smash [noun] open!";
+
+Check smashing it with: 
+	if the noun is a person, say "why would you want to smash [noun]?!" instead; 
+	if the second noun is not a nokia phone, say "[The second noun] does not have the properties of a nokia phone" instead;
+	if the noun is not a faculty room, say "that is a waste of time to smash the [noun]".
+		
+smashing it with is an action applying to two things.
+
+Understand "smash [something] with [something]" as smashing it with.
+
+
+[ Check time verb can be used instead of spouting the time every turn. ]
+[ ---
+Checking time is an action applying to nothing. [Time automatically goes up 1 minute each turn]
+Understand "check time" and "time" as checking time. [To change time, use "increase the time of day by x minutes"]
+Instead of checking time:
+	say "[the time of day]".
+--- ]
+	
+[-----------------------]
+[             People             ]
+[-----------------------]
+
+[---Dr Gene Fisher---]
+Dr Gene Fisher is a person. Gene is in the Software Design Lab.
+The description of Gene Fisher is "The software engineering professor at Cal Poly. If you talk to him, he may be able to help you.".
+
+Instead of talking to Gene Fisher:
+	if the location of the player is the southeast corridor:
+		say "I'll hold these unix minions off! go on ahead!!!";
+		now the description of gene is "Looks like fisher is fighting hard against the unix minios...better hurry along!";
+		stop the action;
+	if the person is Gene:
+		say "Dr. Fisher looks up from his laptop. 'There seems to be something going on with the servers.'[paragraph break]'I'm going to go see what's up. I'm going to lock the door so you'll need this new app I made. It's called lab door key. All you have to do to get it is [bold type]download lab door key[roman type]. It'll automatically download into your phone, then you can [bold type]launch lab door key[roman type] to open this lab's door.'[paragraph break]'Oh, and don't forget your phone charger over there. If your phone isn't charged, you won't be able to use any apps. Try [bold type]charge phone[roman type].'[paragraph break]Dr. Fisher packs up and leaves the room.";
+		move Gene to the SouthEast corridor;
+		stop the action;
+		
+[---Dr Zoe Wood---]
+Dr Zoe Wood is a person. Zoe is in the Game Design Lab.
+The description of Zoe Wood is "The graphics professor at Cal Poly. If you talk to her, she may be able to help you.".
+
+Instead of talking to Zoe Wood:
+	if the location of the player is in the CSL:
+		say "Hurry and defeat vogon, I don't know how much longer I can old Sparx off!";
+		now the description of zoe wood is "Looks like Zoe is having some difficulty against sparx! Better hurry and defeat vogon!";
+		stop the action;
+	if the person is Zoe Wood:
+		say "Dr. Zoe Wood approaches you, 'Hello, student! If you have noticed, something is wrong with the servers. If you're willing to help me, I suggest we split up and investigate the building. The best place to look first is in the server room in the CSL.'[paragraph break]'I see you have a smart phone. I have prepared a phone application to attack the servers should anything go wrong. You can download the app, DDOS, onto your phone from the app store. Make sure to examine your phone to check it's remaining battery - you wouldn't want to run out of battery life! Either way, I'm off to go see if I can help get the servers back up.'[paragraph break]Dr. Wood leaves the room.";
+		move zoe wood to the CSL;
+		now door 252 is unlocked.
+
+[---Foaad---]
+Foaad is a man. Foaad is in 14-213. He carries the North Atrium Key.
 
 Instead of examining Foaad:
 	say "[The noun] looks like he could use a solder pen. Better go find that"
@@ -340,25 +266,110 @@ before giving something to foaad:
 	otherwise:
 		say "I only want the solder pen";
 		stop the action.
-			
-Need relates one person to various things. The verb to need (he needs, they need, he needed, it is needed, he is needing) implies the need relation.
-Foaad needs the solder pen.	
 
-Carry out smashing a container with something: 
-	if noun is a faculty room:
-		now the noun is open;
-		say "You smash [noun] open!";
-
-
-Check smashing it with: 
-	if the noun is a person, say "why would you want to smash [noun]?!" instead; 
-	if the second noun is not a nokia phone, say "[The second noun] does not have the properties of a nokia phone" instead;
-	if the noun is not a faculty room, say "that is a waste of time to smash the [noun]".
+Foaad needs the solder pen.
 		
-smashing it with is an action applying to two things.
+[ --------------------------]
+[     Building 14 Hallway     ]
+[ --------------------------]
 
-Understand "smash [something] with [something]" as smashing it with.
+[---Story---]
+To say Intro text: say "[paragraph break]You are finishing up your program, checking to make sure everything compiles and that your name is on the source code. You go to SSH into Vogon, when you realize that something is wrong. You cannot access Vogon, so you shrug it off and try Unix1. After you realize that Unix1 is not working, you start to lightly perspire. You desperately want to go home to your bed and fluffy pillow and sleep. As you try Unix2 and fail to connect once again, you bang your head on the table. What to do?".
 
+Instead of going to Hallway 1 when charger is not held:
+	say "Maybe you should heed Fisher's suggestion and bring your phone charger.".
+
+[---Descriptions---]
+Software Design Lab is a room with a description "A lab room lined with computers with a projector and table at the center. North is a doorway leading to the hall.[if Hallway 1 is unvisited][Intro text][end if]".
+
+Game Design Lab is a room with a description "The Game Design Lab is filled computers and with a projector and table at the center.".
+
+Janitor's Closet is a room with a description "Perhaps there is something useful in here.".
+
+Room 246 is a Room. The description is "There is a door to the south.".
+Room 248 is a Room. The description is "There is a door to the south.".
+Room 249 is a Room. The description is "There is a door to the south. You can move west.".
+Room 250 is a Room. The description is "There is a door to the north. You can move west.".
+Room 251 is a Room. The description is "There is a door to the north.".
+Room 252 is a Room. The description is "There is a door to the north.".
+
+Hallway 1 is a room with the description "To the west there is a staircase, but you have no need to go downstairs. To the north is a door leading outside. Continue East down the Hallway". 
+
+Hallway 2 is a room with the description "Continue east down the Hallway or south into the Game Design Lab". 
+
+Hallway 3 is a room with the description "Continue east down the Hallway or north into the Janitor's Closet.". 
+
+Hallway 4 is a room with the description "Continue north to the South Faculty Offices or east down the hallway. The Faculty Offices may be a good place to look for helpful professors.". 
+
+Hallway 5 is a Room. The description is "Continue east down the hallway.". 
+Hallway 6 is a Room. The description is "Continue east down the hallway.".
+Hallway 7 is a Room. The description is "To the south is room 252. You can go east or west in the East Hall.".
+Hallway 8 is a Room. The description is "To the north is room 249. To the south is room 250. You can go east or west down the East Hall.".
+Hallway 9 is a Room. The description is "To the east is a staircase. To the south is a door leading out. To the north is Room 249 and to the south is Room 250. You can go west in the East Hall.".
+
+the printed name of Hallway 1 is "East-West Hallway". the printed name of Hallway 2 is "East-West Hallway". the printed name of Hallway 3 is "East-West Hallway". the printed name of Hallway 4 is "East-West Hallway". the printed name of Hallway 5 is "East-West Hallway". the printed name of Hallway 6 is "East-West Hallway". the printed name of Hallway 7 is "East-West Hallway". the printed name of Hallway 8 is "East-West Hallway". the printed name of Hallway 9 is "East-West Hallway".
+
+Door1 is a closed, locked door.
+Door2 is a closed, unlocked door. 
+Door3 is a closed, unlocked door.	
+Hallway Door is a locked door.
+
+The printed name of Door1 is "Software Design Lab Door". 
+The printed name of Door2 is "Game Design Lab Door".
+The printed name of Door3 is "Janitor's Closet Door".
+
+Door 249 is a door. It is south of Room 249 and north of Hallway 9. 
+Door 250 is a door. It is north of Room 250 and south of Hallway 9.
+Door 248 is a door. It is south of Room 248 and north of Hallway 8.
+Door 251 is a door. It is north of Room 251 and south of Hallway 8.
+Door 246 is a door. It is south of Room 246 and north of Hallway 7.
+Door 252 is a locked door. It is north of Room 252 and south of Hallway 7.
+
+Door1 is north of the Software Design Lab.
+Door2 is north of the Game Design Lab. 
+Door3 is south of the Janitor's Closet. 
+Hallway Door is south of the SouthEast Corridor and north of Hallway 4.
+
+Hallway 1 is north of Door1.
+Hallway 2 is east of the Hallway 1 and north of Door2.
+Hallway 3 is east of the Hallway 2 and south of Door3.
+Hallway 4 is east of the Hallway 3.
+Hallway 5 is east of Hallway 4.
+Hallway 6 is east of Hallway 5.
+Hallway 7 is east of Hallway 6.
+Hallway 8 is east of Hallway 7.
+Hallway 9 is east of Hallway 8.
+
+[ ------------------------]
+[        South Faculty         ]
+[ ------------------------]
+
+[---Descriptions---]
+The SouthEast Corridor is a room. It has the description "You're in the the Southern end of the East Outdoor Corridor. To the north is a fallen vending machine that is blocking your path. The archways to the east have been fenced off. Your only option is to head west toward the the South Faculty Offices."
+
+The SouthWest Corridor is a room. It has the description "You're in the Northern end of the West Outdoor Corridor. The west is fenced off, but the corridor continues to the North. To the south is a locked door and to the west are the South Faculty Offices.".
+
+The South Faculty Atrium is a room. [It is west of the SouthEast Corridor and east of the SouthWest Corridor. ]It has the description "You're in the center of the southern faculty offices. To the north and south are enterances to the faculty offices."
+
+The Faculty Entrances1 is a room. It is north of the South Faculty Atrium. It has the description "You see seven faculty offices:  14-205, 14-206, 14-207, 14-208, 14-209, 14-210, 14-211. You can enter each office and look around.[paragraph break]::Refer to the room by the last 3 digits. ie. 14-205 as 205::"
+
+The Faculty Entrances2 is a room. It is south of the South Faculty Atrium. It has the description "You see seven faculty offices:  14-203, 14-204, 14-212, 14-213, 14-214, 14-215, 14-216. You can enter each office and look around.[paragraph break]::Refer to the room by the last 3 digits. ie. 14-205 as 205::"
+
+The 14-205 is a Faculty Room inside the Faculty Entrances1. The pin unlocks it.
+The 14-206 is a Faculty Room inside the Faculty Entrances1.
+The 14-207 is a Faculty Room inside the Faculty Entrances1.
+The 14-208 is a Faculty Room inside the Faculty Entrances1. The rusted key unlocks it. 
+The 14-209 is a Faculty Room inside the Faculty Entrances1.
+The 14-210 is a Faculty Room inside the Faculty Entrances1. The description of 14-210 is "gene fisher".
+The 14-211 is a Faculty Room inside the Faculty Entrances1. 14-211 is open.
+
+The 14-203 is a Faculty Room inside the Faculty Entrances2.
+The 14-204 is a Faculty Room inside the Faculty Entrances2. 
+The 14-212 is a Faculty Room inside the Faculty Entrances2.
+The 14-213 is a Faculty Room inside the Faculty Entrances2. 
+The 14-214 is a Faculty Room inside the Faculty Entrances2.
+The 14-215 is a Faculty Room inside the Faculty Entrances2. 
+The 14-216 is a Faculty Room inside the Faculty Entrances2. 
 
 Understand "205" as 14-205.
 Understand "206" as 14-206.
@@ -376,8 +387,6 @@ Understand "214" as 14-214.
 Understand "215" as 14-215.
 Understand "216" as 14-216. 
 
-
-[furnature]
 The description of the desk is "Typical desk you would see in a teachers office. Messy with papers.".
 A desk is a backdrop in 14-205. 
 A desk is a backdrop in 14-206.
@@ -395,17 +404,16 @@ A desk is a backdrop in 14-214.
 A desk is a backdrop in 14-215.
 A desk is a backdrop in 14-216. 
 
-
 SF-east-gate is a door and unlocked. It is west of the South Faculty Atrium and east of the SouthWest corridor.
 SF-west-gate is a door and unlocked. It is east of the South Faculty Atrium and west of the SouthEast corridor.
 NF-east gate is a door and unlocked. It is east of the northwest corridor and west of the north faculty atrium.
 NF-west gate is a door and locked. it is east of the north faculty atrium and west of the northeast corridor. The north atrium key unlocks the nf-west-gate.
 
-
 [ ------------------------]
-[         NORTH FACULTY            ]
+[        North Faculty         ]
 [ ------------------------]
 
+[---Descriptions---]
 The NorthWest Corridor is a room. It has the description "You're in the West Corridor. The west is still fenced off. To the north is another fallen vending machine. Weird... Seems your only option is to head east toward the North Faculty Offices". It is north of the SouthWest Corridor.
 The NorthEast Corridor is a room. It has the description "You're in the Northern end of the Eastern Corridor. To the south is the first fallen vending machine you saw. The eastern archways are still fenced off. You can see that to the north the path is clear.". 
 
@@ -441,9 +449,8 @@ Understand "229" as 14-229.
 Understand "230" as 14-230.
 Understand "231" as 14-231.
 
-
 [ ----------------------]
-[             CSL                         ]
+[                CSL               ]
 [ ----------------------]
 
 The CSL is a room with the description "Main CSL Room.". 
@@ -454,7 +461,7 @@ The Server Room is a room with the description "Home of Vogon and Falcon."
 The Server Room door is a door. It is east of the CSL and west of the Server Room.
 
 [ ----------------------]
-[---Enemy Setup---]
+[       Enemy Setup        ]
 [ ----------------------]
 
 [the Player is in Hallway 7.]
@@ -464,10 +471,7 @@ Enemy is a kind of thing. An enemy can be dead. An enemy is usually not dead. An
 [Unix1 is a kind of enemy. Enemy-health of Unix1 is 5.
 There is 1 Unix1 in 14-254. It is scenery.]
 
-[ ----------------------]
 [---Unix1 Battle---]
-[ ----------------------]
-
 Unix1 is an enemy. Enemy-health of Unix1 is 5.
 Unix1 Battle is a scene.
 
@@ -519,10 +523,7 @@ Every turn during Unix1 Battle:
 			[say "[currentEnemy]: Attack! [enemy-health of currentEnemy] [Paragraph break]";
 			Decrease the Enemy-Health of Unix1 by 1;]
 
-[--------------------]
-[----Unix2 Battle----]
-[--------------------]
-
+[---Unix2 Battle---]
 [Player is in Northwest Corridor.]
 
 Unix2 is an enemy. Enemy-health of Unix2 is 10.
@@ -581,11 +582,8 @@ Every turn during Unix2 Battle:
 					
 				[say "[currentEnemy]: Attack! [enemy-health of currentEnemy] [Paragraph break]";
 				Decrease the Enemy-Health of Unix1 by 1;]
-				
-[--------------------]
-[----Vogon Battle----]
-[--------------------]
 
+[---Vogon Battle---]
 Vogon is an enemy. Enemy-health of Vogon is 20.
 Vogon Battle is a scene.
 
@@ -638,6 +636,3 @@ Every turn during Vogon Battle:
 				
 			[say "[currentEnemy]: Attack! [enemy-health of currentEnemy] [Paragraph break]";
 			Decrease the Enemy-Health of Unix1 by 1;]
-
-[ --- Time stated at the end of every turn --- ]
-Every turn: say "It's now [the time of day]".
