@@ -406,17 +406,20 @@ The CSL door is a door. It is south of the CSL and north of the NOrthEast Corrid
 The Server Room is a room with the description "Home of Vogon and Falcon." 
 The Server Room door is a door. It is east of the CSL and west of the Server Room.
 
+[ ----------------------]
+[---Enemy Setup---]
+[ ----------------------]
 
-
-
-
-
-[Player is in South Hall 5.]
+[the Player is in Hallway 7.]
 
 Enemy is a kind of thing. An enemy can be dead. An enemy is usually not dead. An enemy has a number called enemy-health. The plural of enemy is enemies.
 
 [Unix1 is a kind of enemy. Enemy-health of Unix1 is 5.
 There is 1 Unix1 in 14-254. It is scenery.]
+
+[ ----------------------]
+[---Unix1 Battle---]
+[ ----------------------]
 
 Unix1 is an enemy. Enemy-health of Unix1 is 5.
 Unix1 Battle is a scene.
@@ -452,14 +455,142 @@ Every turn during Unix1 Battle:
 	If the Enemy-health of Unix1 is 0:
 		Now Unix1 is dead;
 	Let playerLocation be the location of the player; [Create a condition that the player is in combat, possibly turn wifi on or off. Give a chance for the player to leave and charge phone and kick them out of battle till they recharge. Also regain enemy health when they are not battling.]
-	If phone is switched on:
+	If the phone is on:
 		Repeat with currentEnemy running through enemies in playerLocation:
 			Let enemy-attack be a random number between 1 and 2;
 			if enemy-attack is 1:
 				say "[currentEnemy] uses open browser twice.[Paragraph break]";
-				say "You lose a set amout of Battery life. (1)[Paragraph break]"; [Change this to say and decrease actual battery life.]
+				say "You lose 1 Battery life.[Paragraph break]"; [Change this to say and decrease actual battery life.]
+				Decrease Battery life by 1;
 			else if enemy-attack is 2:
 				say "[currentEnemy] uses Cntr^D on you.[Paragraph break]";
-				say "You lose a set amount of Battery life. (2?)[Paragraph break]". [Change this to say and decrease actual battery life.]
+				say "You lose 1 Battery life. [Paragraph break]";[Change this to say and decrease actual battery life.]
+				Decrease Battery Life by 1;
+			 say "Your currently have [Battery Life]% battery left.[Paragraph break]".
+			[say "[currentEnemy]: Attack! [enemy-health of currentEnemy] [Paragraph break]";
+			Decrease the Enemy-Health of Unix1 by 1;]
+
+[--------------------]
+[----Unix2 Battle----]
+[--------------------]
+
+[Player is in Northwest Corridor.]
+
+Unix2 is an enemy. Enemy-health of Unix2 is 10.
+Unix2 Battle is a scene.
+
+[Started substituting Room 252 for 14-254 for the time being]
+Unix2 Battle begins when the player is in North Faculty Atrium for the first time
+
+[Unix1 Battle begins when the player is in 14-254 and the enemy is not dead.]
+
+When Unix2 Battle begins:
+	Move Unix2 to 14-231; 
+	say "The door behind you closes and locks itself. You knew it was too easy. [Paragraph break]";
+	 [Close all the doors in room.]
+	 Now NF-East Gate is closed;
+	 Now NF-West Gate is closed;
+	[Lock all the doors in room.]
+	Now NF-East Gate is locked;
+	Now NF-West Gate is locked;
+	say "You need to find the next battle. It must be around here somewhere.".
+
+When Unix2 Battle ends:
+	Remove Unix2 from play; 
+	say "The screen fades to the usual terminal. [Paragraph break]";
+	[Unlock all doors in room.]
+	Now NF-East Gate is unlocked;
+	Now NF-West Gate is unlocked;
+	say "You hear a clicking noise. The doors have been unlocked.[Paragraph break]
+		You realize servers are being infected one after another, better step up the pace or you'll run out of time.".
+
+Unix2 Battle ends when (Unix2 is dead). [The enemy will always be present till it dies.]
+
+Every turn during Unix2 Battle:
+	If the player is in 14-213 for the first time:
+		say "You found the source of the locked doors. Take it down!";
+	else:
+		If the Enemy-health of Unix2 is 0:
+			Now Unix2 is dead;
+		Let playerLocation be the location of the player; [Create a condition that the player is in combat, possibly turn wifi on or off. Give a chance for the player to leave and charge phone and kick them out of battle till they recharge. Also regain enemy health when they are not battling.]
+		If phone is on:
+			Repeat with currentEnemy running through enemies in playerLocation:
+				Let enemy-attack be a random number between 1 and 4;
+				if enemy-attack is 1:
+					say "[currentEnemy] uses Network Storm.[Paragraph break]";
+					say "You lose 3 Battery life.[Paragraph break]"; [Change this to say and decrease actual battery life.]
+					Decrease Battery Life by 3;
+				else if enemy-attack is 2:
+					say "[currentEnemy] uses Spyware Spam.[Paragraph break]";
+					say "You lose 1 Battery life.[Paragraph break]"; [Change this to say and decrease actual battery life.]
+					Decrease battery Life by 1;
+				else if enemy-attack is 3:
+					say "[currentEnemy] uses Nyan Cat Sound Blast.[Paragraph break]";
+					say "You lose 2 Battery life.[Paragraph break]"; [Change this to say and decrease actual battery life.]
+					Decrease battery Life by 2;
+				 say "Your currently have [Battery Life]% battery left.[Paragraph break]".
+					
+				[say "[currentEnemy]: Attack! [enemy-health of currentEnemy] [Paragraph break]";
+				Decrease the Enemy-Health of Unix1 by 1;]
+				
+[--------------------]
+[----Vogon Battle----]
+[--------------------]
+
+[The Player is in NorthEast Corridor.]
+
+Vogon is an enemy. Enemy-health of Vogon is 20.
+Vogon Battle is a scene.
+
+[Started substituting Room 252 for 14-254 for the time being]
+Vogon Battle begins when the player is in CSL.
+
+[Unix1 Battle begins when the player is in 14-254 and the enemy is not dead.]
+
+When Vogon Battle begins:
+	Move Vogon to CSL; 
+	say "The door behind you closes and locks itself. This is it, the final battle. [Paragraph break]";
+	 [Close all the doors in room.]
+	 Now CSL door is closed;
+	 Now Server Room door is closed;
+	[Lock all the doors in room.]
+	Now CSL door is locked;
+	Now Server Room door is locked.
+
+When Vogon Battle ends:
+	Remove Vogon from play; 
+	say "The screen fades to the usual terminal. [Paragraph break]";
+	[Unlock all doors in room.]
+	Now CSL door is unlocked;
+	Now Server Room door is unlocked;
+	say "You've taken down Vogon. You enter terminal and quickly make the changes needed to hand in your assignment.[Paragraph break]".
+
+Vogon Battle ends when (Vogon is dead). [The enemy will always be present till it dies.]
+
+Every turn during Vogon Battle:
+	If the Enemy-health of Vogon is 0:
+		Now Vogon is dead;
+	Let playerLocation be the location of the player; [Create a condition that the player is in combat, possibly turn wifi on or off. Give a chance for the player to leave and charge phone and kick them out of battle till they recharge. Also regain enemy health when they are not battling.]
+	If phone is on:
+		Repeat with currentEnemy running through enemies in playerLocation:
+			Let enemy-attack be a random number between 1 and 4;
+			if enemy-attack is 1:
+				say "[currentEnemy] uses Troll Face Popup.[Paragraph break]";
+				say "You lose 1 Battery life.[Paragraph break]"; [Change this to say and decrease actual battery life.]
+				Decrease Battery Life by 1;
+			else if enemy-attack is 2:
+				say "[currentEnemy] uses QWOP Duel.[Paragraph break]";
+				say "You lose 3 Battery life.[Paragraph break]"; [Change this to say and decrease actual battery life.]
+				Decrease battery Life by 3;
+			else if enemy-attack is 3:
+				say "[currentEnemy] uses Stuxnet Update.[Paragraph break]";
+				say "You lose 5 Battery life.[Paragraph break]"; [Change this to say and decrease actual battery life.]
+				Decrease battery Life by 5;
+			else if enemy-attack is 4:
+				say "[currentEnemy] uses Phone Update and Reboot.[Paragraph break]";
+				say "You lose 7 Battery life.[Paragraph break]"; [Change this to say and decrease actual battery life.]
+				Decrease battery Life by 7;
+			 say "Your currently have [Battery Life]% battery left.[Paragraph break]".
+				
 			[say "[currentEnemy]: Attack! [enemy-health of currentEnemy] [Paragraph break]";
 			Decrease the Enemy-Health of Unix1 by 1;]
