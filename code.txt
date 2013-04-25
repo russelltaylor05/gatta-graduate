@@ -30,7 +30,9 @@ Faculty Room is a kind of container. Faculty Room is scenery, closed, enterable,
 
 Every turn:
 	if the phone is on, now Battery Life is Battery Life  minus 1;
-	if battery life is zero or battery life is less than zero, now the phone is off;
+	if battery life is zero or battery life is less than zero:
+		say "Your battery has run out of power and turned off. You need to charge it in order to turn it back on again.".
+		now the phone is off;
 	if the player is in hallway 1 for the first time, say "There's a loud crash coming from inside the Game Design Lab to the east!";
 	if the player is in hallway 4 for the first time, say "There's a loud crash coming from inside one of the classrooms down the hallway to the east!";
 	if the player is in hallway 5 for the first time, say "There is another loud crash towards the east!";
