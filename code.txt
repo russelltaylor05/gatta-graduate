@@ -49,6 +49,13 @@ Check launching it:
 	if the noun is not an app, say "You can't do that." instead;
 	if the noun is DDOS, say "DDOS!";
 	if the noun is keylogger, say "You're logging its keys!";
+	if the noun is lab door key:
+		if door1 is locked: 
+			now door1 is unlocked;
+			say "The lab door unlocks.";
+		else:
+			now door1 is locked;
+			say "The lab door locks.";
 	if the player is not carrying the phone, say "You need your phone to do that.".
 Understand "launch [something]" as launching it.
 
@@ -97,7 +104,7 @@ Instead of checking time:
 	say "[the time of day]".
 --- ]
 
-Every turn: say "It's now [the time of day]".
+
 
 At 12 AM:
 	end the game saying "It's past 11 PM, you've failed to turn in your assignment on time. You're now a college dropout!";
@@ -128,7 +135,7 @@ Instead of talking to Gene Fisher:
 		now the description of gene is "Looks like fisher is fighting hard against the unix minios...better hurry along!";
 		stop the action;
 	if the person is Gene:
-		say "Dr. Fisher looks up from his laptop. 'There seems to be something going on with the servers.'[paragraph break]'I'm going to go see what's up. I'm going to lock the door so you'll need this new app I made. It's called lab door key. All you have to do to get it is [bold type]download lab door key[roman type]. It'll automatically download into your phone, then you can [bold type]use lab door key[roman type] to open this lab's door.'[paragraph break]'Oh, and don't forget your phone charger over there. If your phone isn't charged, you won't be able to use any apps. Try [bold type]charge phone[roman type].'[paragraph break]Dr. Fisher packs up and leaves the room.";
+		say "Dr. Fisher looks up from his laptop. 'There seems to be something going on with the servers.'[paragraph break]'I'm going to go see what's up. I'm going to lock the door so you'll need this new app I made. It's called lab door key. All you have to do to get it is [bold type]download lab door key[roman type]. It'll automatically download into your phone, then you can [bold type]launch lab door key[roman type] to open this lab's door.'[paragraph break]'Oh, and don't forget your phone charger over there. If your phone isn't charged, you won't be able to use any apps. Try [bold type]charge phone[roman type].'[paragraph break]Dr. Fisher packs up and leaves the room.";
 		move Gene to the SouthEast  corridor;
 		stop the action;
 Instead of talking to Zoe Wood:
@@ -137,8 +144,9 @@ Instead of talking to Zoe Wood:
 		now the description of zoe wood is "Looks like Zoe is having some difficulty against sparx! Better hurry and defeat vogon!";
 		stop the action;
 	if the person is Zoe Wood:
-		say "Dr. Zoe Wood approaches you, 'Hello, student! If you have noticed, something is wrong with the servers. If you're willing to help me, I suggest we split up and investigate the building. The best place to look first is in the server room in the CSL.[paragraph break]I see you have a smart phone. I have prepared a phone application to attack the servers should anything go wrong. You can download the app, DDOS, onto your phone from the app store. I have heard of other professor who have created phone apps of their own in case of this emergency. Perhaps they are in the building and can help as well. Make sure to look at your phone to check your phone battery. You wouldn't want to run out of battery life! Good luck, I'm going to get to the bottom of the mystery!'[paragraph break]Dr. Wood leaves the room.";
-		move zoe wood to the CSL.
+		say "Dr. Zoe Wood approaches you, 'Hello, student! If you have noticed, something is wrong with the servers. If you're willing to help me, I suggest we split up and investigate the building. The best place to look first is in the server room in the CSL.'[paragraph break]'I see you have a smart phone. I have prepared a phone application to attack the servers should anything go wrong. You can download the app, DDOS, onto your phone from the app store. Make sure to examine your phone to check it's remaining battery - you wouldn't want to run out of battery life! Either way, I'm off to go see if I can help get the servers back up.'[paragraph break]Dr. Wood leaves the room.";
+		move zoe wood to the CSL;
+		now door 252 is unlocked.
 
 
 
@@ -163,23 +171,13 @@ Janitor's Closet is a room with a description "Perhaps there is something useful
 
 Hallway 1 is a room with the description "To the west there is a staircase, but you have no need to go downstairs. To the north is a door leading outside. Continue East down the Hallway". 
 Hallway 2 is a room with the description "Continue east down the Hallway or south into the Game Design Lab". 
-Hallway 3 is a room with the description "Continue East down the Hallway or north into the Janitor's Closet.". 
-Hallway 4 is a room with the description "Continue North to the South Faculty Offices or east down the hallway. The Faculty Offices may be a good place to look for helpful professors.". 
+Hallway 3 is a room with the description "Continue east down the Hallway or north into the Janitor's Closet.". 
+Hallway 4 is a room with the description "Continue north to the South Faculty Offices or east down the hallway. The Faculty Offices may be a good place to look for helpful professors.". 
 
 [Doors]
 Door1 is a closed, locked door.
 Door2 is a closed, unlocked door. 
-Door3 is a closed, unlocked door.
-
-Using lab door key is an action applying to nothing.
-Understand "Use lab door key" as using lab door key.
-Instead of using lab door key:
-	if door1 is locked: 
-		now door1 is unlocked;
-		say "The lab door unlocks.";
-	else:
-		now door1 is locked;
-		say "The lab door locks.".
+Door3 is a closed, unlocked door.	
 
 [Directions]
 Door1 is north of the Software Design Lab.
@@ -191,8 +189,9 @@ the printed name of Door3 is "Janitor's Closet Door".
 Hallway 1 is north of Door1.
 Hallway 2 is east of the Hallway 1 and north of Door2.
 Hallway 3 is east of the Hallway 2 and south of Door3.
-Hallway 4 is east of the Hallway 3 and south of the SouthEast Corridor.
-the printed name of Hallway1 is "East-West Hallway". the printed name of Hallway2 is "East-West Hallway". the printed name of Hallway3 is "East-West Hallway". the printed name of Hallway4 is "East-West Hallway".
+Hallway 4 is east of the Hallway 3.
+
+Hallway Door is a locked door. Hallway Door is south of the SouthEast Corridor and north of Hallway 4.
 
 Every turn:
 	if the player is in hallway 1 for the first time, say "There's a loud crash coming from inside the Game Design Lab to the east!";
@@ -223,6 +222,7 @@ Hallway 7 is a Room. The description is "To the south is room 252. You can go ea
 Hallway 8 is a Room. The description is "To the north is room 249. To the south is room 250. You can go east or west down the East Hall.".
 Hallway 9 is a Room. The description is "To the east is a staircase. To the south is a door leading out. To the north is Room 249 and to the south is Room 250. You can go west in the East Hall.".
 
+the printed name of Hallway 1 is "East-West Hallway". the printed name of Hallway 2 is "East-West Hallway". the printed name of Hallway 3 is "East-West Hallway". the printed name of Hallway 4 is "East-West Hallway". the printed name of Hallway 5 is "East-West Hallway". the printed name of Hallway 6 is "East-West Hallway". the printed name of Hallway 7 is "East-West Hallway". the printed name of Hallway 8 is "East-West Hallway". the printed name of Hallway 9 is "East-West Hallway".
 
 [Directions]
 Hallway 5 is east of Hallway 4.
@@ -237,7 +237,7 @@ Door 250 is a door. It is north of Room 250 and south of Hallway 9.
 Door 248 is a door. It is south of Room 248 and north of Hallway 8.
 Door 251 is a door. It is north of Room 251 and south of Hallway 8.
 Door 246 is a door. It is south of Room 246 and north of Hallway 7.
-Door 252 is a door. It is north of Room 252 and south of Hallway 7.
+Door 252 is a locked door. It is north of Room 252 and south of Hallway 7.
 
 
 
@@ -470,7 +470,9 @@ When Unix1 Battle ends:
 	Remove Unix1 from play; [Unlock all doors in room.]
 	say "The screen fades to the usual terminal. [Paragraph break]";
 	now Door 252 is unlocked;
-	say "The door to the north makes a clicking noise. It seems to be unlocked.".
+	say "The door to the north makes a clicking noise. It seems to be unlocked. Maybe the hallway door leading the faculty offices has opened too.";
+	now hallway door is unlocked;
+	now hallway door is open;
 
 Unix1 Battle ends when (Unix1 is dead). [The enemy will always be present till it dies.]
 
@@ -624,3 +626,6 @@ Every turn during Vogon Battle:
 				
 			[say "[currentEnemy]: Attack! [enemy-health of currentEnemy] [Paragraph break]";
 			Decrease the Enemy-Health of Unix1 by 1;]
+
+[ --- Time stated at the end of every turn --- ]
+Every turn: say "It's now [the time of day]".
