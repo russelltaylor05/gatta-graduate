@@ -103,9 +103,32 @@ Carry out turning off:
 Launching it is an action applying to one thing.
 Check launching it:
 	if the noun is not an app, say "You can't do that." instead;
-	if the noun is DDOS, say "DDOS!";
-	if the noun is keylogger, say "You're logging its keys!";
-	if the noun is lab door key:
+	if the phone is off, say "You need to turn your phone on to launch apps!";
+	if the noun is DDOS and the phone is on:
+		say "DDOS!";
+		if Unix1 Battle is happening:
+			Now enemy-health of unix1 is enemy-health of unix1 minus 10;
+		if Unix2 Battle is happening:
+			Now enemy-health of unix2 is enemy-health of unix2 minus 10;
+		if Vogon Battle is happening:
+			Now enemy-health of vogon is enemy-health of vogon minus 10;
+	if the noun is keylogger and the phone is on:
+		say "You're logging its keys!";
+		if Unix1 Battle is happening:
+			Now enemy-health of unix1 is enemy-health of unix1 minus 1;
+		if Unix2 Battle is happening:
+			Now enemy-health of unix2 is enemy-health of unix2 minus 1;
+		if Vogon Battle is happening:
+			Now enemy-health of vogon is enemy-health of vogon minus 1;
+	if the noun is packet spoofer and the phone is on:
+		say "You're spoofing packets!";
+		if Unix1 Battle is happening:
+			Now enemy-health of unix1 is enemy-health of unix1 minus 3;
+		if Unix2 Battle is happening:
+			Now enemy-health of unix2 is enemy-health of unix2 minus 3;
+		if Vogon Battle is happening:
+			Now enemy-health of vogon is enemy-health of vogon minus 3;
+	if the noun is lab door key and the phone is on:
 		if the player is in Software Design Lab:
 			if door1 is locked: 
 				now door1 is unlocked;
@@ -238,9 +261,23 @@ Instead of talking to Zoe Wood:
 		now the description of zoe wood is "Looks like Zoe is having some difficulty against sparx! Better hurry and defeat vogon!";
 		stop the action;
 	if the person is Zoe Wood:
-		say "Dr. Zoe Wood approaches you, 'Hello, student! If you have noticed, something is wrong with the servers. If you're willing to help me, I suggest we split up and investigate the building. The best place to look first is in the server room in the CSL.'[paragraph break]'I see you have a smart phone. I have prepared a phone application to attack the servers should anything go wrong. You can download the app, DDOS, onto your phone from the app store. Make sure to examine your phone to check it's remaining battery - you wouldn't want to run out of battery life! Either way, I'm off to go see if I can help get the servers back up.'[paragraph break]Dr. Wood leaves the room.";
+		say "Dr. Zoe Wood approaches you, 'Hey, if you have noticed, something is wrong with the servers. If you're willing to help me, I suggest we split up and investigate the building. The best place to look first is in probably the server room in the CSL.'[paragraph break]'I see you have a smart phone. I have prepared a phone application to attack the servers should anything go wrong. You can download keylogger onto your phone from the app store. Make sure to examine your phone to check it's remaining battery - you wouldn't want to run out of battery life! Either way, I'm off to go see if I can help get the servers back up.'[paragraph break]Dr. Wood leaves the room.";
 		move zoe wood to the CSL;
 		now door 252 is unlocked.
+		
+[--- Dr Alex Dekhtyar ---]
+Dr Alex Dekhtyar is a person. Dekhtyar is in room 246. 
+The description of Dekhtyar is "Dr. Dekhtyar appears to be working on something at a terminal. Maybe you should talk to him.".
+
+Instead of talking to Dekhtyar:
+		say "'Don't distract me, I'm busy fighting off whatever virus is attempting to infect all our databases. I've found out that one of the servers has gone rogue, but I can't exactly pinpoint which one. I need you to go figure out what's going on and fix it so we don't lose everything.'[paragraph break]'Oh and before I forget - before Hugh Smith left to try to fix the problem he told me there's an app in the app store we might use in such a situation - packet spoofer. Good luck.'";
+		
+[--- Dr Ignacio Vakalis ---]
+Dr Ignacio Vakalis is a person. Vakalis is in 14-231.
+The description of Vakalis is "Dr. Vakalis is furiously putting out keystrokes, it looks like he's battling one of the servers.".
+
+Instead of talking to Vakalis:
+		say "'We were warned this would happen, but I thought our staff could handle it. It doesn't seem to be the case right now though, we need the help of as many students as we can get. Download my DDOS app from the app store and get moving.'";
 
 [---Foaad---]
 Foaad is a man. Foaad is in 14-213. He carries the North Atrium Key.
@@ -294,7 +331,7 @@ Room 252 is a Room. The description is "There is a door to the north.".
 
 Hallway 1 is a room with the description "To the west there is a staircase, but you have no need to go downstairs. To the north is a door leading outside. Continue East down the Hallway". 
 
-Hallway 2 is a room with the description "Continue east down the Hallway or south into the Game Design Lab". 
+Hallway 2 is a room with the description "Continue east down the Hallway or south into the Game Design Lab.[if unvisited] Something tells you that you should probably go into the Game Design Lab.[end if]". 
 
 Hallway 3 is a room with the description "Continue east down the Hallway or north into the Janitor's Closet.". 
 
@@ -504,7 +541,7 @@ Unix1 Battle ends when (Unix1 is dead). [The enemy will always be present till i
 		say "What enemy.".]
 
 Every turn during Unix1 Battle:
-	If the Enemy-health of Unix1 is 0:
+	If the Enemy-health of Unix1 is 0  or Enemy-health of Unix1 is less than 0:
 		Now Unix1 is dead;
 	Let playerLocation be the location of the player; [Create a condition that the player is in combat, possibly turn wifi on or off. Give a chance for the player to leave and charge phone and kick them out of battle till they recharge. Also regain enemy health when they are not battling.]
 	If the phone is on:
@@ -559,7 +596,7 @@ Every turn during Unix2 Battle:
 	If the player is in 14-213 for the first time:
 		say "You found the source of the locked doors. Take it down!";
 	else:
-		If the Enemy-health of Unix2 is 0:
+		If the Enemy-health of Unix2 is 0 or Enemy-health of Unix2 is less than 0:
 			Now Unix2 is dead;
 		Let playerLocation be the location of the player; [Create a condition that the player is in combat, possibly turn wifi on or off. Give a chance for the player to leave and charge phone and kick them out of battle till they recharge. Also regain enemy health when they are not battling.]
 		If phone is on:
@@ -609,7 +646,7 @@ When Vogon Battle ends:
 Vogon Battle ends when (Vogon is dead). [The enemy will always be present till it dies.]
 
 Every turn during Vogon Battle:
-	If the Enemy-health of Vogon is 0:
+	If the Enemy-health of Vogon is 0 or Enemy-health of Vogon is less than 0:
 		Now Vogon is dead;
 	Let playerLocation be the location of the player; [Create a condition that the player is in combat, possibly turn wifi on or off. Give a chance for the player to leave and charge phone and kick them out of battle till they recharge. Also regain enemy health when they are not battling.]
 	If phone is on:
