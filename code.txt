@@ -39,7 +39,7 @@ Carry out turning off:
 
 Battery life is a number variable. Battery life is 100.
 
-app is a kind of thing. DDOS, packet spoofer, keylogger is an app.
+app is a kind of thing. DDOS, packet spoofer, keylogger, lab door key is an app.
 
 [ -----------------------]
 [            Actions                      ]
@@ -74,6 +74,12 @@ Understand "Download packet spoofer" as downloading packet spoofer.
 Instead of downloading packet spoofer:
 	if packet spoofer is not in the phone, say "Successfully downloaded the app!";
 	now packet spoofer is in the phone.
+
+Downloading lab door key is an action applying to nothing.
+Understand "Download lab door key" as downloading lab door key.
+Instead of downloading lab door key:
+	if lab door key is not in the phone, say "Successfully downloaded the app!";
+	now lab door key is in the phone.
 
 Charging it is an action applying to one thing.
 Check Charging it:
@@ -122,7 +128,7 @@ Instead of talking to Gene Fisher:
 		now the description of gene is "Looks like fisher is fighting hard against the unix minios...better hurry along!";
 		stop the action;
 	if the person is Gene:
-		say "Dr. Fisher looks up from his laptop. 'There seems to be something with the servers.'[paragraph break]'I'm going to go see what is up. You can go too, but you shouldn't leave without taking your phone charger. I have heard of phone applications that professors have made to help debug the servers. Some professors may be on campus right now. If your phone isn't charged, you won't be able to use these applications.'[paragraph break]Dr. Fisher packs up and leaves the room.";
+		say "Dr. Fisher looks up from his laptop. 'There seems to be something going on with the servers.'[paragraph break]'I'm going to go see what's up. I'm going to lock the door so you'll need this new app I made. It's called lab door key. All you have to do to get it is [bold type]download lab door key[roman type]. It'll automatically download into your phone, then you can [bold type]use lab door key[roman type] to open this lab's door.[paragraph break]Oh, and don't forget your phone charger over there. If your phone isn't charged, you won't be able to use any apps. Try [bold type]charge phone[roman type].'[paragraph break]Dr. Fisher packs up and leaves the room.";
 		move Gene to the SouthEast  corridor;
 		stop the action;
 Instead of talking to Zoe Wood:
@@ -161,9 +167,19 @@ Hallway 3 is a room with the description "Continue East down the Hallway or nort
 Hallway 4 is a room with the description "Continue North to the South Faculty Offices or east down the hallway. The Faculty Offices may be a good place to look for helpful professors.". 
 
 [Doors]
-Door1 is a closed, unlocked door. 
+Door1 is a closed, locked door.
 Door2 is a closed, unlocked door. 
 Door3 is a closed, unlocked door.
+
+Using lab door key is an action applying to nothing.
+Understand "Use lab door key" as using lab door key.
+Instead of using lab door key:
+	if door1 is locked: 
+		now door1 is unlocked;
+		say "The lab door unlocks.";
+	else:
+		now door1 is locked;
+		say "The lab door locks.".
 
 [Directions]
 Door1 is north of the Software Design Lab.
