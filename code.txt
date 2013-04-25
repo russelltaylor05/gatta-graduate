@@ -32,7 +32,7 @@ Faculty Room is a kind of container. Faculty Room is scenery, closed, enterable,
 Every turn:
 	if the phone is on, now Battery Life is Battery Life  minus 1;
 	if battery life is zero or battery life is less than zero:
-		say "Your battery has run out of power and turned off. You need to charge it in order to turn it back on again.";
+		say "Your phone has run out of power and turned off. You need to charge it in order to turn it back on again.";
 		now the phone is off;
 	if the player is in hallway 1 for the first time, say "There's a loud crash coming from inside the Game Design Lab to the east!";
 	if the player is in hallway 4 for the first time, say "There's a loud crash coming from inside one of the classrooms down the hallway to the east!";
@@ -543,14 +543,14 @@ Unix1 Battle begins when (the player is in Room 252 for the first time) or (the 
 
 When Unix1 Battle begins:
 	Move Unix1 to Room 252; 
-	say "The door behind you closes and locks itself. It's a trap! [Paragraph break]";
+	say "The door behind you closes and locks itself. It's a trap![Paragraph break]";
 	Now Door 252 is closed; [Close all the doors in room.]
 	Now Door 252 is locked; [Lock all the doors in room.]
 	say "Unix1 is on the computer. It looks pissed.".
 
 When Unix1 Battle ends:
 	Remove Unix1 from play; [Unlock all doors in room.]
-	say "The screen fades to the usual terminal. [Paragraph break]";
+	say "The screen fades to the usual terminal.[Paragraph break]";
 	now Door 252 is unlocked;
 	say "The door to the north makes a clicking noise. It seems to be unlocked. Maybe the hallway door leading the faculty offices has opened too.";
 	now hallway door is unlocked;
@@ -573,12 +573,12 @@ Every turn during Unix1 Battle:
 		Repeat with currentEnemy running through enemies in playerLocation:
 			Let enemy-attack be a random number between 1 and 2;
 			if enemy-attack is 1:
-				say "[currentEnemy] uses open browser twice.[Paragraph break]";
-				say "You lose 1 Battery life.[Paragraph break]"; [Change this to say and decrease actual battery life.]
+				say "[currentEnemy] uses open Internet Explorer twice.[Paragraph break]";
+				say "You lose 1 Battery life. "; [Change this to say and decrease actual battery life.]
 				Decrease Battery life by 1;
 			else if enemy-attack is 2:
-				say "[currentEnemy] uses Cntr^D on you.[Paragraph break]";
-				say "You lose 1 Battery life. [Paragraph break]";[Change this to say and decrease actual battery life.]
+				say "[currentEnemy] uses Cntl^D on you.[Paragraph break]";
+				say "You lose 1 Battery life. ";[Change this to say and decrease actual battery life.]
 				Decrease Battery Life by 1;
 			 say "Your currently have [Battery Life]% battery left.[Paragraph break]".
 			[say "[currentEnemy]: Attack! [enemy-health of currentEnemy] [Paragraph break]";
@@ -597,7 +597,7 @@ Unix2 Battle begins when the player is in North Faculty Atrium for the first tim
 
 When Unix2 Battle begins:
 	Move Unix2 to 14-231; 
-	say "The door behind you closes and locks itself. You knew it was too easy. [Paragraph break]";
+	say "The door behind you closes and locks itself. You knew it was too easy.[Paragraph break]";
 	 [Close all the doors in room.]
 	 Now NF-East Gate is closed;
 	 Now NF-West Gate is closed;
@@ -608,7 +608,7 @@ When Unix2 Battle begins:
 
 When Unix2 Battle ends:
 	Remove Unix2 from play; 
-	say "The screen fades to the usual terminal. [Paragraph break]";
+	say "The screen fades to the usual terminal.[Paragraph break]";
 	[Unlock all doors in room.]
 	Now NF-East Gate is unlocked;
 	Now NF-West Gate is unlocked;
@@ -629,15 +629,15 @@ Every turn during Unix2 Battle:
 				Let enemy-attack be a random number between 1 and 4;
 				if enemy-attack is 1:
 					say "[currentEnemy] uses Network Storm.[Paragraph break]";
-					say "You lose 3 Battery life.[Paragraph break]"; [Change this to say and decrease actual battery life.]
-					Decrease Battery Life by 3;
+					say "You lose 6 Battery life. "; [Change this to say and decrease actual battery life.]
+					Decrease Battery Life by 6;
 				else if enemy-attack is 2:
 					say "[currentEnemy] uses Spyware Spam.[Paragraph break]";
-					say "You lose 1 Battery life.[Paragraph break]"; [Change this to say and decrease actual battery life.]
-					Decrease battery Life by 1;
+					say "You lose 3 Battery life. "; [Change this to say and decrease actual battery life.]
+					Decrease battery Life by 3;
 				else if enemy-attack is 3:
 					say "[currentEnemy] uses Nyan Cat Sound Blast.[Paragraph break]";
-					say "You lose 2 Battery life.[Paragraph break]"; [Change this to say and decrease actual battery life.]
+					say "You lose 2 Battery life. "; [Change this to say and decrease actual battery life.]
 					Decrease battery Life by 2;
 				 say "Your currently have [Battery Life]% battery left.[Paragraph break]".
 					
@@ -666,7 +666,7 @@ When Vogon Battle ends:
 	[Unlock all doors in room.]
 	Now CSL door is unlocked;
 	Now Server Room door is unlocked;
-	end the game saying "You've taken down Vogon. You enter terminal and quickly make the changes needed to hand in your assignment.[Paragraph break]You've done it. You're going to graduate on time. Well done!".
+	end the game saying "You've taken down Vogon. You enter terminal and quickly repair the system in order to hand in your assignment.[Paragraph break]> Reparation Complete.[line break]> Handin... Successful![paragraph break]You've done it. You're going to graduate on time. Well done!".
 
 Vogon Battle ends when (Vogon is dead). [The enemy will always be present till it dies.]
 
@@ -678,22 +678,22 @@ Every turn during Vogon Battle:
 		Repeat with currentEnemy running through enemies in playerLocation:
 			Let enemy-attack be a random number between 1 and 4;
 			if enemy-attack is 1:
-				say "[currentEnemy] uses Troll Face Popup.[Paragraph break]";
-				say "You lose 1 Battery life.[Paragraph break]"; [Change this to say and decrease actual battery life.]
+				say "[currentEnemy] uses Troll Face Popup. It's clearly mocking you![Paragraph break]";
+				say "You lose 1 Battery life. "; [Change this to say and decrease actual battery life.]
 				Decrease Battery Life by 1;
 			else if enemy-attack is 2:
 				say "[currentEnemy] uses QWOP Duel.[Paragraph break]";
-				say "You lose 3 Battery life.[Paragraph break]"; [Change this to say and decrease actual battery life.]
-				Decrease battery Life by 3;
+				say "You lose 5 Battery life. "; [Change this to say and decrease actual battery life.]
+				Decrease battery Life by 5;
 			else if enemy-attack is 3:
 				say "[currentEnemy] uses Stuxnet Update.[Paragraph break]";
-				say "You lose 5 Battery life.[Paragraph break]"; [Change this to say and decrease actual battery life.]
-				Decrease battery Life by 5;
+				say "You lose 10 Battery life. "; [Change this to say and decrease actual battery life.]
+				Decrease battery Life by 10;
 			else if enemy-attack is 4:
 				say "[currentEnemy] uses Phone Update and Reboot.[Paragraph break]";
-				say "You lose 7 Battery life.[Paragraph break]"; [Change this to say and decrease actual battery life.]
-				Decrease battery Life by 7;
-			 say "Your currently have [Battery Life]% battery left.[Paragraph break]".
+				say "You lose 15 Battery life. "; [Change this to say and decrease actual battery life.]
+				Decrease battery Life by 15;
+			 say "You currently have [Battery Life]% battery remaining.[Paragraph break]".
 				
 			[say "[currentEnemy]: Attack! [enemy-health of currentEnemy] [Paragraph break]";
 			Decrease the Enemy-Health of Unix1 by 1;]
