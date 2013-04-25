@@ -29,7 +29,6 @@ Faculty Room is a kind of container. Faculty Room is scenery, closed, enterable,
 [ -----------------------]
 
 Every turn:
-	say "It's now [the time of day]";
 	if the player is in hallway 1 for the first time, say "There's a loud crash coming from inside the Game Design Lab to the east!";
 	if the player is in hallway 4 for the first time, say "There's a loud crash coming from inside one of the classrooms down the hallway to the east!";
 	if the player is in hallway 5 for the first time, say "There is another loud crash towards the east!";
@@ -636,3 +635,7 @@ Every turn during Vogon Battle:
 				
 			[say "[currentEnemy]: Attack! [enemy-health of currentEnemy] [Paragraph break]";
 			Decrease the Enemy-Health of Unix1 by 1;]
+
+[ --- Time of Day should be stated last, so it's at the bottom of the code base --- ]
+Every turn:
+	say "It's now [the time of day]";
