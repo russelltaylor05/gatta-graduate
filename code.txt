@@ -144,7 +144,7 @@ Janitor's Closet is a room with a description "Perhaps there is something useful
 Hallway 1 is a room with the description "To the west there is a staircase, but you have no need to go downstairs. To the north is a door leading outside. Continue East down the Hallway". 
 Hallway 2 is a room with the description "Continue east down the Hallway or south into the Game Design Lab". 
 Hallway 3 is a room with the description "Continue East down the Hallway or north into the Janitor's Closet.". 
-Hallway 4 is a room with the description "Continue North to the South Faculty Offices or east down the hallway.". 
+Hallway 4 is a room with the description "Continue North to the South Faculty Offices or east down the hallway. The Faculty Offices may be a good place to look for helpful professors.". 
 
 [Doors]
 Door1 is a closed, unlocked door. 
@@ -169,6 +169,10 @@ Every turn:
 	if the player is in hallway 4 for the first time, say "There's a loud crash coming from inside one of the classrooms down the hallway to the east!";
 	if the player is in hallway 5 for the first time, say "There is another loud crash towards the east!";
 	if the player is in hallway 6 for the first time, say "The smashing is getting even louder towards the east!";
+	if the player is in SouthEast Corridor for the first time and (Gene is in the Software Design Lab), say "It's dangerous to go alone. Talk to Dr Fisher before going any further!";
+	if the player is in SouthEast Corridor for the first time and (Zoe is in the Game Design Lab), say "It's dangerous to go alone. Maybe there is someone who can help in the Game Design Lab!";
+	if the player is in SouthEast Corridor for the first time and (Unix1 is in Room 252), say "You should probably check out those loud noises before going any further.";
+	if the player is in SouthEast Corridor for the first time and (Gene is in the Software Design Lab or Zoe is in the Game Design Lab or Unix1 is in Room 252), now the player is in Hallway 4;
 	if the player is in hallway 7 for the first time, say "The smashing and crashing is coming from behind Door 252!".
 
 
