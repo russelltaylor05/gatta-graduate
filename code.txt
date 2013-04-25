@@ -12,7 +12,7 @@ The player is in Software Design Lab.
 [Instead of talking to Dr Gene Fisher:
 	now the player is in Faculty Entrances1.]
 
-When play begins: now the time of day is 9:00 PM.
+When play begins: now the time of day is 9:01 PM.
 
 [Pseudo Rooms]
 Classroom is a kind of container. classroom is scenery, lockable, closed, enterable, fixed in place, openable.
@@ -128,7 +128,7 @@ Instead of talking to Gene Fisher:
 		now the description of gene is "Looks like fisher is fighting hard against the unix minios...better hurry along!";
 		stop the action;
 	if the person is Gene:
-		say "Dr. Fisher looks up from his laptop. 'There seems to be something going on with the servers.'[paragraph break]'I'm going to go see what's up. I'm going to lock the door so you'll need this new app I made. It's called lab door key. All you have to do to get it is [bold type]download lab door key[roman type]. It'll automatically download into your phone, then you can [bold type]use lab door key[roman type] to open this lab's door.[paragraph break]Oh, and don't forget your phone charger over there. If your phone isn't charged, you won't be able to use any apps. Try [bold type]charge phone[roman type].'[paragraph break]Dr. Fisher packs up and leaves the room.";
+		say "Dr. Fisher looks up from his laptop. 'There seems to be something going on with the servers.'[paragraph break]'I'm going to go see what's up. I'm going to lock the door so you'll need this new app I made. It's called lab door key. All you have to do to get it is [bold type]download lab door key[roman type]. It'll automatically download into your phone, then you can [bold type]use lab door key[roman type] to open this lab's door.'[paragraph break]'Oh, and don't forget your phone charger over there. If your phone isn't charged, you won't be able to use any apps. Try [bold type]charge phone[roman type].'[paragraph break]Dr. Fisher packs up and leaves the room.";
 		move Gene to the SouthEast  corridor;
 		stop the action;
 Instead of talking to Zoe Wood:
