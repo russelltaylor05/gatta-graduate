@@ -1,4 +1,4 @@
-﻿"Gotta Graduate" by Robin Verweij, David O’Connor, Ryan Chan, Luke Plewa, Lauren Thurston, and Russell Taylor
+"Gotta Graduate" by Robin Verweij, David O’Connor, Ryan Chan, Luke Plewa, Lauren Thurston, and Russell Taylor
 
 
 [ -----------------------]
@@ -117,7 +117,7 @@ Instead of talking to Zoe Wood:
 		now the description of zoe wood is "Looks like Zoe is having some difficulty against sparx! Better hurry and defeat vogon!";
 		stop the action;
 	if the person is Zoe Wood:
-		say "Dr. Zoe Wood approaches you, 'Hello, student! If you have noticed, something is wrong with the servers. If you're willing to help me, I suggest we split up and investigate the building. The best place to look first is in the server room in the CSL.[paragraph break]I see you have a smart phone. I have prepared a phone application to attack the servers should anything go wrong. You can download the app, DDOS, onto your phone from the app store. I have heard of other professor who have created phone apps of their own in case of this emergency. Perhaps they are in the building and can help as well. Good luck, I'm going to get to the bottom of the mystery!'[paragraph break]Dr. Wood leaves the room.";
+		say "Dr. Zoe Wood approaches you, 'Hello, student! If you have noticed, something is wrong with the servers. If you're willing to help me, I suggest we split up and investigate the building. The best place to look first is in the server room in the CSL.[paragraph break]I see you have a smart phone. I have prepared a phone application to attack the servers should anything go wrong. You can download the app, DDOS, onto your phone from the app store. I have heard of other professor who have created phone apps of their own in case of this emergency. Perhaps they are in the building and can help as well. Make sure to look at your phone to check your phone battery. You wouldn't want to run out of battery life! Good luck, I'm going to get to the bottom of the mystery!'[paragraph break]Dr. Wood leaves the room.";
 		move zoe wood to the CSL.
 
 
@@ -164,6 +164,12 @@ Hallway 3 is east of the Hallway 2 and south of Door3.
 Hallway 4 is east of the Hallway 3 and south of the SouthEast Corridor.
 the printed name of Hallway1 is "East-West Hallway". the printed name of Hallway2 is "East-West Hallway". the printed name of Hallway3 is "East-West Hallway". the printed name of Hallway4 is "East-West Hallway".
 
+Every turn:
+	if the player is in hallway 1 for the first time, say "There's a loud crash coming from inside the Game Design Lab to the east!";
+	if the player is in hallway 4 for the first time, say "There's a loud crash coming from inside one of the classrooms down the hallway to the east!";
+	if the player is in hallway 5 for the first time, say "There is another loud crash towards the east!";
+	if the player is in hallway 6 for the first time, say "The smashing is getting even louder towards the east!";
+	if the player is in hallway 7 for the first time, say "The smashing and crashing is coming from behind Door 252!".
 
 
 [--------------------------]
@@ -179,7 +185,7 @@ Room 252 is a Room. The description is "There is a door to the north.".
 
 Hallway 5 is a Room. The description is "Continue east down the hallway.". 
 Hallway 6 is a Room. The description is "Continue east down the hallway.".
-Hallway 7 is a Room. The description is "To the south is room 250. You can go east or west in the East Hall.".
+Hallway 7 is a Room. The description is "To the south is room 252. You can go east or west in the East Hall.".
 Hallway 8 is a Room. The description is "To the north is room 249. To the south is room 250. You can go east or west down the East Hall.".
 Hallway 9 is a Room. The description is "To the east is a staircase. To the south is a door leading out. To the north is Room 249 and to the south is Room 250. You can go west in the East Hall.".
 
