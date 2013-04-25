@@ -12,6 +12,7 @@ The player is in Software Design Lab.
 [Instead of talking to Dr Gene Fisher:
 	now the player is in Faculty Entrances1.]
 
+When play begins: now the time of day is 9:00 PM.
 
 [Pseudo Rooms]
 Classroom is a kind of container. classroom is scenery, lockable, closed, enterable, fixed in place, openable.
@@ -82,10 +83,23 @@ Check Charging it:
 	if the player is not carrying the charger, say "You need your charger to do that." instead.
 Understand "charge [something]" as Charging it.
 
+[ Check time verb can be used instead of spouting the time every turn. ]
+[ ---
+Checking time is an action applying to nothing. [Time automatically goes up 1 minute each turn]
+Understand "check time" and "time" as checking time. [To change time, use "increase the time of day by x minutes"]
+Instead of checking time:
+	say "[the time of day]".
+--- ]
+
+Every turn: say "It's now [the time of day]".
+
+At 11 PM:
+	end the game saying "It's past 11 PM, you've failed to turn in your assignment on time. You're now a college dropout!";
+
 [ -----------------------]
 [   Text instantials   ]
 [ -----------------------]
-To say Opening text: say "You are in the Software Design Lab at 9pm working on the last programming assignment of your last day of your last quarter at Cal Poly. In order to graduate you NEED to finish this program, or else you will get kicked out of college.".
+To say Opening text: say "[italic type]You are in the Software Design Lab at [time of day] working on the last programming assignment of your last day of your last quarter at Cal Poly. Failing this assignment means you fail the class, don't graduate, and need to come back for Fall quarter, meaning you won't be able to take that full time position at Google. Disappoint.[paragraph break][roman type][bold type]In order to graduate on time you need to turn your program in before 11:00 PM.[roman type][paragraph break]".
 
 When play begins:
 	say "[Opening text]".
