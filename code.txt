@@ -202,8 +202,13 @@ Every turn:
 	if the player is in SouthEast Corridor for the first time and (Zoe is in the Game Design Lab), say "It's dangerous to go alone. Maybe there is someone who can help in the Game Design Lab!";
 	if the player is in SouthEast Corridor for the first time and (Unix1 is not dead), say "You should probably check out those loud noises before going any further.";
 	if the player is in SouthEast Corridor for the first time and (Gene is in the Software Design Lab or Zoe is in the Game Design Lab or Unix1 is not dead), now the player is in Hallway 4;
-	if the player is in hallway 7 for the first time, say "The smashing and crashing is coming from behind Door 252!".
-
+	if the player is in hallway 7 for the first time, say "The smashing and crashing is coming from behind Door 252!";
+	if the player is in South Faculty Atrium for the first time:
+		say "[italic type]As you enter the South Faculty Atrium the gates slam shut and lock themselves. Looks like you're going to need to find a way out.[roman type]";
+		now SF-east-gate is closed;
+		now SF-east-gate is locked;
+		now SF-west-gate is closed;
+		now SF-west-gate is locked;
 
 [--------------------------]
 [         EAST HALLWAY 	             ]
@@ -238,8 +243,6 @@ Door 248 is a door. It is south of Room 248 and north of Hallway 8.
 Door 251 is a door. It is north of Room 251 and south of Hallway 8.
 Door 246 is a door. It is south of Room 246 and north of Hallway 7.
 Door 252 is a locked door. It is north of Room 252 and south of Hallway 7.
-
-
 
 [ ------------------------]
 [        SOUTH FACULTY             ]
@@ -396,7 +399,7 @@ A desk is a backdrop in 14-216.
 SF-east-gate is a door and unlocked. It is west of the South Faculty Atrium and east of the SouthWest corridor.
 SF-west-gate is a door and unlocked. It is east of the South Faculty Atrium and west of the SouthEast corridor.
 NF-east gate is a door and unlocked. It is east of the northwest corridor and west of the north faculty atrium.
-NF-west gate is a door . it is east of the north faculty atrium and west of the northeast corridor. The north atrium key unlocks the nf-west-gate.
+NF-west gate is a door and locked. it is east of the north faculty atrium and west of the northeast corridor. The north atrium key unlocks the nf-west-gate.
 
 
 [ ------------------------]
@@ -423,7 +426,6 @@ The 14-228 is Faculty Room inside the Faculty Entrances4.
 The 14-229 is Faculty Room inside the Faculty Entrances4.
 The 14-230 is Faculty Room inside the Faculty Entrances4.
 The 14-231 is Faculty Room inside the Faculty Entrances4.
-
 
 [ ----------------------]
 [             CSL                         ]
@@ -569,18 +571,13 @@ Every turn during Unix2 Battle:
 [----Vogon Battle----]
 [--------------------]
 
-[The Player is in NorthEast Corridor.]
-
 Vogon is an enemy. Enemy-health of Vogon is 20.
 Vogon Battle is a scene.
 
-[Started substituting Room 252 for 14-254 for the time being]
-Vogon Battle begins when the player is in CSL.
-
-[Unix1 Battle begins when the player is in 14-254 and the enemy is not dead.]
+Vogon Battle begins when the player is in Server Room.
 
 When Vogon Battle begins:
-	Move Vogon to CSL; 
+	Move Vogon to Server Room; 
 	say "The door behind you closes and locks itself. This is it, the final battle. [Paragraph break]";
 	 [Close all the doors in room.]
 	 Now CSL door is closed;
@@ -595,7 +592,7 @@ When Vogon Battle ends:
 	[Unlock all doors in room.]
 	Now CSL door is unlocked;
 	Now Server Room door is unlocked;
-	say "You've taken down Vogon. You enter terminal and quickly make the changes needed to hand in your assignment.[Paragraph break]".
+	end the game saying "You've taken down Vogon. You enter terminal and quickly make the changes needed to hand in your assignment.[Paragraph break]You've done it. You're going to graduate on time. Well done!".
 
 Vogon Battle ends when (Vogon is dead). [The enemy will always be present till it dies.]
 
