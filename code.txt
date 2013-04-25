@@ -1,4 +1,4 @@
-"Gotta Graduate" by Robin Verweij, David O’Connor, Ryan Chan, Luke Plewa, Lauren Thurston, and Russell Taylor
+﻿"Gotta Graduate" by Robin Verweij, David O’Connor, Ryan Chan, Luke Plewa, Lauren Thurston, and Russell Taylor
 
 
 [ -----------------------]
@@ -426,6 +426,21 @@ The 14-228 is Faculty Room inside the Faculty Entrances4.
 The 14-229 is Faculty Room inside the Faculty Entrances4.
 The 14-230 is Faculty Room inside the Faculty Entrances4.
 The 14-231 is Faculty Room inside the Faculty Entrances4.
+
+Understand "219" as 14-219.
+Understand "221" as 14-221.
+Understand "222" as 14-222.
+Understand "223" as 14-223.
+Understand "226" as 14-226.
+
+Understand "217" as 14-217.
+Understand "218" as 14-218.
+Understand "227" as 14-227.
+Understand "228" as 14-228.
+Understand "229" as 14-229.
+Understand "230" as 14-230.
+Understand "231" as 14-231.
+
 
 [ ----------------------]
 [             CSL                         ]
