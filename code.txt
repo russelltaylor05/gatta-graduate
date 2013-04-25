@@ -171,8 +171,8 @@ Every turn:
 	if the player is in hallway 6 for the first time, say "The smashing is getting even louder towards the east!";
 	if the player is in SouthEast Corridor for the first time and (Gene is in the Software Design Lab), say "It's dangerous to go alone. Talk to Dr Fisher before going any further!";
 	if the player is in SouthEast Corridor for the first time and (Zoe is in the Game Design Lab), say "It's dangerous to go alone. Maybe there is someone who can help in the Game Design Lab!";
-	if the player is in SouthEast Corridor for the first time and (Unix1 is in Room 252), say "You should probably check out those loud noises before going any further.";
-	if the player is in SouthEast Corridor for the first time and (Gene is in the Software Design Lab or Zoe is in the Game Design Lab or Unix1 is in Room 252), now the player is in Hallway 4;
+	if the player is in SouthEast Corridor for the first time and (Unix1 is not dead), say "You should probably check out those loud noises before going any further.";
+	if the player is in SouthEast Corridor for the first time and (Gene is in the Software Design Lab or Zoe is in the Game Design Lab or Unix1 is not dead), now the player is in Hallway 4;
 	if the player is in hallway 7 for the first time, say "The smashing and crashing is coming from behind Door 252!".
 
 
