@@ -27,12 +27,12 @@ The charger is a thing in the Software Design Lab.
 
 The phone is a transparent container. The phone can be on or off. The player carries the phone. The description of the phone is "Battery Life: [battery life]%.".
 Turning on is an action applying to nothing.
-Understand "turn on phone" as turning on.
+Understand "turn on phone" and "turn phone on" as turning on.
 Carry out turning on:
 	now phone is on;
 	say "Phone turned on.".
 Turning off is an action applying to nothing.
-Understand "turn off phone" as turning off.
+Understand "turn off phone" and "turn phone off" as turning off.
 Carry out turning off:
 	now phone is off;
 	say "Phone turned off.".
