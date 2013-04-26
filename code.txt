@@ -1,4 +1,4 @@
-"Gotta Graduate" by Robin Verweij, David O’Connor, Ryan Chan, Luke Plewa, Lauren Thurston, and Russell Taylor
+﻿"Gotta Graduate" by Robin Verweij, David O’Connor, Ryan Chan, Luke Plewa, Lauren Thurston, and Russell Taylor
 
 [ -----------------------]
 [               Setup              ]
@@ -10,7 +10,8 @@ The player is in Software Design Lab.
 
 [Instead of talking to Dr Gene Fisher:
 	now the player is carrying the north atrium key;
-	now the player is in northwest corridor.]
+	now the player has the nokia phone;
+	now the player is in south faculty atrium.]
 
 To say Opening text: say "[italic type]You are in the Software Design Lab at [time of day] working on the last programming assignment of your last day of your last quarter at Cal Poly. Failing this assignment means you fail the class, don't graduate, and need to come back for Fall quarter, meaning you won't be able to take that full time position at Google. Disappoint.[paragraph break][roman type][bold type]In order to graduate on time you need to turn your program in before 12:00 AM.[roman type][paragraph break]".
 
@@ -75,7 +76,7 @@ Definition: a device is empty:
 		no; 
 	yes.
 
-The nokia phone is a device. The description is "Nokia Phone: This phone has the properties all nokia phones have. (try smashing stuff)".
+The nokia phone is a device. The description is "Nokia Phone: This phone has the properties all nokia phones have. (try smashing stuff ie. smash X with nokia phone)".
 The solder pen is a device. "Portable Soldering Pen".
 The backpack is in the South Faculty Atrium.
 The nokia phone is in 14-205.
@@ -85,7 +86,7 @@ An AA cell is a  battery.  It is in 14-216. The description of the AA Cell is "A
 The description of the backpack is "Recon. A familiar Northface backpack. You know the ins and out of this packpack. You easily can find the contents within".
 The rusted key is in Faculty Entrances1. The description is "Engraved into the scratched and heavily used key is '14-20...'".
 The pin is in 14-208. The description is "This pin might come in use to unlock a door".
-The note is in 14-211. The description is "Busy,  if anyone reads this can you get my cell phone from 14-205?".
+The note is in 14-211. The description is "Busy,  if anyone reads this can you get my cell phone from 14-205?[paragraph break] ::unlock 205 with something and then go to 213".
 [The South Faculty key is in 14-205. "Engraved into the key is 'gate key'".]
 
 [---CSL Items---]
@@ -228,7 +229,10 @@ Need relates one person to various things. The verb to need (he needs, they need
 Carry out smashing a container with something: 
 	if noun is a faculty room:
 		now the noun is open;
+		now the noun is unlocked;
 		say "You smash [noun] open!";
+		
+
 
 Check smashing it with: 
 	if the noun is a person, say "why would you want to smash [noun]?!" instead; 
@@ -311,12 +315,12 @@ Instead of talking to Foaad:
 	if foaad has the solder pen:
 		say "I'm busy working on my project!!";
 	otherwise:
-		say "I could really use a solder pen for my side project, I'm sure I can give you something for it".
+		say "I could really use a solder pen for my side project, I'm sure I can give you something for it. You should be able to find the solder pen on this half of the offices!".
 	
 before giving something to foaad:
 	if noun is a solder pen:
 		if noun is empty:
-			say "This is useless with out a battery in it";
+			say "This is useless with out a battery in it. You should beable to find the battery on this half of the offices.";
 			stop the action;
 		if noun is not empty:
 			say "Ah this will help me alot. What did you say you were doing? anyways I have this 'A' I can give you, but how about this key? [paragraph break] [paragraph break]::you now carry the key foaad gave you::";
@@ -424,7 +428,7 @@ The 14-211 is a Faculty Room inside the Faculty Entrances1. 14-211 is open.
 The 14-203 is a Faculty Room inside the Faculty Entrances2.
 The 14-204 is a Faculty Room inside the Faculty Entrances2. 
 The 14-212 is a Faculty Room inside the Faculty Entrances2.
-The 14-213 is a Faculty Room inside the Faculty Entrances2. 
+The 14-213 is a Faculty Room inside the Faculty Entrances2.  The description of 14-213 is "Foaad's office".
 The 14-214 is a Faculty Room inside the Faculty Entrances2.
 The 14-215 is a Faculty Room inside the Faculty Entrances2. 
 The 14-216 is a Faculty Room inside the Faculty Entrances2. 
