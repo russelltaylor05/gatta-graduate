@@ -188,7 +188,7 @@ Instead of downloading lab door key:
 Charging it is an action applying to one thing.
 Check Charging it:
 	if the noun is not the phone, say "You can only do that with your phone." instead;
-	if the noun is the phone and the player is carrying the charger, say "You have finished charging." instead;
+	if the noun is the phone and the player is carrying the charger, say "You have finished charging.";
 	if the noun is the phone, now battery life is 100;
 	if the player is not carrying the charger, say "You need your charger to do that." instead.
 Understand "charge [something]" as Charging it.
