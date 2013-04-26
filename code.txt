@@ -55,7 +55,7 @@ Every turn:
 [ -----------------------]
 
 [---Hallway Items---]
-A key is a thing. Key is in Janitor's Closet. The description of key is "Borrowed from the Janitor's Closet. Perhaps it has access to a particular room in building 14.". The key unlocks Game Design Door.
+A mop is a thing. mop is in Janitor's Closet. The description of mop is "This has no use for you and it doesn't belong to you. You are a thief.".
 
 The charger is a thing in the Software Design Lab.
 
