@@ -118,36 +118,36 @@ Check launching it:
 	if the noun is DDOS and the phone is on:
 		say "DDOS![line break]";
 		if Unix1 Battle is happening:
-			say "Your DDOS app hits unix1 for a whooping 10 health and closes. Unix1 has [enemy-health of unix1] health remaining.[paragraph break]";
 			Now enemy-health of unix1 is enemy-health of unix1 minus 10;
+			say "Your DDOS app hits unix1 for a whooping 10 health and closes. Unix1 has [enemy-health of unix1] health remaining.[paragraph break]";
 		if Unix2 Battle is happening:
-			say "Your DDOS app hits unix2 for a whooping 10 health and closes. Unix1 has [enemy-health of unix1] health remaining.[paragraph break]";
 			Now enemy-health of unix2 is enemy-health of unix2 minus 10;
+			say "Your DDOS app hits unix2 for a whooping 10 health and closes. Unix1 has [enemy-health of unix1] health remaining.[paragraph break]";
 		if Vogon Battle is happening:
-			say "Your DDOS app hits vogon for a whooping 10 health and closes. Unix1 has [enemy-health of unix1] health remaining.[paragraph break]";
 			Now enemy-health of vogon is enemy-health of vogon minus 10;
+			say "Your DDOS app hits vogon for a whooping 10 health and closes. Unix1 has [enemy-health of unix1] health remaining.[paragraph break]";
 	if the noun is keylogger and the phone is on:
 		say "You're logging its keys![line break]";
 		if Unix1 Battle is happening:
-			say "Your keylogger app hits unix1 for 1 health and closes. Unix1 has [enemy-health of unix1] health remaining.[paragraph break]";
 			Now enemy-health of unix1 is enemy-health of unix1 minus 1;
+			say "Your keylogger app hits unix1 for 1 health and closes. Unix1 has [enemy-health of unix1] health remaining.[paragraph break]";
 		if Unix2 Battle is happening:
-			say "Your keylogger app hits unix2 for 1 health and closes. Unix2 has [enemy-health of unix1] health remaining.[paragraph break]";
 			Now enemy-health of unix2 is enemy-health of unix2 minus 1;
+			say "Your keylogger app hits unix2 for 1 health and closes. Unix2 has [enemy-health of unix1] health remaining.[paragraph break]";
 		if Vogon Battle is happening:
-			say "Your keylogger app hits vogon for 1 health and closes. Vogon has [enemy-health of unix1] health remaining.[paragraph break]";
 			Now enemy-health of vogon is enemy-health of vogon minus 1;
+			say "Your keylogger app hits vogon for 1 health and closes. Vogon has [enemy-health of unix1] health remaining.[paragraph break]";
 	if the noun is packet spoofer and the phone is on:
 		say "You're spoofing packets![line break]";
 		if Unix1 Battle is happening:
-			say "Your packet spoofer app hits unix1 for 2 health and closes. Unix1 has [enemy-health of unix1] health remaining.[paragraph break]";
 			Now enemy-health of unix1 is enemy-health of unix1 minus 2;
+			say "Your packet spoofer app hits unix1 for 2 health and closes. Unix1 has [enemy-health of unix1] health remaining.[paragraph break]";
 		if Unix2 Battle is happening:
-			say "Your packet spoofer app hits unix2 for 2 health and closes. Unix2 has [enemy-health of unix1] health remaining.[paragraph break]";
 			Now enemy-health of unix2 is enemy-health of unix2 minus 2;
+			say "Your packet spoofer app hits unix2 for 2 health and closes. Unix2 has [enemy-health of unix1] health remaining.[paragraph break]";
 		if Vogon Battle is happening:
-			say "Your packet spoofer app hits vogon for 2 health and closes. Vogon has [enemy-health of unix1] health remaining.[paragraph break]";
 			Now enemy-health of vogon is enemy-health of vogon minus 2;
+			say "Your packet spoofer app hits vogon for 2 health and closes. Vogon has [enemy-health of unix1] health remaining.[paragraph break]";
 	if the noun is lab door key and the phone is on:
 		if the player is in Software Design Lab:
 			if door1 is locked: 
@@ -553,6 +553,12 @@ There is 1 Unix1 in 14-254. It is scenery.]
 Unix1 is an enemy. Enemy-health of Unix1 is 5.
 Unix1 Battle is a scene.
 
+Instead of opening Door 252:
+	If the door 252 is locked:
+		say "Wait, you are I'll prepared for whatever is behind this door. Better go to the Game Lab to the west first.";
+	else:
+		move player to room 252.
+
 [Started substituting Room 252 for 14-254 for the time being]
 Unix1 Battle begins when (the player is in Room 252 for the first time) or (the player is in Room 252 and the enemy is not dead).
 
@@ -563,7 +569,12 @@ When Unix1 Battle begins:
 	say "The door behind you closes and locks itself. It's a trap![Paragraph break]";
 	Now Door 252 is closed; [Close all the doors in room.]
 	Now Door 252 is locked; [Lock all the doors in room.]
-	say "Unix1 is on the computer. It looks pissed.".
+	if phone is off:
+		say "You turn on your phone.";
+		Now phone is on;
+	say "Unix1 is on the computer. It looks pissed.
+	[Paragraph break]A message appears on your phone: 'You need to launch apps at the terminal. Launching them will cause damage to the server. 
+	[Paragraph break]If you haven't done so already. Download keylogger and then launch keylogger. The app will do the rest. Good luck.'".
 
 When Unix1 Battle ends:
 	Remove Unix1 from play; [Unlock all doors in room.]
