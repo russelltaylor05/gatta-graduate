@@ -544,7 +544,7 @@ The Server Room door is a closed locked door. It is east of the CSL and west of 
 
 [the Player is in Hallway 7.]
 
-Enemy is a kind of thing. An enemy is fixed in place. An enemy can be dead. An enemy is usually not dead. An enemy has a number called enemy-health. The plural of enemy is enemies.
+Enemy is a kind of thing. An enemy is fixed in place. An enemy can be dead. An enemy is usually not dead. An enemy has a number called enemy-health. The plural of enemy is enemies. An enemy is fixed in place.
 
 [Unix1 is a kind of enemy. Enemy-health of Unix1 is 5.
 There is 1 Unix1 in 14-254. It is scenery.]
