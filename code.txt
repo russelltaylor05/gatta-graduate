@@ -1,4 +1,4 @@
-﻿"Gotta Graduate" by Robin Verweij, David O’Connor, Ryan Chan, Luke Plewa, Lauren Thurston, and Russell Taylor
+"Gotta Graduate" by Robin Verweij, David O’Connor, Ryan Chan, Luke Plewa, Lauren Thurston, and Russell Taylor
 
 [ -----------------------]
 [               Setup              ]
@@ -9,9 +9,7 @@ use no scoring. use full-length room descriptions.
 The player is in Software Design Lab.
 
 [Instead of talking to Dr Gene Fisher:
-	now the player is carrying the north atrium key;
-	now the player has the nokia phone;
-	now the player is in south faculty atrium.]
+	now the player is in northeast corridor.]
 
 To say Opening text: say "[italic type]You are in the Software Design Lab at [time of day] working on the last programming assignment of your last day of your last quarter at Cal Poly. Failing this assignment means you fail the class, don't graduate, and need to come back for Fall quarter, meaning you won't be able to take that full time position at Google. Disappoint.[paragraph break][roman type][bold type]In order to graduate on time you need to turn your program in before 12:00 AM.[roman type][paragraph break]".
 
@@ -45,7 +43,6 @@ Every turn:
 	if the player is in SouthEast Corridor for the first time and (Gene is in the Software Design Lab or Zoe is in the Game Design Lab or Unix1 is not dead), now the player is in Hallway 4;
 	if the player is in hallway 7 for the first time, say "The smashing and crashing is coming from behind Door 252!";
 	if the player is in South Faculty Atrium for the first time:
-		say "[italic type]As you enter the South Faculty Atrium the gates slam shut and lock themselves. Looks like you're going to need to find a way out.[roman type]";
 		now SF-east-gate is closed;
 		now SF-east-gate is locked;
 		now SF-west-gate is closed;
@@ -78,12 +75,10 @@ Definition: a device is empty:
 
 The nokia phone is a device. The description is "Nokia Phone: This phone has the properties all nokia phones have. (try smashing stuff ie. smash X with nokia phone)".
 The solder pen is a device. "Portable Soldering Pen".
-The backpack is in the South Faculty Atrium.
 The nokia phone is in 14-205.
 The solder pen is in 14-204.
 
 An AA cell is a  battery.  It is in 14-216. The description of the AA Cell is "An AA cell battery is always found when you really need an AAA".
-The description of the backpack is "Recon. A familiar Northface backpack. You know the ins and out of this packpack. You easily can find the contents within".
 The rusted key is in Faculty Entrances1. The description is "Engraved into the scratched and heavily used key is '14-20...'".
 The pin is in 14-208. The description is "This pin might come in use to unlock a door".
 The note is in 14-211. The description is "Busy,  if anyone reads this can you get my cell phone from 14-205?[paragraph break] ::unlock 205 with something and then go to 213".
@@ -121,28 +116,37 @@ Check launching it:
 	if the noun is not an app, say "You can't do that." instead;
 	if the phone is off, say "You need to turn your phone on to launch apps!";
 	if the noun is DDOS and the phone is on:
-		say "DDOS!";
+		say "DDOS![line break]";
 		if Unix1 Battle is happening:
+			say "Your DDOS app hits unix1 for a whooping 10 health and closes. Unix1 has [enemy-health of unix1] health remaining.[paragraph break]";
 			Now enemy-health of unix1 is enemy-health of unix1 minus 10;
 		if Unix2 Battle is happening:
+			say "Your DDOS app hits unix2 for a whooping 10 health and closes. Unix1 has [enemy-health of unix1] health remaining.[paragraph break]";
 			Now enemy-health of unix2 is enemy-health of unix2 minus 10;
 		if Vogon Battle is happening:
+			say "Your DDOS app hits vogon for a whooping 10 health and closes. Unix1 has [enemy-health of unix1] health remaining.[paragraph break]";
 			Now enemy-health of vogon is enemy-health of vogon minus 10;
 	if the noun is keylogger and the phone is on:
-		say "You're logging its keys!";
+		say "You're logging its keys![line break]";
 		if Unix1 Battle is happening:
+			say "Your keylogger app hits unix1 for 1 health and closes. Unix1 has [enemy-health of unix1] health remaining.[paragraph break]";
 			Now enemy-health of unix1 is enemy-health of unix1 minus 1;
 		if Unix2 Battle is happening:
+			say "Your keylogger app hits unix2 for 1 health and closes. Unix2 has [enemy-health of unix1] health remaining.[paragraph break]";
 			Now enemy-health of unix2 is enemy-health of unix2 minus 1;
 		if Vogon Battle is happening:
+			say "Your keylogger app hits vogon for 1 health and closes. Vogon has [enemy-health of unix1] health remaining.[paragraph break]";
 			Now enemy-health of vogon is enemy-health of vogon minus 1;
 	if the noun is packet spoofer and the phone is on:
-		say "You're spoofing packets!";
+		say "You're spoofing packets![line break]";
 		if Unix1 Battle is happening:
+			say "Your packet spoofer app hits unix1 for 2 health and closes. Unix1 has [enemy-health of unix1] health remaining.[paragraph break]";
 			Now enemy-health of unix1 is enemy-health of unix1 minus 2;
 		if Unix2 Battle is happening:
+			say "Your packet spoofer app hits unix2 for 2 health and closes. Unix2 has [enemy-health of unix1] health remaining.[paragraph break]";
 			Now enemy-health of unix2 is enemy-health of unix2 minus 2;
 		if Vogon Battle is happening:
+			say "Your packet spoofer app hits vogon for 2 health and closes. Vogon has [enemy-health of unix1] health remaining.[paragraph break]";
 			Now enemy-health of vogon is enemy-health of vogon minus 2;
 	if the noun is lab door key and the phone is on:
 		if the player is in Software Design Lab:
@@ -165,26 +169,38 @@ Understand "Download [something]" as downloading it.
 Downloading DDOS is an action applying to nothing.
 Understand "Download DDOS" as downloading DDOS.
 Instead of downloading DDOS:
-	if DDOS is not in the phone, say "Successfully downloaded the app!";
-	now DDOS is in the phone.
+	if DDOS is not in the phone and the phone is on:
+		say "Successfully downloaded the app!";
+		now DDOS is in the phone;
+	else:
+		say "Your phone must be on to download apps!".
 	
 Downloading keylogger is an action applying to nothing.
 Understand "Download keylogger" as downloading keylogger.
 Instead of downloading keylogger:
-	if keylogger is not in the phone, say "Successfully downloaded the app!";
-	now keylogger is in the phone.
+	if keylogger is not in the phone and the phone is on:
+		say "Successfully downloaded the app!";
+		now keylogger is in the phone;
+	else:
+		say "Your phone must be on to download apps!".		
 	
 Downloading packet spoofer is an action applying to nothing.
 Understand "Download packet spoofer" as downloading packet spoofer.
 Instead of downloading packet spoofer:
-	if packet spoofer is not in the phone, say "Successfully downloaded the app!";
-	now packet spoofer is in the phone.
+	if packet spoofer is not in the phone and the phone is on:
+		say "Successfully downloaded the app!";
+		now packet spoofer is in the phone;
+	else:
+		say "Your phone must be on to download apps!".
 
 Downloading lab door key is an action applying to nothing.
 Understand "Download lab door key" as downloading lab door key.
 Instead of downloading lab door key:
-	if lab door key is not in the phone, say "Successfully downloaded the app!";
-	now lab door key is in the phone.
+	if lab door key is not in the phone and the phone is on:
+		say "Successfully downloaded the app!";
+		now lab door key is in the phone;
+	else:
+		say "Your phone must be on to download apps!".
 
 Charging it is an action applying to one thing.
 Check Charging it:
@@ -273,7 +289,7 @@ Instead of talking to Gene Fisher:
 		now the description of gene is "Looks like fisher is fighting hard against the unix minios...better hurry along!";
 		stop the action;
 	if the person is Gene:
-		say "Dr. Fisher looks up from his laptop. 'There seems to be something going on with the servers.'[paragraph break]'I'm going to go see what's up. I'm going to lock the door so you'll need this new app I made. It's called lab door key. All you have to do to get it is [bold type]download lab door key[roman type]. It'll automatically download into your phone, then you can [bold type]launch lab door key[roman type] to open this lab's door.'[paragraph break]'Oh, and don't forget your phone charger over there. If your phone isn't charged, you won't be able to use any apps. Try [bold type]charge phone[roman type].'[paragraph break]Dr. Fisher packs up and leaves the room.";
+		say "Dr. Fisher looks up from his laptop. 'There seems to be something going on with the servers.'[paragraph break]'I'm going to go see what's up. I'm going to lock the door so you'll need this new app I made. It's called lab door key. All you have to do to get it is [bold type]download lab door key[roman type]. It'll automatically download into your phone, then you can [bold type]launch lab door key[roman type] to open this lab's door.'[paragraph break]'Oh by the way[if charger is not held], don't forget your phone charger over there[end if]. If your phone isn't charged, you won't be able to use any apps. Try [bold type]charge phone[roman type].'[paragraph break]Dr. Fisher packs up and leaves the room.";
 		move Gene to the SouthEast corridor;
 		stop the action;
 		
@@ -355,19 +371,19 @@ Room 250 is a Room. The description is "There is a door to the north. You can mo
 Room 251 is a Room. The description is "There is a door to the north.".
 Room 252 is a Room. The description is "There is a door to the north.".
 
-Hallway 1 is a room with the description "To the west there is a staircase, but you have no need to go downstairs. To the north is a door leading outside. Continue East down the Hallway". 
+Hallway 1 is a room with the description "To the west there is a staircase that's cordoned off with caution tape. To the north is a door leading outside that's been completely blockaded with desks. The hallway you're in goes east.". 
 
-Hallway 2 is a room with the description "Continue east down the Hallway or south into the Game Design Lab.[if unvisited] Something tells you that you should probably go into the Game Design Lab.[end if]". 
+Hallway 2 is a room with the description "To the south is the Game Design Lab.[if unvisited] Something tells you that you should probably go into the Game Design Lab.[end if] The hallway you're in goes east and west.". 
 
-Hallway 3 is a room with the description "Continue east down the Hallway or north into the Janitor's Closet.". 
+Hallway 3 is a room with the description "To the north is the Janitor's Closet. The hallway you're in goes east and west.". 
 
-Hallway 4 is a room with the description "Continue north to the South Faculty Offices or east down the hallway. The Faculty Offices may be a good place to look for helpful professors.". 
+Hallway 4 is a room with the description "To the north is the hallway leading to the South Faculty Offices. The Faculty Offices may be a good place to look for helpful professors. The hallway you're in goes east and west.". 
 
-Hallway 5 is a Room. The description is "Continue east down the hallway.". 
-Hallway 6 is a Room. The description is "Continue east down the hallway.".
-Hallway 7 is a Room. The description is "To the south is room 252. You can go east or west in the East Hall.".
-Hallway 8 is a Room. The description is "To the north is room 249. To the south is room 250. You can go east or west down the East Hall.".
-Hallway 9 is a Room. The description is "To the east is a staircase. To the south is a door leading out. To the north is Room 249 and to the south is Room 250. You can go west in the East Hall.".
+Hallway 5 is a Room. The description is "The hallway you're in goes east and west.". 
+Hallway 6 is a Room. The description is "The hallway you're in goes east and west.".
+Hallway 7 is a Room. The description is "To the north is room 246. To the south is room 252. The hallway you're in goes east and west.".
+Hallway 8 is a Room. The description is "To the north is room 249. To the south is room 250. The hallway you're in goes east and west.".
+Hallway 9 is a Room. The description is "To the east is a staircase that's been cordoned off with caution tape and a door leading outside that's been completely blockaded with desks. To the south is room 250 and to the north is room 249. The lights are off and there's no one inside either room. The hallway you're in goes west.".
 
 the printed name of Hallway 1 is "East-West Hallway". the printed name of Hallway 2 is "East-West Hallway". the printed name of Hallway 3 is "East-West Hallway". the printed name of Hallway 4 is "East-West Hallway". the printed name of Hallway 5 is "East-West Hallway". the printed name of Hallway 6 is "East-West Hallway". the printed name of Hallway 7 is "East-West Hallway". the printed name of Hallway 8 is "East-West Hallway". the printed name of Hallway 9 is "East-West Hallway".
 
@@ -380,8 +396,8 @@ The printed name of Door1 is "Software Design Lab Door".
 The printed name of Door2 is "Game Design Lab Door".
 The printed name of Door3 is "Janitor's Closet Door".
 
-Door 249 is a door. It is south of Room 249 and north of Hallway 9. 
-Door 250 is a door. It is north of Room 250 and south of Hallway 9.
+Door 249 is a locked door. It is south of Room 249 and north of Hallway 9. 
+Door 250 is a locked door. It is north of Room 250 and south of Hallway 9.
 Door 248 is a door. It is south of Room 248 and north of Hallway 8.
 Door 251 is a door. It is north of Room 251 and south of Hallway 8.
 Door 246 is a door. It is south of Room 246 and north of Hallway 7.
@@ -411,7 +427,7 @@ The SouthEast Corridor is a room. It has the description "You're in the the Sout
 
 The SouthWest Corridor is a room. It has the description "You're in the Northern end of the West Outdoor Corridor. The west is fenced off, but the corridor continues to the North. To the south is a locked door and to the west are the South Faculty Offices.".
 
-The South Faculty Atrium is a room. [It is west of the SouthEast Corridor and east of the SouthWest Corridor. ]It has the description "You're in the center of the southern faculty offices. To the north and south are enterances to the faculty offices."
+The South Faculty Atrium is a room. [It is west of the SouthEast Corridor and east of the SouthWest Corridor. ]It has the description "[if unvisited][italic type]As you enter the South Faculty Atrium the gates slam shut and lock themselves. Looks like you're going to need to find a way out.[roman type][line break][end if]You're in the center of the southern faculty offices. To the north and south are enterances to the faculty offices."
 
 The Faculty Entrances1 is a room. It is north of the South Faculty Atrium. It has the description "You see seven faculty offices:  14-205, 14-206, 14-207, 14-208, 14-209, 14-210, 14-211. You can enter each office and look around.[paragraph break]::Refer to the room by the last 3 digits. ie. 14-205 as 205::"
 
@@ -477,7 +493,7 @@ NF-west gate is a door and locked. it is east of the north faculty atrium and we
 
 [---Descriptions---]
 The NorthWest Corridor is a room. It has the description "You're in the West Corridor. The west is still fenced off. To the north is another fallen vending machine. Weird... Seems your only option is to head east toward the North Faculty Offices". It is north of the SouthWest Corridor.
-The NorthEast Corridor is a room. It has the description "You're in the Northern end of the Eastern Corridor. To the south is the first fallen vending machine you saw. The eastern archways are still fenced off. You can see that to the north the path is clear.". 
+The NorthEast Corridor is a room. It has the description "You're in the Northern end of the Eastern Corridor. To the south is the first fallen vending machine you saw. The eastern archways are still fenced off. To the north is the CSL. You finally made it.". 
 
 The North Faculty Atrium is a room. [It is west of the NorthEast Corridor and east of the NorthWest Corridor. ]It has the description "You're in the center of the northern faculty offices. To the north and south are enterances to the faculty offices."
 The Faculty Entrances3 is a room. It is north of the North Faculty Atrium. It has the description "You see five faculty offices:  14-219, 14-221, 14-222, 14-223, 14-226. You can enter each office and look around."
@@ -515,10 +531,7 @@ Understand "231" as 14-231.
 [                CSL               ]
 [ ----------------------]
 
-[---Story---]
-To say Enter CSL: say "You finally get to the CSL. The room is hotter than usual, but you don't seem to think anything of it. You try the door to the Server Room so you can finally end everything, but as soon as you touch it, you jump back. The door handle is extremely hot! Dumbfounded, you look around as you try to think of a way to get into the Server Room.".
-
-The CSL is a room with the description "Main CSL Room. You see rows of computers.". 
+The CSL is a room with the description "[if unvisited]You finally get to the CSL. The room is hotter than usual, but you don't seem to think anything of it. You try the door to the Server Room so you can finally end everything, but as soon as you touch it, you jump back. The door handle is extremely hot! Dumbfounded, you look around as you try to think of a way to get into the Server Room.[end if][paragraph break]Main CSL Room. You see rows of computers.". 
 The CSL door is a door. It is south of the CSL and north of the NorthEast Corridor.
 [It is north of NorthEast Corridor.]
 
@@ -531,7 +544,7 @@ The Server Room door is a closed locked door. It is east of the CSL and west of 
 
 [the Player is in Hallway 7.]
 
-Enemy is a kind of thing. An enemy can be dead. An enemy is usually not dead. An enemy has a number called enemy-health. The plural of enemy is enemies.
+Enemy is a kind of thing. An enemy is fixed in place. An enemy can be dead. An enemy is usually not dead. An enemy has a number called enemy-health. The plural of enemy is enemies.
 
 [Unix1 is a kind of enemy. Enemy-health of Unix1 is 5.
 There is 1 Unix1 in 14-254. It is scenery.]
