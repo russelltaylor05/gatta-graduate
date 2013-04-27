@@ -116,38 +116,38 @@ Check launching it:
 	if the noun is not an app, say "You can't do that." instead;
 	if the phone is off, say "You need to turn your phone on to launch apps!";
 	if the noun is DDOS and the phone is on:
-		say "DDOS![line break]";
+		say "[line break]DDOS![line break]";
 		if Unix1 Battle is happening:
 			Now enemy-health of unix1 is enemy-health of unix1 minus 10;
-			say "Your DDOS app hits unix1 for a whooping 10 health and closes. Unix1 has [enemy-health of unix1] health remaining.[paragraph break]";
+			say "Your DDOS app hits unix1 for a whooping 10 health and closes.[line break]Unix1 has [enemy-health of unix1] health remaining.[paragraph break]";
 		if Unix2 Battle is happening:
 			Now enemy-health of unix2 is enemy-health of unix2 minus 10;
-			say "Your DDOS app hits unix2 for a whooping 10 health and closes. Unix1 has [enemy-health of unix1] health remaining.[paragraph break]";
+			say "Your DDOS app hits unix2 for a whooping 10 health and closes.[line break]Unix1 has [enemy-health of unix1] health remaining.[paragraph break]";
 		if Vogon Battle is happening:
 			Now enemy-health of vogon is enemy-health of vogon minus 10;
-			say "Your DDOS app hits vogon for a whooping 10 health and closes. Unix1 has [enemy-health of unix1] health remaining.[paragraph break]";
+			say "Your DDOS app hits vogon for a whooping 10 health and closes.[line break]Unix1 has [enemy-health of unix1] health remaining.[paragraph break]";
 	if the noun is keylogger and the phone is on:
-		say "You're logging its keys![line break]";
+		say "[line break]You're logging its keys![line break]";
 		if Unix1 Battle is happening:
 			Now enemy-health of unix1 is enemy-health of unix1 minus 1;
-			say "Your keylogger app hits unix1 for 1 health and closes. Unix1 has [enemy-health of unix1] health remaining.[paragraph break]";
+			say "Your keylogger app hits unix1 for 1 health and closes.[line break]Unix1 has [enemy-health of unix1] health remaining.[paragraph break]";
 		if Unix2 Battle is happening:
 			Now enemy-health of unix2 is enemy-health of unix2 minus 1;
-			say "Your keylogger app hits unix2 for 1 health and closes. Unix2 has [enemy-health of unix1] health remaining.[paragraph break]";
+			say "Your keylogger app hits unix2 for 1 health and closes.[line break]Unix2 has [enemy-health of unix1] health remaining.[paragraph break]";
 		if Vogon Battle is happening:
 			Now enemy-health of vogon is enemy-health of vogon minus 1;
-			say "Your keylogger app hits vogon for 1 health and closes. Vogon has [enemy-health of unix1] health remaining.[paragraph break]";
+			say "Your keylogger app hits vogon for 1 health and closes.[line break]Vogon has [enemy-health of unix1] health remaining.[paragraph break]";
 	if the noun is packet spoofer and the phone is on:
-		say "You're spoofing packets![line break]";
+		say "[line break]You're spoofing packets![line break]";
 		if Unix1 Battle is happening:
 			Now enemy-health of unix1 is enemy-health of unix1 minus 2;
-			say "Your packet spoofer app hits unix1 for 2 health and closes. Unix1 has [enemy-health of unix1] health remaining.[paragraph break]";
+			say "Your packet spoofer app hits unix1 for 2 health and closes.[line break]Unix1 has [enemy-health of unix1] health remaining.[paragraph break]";
 		if Unix2 Battle is happening:
 			Now enemy-health of unix2 is enemy-health of unix2 minus 2;
-			say "Your packet spoofer app hits unix2 for 2 health and closes. Unix2 has [enemy-health of unix1] health remaining.[paragraph break]";
+			say "Your packet spoofer app hits unix2 for 2 health and closes.[line break]Unix2 has [enemy-health of unix1] health remaining.[paragraph break]";
 		if Vogon Battle is happening:
 			Now enemy-health of vogon is enemy-health of vogon minus 2;
-			say "Your packet spoofer app hits vogon for 2 health and closes. Vogon has [enemy-health of unix1] health remaining.[paragraph break]";
+			say "Your packet spoofer app hits vogon for 2 health and closes.[line break]Vogon has [enemy-health of unix1] health remaining.[paragraph break]";
 	if the noun is lab door key and the phone is on:
 		if the player is in Software Design Lab:
 			if door1 is locked: 
@@ -285,8 +285,12 @@ The description of Gene Fisher is "The software engineering professor at Cal Pol
 
 Instead of talking to Gene Fisher:
 	if the location of the player is the southeast corridor:
-		say "I'll hold these unix minions off! go on ahead!!!";
-		now the description of gene is "Looks like fisher is fighting hard against the unix minios...better hurry along!";
+		say "'It seems like one of the servers has gone rogue and is infecting others. We need to get to the CSL ASAP!'[line break][italic type]Fisher flinches as ear-splitting static noise booms across campus.[roman type][line break]'Y-y-you know how I always say that one test is worth a thousand opinions? I'm going to set up here and try to figure out exactly what's going on so when you get to that server room I can help you out. Better get moving!'";
+		now the description of gene is "Looks like Fisher is trying to figure out exactly what's going on, he's furiously typing on his laptop.";
+		move Gene to the CSL;
+		stop the action;
+	if the location of the player is the CSL:
+		say "'I figured out that Vogon has become somewhat self-aware and is infecting the other VMs. We need to stop it, but it looks like we're going to have to figure out how to get into that server room...'".
 		stop the action;
 	if the person is Gene:
 		say "Dr. Fisher looks up from his laptop. 'There seems to be something going on with the servers.'[paragraph break]'I'm going to go see what's up. I'm going to lock the door so you'll need this new app I made. It's called lab door key. All you have to do to get it is [bold type]download lab door key[roman type]. It'll automatically download into your phone, then you can [bold type]launch lab door key[roman type] to open this lab's door.'[paragraph break]'Oh by the way[if charger is not held], don't forget your phone charger over there[end if]. If your phone isn't charged, you won't be able to use any apps. Try [bold type]charge phone[roman type].'[paragraph break]Dr. Fisher packs up and leaves the room.";
@@ -299,8 +303,8 @@ The description of Zoe Wood is "The graphics professor at Cal Poly. If you talk 
 
 Instead of talking to Zoe Wood:
 	if the location of the player is in the CSL:
-		say "Hurry and defeat vogon, I don't know how much longer I can old Sparx off!";
-		now the description of zoe wood is "Looks like Zoe is having some difficulty against sparx! Better hurry and defeat vogon!";
+		say "Zoe is furiously typing commands on a terminal. She doesn't even look back as she yells.[line break]'Hurry up and defeat vogon, I don't know how much longer I can hold sparx off!";
+		now the description of zoe wood is "Looks like Zoe is having some difficulty against sparx! Better hurry and defeat vogon!!!";
 		stop the action;
 	if the person is Zoe Wood:
 		say "Dr. Zoe Wood approaches you, 'Hey, if you have noticed, something is wrong with the servers. If you're willing to help me, I suggest we split up and investigate the building. The best place to look first is in probably the server room in the CSL.'[paragraph break]'I see you have a smart phone. I have prepared a phone application to attack the servers should anything go wrong. You can download keylogger onto your phone from the app store. Make sure to examine your phone to check it's remaining battery - you wouldn't want to run out of battery life! Either way, I'm off to go see if I can help get the servers back up.'[paragraph break]Dr. Wood leaves the room.";
@@ -576,8 +580,7 @@ When Unix1 Battle begins:
 		say "You turn on your phone.";
 		Now phone is on;
 	say "Unix1 is on the computer. It looks pissed.
-	[Paragraph break]A message appears on your phone: 'You need to launch apps at the terminal. Launching them will cause damage to the server. 
-	[Paragraph break]If you haven't done so already. Download keylogger and then launch keylogger. The app will do the rest. Good luck.'".
+	[Paragraph break]A message appears on your phone: 'You need to launch apps at the terminal. Launching them will cause damage to the server.'".
 
 When Unix1 Battle ends:
 	Remove Unix1 from play; [Unlock all doors in room.]
@@ -603,15 +606,15 @@ Every turn during Unix1 Battle:
 	If the phone is on:
 		Repeat with currentEnemy running through enemies in playerLocation:
 			Let enemy-attack be a random number between 1 and 2;
-			if enemy-attack is 1:
-				say "[currentEnemy] uses open Internet Explorer twice.[Paragraph break]";
-				say "You lose 1 Battery life. "; [Change this to say and decrease actual battery life.]
+			if enemy-attack is 1 and enemy-health of unix1 is not 0:
+				say "[currentEnemy] uses open Internet Explorer twice.[line break]";
+				say "You lose 1 Battery life.[line break]"; [Change this to say and decrease actual battery life.]
 				Decrease Battery life by 1;
-			else if enemy-attack is 2:
-				say "[currentEnemy] uses Cntl^D on you.[Paragraph break]";
-				say "You lose 1 Battery life. ";[Change this to say and decrease actual battery life.]
+			else if enemy-attack is 2 and enemy-health of unix1 is not 0:
+				say "[currentEnemy] uses Cntl^D on you.[line break]";
+				say "You lose 1 Battery life.[line break]";[Change this to say and decrease actual battery life.]
 				Decrease Battery Life by 1;
-			 say "Your currently have [Battery Life]% battery left.[Paragraph break]".
+			 say "You currently have [Battery Life]% battery left.[line break]".
 			[say "[currentEnemy]: Attack! [enemy-health of currentEnemy] [Paragraph break]";
 			Decrease the Enemy-Health of Unix1 by 1;]
 
@@ -658,19 +661,19 @@ Every turn during Unix2 Battle:
 		If phone is on:
 			Repeat with currentEnemy running through enemies in playerLocation:
 				Let enemy-attack be a random number between 1 and 4;
-				if enemy-attack is 1:
-					say "[currentEnemy] uses Network Storm.[Paragraph break]";
-					say "You lose 6 Battery life. "; [Change this to say and decrease actual battery life.]
+				if enemy-attack is 1 and enemy-health of unix2 is not 0:
+					say "[currentEnemy] uses Network Storm.[line break]";
+					say "You lose 6 Battery life.[line break]"; [Change this to say and decrease actual battery life.]
 					Decrease Battery Life by 6;
-				else if enemy-attack is 2:
-					say "[currentEnemy] uses Spyware Spam.[Paragraph break]";
-					say "You lose 3 Battery life. "; [Change this to say and decrease actual battery life.]
+				else if enemy-attack is 2 and enemy-health of unix2 is not 0:
+					say "[currentEnemy] uses Spyware Spam.[line break]";
+					say "You lose 3 Battery life.[line break]"; [Change this to say and decrease actual battery life.]
 					Decrease battery Life by 3;
-				else if enemy-attack is 3:
-					say "[currentEnemy] uses Nyan Cat Sound Blast.[Paragraph break]";
-					say "You lose 2 Battery life. "; [Change this to say and decrease actual battery life.]
+				else if enemy-attack is 3 and enemy-health of unix2 is not 0:
+					say "[currentEnemy] uses Nyan Cat Sound Blast.[line break]";
+					say "You lose 2 Battery life.[line break]"; [Change this to say and decrease actual battery life.]
 					Decrease battery Life by 2;
-				 say "Your currently have [Battery Life]% battery left.[Paragraph break]".
+				 say "You currently have [Battery Life]% battery left.[Paragraph break]".
 					
 				[say "[currentEnemy]: Attack! [enemy-health of currentEnemy] [Paragraph break]";
 				Decrease the Enemy-Health of Unix1 by 1;]
@@ -708,21 +711,21 @@ Every turn during Vogon Battle:
 	If phone is on:
 		Repeat with currentEnemy running through enemies in playerLocation:
 			Let enemy-attack be a random number between 1 and 4;
-			if enemy-attack is 1:
-				say "[currentEnemy] uses Troll Face Popup. It's clearly mocking you![Paragraph break]";
-				say "You lose 1 Battery life. "; [Change this to say and decrease actual battery life.]
+			if enemy-attack is 1 and enemy-health of vogon is not 0:
+				say "[currentEnemy] uses Troll Face Popup. It's clearly mocking you![line break]";
+				say "You lose 1 Battery life.[line break]"; [Change this to say and decrease actual battery life.]
 				Decrease Battery Life by 1;
-			else if enemy-attack is 2:
-				say "[currentEnemy] uses QWOP Duel.[Paragraph break]";
-				say "You lose 5 Battery life. "; [Change this to say and decrease actual battery life.]
+			else if enemy-attack is 2 and enemy-health of vogon is not 0:
+				say "[currentEnemy] uses QWOP Duel.[line break]";
+				say "You lose 5 Battery life.[line break]"; [Change this to say and decrease actual battery life.]
 				Decrease battery Life by 5;
-			else if enemy-attack is 3:
-				say "[currentEnemy] uses Stuxnet Update.[Paragraph break]";
-				say "You lose 10 Battery life. "; [Change this to say and decrease actual battery life.]
+			else if enemy-attack is 3 and enemy-health of vogon is not 0:
+				say "[currentEnemy] uses Stuxnet Update.[line break]";
+				say "You lose 10 Battery life.[line break]"; [Change this to say and decrease actual battery life.]
 				Decrease battery Life by 10;
-			else if enemy-attack is 4:
-				say "[currentEnemy] uses Phone Update and Reboot.[Paragraph break]";
-				say "You lose 15 Battery life. "; [Change this to say and decrease actual battery life.]
+			else if enemy-attack is 4 and enemy-health of vogon is not 0:
+				say "[currentEnemy] uses Phone Update and Reboot.[line break]";
+				say "You lose 15 Battery life.[line break]"; [Change this to say and decrease actual battery life.]
 				Decrease battery Life by 15;
 			 say "You currently have [Battery Life]% battery remaining.[Paragraph break]".
 				
@@ -731,4 +734,4 @@ Every turn during Vogon Battle:
 
 [ --- Time of Day should be stated last, so it's at the bottom of the code base --- ]
 Every turn:
-	say "It's now [the time of day]";
+	say "It's now [the time of day][line break]";
