@@ -11,6 +11,8 @@ The player is in Software Design Lab.
 [Instead of talking to Dr Gene Fisher:
 	now the player is in northeast corridor.]
 
+The time of day is 9:00 PM.
+
 To say Opening text: say "[italic type]You are in the Software Design Lab at [time of day] working on the last programming assignment of your last day of your last quarter at Cal Poly. Failing this assignment means you fail the class, don't graduate, and need to come back for Fall quarter, meaning you won't be able to take that full time position at Google. Disappoint.[paragraph break][roman type][bold type]In order to graduate on time you need to turn your program in before 12:00 AM.[roman type][paragraph break]".
 
 When play begins:
@@ -18,7 +20,7 @@ When play begins:
 	now the time of day is 9:01 PM.
 	
 At 12 AM:
-	end the game saying "It's past 12 AM, you've failed to turn in your assignment on time. You're now a college dropout!";
+	end the game saying "It is past 12 AM and you have failed to turn in your assignment on time. You drop to your knees, raise both your arms to the sky and scream, 'NOOOOOOOO!'. Congratulations, you are now a college dropout!";
 
 [---Pseudo Rooms---]
 Classroom is a kind of container. classroom is scenery, lockable, closed, enterable, fixed in place, openable.
@@ -53,7 +55,7 @@ Every turn:
 [ -----------------------]
 
 [---Hallway Items---]
-A mop is a thing. mop is in Janitor's Closet. The description of mop is "This has no use for you and it doesn't belong to you. You are a thief.".
+A mop is a thing. mop is in Janitor's Closet. The description of mop is "This has no use for you and it doesn't belong to you. [if player holding mop]You are a thief.[end if]".
 
 The charger is a thing in the Software Design Lab.
 
@@ -157,7 +159,7 @@ Check launching it:
 				now door1 is locked;
 				say "The lab door locks.";
 		else:
-			say "It seems like the door this app unlocks is not close.";
+			say "It seems like the door this app unlocks is not close by.";
 	if the player is not carrying the phone, say "You need your phone to do that.".
 Understand "launch [something]" as launching it.
 
@@ -215,6 +217,13 @@ To say talk to instead:
 	say "(To communicate, TALK TO a character.) ".
 Understand "talk to [someone]" as talking to. Understand "talk to [something]" as talking to. Talking to is an action applying to one visible thing.
 
+[---Hallway---]
+Instead of going to Hallway 1 when charger is not held:
+	if location of Gene Fisher is not the location of the player:
+		say "Maybe you should heed Fisher's suggestion and bring your phone charger.";
+	otherwise:
+		say "You try to open the door, but it is locked.".
+
 [---South Faculty Actions/Rules---]
 Understand "turn on [device]" as switching on.
 Understand "turn off [device]" as switching off.
@@ -248,8 +257,6 @@ Carry out smashing a container with something:
 		now the noun is unlocked;
 		say "You smash [noun] open!";
 		
-
-
 Check smashing it with: 
 	if the noun is a person, say "why would you want to smash [noun]?!" instead; 
 	if the second noun is not a nokia phone, say "[The second noun] does not have the properties of a nokia phone" instead;
@@ -287,10 +294,11 @@ Instead of talking to Gene Fisher:
 	if the location of the player is the southeast corridor:
 		say "'It seems like one of the servers has gone rogue and is infecting others. We need to get to the CSL ASAP!'[line break][italic type]Fisher flinches as ear-splitting static noise booms across campus.[roman type][line break]'Y-y-you know how I always say that one test is worth a thousand opinions? I'm going to set up here and try to figure out exactly what's going on so when you get to that server room I can help you out. Better get moving!'";
 		now the description of gene is "Looks like Fisher is trying to figure out exactly what's going on, he's furiously typing on his laptop.";
-		move Gene to the CSL;
 		stop the action;
+	if the location of the player is in the northeast corridor:
+		move Gene to the CSL;
 	if the location of the player is the CSL:
-		say "'I figured out that Vogon has become somewhat self-aware and is infecting the other VMs. We need to stop it, but it looks like we're going to have to figure out how to get into that server room...'".
+		say "'I figured out that Vogon has become somewhat self-aware and is infecting the other VMs. We need to stop it, but it looks like we're going to have to figure out how to get into that server room...'";
 		stop the action;
 	if the person is Gene:
 		say "Dr. Fisher looks up from his laptop. 'There seems to be something going on with the servers.'[paragraph break]'I'm going to go see what's up. I'm going to lock the door so you'll need this new app I made. It's called lab door key. All you have to do to get it is [bold type]download lab door key[roman type]. It'll automatically download into your phone, then you can [bold type]launch lab door key[roman type] to open this lab's door.'[paragraph break]'Oh by the way[if charger is not held], don't forget your phone charger over there[end if]. If your phone isn't charged, you won't be able to use any apps. Try [bold type]charge phone[roman type].'[paragraph break]Dr. Fisher packs up and leaves the room.";
@@ -307,7 +315,7 @@ Instead of talking to Zoe Wood:
 		now the description of zoe wood is "Looks like Zoe is having some difficulty against sparx! Better hurry and defeat vogon!!!";
 		stop the action;
 	if the person is Zoe Wood:
-		say "Dr. Zoe Wood approaches you, 'Hey, if you have noticed, something is wrong with the servers. If you're willing to help me, I suggest we split up and investigate the building. The best place to look first is in probably the server room in the CSL.'[paragraph break]'I see you have a smart phone. I have prepared a phone application to attack the servers should anything go wrong. You can download keylogger onto your phone from the app store. Make sure to examine your phone to check it's remaining battery - you wouldn't want to run out of battery life! Either way, I'm off to go see if I can help get the servers back up.'[paragraph break]Dr. Wood leaves the room.";
+		say "Dr. Zoe Wood approaches you, 'Hey, if you haven't noticed, something is wrong with the servers. If you're willing to help me, I suggest we split up and investigate the building. The best place to look first is in probably the server room in the CSL.'[paragraph break]She looks down to see your phone in your hand. 'I see you have a smart phone. I have prepared a phone application to attack the servers should anything go wrong. You can download keylogger onto your phone from the app store. Make sure to examine your phone to check it's remaining battery - you wouldn't want to run out of battery life! Either way, I'm off to go see if I can help get the servers back up.'[paragraph break]Dr. Wood leaves the room.";
 		move zoe wood to the CSL;
 		now door 252 is unlocked.
 		
@@ -316,7 +324,10 @@ Dr Alex Dekhtyar is a person. Dekhtyar is in room 246.
 The description of Dekhtyar is "Dr. Dekhtyar appears to be working on something at a terminal. Maybe you should talk to him.".
 
 Instead of talking to Dekhtyar:
-		say "'Don't distract me, I'm busy fighting off whatever virus is attempting to infect all our databases. I've found out that one of the servers has gone rogue, but I can't exactly pinpoint which one. I need you to go figure out what's going on and fix it so we don't lose everything.'[paragraph break]'Oh and before I forget - before Hugh Smith left to try to fix the problem he told me there's an app in the app store we might use in such a situation - packet spoofer. Good luck.'";
+	if room 246 is unvisited:
+		say "You see Dekhtyar furiously typing on his laptop. 'Don't distract me, I'm busy fighting off whatever virus is attempting to infect all our databases. I've found out that one of the servers has gone rogue, but I can't exactly pinpoint which one. I need you to go figure out what's going on and fix it so we don't lose everything.'[paragraph break]'Oh and before I forget - before Hugh Smith left to try to fix the problem he told me there's an app in the app store we might use in such a situation - packet spoofer. Good luck.'";
+	otherwise:
+		say "Dekhtyar seems irritated. 'I said don't distract me! Hugh Smith left earlier to help fix this mess. His packet spoofer application should be useful. Now go!'".
 		
 [--- Dr Ignacio Vakalis ---]
 Dr Ignacio Vakalis is a person. Vakalis is in 14-219.
@@ -356,10 +367,7 @@ Foaad needs the solder pen.
 [ --------------------------]
 
 [---Story---]
-To say Intro text: say "[paragraph break]You are finishing up your program, checking to make sure everything compiles and that your name is on the source code. You go to SSH into Vogon, when you realize that something is wrong. You cannot access Vogon, so you shrug it off and try Unix1. After you realize that Unix1 is not working, you start to lightly perspire. You desperately want to go home to your bed and fluffy pillow and sleep. As you try Unix2 and fail to connect once again, you bang your head on the table. What to do?".
-
-Instead of going to Hallway 1 when charger is not held:
-	say "Maybe you should heed Fisher's suggestion and bring your phone charger.".
+To say Intro text: say "[paragraph break]You are finishing up your program, checking to make sure everything compiles and that your name is on the source code. You go to SSH into Vogon, when you realize that something is wrong. You cannot access Vogon, so you shrug it off and try Unix1. After you realize that Unix1 is not working, you start to lightly perspire. You desperately want to go home to your bed and fluffy pillow and sleep. As you try Unix2 and fail to connect once again, you bang your head on the table. What to do?[no line break]".
 
 [---Descriptions---]
 Software Design Lab is a room with a description "A lab room lined with computers with a projector and table at the center. North is a doorway leading to the hall.[if Hallway 1 is unvisited][Intro text][end if]".
@@ -734,4 +742,4 @@ Every turn during Vogon Battle:
 
 [ --- Time of Day should be stated last, so it's at the bottom of the code base --- ]
 Every turn:
-	say "It's now [the time of day][line break]";
+	say "It is now [the time of day][line break]";
