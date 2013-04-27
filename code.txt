@@ -555,9 +555,12 @@ Unix1 Battle is a scene.
 
 Instead of opening Door 252:
 	If the door 252 is locked:
-		say "Wait, you are I'll prepared for whatever is behind this door. Better go to the Game Lab to the west first.";
+		if Unix1 battle is happening:
+			say "The door is locked. You must defeat the server first.";
+		if Unix1 battle has not happened:
+			say "Wait, you are I'll prepared for whatever is behind this door. Better go to the Game Lab to the west first.";
 	else:
-		move player to room 252.
+		now door 252 is open.
 
 [Started substituting Room 252 for 14-254 for the time being]
 Unix1 Battle begins when (the player is in Room 252 for the first time) or (the player is in Room 252 and the enemy is not dead).
