@@ -124,10 +124,10 @@ Check launching it:
 			say "Your DDOS app hits unix1 for a whooping 10 health and closes.[line break]Unix1 has [enemy-health of unix1] health remaining.[paragraph break]";
 		if Unix2 Battle is happening:
 			Now enemy-health of unix2 is enemy-health of unix2 minus 10;
-			say "Your DDOS app hits unix2 for a whooping 10 health and closes.[line break]Unix1 has [enemy-health of unix1] health remaining.[paragraph break]";
+			say "Your DDOS app hits unix2 for a whooping 10 health and closes.[line break]Unix1 has [enemy-health of unix2] health remaining.[paragraph break]";
 		if Vogon Battle is happening:
 			Now enemy-health of vogon is enemy-health of vogon minus 10;
-			say "Your DDOS app hits vogon for a whooping 10 health and closes.[line break]Unix1 has [enemy-health of unix1] health remaining.[paragraph break]";
+			say "Your DDOS app hits vogon for a whooping 10 health and closes.[line break]Unix1 has [enemy-health of vogon] health remaining.[paragraph break]";
 	if the noun is keylogger and the phone is on:
 		say "[line break]You're logging its keys![line break]";
 		if Unix1 Battle is happening:
@@ -135,10 +135,10 @@ Check launching it:
 			say "Your keylogger app hits unix1 for 1 health and closes.[line break]Unix1 has [enemy-health of unix1] health remaining.[paragraph break]";
 		if Unix2 Battle is happening:
 			Now enemy-health of unix2 is enemy-health of unix2 minus 1;
-			say "Your keylogger app hits unix2 for 1 health and closes.[line break]Unix2 has [enemy-health of unix1] health remaining.[paragraph break]";
+			say "Your keylogger app hits unix2 for 1 health and closes.[line break]Unix2 has [enemy-health of unix2] health remaining.[paragraph break]";
 		if Vogon Battle is happening:
 			Now enemy-health of vogon is enemy-health of vogon minus 1;
-			say "Your keylogger app hits vogon for 1 health and closes.[line break]Vogon has [enemy-health of unix1] health remaining.[paragraph break]";
+			say "Your keylogger app hits vogon for 1 health and closes.[line break]Vogon has [enemy-health of vogon] health remaining.[paragraph break]";
 	if the noun is packet spoofer and the phone is on:
 		say "[line break]You're spoofing packets![line break]";
 		if Unix1 Battle is happening:
@@ -146,10 +146,10 @@ Check launching it:
 			say "Your packet spoofer app hits unix1 for 2 health and closes.[line break]Unix1 has [enemy-health of unix1] health remaining.[paragraph break]";
 		if Unix2 Battle is happening:
 			Now enemy-health of unix2 is enemy-health of unix2 minus 2;
-			say "Your packet spoofer app hits unix2 for 2 health and closes.[line break]Unix2 has [enemy-health of unix1] health remaining.[paragraph break]";
+			say "Your packet spoofer app hits unix2 for 2 health and closes.[line break]Unix2 has [enemy-health of unix2] health remaining.[paragraph break]";
 		if Vogon Battle is happening:
 			Now enemy-health of vogon is enemy-health of vogon minus 2;
-			say "Your packet spoofer app hits vogon for 2 health and closes.[line break]Vogon has [enemy-health of unix1] health remaining.[paragraph break]";
+			say "Your packet spoofer app hits vogon for 2 health and closes.[line break]Vogon has [enemy-health of vogon] health remaining.[paragraph break]";
 	if the noun is lab door key and the phone is on:
 		if the player is in Software Design Lab:
 			if door1 is locked: 
@@ -274,7 +274,7 @@ After examining line of tables:
 	now power supply is in CSL.
 	
 After switching off power supply:
-	say "The room becomes instantly silent. The computers have stopped running, so you should be able to get into the Server Room now.";
+	say "Well that was easy. The room becomes instantly silent. The computers have stopped running, so you should be able to get into the Server Room now.";
 	now Server Room door is unlocked.
 	
 [ Check time verb can be used instead of spouting the time every turn. ]
@@ -317,7 +317,7 @@ Instead of talking to Zoe Wood:
 		say "Zoe is furiously typing commands on a terminal. She doesn't even look back as she yells.[line break]'Hurry up and defeat vogon, I don't know how much longer I can hold sparx off!";
 		now the description of zoe wood is "Looks like Zoe is having some difficulty against sparx! Better hurry and defeat vogon!!!";
 		stop the action;
-	if the person is Zoe Wood:
+	otherwise:
 		say "Dr. Zoe Wood approaches you, 'Hey, if you haven't noticed, something is wrong with the servers. If you're willing to help me, I suggest we split up and investigate the building. The best place to look first is in probably the server room in the CSL.'[paragraph break]She looks down to see your phone in your hand. 'I see you have a smart phone. I have prepared a phone application to attack the servers should anything go wrong. You can download keylogger onto your phone from the app store. Make sure to examine your phone to check it's remaining battery - you wouldn't want to run out of battery life! Either way, I'm off to go see if I can help get the servers back up.'[paragraph break]Dr. Wood leaves the room.";
 		move zoe wood to the CSL;
 		now door 252 is unlocked.
@@ -499,8 +499,8 @@ A desk is a backdrop in 14-216.
 
 SF-west-gate is a door and lockable. SF-west-gate is open and unlocked. It is west of the South Faculty Atrium and east of the SouthWest corridor. The south atrium key unlocks the sf-west-gate.
 SF-east-gate is a door and lockable. SF-east-gate is open and unlocked. It is east of the South Faculty Atrium and west of the SouthEast corridor. 
-NF-east gate is a door and unlocked. It is west of the northeast corridor and east of the north faculty atrium.
-NF-west gate is a door and locked. it is west of the north faculty atrium and east of the northwest corridor. The north atrium key unlocks the nf-west-gate.
+NF-east gate is a door and locked. It is west of the northeast corridor and east of the north faculty atrium.
+NF-west gate is a door and unlocked. it is west of the north faculty atrium and east of the northwest corridor. The north atrium key unlocks the nf-west-gate.
 
 [ ------------------------]
 [        North Faculty         ]
@@ -514,7 +514,7 @@ The North Faculty Atrium is a room. [It is west of the NorthEast Corridor and ea
 The Faculty Entrances3 is a room. It is north of the North Faculty Atrium. It has the description "You see five faculty offices:  14-219, 14-221, 14-222, 14-223, 14-226. You can enter each office and look around."
 The Faculty Entrances4 is a room. It is south of the North Faculty Atrium. It has the description "You see seven faculty offices:  14-217, 14-218, 14-227, 14-228, 14-229, 14-230, 14-231. You can enter each office and look around."
 
-The 14-219 is Faculty Room inside the Faculty Entrances3.
+The 14-219 is Faculty Room inside the Faculty Entrances3. It is unlocked.
 The 14-221 is Faculty Room inside the Faculty Entrances3.
 The 14-222 is Faculty Room inside the Faculty Entrances3.
 The 14-223 is Faculty Room inside the Faculty Entrances3.
@@ -546,7 +546,7 @@ Understand "231" as 14-231.
 [                CSL               ]
 [ ----------------------]
 
-The CSL is a room with the description "[if unvisited]You finally get to the CSL. The room is hotter than usual, but you don't seem to think anything of it. You try the door to the Server Room so you can finally end everything, but as soon as you touch it, you jump back. The door handle is extremely hot! Dumbfounded, you look around as you try to think of a way to get into the Server Room.[end if][paragraph break]Main CSL Room. You see rows of computers.". 
+The CSL is a room with the description "[if unvisited]You finally get to the CSL. The room is hotter than usual, but you don't seem to think anything of it. You try the door to the Server Room so you can finally end everything, but as soon as you touch it, you jump back. The door handle is extremely hot! Dumbfounded, you look around as you try to think of a way to get into the Server Room.[end if][paragraph break]Main CSL Room. You see rows of computers. The door to the Server Room is to the east". 
 The CSL door is a door. It is south of the CSL and north of the NorthEast Corridor.
 [It is north of NorthEast Corridor.]
 
@@ -642,7 +642,7 @@ Unix2 Battle begins when the player is in North Faculty Atrium for the first tim
 
 When Unix2 Battle begins:
 	Move Unix2 to north faculty atrium;
-	say "The door behind you closes and locks itself. You knew it was too easy.[Paragraph break]";
+	say "The door behind you closes and locks itself. You see Unix2 in the middle of the atrium. You knew it was too easy.[Paragraph break]";
 	 [Close all the doors in room.]
 	 Now NF-East Gate is closed;
 	 Now NF-West Gate is closed;
@@ -657,36 +657,33 @@ When Unix2 Battle ends:
 	Now NF-East Gate is unlocked;
 	Now NF-West Gate is unlocked;
 	say "You hear a clicking noise. The doors have been unlocked.[Paragraph break]
-		You realize servers are being infected one after another, better step up the pace or you'll run out of time.".
+		You realize servers are being infected one after another, better step up the pace or you'll run out of time. You wonder if there is anything of interest in this atrium.".
 
 Unix2 Battle ends when (Unix2 is dead). [The enemy will always be present till it dies.]
 
 Every turn during Unix2 Battle:
-	If the player is in 14-231 for the first time:
-		say "You found the source of the locked doors. Take it down!";
-	else:
-		If the Enemy-health of Unix2 is 0 or Enemy-health of Unix2 is less than 0:
-			Now Unix2 is dead;
-		Let playerLocation be the location of the player; [Create a condition that the player is in combat, possibly turn wifi on or off. Give a chance for the player to leave and charge phone and kick them out of battle till they recharge. Also regain enemy health when they are not battling.]
-		If phone is on:
-			Repeat with currentEnemy running through enemies in playerLocation:
-				Let enemy-attack be a random number between 1 and 4;
-				if enemy-attack is 1 and enemy-health of unix2 is not 0:
-					say "[currentEnemy] uses Network Storm.[line break]";
-					say "You lose 6 Battery life.[line break]"; [Change this to say and decrease actual battery life.]
-					Decrease Battery Life by 6;
-				else if enemy-attack is 2 and enemy-health of unix2 is not 0:
-					say "[currentEnemy] uses Spyware Spam.[line break]";
-					say "You lose 3 Battery life.[line break]"; [Change this to say and decrease actual battery life.]
-					Decrease battery Life by 3;
-				else if enemy-attack is 3 and enemy-health of unix2 is not 0:
-					say "[currentEnemy] uses Nyan Cat Sound Blast.[line break]";
-					say "You lose 2 Battery life.[line break]"; [Change this to say and decrease actual battery life.]
-					Decrease battery Life by 2;
-				 say "You currently have [Battery Life]% battery left.[Paragraph break]".
-					
-				[say "[currentEnemy]: Attack! [enemy-health of currentEnemy] [Paragraph break]";
-				Decrease the Enemy-Health of Unix1 by 1;]
+	If the Enemy-health of Unix2 is 0 or Enemy-health of Unix2 is less than 0:
+		Now Unix2 is dead;
+	Let playerLocation be the location of the player; [Create a condition that the player is in combat, possibly turn wifi on or off. Give a chance for the player to leave and charge phone and kick them out of battle till they recharge. Also regain enemy health when they are not battling.]
+	If phone is on:
+		Repeat with currentEnemy running through enemies in playerLocation:
+			Let enemy-attack be a random number between 1 and 4;
+			if enemy-attack is 1 and enemy-health of unix2 is not 0:
+				say "[currentEnemy] uses Network Storm.[line break]";
+				say "You lose 6 Battery life.[line break]"; [Change this to say and decrease actual battery life.]
+				Decrease Battery Life by 6;
+			else if enemy-attack is 2 and enemy-health of unix2 is not 0:
+				say "[currentEnemy] uses Spyware Spam.[line break]";
+				say "You lose 3 Battery life.[line break]"; [Change this to say and decrease actual battery life.]
+				Decrease battery Life by 3;
+			else if enemy-attack is 3 and enemy-health of unix2 is not 0:
+				say "[currentEnemy] uses Nyan Cat Sound Blast.[line break]";
+				say "You lose 2 Battery life.[line break]"; [Change this to say and decrease actual battery life.]
+				Decrease battery Life by 2;
+			 say "You currently have [Battery Life]% battery left.[Paragraph break]".
+				
+			[say "[currentEnemy]: Attack! [enemy-health of currentEnemy] [Paragraph break]";
+			Decrease the Enemy-Health of Unix1 by 1;]
 
 [---Vogon Battle---]
 Vogon is an enemy. Enemy-health of Vogon is 20.
